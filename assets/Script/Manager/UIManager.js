@@ -19,6 +19,11 @@ var UIManager = cc.Class({
         this.CurrentMenu = null;
     },
 
+    start()
+    {
+        GameMgr.instance.onInit();
+    },
+
     showLoading(display)
     {
         if (display)
@@ -87,8 +92,18 @@ var UIManager = cc.Class({
         this.MenuGame.removePlayer(player);
     },
     
-    enterRoom(roomName)
+    playerEnterSeat(playerInfo, seat)
     {
-        showMenu("MenuMatchRoom");
+        this.MenuGame.playerEnterSeat(playerInfo, seat);
     },
+
+    playerLeaveSeat(seat)
+    {
+        this.MenuGame.playerLeaveSeat(seat);
+    },
+
+    setHost(playerId)
+    {
+        this.MenuGame.setHost(playerId);
+    }
 });

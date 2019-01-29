@@ -22,6 +22,9 @@ var UIManager = cc.Class({
         this.MenuStack = [];
         this.CurrentMenu = null;
     },
+    start: function start() {
+        GameMgr.instance.onInit();
+    },
     showLoading: function showLoading(display) {
         if (display) this.loadingscreen.show();else this.loadingscreen.hide();
     },
@@ -71,8 +74,14 @@ var UIManager = cc.Class({
         console.log(player);
         this.MenuGame.removePlayer(player);
     },
-    enterRoom: function enterRoom(roomName) {
-        showMenu("MenuMatchRoom");
+    playerEnterSeat: function playerEnterSeat(playerInfo, seat) {
+        this.MenuGame.playerEnterSeat(playerInfo, seat);
+    },
+    playerLeaveSeat: function playerLeaveSeat(seat) {
+        this.MenuGame.playerLeaveSeat(seat);
+    },
+    setHost: function setHost(playerId) {
+        this.MenuGame.setHost(playerId);
     }
 });
 

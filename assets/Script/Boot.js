@@ -15,7 +15,12 @@ cc.Class({
 
     startLoading()
     {
-        this.InitGameSpark();
+        this.loadResource();
+    },
+
+    loadResource()
+    {
+        ImageCache.Init(this.InitGameSpark.bind(this));
     },
 
     InitGameSpark()
@@ -25,7 +30,7 @@ cc.Class({
     },
 
     LoginServer()
-    {
+    {      
         this.userId = FBInstantHelper.getPlayerID();
         GSMgr.instance.authenticationRequest(this.userId, this.userId, this.OnTryLogin.bind(this));
     },
@@ -67,8 +72,13 @@ cc.Class({
         console.log(response);
         if (!response.error)
         {
-            this.LoadGameScene();
+            this.WaitMatchData();
         }
+    },
+
+    WaitMatchData() //it's sent automatically when user enter room
+    {
+        GameMgr.instance.onMatchLoaded(this.LoadGameScene.bind(this));
     },
 
     LoadGameScene()

@@ -19,7 +19,10 @@ cc.Class({
         this.startLoading();
     },
     startLoading: function startLoading() {
-        this.InitGameSpark();
+        this.loadResource();
+    },
+    loadResource: function loadResource() {
+        ImageCache.Init(this.InitGameSpark.bind(this));
     },
     InitGameSpark: function InitGameSpark() {
         GSMgr.instance.Init(this.LoginServer.bind(this));
@@ -52,8 +55,12 @@ cc.Class({
     onEnterRoomResponse: function onEnterRoomResponse(response) {
         console.log(response);
         if (!response.error) {
-            this.LoadGameScene();
+            this.WaitMatchData();
         }
+    },
+    WaitMatchData: function WaitMatchData() //it's sent automatically when user enter room
+    {
+        GameMgr.instance.onMatchLoaded(this.LoadGameScene.bind(this));
     },
     LoadGameScene: function LoadGameScene() {
         cc.director.preloadScene("Game", this.Finished);

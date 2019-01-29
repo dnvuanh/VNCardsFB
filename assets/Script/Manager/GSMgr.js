@@ -19,6 +19,7 @@ var GSMgr = cc.Class({
     {
         GSMgr.instance = this;
         cc.game.addPersistRootNode(this.node);
+        this.RTMessagesListeners = {};
     },
 
     Init (callback) {
@@ -62,7 +63,7 @@ var GSMgr = cc.Class({
                     clearTimeout(this.myTimer);
                 }
 			    this.myTimer = setInterval(this.mainRTLoop.bind(this), 10);
-			    this.startRTSession(accessToken, host, port);
+			    this.myRTSession.start(accessToken, host, port);
                 break;
 
             case ".MatchUpdatedMessage":
@@ -144,7 +145,7 @@ var GSMgr = cc.Class({
     },
 
     onPacketReceived(res) {
-        cc.log("onPacketReceived", res);
+        this.triggerCallback(res.opCode, res.data);
     },
 
     startRTSession(connectToken, host, port) {
@@ -196,10 +197,26 @@ var GSMgr = cc.Class({
 
 			data.setLong(1, this.numCycles);
 
-			this.myRTSession.session.sendRTData(1, GameSparksRT.deliveryIntent.RELIABLE, data, []);
+            this.myRTSession.session.sendRTData(1, GameSparksRT.deliveryIntent.RELIABLE, data, []);
 
 			this.numCycles ++;
 		}
+    },
+
+    registerOpCodeCallback(opCode, callback) {
+        if (!this.RTMessagesListeners[opCode]) {
+            this.RTMessagesListeners[opCode] = [];
+        }
+        this.RTMessagesListeners[opCode].push(callback);
+    },
+
+    triggerCallback(opCode, data) {
+        let listeners = this.RTMessagesListeners[opCode];
+        if (listeners) {
+            for (let i in listeners) {
+                listeners[i](data);
+            }
+        }
     },
 
     sendRTData(code, data)

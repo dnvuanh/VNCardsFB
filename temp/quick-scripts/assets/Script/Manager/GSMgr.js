@@ -21,6 +21,7 @@ var GSMgr = cc.Class({
     onLoad: function onLoad() {
         GSMgr.instance = this;
         cc.game.addPersistRootNode(this.node);
+        this.RTMessagesListeners = {};
     },
     Init: function Init(callback) {
         this.Inited = false;
@@ -57,7 +58,7 @@ var GSMgr = cc.Class({
                     clearTimeout(this.myTimer);
                 }
                 this.myTimer = setInterval(this.mainRTLoop.bind(this), 10);
-                this.startRTSession(accessToken, host, port);
+                this.myRTSession.start(accessToken, host, port);
                 break;
 
             case ".MatchUpdatedMessage":
@@ -126,7 +127,7 @@ var GSMgr = cc.Class({
         cc.log("onSessionReady", res);
     },
     onPacketReceived: function onPacketReceived(res) {
-        cc.log("onPacketReceived", res);
+        this.triggerCallback(res.opCode, res.data);
     },
     startRTSession: function startRTSession(connectToken, host, port) {
         var index = host.indexOf(":");
@@ -176,6 +177,20 @@ var GSMgr = cc.Class({
             this.myRTSession.session.sendRTData(1, GameSparksRT.deliveryIntent.RELIABLE, data, []);
 
             this.numCycles++;
+        }
+    },
+    registerOpCodeCallback: function registerOpCodeCallback(opCode, callback) {
+        if (!this.RTMessagesListeners[opCode]) {
+            this.RTMessagesListeners[opCode] = [];
+        }
+        this.RTMessagesListeners[opCode].push(callback);
+    },
+    triggerCallback: function triggerCallback(opCode, data) {
+        var listeners = this.RTMessagesListeners[opCode];
+        if (listeners) {
+            for (var i in listeners) {
+                listeners[i](data);
+            }
         }
     },
     sendRTData: function sendRTData(code, data) {

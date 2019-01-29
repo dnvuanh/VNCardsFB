@@ -1,6 +1,6 @@
 "use strict";
 cc._RF.push(module, '3da6c2KFnVCRYg4359XJTFF', 'MenuGame');
-// Script/MenuGame.js
+// Script/UI/MenuGame.js
 
 "use strict";
 
@@ -10,7 +10,8 @@ cc.Class({
     extends: MenuScene,
 
     properties: {
-        onlineList: require("OnlineList")
+        onlineList: require("OnlineList"),
+        SeatMgr: require("SeatMgr")
     },
 
     addPlayer: function addPlayer(player) {
@@ -22,6 +23,15 @@ cc.Class({
     requestSeat: function requestSeat(sender, seat) {
         console.log("request Seat");
         GSMgr.instance.requestSeat(parseInt(seat));
+    },
+    playerEnterSeat: function playerEnterSeat(playerInfo, seat) {
+        this.SeatMgr.onPlayerEnter(playerInfo, seat);
+    },
+    playerLeaveSeat: function playerLeaveSeat(seat) {
+        this.SeatMgr.onPlayerLeave(seat);
+    },
+    setHost: function setHost(playerId) {
+        this.SeatMgr.setHost(playerId);
     }
 });
 

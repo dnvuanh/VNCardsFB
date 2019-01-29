@@ -1,6 +1,6 @@
 "use strict";
 cc._RF.push(module, '8d713FALlRLVrvU+8BCpXSL', 'OnlinePlayer');
-// Script/OnlinePlayer.js
+// Script/UI/OnlinePlayer.js
 
 "use strict";
 
@@ -12,20 +12,23 @@ cc.Class({
         displayName: cc.Label
     },
 
-    display: function display(userId, photo, name) {
+    display: function display(userId, photo, name, callback) {
         var _this = this;
 
         this.userId = userId;
-        if (photo != "default") {
-            cc.loader.load(photo, function (err, img) {
-                if (err) {
-                    cc.error(err);
-                    return;
-                }
-                _this.avatar.spriteFrame = new cc.SpriteFrame(img);
-            }.bind(this));
-        }
         this.displayName.string = name;
+        if (photo != "default") {
+            ImageCache.loadAvatar(userId, photo, function (imgSprite) {
+                if (imgSprite) {
+                    _this.avatar.spriteFrame = imgSprite;
+                } else {
+                    console.log("Error while loading user avatar " + userId);
+                }
+                callback();
+            });
+        } else {
+            callback();
+        }
     }
 });
 

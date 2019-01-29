@@ -10,5 +10,6 @@ window.GSMgr = new require("GSMgr");
 window.GameMgr = new require("GameMgr");
 window.UIManager = new require("UIManager");
 window.ServerCode = require("ServerCode");
+window.ImageCache = require("ImageCache");
 
 cc._RF.pop();

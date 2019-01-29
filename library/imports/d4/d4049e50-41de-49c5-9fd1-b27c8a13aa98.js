@@ -24,10 +24,13 @@ cc.Class({
         });
     },
     addPlayer: function addPlayer(player) {
+        var _this2 = this;
+
         var playerNode = cc.instantiate(this.onlinePlayer);
-        playerNode.getComponent("OnlinePlayer").display(player.id, player.scriptData.Photo, player.displayName);
-        playerNode.parent = this.listNode;
-        playerNode.name = player.id;
+        playerNode.getComponent("OnlinePlayer").display(player.id, player.scriptData.Photo, player.displayName, function () {
+            playerNode.parent = _this2.listNode;
+            playerNode.name = player.id;
+        });
     },
     removePlayer: function removePlayer(player) {
         var playerNode = this.listNode.getChildByName(player);

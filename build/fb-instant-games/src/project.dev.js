@@ -38,7 +38,10 @@ window.__require = function e(t, n, r) {
         this.startLoading();
       },
       startLoading: function startLoading() {
-        this.InitGameSpark();
+        this.loadResource();
+      },
+      loadResource: function loadResource() {
+        ImageCache.Init(this.InitGameSpark.bind(this));
       },
       InitGameSpark: function InitGameSpark() {
         GSMgr.instance.Init(this.LoginServer.bind(this));
@@ -64,7 +67,10 @@ window.__require = function e(t, n, r) {
       },
       onEnterRoomResponse: function onEnterRoomResponse(response) {
         console.log(response);
-        response.error || this.LoadGameScene();
+        response.error || this.WaitMatchData();
+      },
+      WaitMatchData: function WaitMatchData() {
+        GameMgr.instance.onMatchLoaded(this.LoadGameScene.bind(this));
       },
       LoadGameScene: function LoadGameScene() {
         cc.director.preloadScene("Game", this.Finished);
@@ -93,11 +99,11 @@ window.__require = function e(t, n, r) {
     "use strict";
     var FBFakeData = {
       context: {
-        id: "1594416347337301"
+        id: "1991595654288655"
       },
       player: {
-        name: "Mayb",
-        id: "TestUser02",
+        name: "Mayc",
+        id: "TestUser03",
         photo: "default"
       }
     };
@@ -164,6 +170,7 @@ window.__require = function e(t, n, r) {
       onLoad: function onLoad() {
         GSMgr.instance = this;
         cc.game.addPersistRootNode(this.node);
+        this.RTMessagesListeners = {};
       },
       Init: function Init(callback) {
         this.Inited = false;
@@ -197,7 +204,7 @@ window.__require = function e(t, n, r) {
           this.myRTSession.stop();
           this.myTimer && clearTimeout(this.myTimer);
           this.myTimer = setInterval(this.mainRTLoop.bind(this), 10);
-          this.startRTSession(accessToken, host, port);
+          this.myRTSession.start(accessToken, host, port);
           break;
 
          case ".MatchUpdatedMessage":
@@ -262,7 +269,7 @@ window.__require = function e(t, n, r) {
         cc.log("onSessionReady", res);
       },
       onPacketReceived: function onPacketReceived(res) {
-        cc.log("onPacketReceived", res);
+        this.triggerCallback(res.opCode, res.data);
       },
       startRTSession: function startRTSession(connectToken, host, port) {
         var index = host.indexOf(":");
@@ -293,6 +300,14 @@ window.__require = function e(t, n, r) {
           this.numCycles++;
         }
       },
+      registerOpCodeCallback: function registerOpCodeCallback(opCode, callback) {
+        this.RTMessagesListeners[opCode] || (this.RTMessagesListeners[opCode] = []);
+        this.RTMessagesListeners[opCode].push(callback);
+      },
+      triggerCallback: function triggerCallback(opCode, data) {
+        var listeners = this.RTMessagesListeners[opCode];
+        if (listeners) for (var i in listeners) listeners[i](data);
+      },
       sendRTData: function sendRTData(code, data) {
         this.myRTSession.session.sendRTData(code, GameSparksRT.deliveryIntent.RELIABLE, data, [ 0 ]);
       },
@@ -316,6 +331,16 @@ window.__require = function e(t, n, r) {
       onLoad: function onLoad() {
         GameMgr.instance = this;
         cc.game.addPersistRootNode(this.node);
+        this.matchData = {};
+      },
+      start: function start() {
+        GSMgr.instance.registerOpCodeCallback(ServerCode.RP_ENTER_SEAT, this.onPlayerEnterSeat.bind(this));
+        GSMgr.instance.registerOpCodeCallback(ServerCode.RP_LEAVE_SEAT, this.onPlayerLeaveSeat.bind(this));
+        GSMgr.instance.registerOpCodeCallback(ServerCode.RP_LOAD_MATCH, this.onMatchLoad.bind(this));
+        GSMgr.instance.registerOpCodeCallback(ServerCode.RP_HOST_CHANGE, this.onHostChange.bind(this));
+      },
+      onInit: function onInit() {
+        this.startGameScene = true;
       },
       OnMatchFound: function OnMatchFound(message) {
         console.log("Game on match found " + JSON.stringify(message));
@@ -323,9 +348,7 @@ window.__require = function e(t, n, r) {
       },
       OnMatchUpdate: function OnMatchUpdate(message) {
         console.log("Game on match update " + JSON.stringify(message));
-        this.onlineList = message.participants.filter(function(player) {
-          return player.online;
-        });
+        this.onlineList = message.participants;
         if (message.hasOwnProperty("addedPlayers")) {
           var player = this.onlineList.filter(function(player) {
             return player.id == message.addedPlayers;
@@ -337,8 +360,44 @@ window.__require = function e(t, n, r) {
           UIManager.instance.removePlayer(_player);
         }
       },
+      onMatchLoaded: function onMatchLoaded(callback) {
+        this.onMatchLoadedCb = callback;
+      },
+      onMatchLoad: function onMatchLoad(message) {
+        this.matchData = JSON.parse(message.getString(1));
+        this.onMatchLoadedCb && this.onMatchLoadedCb();
+      },
+      getCurrentSeats: function getCurrentSeats() {
+        if (this.matchData) return this.matchData.Seats;
+        return {};
+      },
+      getPlayer: function getPlayer(id) {
+        return this.onlineList.filter(function(player) {
+          return player.id == id;
+        })[0];
+      },
       getOnlineList: function getOnlineList() {
         return this.onlineList;
+      },
+      getHost: function getHost() {
+        return this.matchData.Host;
+      },
+      onPlayerEnterSeat: function onPlayerEnterSeat(message) {
+        var playerId = message.getString(1);
+        var seat = message.getLong(2);
+        this.matchData.Seats[seat] = playerId;
+        UIManager.instance.playerEnterSeat(this.getPlayer(playerId), seat);
+      },
+      onPlayerLeaveSeat: function onPlayerLeaveSeat(message) {
+        var playerId = message.getString(1);
+        var seat = message.getLong(2);
+        this.matchData.Seats[seat] = null;
+        UIManager.instance.playerLeaveSeat(seat);
+      },
+      onHostChange: function onHostChange(message) {
+        var playerId = message.getString(1);
+        this.matchData.Host = playerId;
+        UIManager.instance.setHost(playerId);
       }
     });
     cc._RF.pop();
@@ -353,12 +412,77 @@ window.__require = function e(t, n, r) {
     window.GameMgr = new require("GameMgr");
     window.UIManager = new require("UIManager");
     window.ServerCode = require("ServerCode");
+    window.ImageCache = require("ImageCache");
     cc._RF.pop();
   }, {
     Config: "Config",
     FBInstantHelper: "FBInstantHelper",
+    ImageCache: "ImageCache",
     ServerCode: "ServerCode"
   } ],
+  ImageCache: [ function(require, module, exports) {
+    "use strict";
+    cc._RF.push(module, "858216Ov8NPy70BXz0rki8i", "ImageCache");
+    "use strict";
+    var ImageCache = cc.Class({
+      ctor: function ctor() {
+        this.cachedImages = {};
+      },
+      Init: function Init(callback) {
+        this.addRes("default", "Texture/default");
+        callback();
+      },
+      addRes: function addRes(id, path) {
+        var _this = this;
+        if (!this.cachedImages[id]) {
+          this.cachedImages[id] = path;
+          cc.loader.loadRes(path, function(err, img) {
+            if (err) {
+              cc.error(err);
+              return;
+            }
+            _this.cachedImages[id] = img;
+          }.bind(this));
+        }
+      },
+      load: function load(id, URL) {
+        var _this2 = this;
+        if (!this.cachedImages[id]) {
+          this.cachedImages[id] = URL;
+          cc.loader.load(URL, function(err, img) {
+            if (err) {
+              cc.error(err);
+              return;
+            }
+            _this2.cachedImages[id] = img;
+          }.bind(this));
+        }
+      },
+      addImage: function addImage(id, img) {
+        this.cachedImages[id] ? console.warn("image with id " + id + " is already in cached list") : this.cachedImages[id] = img;
+      },
+      getImage: function getImage(id) {
+        if (!this.cachedImages[id]) {
+          console.error("Image id: " + id + " was not added to cached list");
+          id = "default";
+        }
+        return this.cachedImages[id];
+      },
+      loadAvatar: function loadAvatar(userId, photo, callback) {
+        var _this3 = this;
+        "default" == photo ? callback(new cc.SpriteFrame(this.cachedImages[photo])) : this.cachedImages[userId] ? callback(new cc.SpriteFrame(this.cachedImages[userId])) : cc.loader.load(photo, function(err, img) {
+          err && callback(null);
+          _this3.cachedImages[userId] = img;
+          callback(new cc.SpriteFrame(_this3.cachedImages[userId]));
+        }.bind(this));
+      },
+      getSprite: function getSprite(id) {
+        return new cc.SpriteFrame(this.getImage(id));
+      }
+    });
+    module.exports = new ImageCache();
+    cc._RF.pop();
+  }, {} ],
   Loading: [ function(require, module, exports) {
     "use strict";
     cc._RF.push(module, "bba4bhNnylJQI4PQc5nWGaO", "Loading");
@@ -393,7 +517,8 @@ window.__require = function e(t, n, r) {
     cc.Class({
       extends: MenuScene,
       properties: {
-        onlineList: require("OnlineList")
+        onlineList: require("OnlineList"),
+        SeatMgr: require("SeatMgr")
       },
       addPlayer: function addPlayer(player) {
         this.onlineList.addPlayer(player);
@@ -404,12 +529,22 @@ window.__require = function e(t, n, r) {
       requestSeat: function requestSeat(sender, seat) {
         console.log("request Seat");
         GSMgr.instance.requestSeat(parseInt(seat));
+      },
+      playerEnterSeat: function playerEnterSeat(playerInfo, seat) {
+        this.SeatMgr.onPlayerEnter(playerInfo, seat);
+      },
+      playerLeaveSeat: function playerLeaveSeat(seat) {
+        this.SeatMgr.onPlayerLeave(seat);
+      },
+      setHost: function setHost(playerId) {
+        this.SeatMgr.setHost(playerId);
       }
     });
     cc._RF.pop();
   }, {
     MenuScene: "MenuScene",
-    OnlineList: "OnlineList"
+    OnlineList: "OnlineList",
+    SeatMgr: "SeatMgr"
   } ],
   MenuScene: [ function(require, module, exports) {
     "use strict";
@@ -442,10 +577,12 @@ window.__require = function e(t, n, r) {
         });
       },
       addPlayer: function addPlayer(player) {
+        var _this2 = this;
         var playerNode = cc.instantiate(this.onlinePlayer);
-        playerNode.getComponent("OnlinePlayer").display(player.id, player.scriptData.Photo, player.displayName);
-        playerNode.parent = this.listNode;
-        playerNode.name = player.id;
+        playerNode.getComponent("OnlinePlayer").display(player.id, player.scriptData.Photo, player.displayName, function() {
+          playerNode.parent = _this2.listNode;
+          playerNode.name = player.id;
+        });
       },
       removePlayer: function removePlayer(player) {
         var playerNode = this.listNode.getChildByName(player);
@@ -464,17 +601,95 @@ window.__require = function e(t, n, r) {
         avatar: cc.Sprite,
         displayName: cc.Label
       },
-      display: function display(userId, photo, name) {
+      display: function display(userId, photo, name, callback) {
         var _this = this;
         this.userId = userId;
-        "default" != photo && cc.loader.load(photo, function(err, img) {
-          if (err) {
-            cc.error(err);
-            return;
-          }
-          _this.avatar.spriteFrame = new cc.SpriteFrame(img);
-        }.bind(this));
         this.displayName.string = name;
+        "default" != photo ? ImageCache.loadAvatar(userId, photo, function(imgSprite) {
+          imgSprite ? _this.avatar.spriteFrame = imgSprite : console.log("Error while loading user avatar " + userId);
+          callback();
+        }) : callback();
+      }
+    });
+    cc._RF.pop();
+  }, {} ],
+  SeatDisplay: [ function(require, module, exports) {
+    "use strict";
+    cc._RF.push(module, "4ddfe7i0wlOipA2CLsOlSkc", "SeatDisplay");
+    "use strict";
+    cc.Class({
+      extends: cc.Component,
+      properties: {
+        displayNode: cc.Node,
+        avatar: cc.Sprite,
+        userName: cc.Label,
+        money: cc.Label,
+        hostIcon: cc.Node
+      },
+      onLoad: function onLoad() {
+        this.displayNode.active = false;
+        this.hostIcon.active = false;
+      },
+      display: function display(playerInfo) {
+        var _this = this;
+        this.playerId = playerInfo.id;
+        var photo = playerInfo.scriptData.Photo;
+        var displayName = playerInfo.displayName;
+        ImageCache.loadAvatar(this.playerId, photo, function(imgSprite) {
+          imgSprite ? _this.avatar.spriteFrame = imgSprite : console.log("Error while loading user avatar " + _this.playerId);
+          _this.userName.string = displayName;
+          _this.displayNode.active = true;
+        });
+      },
+      getPlayerId: function getPlayerId() {
+        return this.playerId;
+      },
+      remove: function remove() {
+        this.playerId = null;
+        this.hostIcon.active = false;
+        this.displayNode.active = false;
+      },
+      setHost: function setHost(isHost) {
+        this.hostIcon.active = isHost;
+      }
+    });
+    cc._RF.pop();
+  }, {} ],
+  SeatMgr: [ function(require, module, exports) {
+    "use strict";
+    cc._RF.push(module, "74de1Lk4mZPVZQQT0cxQyC0", "SeatMgr");
+    "use strict";
+    cc.Class({
+      extends: cc.Component,
+      start: function start() {
+        var seats = GameMgr.instance.getCurrentSeats();
+        for (var seat in seats) {
+          var playerId = seats[seat];
+          if (playerId) {
+            var playerInfo = GameMgr.instance.getPlayer(playerId);
+            this.onPlayerEnter(playerInfo, seat);
+          }
+        }
+        var host = GameMgr.instance.getHost();
+        host && this.setHost(host);
+      },
+      onPlayerEnter: function onPlayerEnter(playerInfo, seat) {
+        if (seat < this.node.children.length) {
+          var seatDisplay = this.node.children[seat].getComponent("SeatDisplay");
+          seatDisplay.display(playerInfo);
+        }
+      },
+      onPlayerLeave: function onPlayerLeave(seat) {
+        if (seat < this.node.children.length) {
+          var seatDisplay = this.node.children[seat].getComponent("SeatDisplay");
+          seatDisplay.remove();
+        }
+      },
+      setHost: function setHost(playerId) {
+        for (var i = 0; i < this.node.children.length; i++) {
+          var seatDisplay = this.node.children[i].getComponent("SeatDisplay");
+          seatDisplay && seatDisplay.getPlayerId() == playerId ? seatDisplay.setHost(true) : seatDisplay && seatDisplay.setHost(false);
+        }
       }
     });
     cc._RF.pop();
@@ -484,8 +699,15 @@ window.__require = function e(t, n, r) {
     cc._RF.push(module, "098f25tA1lNC7hv0OFUcAve", "ServerCode");
     "use strict";
     var ServerCode = {
+      RQ_LOAD_MATCH: 999,
       RQ_ENTER_SEAT: 1e3,
-      RP_ENTER_SEAT: 2e3
+      RQ_LEAVE_SEAT: 1001,
+      RP_LOAD_MATCH: 1999,
+      RP_ENTER_SEAT: 2e3,
+      RP_LEAVE_SEAT: 2001,
+      RP_HOST_CHANGE: 2100,
+      RP_REQUEST_ERROR: 5e3,
+      ERROR_DUPLICATED_SEAT: 5001
     };
     module.exports = ServerCode;
     cc._RF.pop();
@@ -508,6 +730,9 @@ window.__require = function e(t, n, r) {
         UIManager.instance = this;
         this.MenuStack = [];
         this.CurrentMenu = null;
+      },
+      start: function start() {
+        GameMgr.instance.onInit();
       },
       showLoading: function showLoading(display) {
         display ? this.loadingscreen.show() : this.loadingscreen.hide();
@@ -553,8 +778,14 @@ window.__require = function e(t, n, r) {
         console.log(player);
         this.MenuGame.removePlayer(player);
       },
-      enterRoom: function enterRoom(roomName) {
-        showMenu("MenuMatchRoom");
+      playerEnterSeat: function playerEnterSeat(playerInfo, seat) {
+        this.MenuGame.playerEnterSeat(playerInfo, seat);
+      },
+      playerLeaveSeat: function playerLeaveSeat(seat) {
+        this.MenuGame.playerLeaveSeat(seat);
+      },
+      setHost: function setHost(playerId) {
+        this.MenuGame.setHost(playerId);
       }
     });
     cc._RF.pop();
@@ -562,5 +793,5 @@ window.__require = function e(t, n, r) {
     Loading: "Loading",
     MenuGame: "MenuGame"
   } ]
-}, {}, [ "Boot", "Config", "FBInstantHelper", "GameMgr", "Global", "Loading", "GSMgr", "UIManager", "MenuGame", "MenuScene", "OnlineList", "OnlinePlayer", "ServerCode" ]);
+}, {}, [ "Boot", "Config", "Global", "ServerCode", "GameMgr", "Loading", "GSMgr", "UIManager", "ImageCache", "MenuGame", "MenuScene", "OnlineList", "OnlinePlayer", "SeatDisplay", "SeatMgr", "FBInstantHelper" ]);
 //# sourceMappingURL=project.dev.js.map

@@ -1,16 +1,16 @@
 "use strict";
 cc._RF.push(module, '5ed8fWDHDFIy6C45JGovLW5', 'FBInstantHelper');
-// Script/FBInstantHelper.js
+// Script/Util/FBInstantHelper.js
 
 "use strict";
 
 var FBFakeData = {
     "context": {
-        "id": "1594416347337301"
+        "id": "1991595654288655"
     },
     "player": {
-        "name": "Mayb",
-        "id": "TestUser02",
+        "name": "Mayc",
+        "id": "TestUser03",
         "photo": "default"
     }
 };
