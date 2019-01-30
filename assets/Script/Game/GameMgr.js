@@ -89,12 +89,22 @@ var GameMgr = cc.Class({
         return this.matchData.Host;
     },
 
+    UpdateUserInfo(message) {
+        this.userId = message.userId;
+    },
+
     onPlayerEnterSeat(message)
     {
         let playerId = message.getString(1);
         let seat = message.getLong(2);
             this.matchData.Seats[seat] = playerId;
             UIManager.instance.playerEnterSeat(this.getPlayer(playerId), seat);
+        
+        if(this.userId == this.getHost()){
+            UIManager.instance.setEnableStartButton(true);
+        } else {
+            UIManager.instance.setEnableStartButton(false);
+        }
     },
 
     onPlayerLeaveSeat(message)

@@ -49,4 +49,9 @@ cc.Class({
     {
         this.SeatMgr.setHost(playerId);
     }
+    },
+
+    setEnableStartButton(enable) {
+        this.ButtonStart.node.active = enable;
+    },
 });

@@ -3,6 +3,8 @@ cc.Class({
 
     properties: {
         loadingBar: cc.ProgressBar,
+        username: cc.EditBox,
+        login: cc.Button,
     },
 
     // LIFE-CYCLE CALLBACKS:
@@ -10,6 +12,14 @@ cc.Class({
     // onLoad () {},
 
     start () {
+        if(FBInstantHelper.isReady()) {
+            this.login.node.active = false;
+            this.username.node.active = false;
+            this.startLoading();
+        }
+    },
+
+    loginButtonPressed() {
         this.startLoading();
     },
 
@@ -31,7 +41,7 @@ cc.Class({
 
     LoginServer()
     {      
-        this.userId = FBInstantHelper.getPlayerID();
+        this.userId = this.username.string; //FBInstantHelper.getPlayerID();
         GSMgr.instance.authenticationRequest(this.userId, this.userId, this.OnTryLogin.bind(this));
     },
 

@@ -40,6 +40,9 @@ cc.Class({
     },
     setHost: function setHost(playerId) {
         this.SeatMgr.setHost(playerId);
+    },
+    setEnableStartButton: function setEnableStartButton(enable) {
+        this.ButtonStart.node.active = enable;
     }
 });
 
