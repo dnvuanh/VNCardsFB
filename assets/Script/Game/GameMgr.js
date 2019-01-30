@@ -1,3 +1,10 @@
+var GameState = {
+    PENDING:0,
+    WAIT:1,
+    STARTED:2,
+    OVER:3
+};
+
 var GameMgr = cc.Class({
     extends: cc.Component,
 
@@ -23,6 +30,7 @@ var GameMgr = cc.Class({
     onInit()
     {
         this.startGameScene = true;
+        this.state = GameState.PENDING;
     },
 
     OnMatchFound(message)
@@ -102,5 +110,15 @@ var GameMgr = cc.Class({
         let playerId = message.getString(1);
             this.matchData.Host = playerId;
             UIManager.instance.setHost(playerId);
-    }
+    },
+
+    onGameStart()
+    {
+
+    },
+
+    onGameOver()
+    {
+
+    },
 });

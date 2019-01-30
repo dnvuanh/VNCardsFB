@@ -250,8 +250,8 @@
     "relativePath": "Script/Loading.js"
   },
   "9ffd88a0-3d4f-4db6-a9cd-d7b5af9553ae": {
-    "asset": 1548608396000,
-    "meta": 1548608396000,
+    "asset": 1548811443000,
+    "meta": 1548811443000,
     "relativePath": "Scene/Game.fire"
   },
   "c5a691e4-b34b-4e73-a836-dd953f461b05": {
@@ -594,11 +594,6 @@
     "meta": 1548608182000,
     "relativePath": "Script/Manager/UIManager.js"
   },
-  "3da6cd8a-1675-4245-8838-df9f57253145": {
-    "asset": 1548608142000,
-    "meta": 1548608182000,
-    "relativePath": "Script/UI/MenuGame.js"
-  },
   "74de12e4-e266-4f55-9410-4f47314320b4": {
     "asset": 1548691688000,
     "meta": 1548691694000,
@@ -610,13 +605,23 @@
     "relativePath": "Script/UI/SeatDisplay.js"
   },
   "a5fb6e06-2a67-4334-aa57-7bb75a6d7df7": {
-    "asset": 1548696944000,
-    "meta": 1548696980000,
+    "asset": 1548813304000,
+    "meta": 1548860451000,
     "relativePath": "Script/Game/GameMgr.js"
   },
   "80631c3e-459e-47fb-b7fd-b58f84d40094": {
     "asset": 1548697244000,
     "meta": 1548697249000,
     "relativePath": "Script/Boot.js"
+  },
+  "3da6cd8a-1675-4245-8838-df9f57253145": {
+    "asset": 1548811421000,
+    "meta": 1548811428000,
+    "relativePath": "Script/UI/MenuGame.js"
+  },
+  "527cb422-2563-4c40-9db8-1dbeeed81801": {
+    "asset": 1548860484000,
+    "meta": 1548860484000,
+    "relativePath": "Prefabs/MenuGame.prefab"
   }
 }

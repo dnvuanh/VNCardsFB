@@ -4,6 +4,13 @@ cc._RF.push(module, 'a5fb64GKmdDNKpXe7dabX33', 'GameMgr', __filename);
 
 "use strict";
 
+var GameState = {
+    PENDING: 0,
+    WAIT: 1,
+    STARTED: 2,
+    OVER: 3
+};
+
 var GameMgr = cc.Class({
     extends: cc.Component,
 
@@ -24,6 +31,7 @@ var GameMgr = cc.Class({
     },
     onInit: function onInit() {
         this.startGameScene = true;
+        this.state = GameState.PENDING;
     },
     OnMatchFound: function OnMatchFound(message) {
         console.log("Game on match found " + JSON.stringify(message));
@@ -81,7 +89,9 @@ var GameMgr = cc.Class({
         var playerId = message.getString(1);
         this.matchData.Host = playerId;
         UIManager.instance.setHost(playerId);
-    }
+    },
+    onGameStart: function onGameStart() {},
+    onGameOver: function onGameOver() {}
 });
 
 cc._RF.pop();

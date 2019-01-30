@@ -6,7 +6,17 @@ cc.Class({
 
     properties: {
         onlineList: require("OnlineList"),
-        SeatMgr: require("SeatMgr")
+        SeatMgr: require("SeatMgr"),
+        ButtonLeave: cc.Node,
+        ButtonStart: cc.Node,
+        InGameButtons: cc.Node,
+    },
+
+    start()
+    {
+        this.ButtonLeave.active = false;
+        this.ButtonStart.active = false;
+        this.InGameButtons.active = false;
     },
 
     addPlayer(player)
