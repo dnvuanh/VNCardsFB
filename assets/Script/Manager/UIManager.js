@@ -105,5 +105,9 @@ var UIManager = cc.Class({
     setHost(playerId)
     {
         this.MenuGame.setHost(playerId);
+    },
+
+    setEnableStartButton(enable) {
+        this.MenuGame.setEnableStartButton(enable);
     }
 });

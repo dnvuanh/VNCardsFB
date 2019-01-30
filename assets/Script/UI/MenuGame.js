@@ -6,7 +6,8 @@ cc.Class({
 
     properties: {
         onlineList: require("OnlineList"),
-        SeatMgr: require("SeatMgr")
+        SeatMgr: require("SeatMgr"),
+        startButton: cc.Button,
     },
 
     addPlayer(player)
@@ -38,5 +39,9 @@ cc.Class({
     setHost(playerId)
     {
         this.SeatMgr.setHost(playerId);
-    }
+    },
+
+    setEnableStartButton(enable) {
+        this.startButton.node.active = enable;
+    },
 });
