@@ -48,7 +48,6 @@ cc.Class({
     setHost(playerId)
     {
         this.SeatMgr.setHost(playerId);
-    }
     },
 
     setEnableStartButton(enable) {
