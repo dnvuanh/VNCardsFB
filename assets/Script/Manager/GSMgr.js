@@ -234,5 +234,11 @@ var GSMgr = cc.Class({
             data.setLong(1, seat);
 
         this.sendRTData(ServerCode.RQ_ENTER_SEAT, data);
-    }
+    },
+
+    startGame(){
+        let data = RTData.get();
+            data.setLong(1, 0);
+        this.sendRTData(ServerCode.RQ_START_GAME, data);
+    },
 });
