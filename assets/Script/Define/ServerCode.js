@@ -3,6 +3,7 @@ var ServerCode = {
     RQ_LOAD_MATCH:  999,
     RQ_ENTER_SEAT: 1000,
     RQ_LEAVE_SEAT: 1001,
+    RQ_START_GAME: 1002,
 
     //response
     RP_LOAD_MATCH: 1999,
