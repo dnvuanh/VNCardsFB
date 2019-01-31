@@ -44,4 +44,8 @@ cc.Class({
     setEnableStartButton(enable) {
         this.startButton.node.active = enable;
     },
+
+    startButtonClicked(){
+        GSMgr.instance.startGame();
+    },
 });
