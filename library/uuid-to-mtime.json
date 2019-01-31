@@ -569,11 +569,6 @@
     "meta": 1548578289000,
     "relativePath": "Script/Util/FBInstantHelper.js"
   },
-  "098f2e6d-0359-4d0b-b86f-d0e154700bde": {
-    "asset": 1548607154000,
-    "meta": 1548607190000,
-    "relativePath": "Script/Define/ServerCode.js"
-  },
   "74de12e4-e266-4f55-9410-4f47314320b4": {
     "asset": 1548691688000,
     "meta": 1548691694000,
@@ -584,14 +579,9 @@
     "meta": 1548694101000,
     "relativePath": "Script/UI/SeatDisplay.js"
   },
-  "527cb422-2563-4c40-9db8-1dbeeed81801": {
-    "asset": 1548860484000,
-    "meta": 1548860484000,
-    "relativePath": "Prefabs/MenuGame.prefab"
-  },
   "9ffd88a0-3d4f-4db6-a9cd-d7b5af9553ae": {
-    "asset": 1548863226000,
-    "meta": 1548863327000,
+    "asset": 1548900122000,
+    "meta": 1548900122000,
     "relativePath": "Scene/Game.fire"
   },
   "49ee16f5-074d-4a52-b51d-b95f36ac0fc3": {
@@ -604,24 +594,44 @@
     "meta": 1548861450000,
     "relativePath": "Script/Boot.js"
   },
+  "269d918a-8a79-47e7-836d-4d2a19072455": {
+    "asset": 1548882315000,
+    "meta": 1548882811000,
+    "relativePath": "Script/Define/Define.js"
+  },
+  "6fdc0398-9a91-40d7-abd0-af80d15037ab": {
+    "asset": 1548882541000,
+    "meta": 1548882811000,
+    "relativePath": "Script/Manager/UIManager.js"
+  },
   "a5fb6e06-2a67-4334-aa57-7bb75a6d7df7": {
-    "asset": 1548860776000,
-    "meta": 1548861451000,
+    "asset": 1548882861000,
+    "meta": 1548882863000,
     "relativePath": "Script/Game/GameMgr.js"
   },
+  "69eded2c-82bf-4e07-a329-b15f1e2e2cf3": {
+    "asset": 1548898746000,
+    "meta": 1548898749000,
+    "relativePath": "Script/UI/ChatBox.js"
+  },
+  "2addfd15-82b0-49bf-b032-b4cf545c17dc": {
+    "asset": 1548899561000,
+    "meta": 1548899561000,
+    "relativePath": "Prefabs/MenuGame.prefab"
+  },
+  "098f2e6d-0359-4d0b-b86f-d0e154700bde": {
+    "asset": 1548899981000,
+    "meta": 1548900064000,
+    "relativePath": "Script/Define/ServerCode.js"
+  },
   "7cd40e88-0b96-4344-8e9e-130153c97712": {
-    "asset": 1548860775000,
-    "meta": 1548861451000,
+    "asset": 1548900006000,
+    "meta": 1548900064000,
     "relativePath": "Script/Manager/GSMgr.js"
   },
   "3da6cd8a-1675-4245-8838-df9f57253145": {
-    "asset": 1548863317000,
-    "meta": 1548863328000,
+    "asset": 1548900056000,
+    "meta": 1548900064000,
     "relativePath": "Script/UI/MenuGame.js"
-  },
-  "6fdc0398-9a91-40d7-abd0-af80d15037ab": {
-    "asset": 1548860775000,
-    "meta": 1548861451000,
-    "relativePath": "Script/Manager/UIManager.js"
   }
 }
