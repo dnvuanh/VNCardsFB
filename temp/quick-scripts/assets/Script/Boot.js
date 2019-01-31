@@ -8,7 +8,9 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        loadingBar: cc.ProgressBar
+        loadingBar: cc.ProgressBar,
+        username: cc.EditBox,
+        login: cc.Button
     },
 
     // LIFE-CYCLE CALLBACKS:
@@ -16,6 +18,13 @@ cc.Class({
     // onLoad () {},
 
     start: function start() {
+        if (FBInstantHelper.isReady()) {
+            this.login.node.active = false;
+            this.username.node.active = false;
+            this.startLoading();
+        }
+    },
+    loginButtonPressed: function loginButtonPressed() {
         this.startLoading();
     },
     startLoading: function startLoading() {
@@ -29,7 +38,7 @@ cc.Class({
         this.loadingBar.progress = 0.6;
     },
     LoginServer: function LoginServer() {
-        this.userId = FBInstantHelper.getPlayerID();
+        this.userId = this.username.string; //FBInstantHelper.getPlayerID();
         GSMgr.instance.authenticationRequest(this.userId, this.userId, this.OnTryLogin.bind(this));
     },
     OnTryLogin: function OnTryLogin(response) {

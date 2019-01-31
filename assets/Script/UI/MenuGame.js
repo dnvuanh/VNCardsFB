@@ -6,8 +6,20 @@ cc.Class({
 
     properties: {
         onlineList: require("OnlineList"),
+        chatBox: require("ChatBox"),
         SeatMgr: require("SeatMgr"),
-        startButton: cc.Button,
+        ButtonLeave: cc.Node,
+        ButtonStart: cc.Node,
+        InGameButtons: cc.Node,
+    },
+
+    start()
+    {
+        this.ButtonLeave.active = false;
+        this.ButtonStart.active = false;
+        this.InGameButtons.active = false;
+        this.onlineList.node.active = true;
+        this.chatBox.node.active = false;
     },
 
     addPlayer(player)
@@ -26,13 +38,27 @@ cc.Class({
         GSMgr.instance.requestSeat(parseInt(seat));
     },
 
+    requestLeaveSeat()
+    {
+        GSMgr.instance.leaveSeat(GameMgr.instance.getMySeat());
+    },
+
     playerEnterSeat(playerInfo, seat)
     {
         this.SeatMgr.onPlayerEnter(playerInfo, seat);
+        if (GameMgr.instance.IsMyId(playerInfo.id))
+        {
+            this.ButtonLeave.active = true;
+        }
     },
 
     playerLeaveSeat(seat)
     {
+        if (GameMgr.instance.getMySeat() == seat)
+        {
+            this.ButtonLeave.active = false;
+            this.setEnableStartButton(false);
+        }
         this.SeatMgr.onPlayerLeave(seat);
     },
 
@@ -42,10 +68,23 @@ cc.Class({
     },
 
     setEnableStartButton(enable) {
-        this.startButton.node.active = enable;
+        this.ButtonStart.active = enable;
     },
 
-    startButtonClicked(){
-        GSMgr.instance.startGame();
+    chatBoxClick()
+    {
+        this.onlineList.node.active = false;
+        this.chatBox.node.active = true;
     },
+
+    onlineClick()
+    {
+        this.onlineList.node.active = true;
+        this.chatBox.node.active = false;
+    },
+
+    onStartGameClick()
+    {
+        GSMgr.instance.startGame();
+    }
 });

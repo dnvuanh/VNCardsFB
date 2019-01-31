@@ -1,3 +1,4 @@
+var Define = require("Define");
 var GameMgr = cc.Class({
     extends: cc.Component,
 
@@ -18,6 +19,7 @@ var GameMgr = cc.Class({
         GSMgr.instance.registerOpCodeCallback(ServerCode.RP_LEAVE_SEAT, this.onPlayerLeaveSeat.bind(this));
         GSMgr.instance.registerOpCodeCallback(ServerCode.RP_LOAD_MATCH, this.onMatchLoad.bind(this));
         GSMgr.instance.registerOpCodeCallback(ServerCode.RP_HOST_CHANGE, this.onHostChange.bind(this));
+        GSMgr.instance.registerOpCodeCallback(ServerCode.RP_STATE_UPDATE, this.onGameStateUpdate.bind(this));
     },
 
     onInit()
@@ -85,17 +87,31 @@ var GameMgr = cc.Class({
         this.userId = message.userId;
     },
 
+    getMyId()
+    {
+        return this.userId;
+    },
+
+    getMySeat()
+    {
+        return this.MySeat;
+    },
+
+    IsMyId(id)
+    {
+        return this.userId == id;
+    },
+
     onPlayerEnterSeat(message)
     {
         let playerId = message.getString(1);
         let seat = message.getLong(2);
             this.matchData.Seats[seat] = playerId;
             UIManager.instance.playerEnterSeat(this.getPlayer(playerId), seat);
-        
-        if(this.userId == this.getHost()){
-            UIManager.instance.setEnableStartButton(true);
-        } else {
-            UIManager.instance.setEnableStartButton(false);
+
+        if (this.IsMyId(playerId))
+        {
+            this.MySeat = seat;
         }
     },
 
@@ -105,6 +121,11 @@ var GameMgr = cc.Class({
         let seat = message.getLong(2);
             this.matchData.Seats[seat] = null;
             UIManager.instance.playerLeaveSeat(seat);
+        
+        if (this.IsMyId(playerId))
+        {
+            this.MySeat = null;
+        }
     },
 
     onHostChange(message)
@@ -112,5 +133,32 @@ var GameMgr = cc.Class({
         let playerId = message.getString(1);
             this.matchData.Host = playerId;
             UIManager.instance.setHost(playerId);
-    }
+    },
+
+    onGameStateUpdate(message)
+    {
+        this.matchData.State = message.getLong(1);
+        switch (this.matchData.State)
+        {
+            case Define.GameState.WAITING:
+                this.onGameStateWaiting();
+            break;
+
+            case Define.GameState.READY:
+                this.onGameStateReady();
+            break;
+        }
+    },
+
+    onGameStateWaiting()
+    {
+        if (this.IsMyId(this.matchData.Host))
+            UIManager.instance.setEnableStartButton(false);
+    },
+
+    onGameStateReady()
+    {
+        if (this.IsMyId(this.matchData.Host))
+            UIManager.instance.setEnableStartButton(true);
+    },
 });

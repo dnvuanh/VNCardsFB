@@ -9,6 +9,7 @@ var ServerCode = {
     RP_LOAD_MATCH: 1999,
     RP_ENTER_SEAT: 2000,
     RP_LEAVE_SEAT: 2001,
+    RP_STATE_UPDATE: 2002,
     RP_HOST_CHANGE: 2100,
 
     //error handle

@@ -64,6 +64,9 @@ var GSMgr = cc.Class({
             case ".MatchUpdatedMessage":
                 GameMgr.instance.OnMatchUpdate(message);
                 break;
+            case ".AuthenticationResponse":
+                GameMgr.instance.UpdateUserInfo(message);
+                break;
         }
     },
     registrationRequest: function registrationRequest(displayName, username, password, photo, onResponse) {
@@ -204,6 +207,18 @@ var GSMgr = cc.Class({
         data.setLong(1, seat);
 
         this.sendRTData(ServerCode.RQ_ENTER_SEAT, data);
+    },
+    leaveSeat: function leaveSeat(seat) {
+        var data = RTData.get();
+        data.setLong(1, seat);
+
+        this.sendRTData(ServerCode.RQ_LEAVE_SEAT, data);
+    },
+    startGame: function startGame() {
+        var data = RTData.get();
+        data.setLong(1, 1);
+
+        this.sendRTData(ServerCode.RQ_START_GAME, data);
     }
 });
 

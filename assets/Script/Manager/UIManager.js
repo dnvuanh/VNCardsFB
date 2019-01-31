@@ -109,5 +109,5 @@ var UIManager = cc.Class({
 
     setEnableStartButton(enable) {
         this.MenuGame.setEnableStartButton(enable);
-    }
+    },
 });

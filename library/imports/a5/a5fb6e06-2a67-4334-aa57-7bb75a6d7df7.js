@@ -4,6 +4,7 @@ cc._RF.push(module, 'a5fb64GKmdDNKpXe7dabX33', 'GameMgr');
 
 "use strict";
 
+var Define = require("Define");
 var GameMgr = cc.Class({
     extends: cc.Component,
 
@@ -21,6 +22,7 @@ var GameMgr = cc.Class({
         GSMgr.instance.registerOpCodeCallback(ServerCode.RP_LEAVE_SEAT, this.onPlayerLeaveSeat.bind(this));
         GSMgr.instance.registerOpCodeCallback(ServerCode.RP_LOAD_MATCH, this.onMatchLoad.bind(this));
         GSMgr.instance.registerOpCodeCallback(ServerCode.RP_HOST_CHANGE, this.onHostChange.bind(this));
+        GSMgr.instance.registerOpCodeCallback(ServerCode.RP_STATE_UPDATE, this.onGameStateUpdate.bind(this));
     },
     onInit: function onInit() {
         this.startGameScene = true;
@@ -65,22 +67,60 @@ var GameMgr = cc.Class({
     getHost: function getHost() {
         return this.matchData.Host;
     },
+    UpdateUserInfo: function UpdateUserInfo(message) {
+        this.userId = message.userId;
+    },
+    getMyId: function getMyId() {
+        return this.userId;
+    },
+    getMySeat: function getMySeat() {
+        return this.MySeat;
+    },
+    IsMyId: function IsMyId(id) {
+        return this.userId == id;
+    },
     onPlayerEnterSeat: function onPlayerEnterSeat(message) {
         var playerId = message.getString(1);
         var seat = message.getLong(2);
         this.matchData.Seats[seat] = playerId;
         UIManager.instance.playerEnterSeat(this.getPlayer(playerId), seat);
+
+        if (this.IsMyId(playerId)) {
+            this.MySeat = seat;
+        }
     },
     onPlayerLeaveSeat: function onPlayerLeaveSeat(message) {
         var playerId = message.getString(1);
         var seat = message.getLong(2);
         this.matchData.Seats[seat] = null;
         UIManager.instance.playerLeaveSeat(seat);
+
+        if (this.IsMyId(playerId)) {
+            this.MySeat = null;
+        }
     },
     onHostChange: function onHostChange(message) {
         var playerId = message.getString(1);
         this.matchData.Host = playerId;
         UIManager.instance.setHost(playerId);
+    },
+    onGameStateUpdate: function onGameStateUpdate(message) {
+        this.matchData.State = message.getLong(1);
+        switch (this.matchData.State) {
+            case Define.GameState.WAITING:
+                this.onGameStateWaiting();
+                break;
+
+            case Define.GameState.READY:
+                this.onGameStateReady();
+                break;
+        }
+    },
+    onGameStateWaiting: function onGameStateWaiting() {
+        if (this.IsMyId(this.matchData.Host)) UIManager.instance.setEnableStartButton(false);
+    },
+    onGameStateReady: function onGameStateReady() {
+        if (this.IsMyId(this.matchData.Host)) UIManager.instance.setEnableStartButton(true);
     }
 });
 
