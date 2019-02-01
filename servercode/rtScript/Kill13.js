@@ -90,6 +90,19 @@ var SendCurrentMatch = function(player, peerId)
     .send();
 }
 
+var SendCardsToPlayer = function(playerId, peerId) 
+{
+    var cardsString = JSON.stringify(MatchPrivateData.Cards[playerId]);
+    var message = RTSession.newData();
+        message.setString(1, cardsString);
+    
+    RTSession.newPacket()
+    .setOpCode(ServerCode.RP_GET_CARDS)
+    .setTargetPeers(peerId)
+    .setData(message)
+    .send();
+}
+
 var OnSeatsRequest = function(packet)
 {
     var playerId = packet.getSender().getPlayerId();
@@ -208,19 +221,33 @@ var onPlayerDisconnect = function(player)
     LeaveCurrentSeat(playerId);
 }
 
-var ReloadDeck = function()
-{
-    const CARD_NUM = 52;
-    var cardInDeck = CARD_NUM;
-    for(var i = 0; i < CARD_NUM; i++) 
-    {
-        MatchPrivateData.Cards[i] = i;
-    }
-}
-
 var OnStartGame = function(firstId)
 {
-    ReloadDeck();
+    var CARD_NUM = 52;
+    var CARD_PER_PLAYER = 13;
+    var deck = new Array(CARD_NUM);
+    //reload deck
+    for(var i = 0; i < CARD_NUM; i++) {
+        deck[i] = i;
+    }
+    //shuffle
+    for(var i = CARD_NUM; i > 1; i--) {
+        var randomIdx = Math.random() * i | 0;
+        var temp = deck[i - 1];
+        deck[i - 1] = deck[randomIdx];
+        deck[randomIdx] = temp;
+        //deck[i - 1, randomIdx] = deck[randomIdx, i - 1];
+    }
+    
+    //send cards to players
+    var players = RTSession.getPlayers();
+    Log.debug("DealCards:" + deck);
+    for(var i = 0; i < players.length; i++)
+    {
+        var player = players[i];
+        MatchPrivateData.Cards[player.getPlayerId()] = deck.slice(i * CARD_PER_PLAYER, (i + 1) * CARD_PER_PLAYER);
+        SendCardsToPlayer(player.getPlayerId(), player.getPeerId());
+    }
 }
 
 var main = function(){

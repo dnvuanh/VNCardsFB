@@ -11,6 +11,7 @@ var ServerCode = {
     RP_LEAVE_SEAT: 2001,
     RP_STATE_UPDATE: 2002,
     RP_HOST_CHANGE: 2100,
+    RP_GET_CARDS: 2101,
 
     //error handle
     RP_REQUEST_ERROR: 5000,
