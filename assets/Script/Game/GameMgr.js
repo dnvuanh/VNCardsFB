@@ -255,5 +255,20 @@ var GameMgr = cc.Class({
         default:
         }
         return result;
+    },
+
+    validTurn(previous, current)
+    {
+        const HEO = 15;
+        if(previous.setType >= Define.SetType.THREEPAIRS){
+            return current.SetType * 100 + current.topCard > previous.SetType * 100 + previous.topCard;
+        } else if(this.cardValue(previous.topCard) == HEO && current.setType >= Define.SetType.THREEPAIRS) {
+            return true;
+        } else if(current.setType == previous.setType 
+            && current.numOfCard == previous.numOfCard 
+            && current.topCard > previous.topCard)  {
+            return true;
+        }
+        return false;
     }
 });
