@@ -11,6 +11,7 @@ cc.Class({
         ButtonLeave: cc.Node,
         ButtonStart: cc.Node,
         InGameButtons: cc.Node,
+        cardPrefab: cc.Prefab,
     },
 
     start()
@@ -86,5 +87,17 @@ cc.Class({
     onStartGameClick()
     {
         GSMgr.instance.startGame();
+        this.ButtonStart.active = false;
+    },
+
+    onCardsReceived(cards)
+    {
+        const CARD_WIDTH = 168;
+        for(var i = 0; i < cards.length; i++)    {
+            var card = new cc.instantiate(this.cardPrefab).getComponent("Card"); 
+            card.init(cards[i]);
+            card.node.setPosition(-1000 + CARD_WIDTH * i, -300);
+            this.node.addChild(card.node);
+        }
     }
 });

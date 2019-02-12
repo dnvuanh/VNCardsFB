@@ -110,4 +110,8 @@ var UIManager = cc.Class({
     setEnableStartButton(enable) {
         this.MenuGame.setEnableStartButton(enable);
     },
+
+    onCardsReceived(cards) {
+        this.MenuGame.onCardsReceived(cards);
+    }
 });

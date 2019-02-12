@@ -167,6 +167,7 @@ var GameMgr = cc.Class({
     {
         var cards = JSON.parse(message.getString(1));
         cards.sort((a,b) => a - b);
+        UIManager.instance.onCardsReceived(cards);
         cc.log("onCardsReceived: " + cards);
     },
 
