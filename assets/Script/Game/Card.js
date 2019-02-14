@@ -8,15 +8,15 @@ cc.Class({
             default: [],
             type: cc.SpriteFrame
         },
-        number: -1,
+        index: -1,
     },
 
     start () {
 
     },
 
-    init(number) {
-        this.sprite.spriteFrame = this.textures[number - 12];
-        this.number = number;
+    init(index) {
+        this.sprite.spriteFrame = this.textures[index - 12];
+        this.index = index;
     }
 });
