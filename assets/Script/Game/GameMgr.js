@@ -20,6 +20,7 @@ var GameMgr = cc.Class({
         GSMgr.instance.registerOpCodeCallback(ServerCode.RP_LOAD_MATCH, this.onMatchLoad.bind(this));
         GSMgr.instance.registerOpCodeCallback(ServerCode.RP_HOST_CHANGE, this.onHostChange.bind(this));
         GSMgr.instance.registerOpCodeCallback(ServerCode.RP_STATE_UPDATE, this.onGameStateUpdate.bind(this));
+        GSMgr.instance.registerOpCodeCallback(ServerCode.RP_CARD_DELIVER, this.onCardsDelivery.bind(this));
     },
 
     onInit()
@@ -161,4 +162,9 @@ var GameMgr = cc.Class({
         if (this.IsMyId(this.matchData.Host))
             UIManager.instance.setEnableStartButton(true);
     },
+
+    onCardsDelivery(message)
+    {
+        this.MyCards = JSON.parse(message.getString(1));
+    }
 });

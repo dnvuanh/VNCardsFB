@@ -16,6 +16,7 @@ var ServerCode = {
     RP_ENTER_SEAT: 2000,
     RP_LEAVE_SEAT: 2001,
     RP_STATE_UPDATE: 2002,
+    RP_CARD_DELIVER: 2003,
     RP_HOST_CHANGE: 2100,
 
     //error handle
