@@ -17,7 +17,7 @@
         "__id__": 2
       }
     ],
-    "_active": true,
+    "_active": false,
     "_level": 0,
     "_components": [],
     "_prefab": null,
@@ -41,9 +41,9 @@
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 0.1727672035139092,
-      "y": 0.1727672035139092,
-      "z": 0.1727672035139092
+      "x": 0.3190104166666667,
+      "y": 0.3190104166666667,
+      "z": 0.3190104166666667
     },
     "_quat": {
       "__type__": "cc.Quat",
@@ -77,7 +77,7 @@
       }
     ],
     "_active": true,
-    "_level": 0,
+    "_level": 1,
     "_components": [
       {
         "__id__": 189
@@ -5643,14 +5643,14 @@
     "_id": "fchVOpVVhBF6FYLO2b2tmJ"
   },
   {
-    "__type__": "69ede0sgr9OB6MpsV8eLizz",
+    "__type__": "32c3dbwCBhN6ZMgZ/8FI8hg",
     "_name": "",
     "_objFlags": 0,
     "node": {
       "__id__": 148
     },
     "_enabled": true,
-    "_id": "19NNxZTghCwp0RzWEXPuFl"
+    "_id": "a5C0MaLUJF/6LlbKTmEmW3"
   },
   {
     "__type__": "cc.PrefabInfo",
@@ -6421,6 +6421,9 @@
     },
     "InGameButtons": {
       "__id__": 114
+    },
+    "cardPrefab": {
+      "__uuid__": "f6dff055-13a7-4070-bd6e-cf55b0601e14"
     },
     "_id": "f74UfqsZNFE5HyhZk3jl6Q"
   },
