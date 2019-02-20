@@ -23,7 +23,7 @@ var GameMgr = cc.Class({
         GSMgr.instance.registerOpCodeCallback(ServerCode.RP_LOAD_MATCH, this.onMatchLoad.bind(this));
         GSMgr.instance.registerOpCodeCallback(ServerCode.RP_HOST_CHANGE, this.onHostChange.bind(this));
         GSMgr.instance.registerOpCodeCallback(ServerCode.RP_STATE_UPDATE, this.onGameStateUpdate.bind(this));
-        GSMgr.instance.registerOpCodeCallback(ServerCode.RP_CARD_DELIVER, this.onCardsDelivery.bind(this));
+        GSMgr.instance.registerOpCodeCallback(ServerCode.RP_GET_CARDS, this.onCardsReceived.bind(this));
     },
     onInit: function onInit() {
         this.startGameScene = true;
@@ -123,8 +123,12 @@ var GameMgr = cc.Class({
     onGameStateReady: function onGameStateReady() {
         if (this.IsMyId(this.matchData.Host)) UIManager.instance.setEnableStartButton(true);
     },
-    onCardsDelivery: function onCardsDelivery(message) {
-        this.MyCards = JSON.parse(message.getString(1));
+    onCardsReceived: function onCardsReceived(message) {
+        var cards = JSON.parse(message.getString(1));
+        cards.sort(function (a, b) {
+            return a - b;
+        });
+        UIManager.instance.onCardsReceived(cards);
     }
 });
 

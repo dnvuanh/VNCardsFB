@@ -5,8 +5,8 @@ cc._RF.push(module, '89824K5fONC+5oD6NoAkjc8', 'Config');
 "use strict";
 
 var Config = {
-    API_Key: "U376425o7BLE",
-    API_Secret: "jFCL29CmvyREVveMfZZb4VXVY45TiSAx"
+    API_Key: "j356603E53FA",
+    API_Secret: "SCWcCimJ27E9MWBwAXn2kJ9lKes90KiC"
 };
 
 module.exports = Config;

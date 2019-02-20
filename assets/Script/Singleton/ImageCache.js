@@ -7,6 +7,8 @@ var ImageCache = cc.Class({
     Init(callback)
     {
         this.addRes("default", "Texture/default");
+        for (var i=12; i<64; i++)
+            this.addRes("Card_" + i, "Texture/Cards/" + "Card_" + i);
         callback();
     },
 

@@ -1,5 +1,6 @@
 
 var MenuScene = require("MenuScene");
+var ObjectPool = require("ObjectPool");
 
 cc.Class({
     extends: MenuScene,
@@ -11,7 +12,7 @@ cc.Class({
         ButtonLeave: cc.Node,
         ButtonStart: cc.Node,
         InGameButtons: cc.Node,
-        cardPrefab: cc.Prefab,
+        myCardNode: cc.Node,
     },
 
     start()
@@ -94,55 +95,11 @@ cc.Class({
 
     onCardsReceived(cards)
     {
-        const CARD_OFFSET = 130;
-        const CARD_OFFSET2 = 40;
-        const CARD_COUNT = 13;
-        const CARD_BACK = 65;
-        const SCALE = 0.5;
-        const LEFT = -600;
-        const BOTTOM_LEFT = -300;
-        const BOTTOM = -300;
-        const LEFT_TOP = -200;
-        for(var i = 0; i < cards.length; i++)    {
-            var card = new cc.instantiate(this.cardPrefab).getComponent("Card"); 
-            card.init(cards[i]);
-            card.node.setPosition(-1000 + CARD_OFFSET * i, -500);
-            this.node.addChild(card.node, 2);
-        }
-
-        //TODO: should optimize 52 conditions to check card face up
-        var mySeat = GameMgr.instance.getMySeat();
-        for(var i = 0; i < CARD_COUNT; i++)    {
-            if(this.seatOccupied[0]) {
-                var card = new cc.instantiate(this.cardPrefab).getComponent("Card"); 
-                card.init(mySeat == 0 ? cards[i] : CARD_BACK);
-                card.node.setPosition(BOTTOM_LEFT + CARD_OFFSET2 * i, BOTTOM);
-                card.node.setScale(SCALE, SCALE);
-                this.node.addChild(card.node, 0);
-            }
-            if(this.seatOccupied[1]) {
-                var card = new cc.instantiate(this.cardPrefab).getComponent("Card"); 
-                card.init(mySeat == 1 ? cards[i] : CARD_BACK);
-                card.node.setPosition(LEFT, LEFT_TOP + CARD_OFFSET2 * i);
-                card.node.setScale(SCALE, SCALE);
-                card.node.setRotation(270);
-                this.node.addChild(card.node, 0);
-            }
-            if(this.seatOccupied[2]) {
-                var card = new cc.instantiate(this.cardPrefab).getComponent("Card"); 
-                card.init(mySeat == 2 ? cards[i] : CARD_BACK);
-                card.node.setPosition(BOTTOM_LEFT + CARD_OFFSET2 * i, -BOTTOM);
-                card.node.setScale(SCALE, SCALE);
-                this.node.addChild(card.node, 0);
-            }
-            if(this.seatOccupied[3]) {
-                var card = new cc.instantiate(this.cardPrefab).getComponent("Card"); 
-                card.init(mySeat == 3 ? cards[i] : CARD_BACK);
-                card.node.setPosition(-LEFT, LEFT_TOP + CARD_OFFSET2 * i);
-                card.node.setScale(SCALE, SCALE);
-                card.node.setRotation(270);
-                this.node.addChild(card.node, 0);
-            }
+        console.log("on Card Receive " + cards);
+        for (var i=0; i<cards.length; i++)
+        {
+            let card = ObjectPool.instance.getCard(cards[i]);
+                card.setParent(this.myCardNode);
         }
     }
 });
