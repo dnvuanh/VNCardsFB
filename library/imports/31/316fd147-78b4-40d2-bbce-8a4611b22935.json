@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "Seat",
+    "texture": "2a76b120-40ce-4992-936d-16ad9217e69a",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      129,
+      129
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      129,
+      129
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}
