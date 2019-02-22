@@ -5,10 +5,10 @@
       "main": true,
       "url": "app://editor/index.html",
       "windowType": "dockable",
-      "x": -1919,
-      "y": -257,
-      "width": 1920,
-      "height": 1057,
+      "x": -8,
+      "y": -8,
+      "width": 1936,
+      "height": 1056,
       "layout": {
         "children": [
           {
@@ -18,7 +18,7 @@
                 "children": [
                   "hierarchy"
                 ],
-                "height": 460,
+                "height": 442,
                 "type": "panel",
                 "width": 491
               },
@@ -27,12 +27,12 @@
                 "children": [
                   "assets"
                 ],
-                "height": 512.984375,
+                "height": 492.984375,
                 "type": "panel",
                 "width": 491
               }
             ],
-            "height": 975,
+            "height": 937,
             "type": "dock-v",
             "width": 491
           },
@@ -45,7 +45,7 @@
                     "children": [
                       "scene"
                     ],
-                    "height": 512.984375,
+                    "height": 492.984375,
                     "type": "panel",
                     "width": 605
                   },
@@ -54,12 +54,12 @@
                     "children": [
                       "node-library"
                     ],
-                    "height": 512.984375,
+                    "height": 492.984375,
                     "type": "panel",
                     "width": 346
                   }
                 ],
-                "height": 512.984375,
+                "height": 492.984375,
                 "type": "dock-h",
                 "width": 953
               },
@@ -69,12 +69,12 @@
                   "console",
                   "timeline"
                 ],
-                "height": 460,
+                "height": 442,
                 "type": "panel",
                 "width": 953
               }
             ],
-            "height": 975,
+            "height": 937,
             "type": "dock-v",
             "width": 953
           },
@@ -83,7 +83,7 @@
             "children": [
               "inspector"
             ],
-            "height": 975,
+            "height": 937,
             "type": "panel",
             "width": 472
           }
@@ -99,17 +99,6 @@
         "inspector",
         "scene"
       ]
-    },
-    "about": {
-      "main": false,
-      "url": "app://editor/page/app-about.html",
-      "windowType": "dockable",
-      "x": -1159,
-      "y": 181,
-      "width": 400,
-      "height": 200,
-      "layout": null,
-      "panels": []
     }
   },
   "panels": {}

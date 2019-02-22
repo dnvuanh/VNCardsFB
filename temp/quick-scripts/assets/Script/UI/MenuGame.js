@@ -17,7 +17,10 @@ cc.Class({
         ButtonLeave: cc.Node,
         ButtonStart: cc.Node,
         InGameButtons: cc.Node,
-        myCardNode: cc.Node
+        myCardNode: cc.Node,
+        rightPanelNode: cc.Node,
+        showRightButton: cc.Button,
+        showRightLabel: cc.Label
     },
 
     start: function start() {
@@ -79,6 +82,16 @@ cc.Class({
             var card = ObjectPool.instance.getCard(cards[i]);
             card.setParent(this.myCardNode);
         }
+    },
+    onShowRightMenuClick: function onShowRightMenuClick() {
+        var position = this.showRightButton.node.getPosition();
+        if (this.rightPanelNode.active == true) {
+            this.rightPanelNode.active = false;
+            this.showRightLabel.string = "<<";
+            return;
+        }
+        this.rightPanelNode.active = true;
+        this.showRightLabel.string = ">>";
     }
 });
 
