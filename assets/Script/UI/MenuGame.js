@@ -99,11 +99,12 @@ cc.Class({
     onCardsReceived(cards)
     {
         console.log("on Card Receive " + cards);
-        for (var i=0; i<cards.length; i++)
+        for (let i=0; i<cards.length; i++)
         {
             let card = ObjectPool.instance.getCard(cards[i]);
                 card.setParent(this.myCardNode);
         }
+        this.InGameButtons.active = true;
     },
 
     onShowRightMenuClick()
@@ -116,5 +117,22 @@ cc.Class({
         }
         this.rightPanelNode.active = true;
         this.showRightLabel.string = ">>";
+    },
+
+    getSelectedCards()
+    {
+        var SelectedCards = [];
+        let cardList = this.myCardNode.getComponentsInChildren("Card");
+        cardList.forEach(card => {
+            if (card.IsSelected())
+            SelectedCards.push(card.getCard());
+        })
+        return SelectedCards;
+    },
+
+    throwCards()
+    {
+        let cards = this.getSelectedCards();
+        console.log(cards);
     }
 });

@@ -82,6 +82,7 @@ cc.Class({
             var card = ObjectPool.instance.getCard(cards[i]);
             card.setParent(this.myCardNode);
         }
+        this.InGameButtons.active = true;
     },
     onShowRightMenuClick: function onShowRightMenuClick() {
         var position = this.showRightButton.node.getPosition();
@@ -92,6 +93,18 @@ cc.Class({
         }
         this.rightPanelNode.active = true;
         this.showRightLabel.string = ">>";
+    },
+    getSelectedCards: function getSelectedCards() {
+        var SelectedCards = [];
+        var cardList = this.myCardNode.getComponentsInChildren("Card");
+        cardList.forEach(function (card) {
+            if (card.IsSelected()) SelectedCards.push(card.getCard());
+        });
+        return SelectedCards;
+    },
+    throwCards: function throwCards() {
+        var cards = this.getSelectedCards();
+        console.log(cards);
     }
 });
 

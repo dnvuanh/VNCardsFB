@@ -88,6 +88,9 @@ var UIManager = cc.Class({
     },
     onCardsReceived: function onCardsReceived(cards) {
         this.MenuGame.onCardsReceived(cards);
+    },
+    getSelectedCards: function getSelectedCards() {
+        return this.MenuGame.getSelectedCards();
     }
 });
 
