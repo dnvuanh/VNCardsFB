@@ -1,61 +1,60 @@
-2019-02-24T13:21:47.733Z - normal: Load ~/.CocosCreator/settings.json
-2019-02-24T13:21:47.802Z - normal: Initializing Asset Database
-2019-02-24T13:21:47.806Z - normal: checking language setting...
-2019-02-24T13:21:47.806Z - normal: Language: en
-2019-02-24T13:21:48.836Z - success: preview server running at http://localhost:7456
-2019-02-24T13:21:48.868Z - success: protocol editor-framework registered
-2019-02-24T13:21:48.868Z - success: protocol app registered
-2019-02-24T13:21:48.868Z - success: protocol theme registered
-2019-02-24T13:21:48.869Z - success: protocol packages registered
-2019-02-24T13:21:48.869Z - success: protocol uuid registerred
-2019-02-24T13:21:48.869Z - success: protocol db registerred
-2019-02-24T13:21:48.869Z - success: protocol thumbnail registerred
-2019-02-24T13:21:48.869Z - success: protocol unpack registerred
-2019-02-24T13:21:48.869Z - success: protocol disable-commonjs registerred
-2019-02-24T13:21:49.402Z - normal: connected!
-2019-02-24T13:21:49.403Z - normal: Check project /Users/anhdinh/Documents/GitHub/VNCardsFB
-2019-02-24T13:21:49.405Z - normal: Initializing project /Users/anhdinh/Documents/GitHub/VNCardsFB
-2019-02-24T13:21:50.483Z - normal: Initializing Cocos2d
-2019-02-24T13:21:51.458Z - normal: Initializing engine extends
-2019-02-24T13:21:51.461Z - normal: Loading editor/builtin packages from /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin
-2019-02-24T13:21:51.486Z - normal: Loading builtin packages from /Applications/CocosCreator.app/Contents/Resources/builtin
-2019-02-24T13:21:52.301Z - success: assets loaded
-2019-02-24T13:21:52.303Z - success: asset-db-debugger loaded
-2019-02-24T13:21:52.419Z - success: builder loaded
-2019-02-24T13:21:52.419Z - success: color-picker loaded
-2019-02-24T13:21:52.594Z - success: cocos-analytics loaded
-2019-02-24T13:21:52.595Z - success: google-play-instant loaded
-2019-02-24T13:21:52.661Z - success: console loaded
-2019-02-24T13:21:52.661Z - success: jsb-adapter loaded
-2019-02-24T13:21:52.909Z - success: fb-instant-games loaded
-2019-02-24T13:21:52.910Z - success: oppo-runtime loaded
-2019-02-24T13:21:52.941Z - success: google-instant-games loaded
-2019-02-24T13:21:52.942Z - success: package-manager loaded
-2019-02-24T13:21:53.194Z - success: hierarchy loaded
-2019-02-24T13:21:53.196Z - success: qqplay-adapter loaded
-2019-02-24T13:21:53.269Z - success: inspector loaded
-2019-02-24T13:21:53.270Z - success: sdkbox loaded
-2019-02-24T13:21:53.299Z - success: keystore loaded
-2019-02-24T13:21:53.301Z - success: tester loaded
-2019-02-24T13:21:53.340Z - success: node-library loaded
-2019-02-24T13:21:53.341Z - success: ui-grid loaded
-2019-02-24T13:21:53.372Z - success: package-asset loaded
-2019-02-24T13:21:53.372Z - success: ui-kit-preview-extra loaded
-2019-02-24T13:21:53.402Z - success: preferences loaded
-2019-02-24T13:21:53.403Z - success: ui-kit-preview loaded
-2019-02-24T13:21:53.430Z - success: project-exporter loaded
-2019-02-24T13:21:53.431Z - success: ui-kit loaded
-2019-02-24T13:21:53.488Z - success: project-importer loaded
-2019-02-24T13:21:53.489Z - success: ui-tree loaded
-2019-02-24T13:21:53.535Z - success: project-settings loaded
-2019-02-24T13:21:53.537Z - success: vivo-runtime loaded
-2019-02-24T13:21:53.691Z - success: scene loaded
-2019-02-24T13:21:53.692Z - success: weapp-adapter loaded
-2019-02-24T13:21:53.695Z - success: simulator-debugger loaded
-2019-02-24T13:21:53.696Z - success: sprite-editor loaded
-2019-02-24T13:21:53.728Z - success: store loaded
-2019-02-24T13:21:53.761Z - success: timeline loaded
-2019-02-24T13:21:57.729Z - normal: Loading packages
-2019-02-24T13:21:57.734Z - normal: Watching packages
-2019-02-24T13:21:57.822Z - normal: Run Application
-2019-02-24T15:05:31.786Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:16080
+2019-03-03T02:52:53.203Z - normal: Load ~/.CocosCreator/settings.json
+2019-03-03T02:52:53.266Z - normal: Initializing Asset Database
+2019-03-03T02:52:53.271Z - normal: checking language setting...
+2019-03-03T02:52:53.271Z - normal: Language: en
+2019-03-03T02:52:54.293Z - success: preview server running at http://localhost:7456
+2019-03-03T02:52:54.329Z - success: protocol editor-framework registered
+2019-03-03T02:52:54.330Z - success: protocol app registered
+2019-03-03T02:52:54.330Z - success: protocol theme registered
+2019-03-03T02:52:54.330Z - success: protocol packages registered
+2019-03-03T02:52:54.330Z - success: protocol uuid registerred
+2019-03-03T02:52:54.331Z - success: protocol db registerred
+2019-03-03T02:52:54.331Z - success: protocol thumbnail registerred
+2019-03-03T02:52:54.331Z - success: protocol unpack registerred
+2019-03-03T02:52:54.331Z - success: protocol disable-commonjs registerred
+2019-03-03T02:52:54.890Z - normal: connected!
+2019-03-03T02:52:54.892Z - normal: Check project /Users/anhdinh/Documents/GitHub/VNCardsFB
+2019-03-03T02:52:54.894Z - normal: Initializing project /Users/anhdinh/Documents/GitHub/VNCardsFB
+2019-03-03T02:52:55.741Z - normal: Initializing Cocos2d
+2019-03-03T02:52:56.673Z - normal: Initializing engine extends
+2019-03-03T02:52:56.676Z - normal: Loading editor/builtin packages from /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin
+2019-03-03T02:52:56.695Z - normal: Loading builtin packages from /Applications/CocosCreator.app/Contents/Resources/builtin
+2019-03-03T02:52:57.508Z - success: assets loaded
+2019-03-03T02:52:57.509Z - success: asset-db-debugger loaded
+2019-03-03T02:52:57.603Z - success: builder loaded
+2019-03-03T02:52:57.603Z - success: color-picker loaded
+2019-03-03T02:52:57.736Z - success: cocos-analytics loaded
+2019-03-03T02:52:57.737Z - success: google-play-instant loaded
+2019-03-03T02:52:57.759Z - success: console loaded
+2019-03-03T02:52:57.759Z - success: jsb-adapter loaded
+2019-03-03T02:52:57.807Z - success: fb-instant-games loaded
+2019-03-03T02:52:57.807Z - success: oppo-runtime loaded
+2019-03-03T02:52:57.925Z - success: google-instant-games loaded
+2019-03-03T02:52:57.926Z - success: package-manager loaded
+2019-03-03T02:52:58.309Z - success: hierarchy loaded
+2019-03-03T02:52:58.310Z - success: qqplay-adapter loaded
+2019-03-03T02:52:58.360Z - success: inspector loaded
+2019-03-03T02:52:58.361Z - success: sdkbox loaded
+2019-03-03T02:52:58.509Z - success: keystore loaded
+2019-03-03T02:52:58.509Z - success: tester loaded
+2019-03-03T02:52:58.544Z - success: node-library loaded
+2019-03-03T02:52:58.545Z - success: ui-grid loaded
+2019-03-03T02:52:58.587Z - success: package-asset loaded
+2019-03-03T02:52:58.587Z - success: ui-kit-preview-extra loaded
+2019-03-03T02:52:58.608Z - success: preferences loaded
+2019-03-03T02:52:58.609Z - success: ui-kit-preview loaded
+2019-03-03T02:52:58.629Z - success: project-exporter loaded
+2019-03-03T02:52:58.629Z - success: ui-kit loaded
+2019-03-03T02:52:58.665Z - success: project-importer loaded
+2019-03-03T02:52:58.666Z - success: ui-tree loaded
+2019-03-03T02:52:58.687Z - success: project-settings loaded
+2019-03-03T02:52:58.688Z - success: vivo-runtime loaded
+2019-03-03T02:52:58.707Z - success: scene loaded
+2019-03-03T02:52:58.708Z - success: weapp-adapter loaded
+2019-03-03T02:52:58.709Z - success: simulator-debugger loaded
+2019-03-03T02:52:58.711Z - success: sprite-editor loaded
+2019-03-03T02:52:58.730Z - success: store loaded
+2019-03-03T02:52:58.750Z - success: timeline loaded
+2019-03-03T02:52:59.000Z - normal: Loading packages
+2019-03-03T02:52:59.032Z - normal: Watching packages
+2019-03-03T02:52:59.119Z - normal: Run Application

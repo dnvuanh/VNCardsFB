@@ -9,10 +9,12 @@ cc.Class({
         onlineList: require("OnlineList"),
         chatBox: require("ChatBox"),
         SeatMgr: require("SeatMgr"),
+        DealCards: require("DealCards"),
         ButtonLeave: cc.Node,
         ButtonStart: cc.Node,
         InGameButtons: cc.Node,
         myCardNode: cc.Node,
+        friendCardNode: cc.Node,
         rightPanelNode: cc.Node,
         showRightButton: cc.Button,
         showRightLabel: cc.Label,
@@ -94,16 +96,21 @@ cc.Class({
     {
         GSMgr.instance.startGame();
         this.ButtonStart.active = false;
+        this.friendCardNode.children.forEach(it => it.active = false);
     },
 
     onCardsReceived(cards)
     {
-        console.log("on Card Receive " + cards);
-        for (let i=0; i<cards.length; i++)
-        {
-            let card = ObjectPool.instance.getCard(cards[i]);
+        let cardCount = 0;
+        this.DealCards.startAnim(()=>{
+            let card = ObjectPool.instance.getCard(cards[cardCount]);
                 card.setParent(this.myCardNode);
-        }
+            if (cardCount == 0)
+            {
+                this.friendCardNode.children.forEach(it => it.active = true);
+            }
+            cardCount += 1;
+        });
         this.InGameButtons.active = true;
     },
 
@@ -123,10 +130,10 @@ cc.Class({
     {
         var SelectedCards = [];
         let cardList = this.myCardNode.getComponentsInChildren("Card");
-        cardList.forEach(card => {
-            if (card.IsSelected())
-            SelectedCards.push(card.getCard());
-        })
+            cardList.forEach(card => {
+                if (card.IsSelected())
+                SelectedCards.push(card.getCard());
+            })
         return SelectedCards;
     },
 

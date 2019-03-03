@@ -235,7 +235,7 @@
     "relativePath": "Animation/Spinner.anim"
   },
   "1a37efdb-4046-4509-941c-e36a8ffd4593": {
-    "asset": 1550244367000,
+    "asset": 1551511046000,
     "meta": 1531630615000,
     "relativePath": "Script/Manager"
   },
@@ -510,7 +510,7 @@
     "relativePath": "Script/Game"
   },
   "7e2a9d9e-92ee-4789-b86a-c290c9f68915": {
-    "asset": 1551013373000,
+    "asset": 1551545185000,
     "meta": 1548476719000,
     "relativePath": "Script/UI"
   },
@@ -534,11 +534,6 @@
     "meta": 1548513678000,
     "relativePath": "resources"
   },
-  "5ed8f583-1c31-48cb-a0b8-e491a8bcb5b9": {
-    "asset": 1548578278000,
-    "meta": 1551014517000,
-    "relativePath": "Script/Util/FBInstantHelper.js"
-  },
   "74de12e4-e266-4f55-9410-4f47314320b4": {
     "asset": 1548691688000,
     "meta": 1551014517000,
@@ -550,13 +545,13 @@
     "relativePath": "Script/UI/SeatDisplay.js"
   },
   "9ffd88a0-3d4f-4db6-a9cd-d7b5af9553ae": {
-    "asset": 1551022632000,
-    "meta": 1551022632000,
+    "asset": 1551606075000,
+    "meta": 1551606075000,
     "relativePath": "Scene/Game.fire"
   },
   "49ee16f5-074d-4a52-b51d-b95f36ac0fc3": {
-    "asset": 1551022640000,
-    "meta": 1551022640000,
+    "asset": 1551606081000,
+    "meta": 1551606081000,
     "relativePath": "Scene/Boot.fire"
   },
   "80631c3e-459e-47fb-b7fd-b58f84d40094": {
@@ -595,8 +590,8 @@
     "relativePath": "Script/GameSparks/gamesparks.js"
   },
   "b4a54cdb-1228-4d16-97a8-3170c6226a88": {
-    "asset": 1551013373000,
-    "meta": 1551014514000,
+    "asset": 1551606180000,
+    "meta": 1551606180000,
     "relativePath": "Prefabs/MenuGame.prefab"
   },
   "9a8185fb-b2cd-4a99-a5df-60ed78414345": {
@@ -924,14 +919,34 @@
     "meta": 1551022358000,
     "relativePath": "Script/Manager/UIManager.js"
   },
-  "3da6cd8a-1675-4245-8838-df9f57253145": {
-    "asset": 1551022871000,
-    "meta": 1551022874000,
-    "relativePath": "Script/UI/MenuGame.js"
-  },
   "257e3bdf-5bc2-40e3-87c5-2a50e6b0e7ba": {
     "asset": 1551023041000,
     "meta": 1551023042000,
     "relativePath": "Script/Card.js"
+  },
+  "2ebccf85-b38c-4839-bb97-5eee65802770": {
+    "asset": 1551197734000,
+    "meta": 1551511046000,
+    "relativePath": "Script/Manager/Untitled-1"
+  },
+  "5ed8f583-1c31-48cb-a0b8-e491a8bcb5b9": {
+    "asset": 1551528173000,
+    "meta": 1551528174000,
+    "relativePath": "Script/Util/FBInstantHelper.js"
+  },
+  "186bb319-0224-4569-9d18-31394b988188": {
+    "asset": 1551582724000,
+    "meta": 1551583265000,
+    "relativePath": "Script/UI/FlyingCard.js"
+  },
+  "c4fdc573-2da4-4dda-bf4c-48c469e45f6f": {
+    "asset": 1551603965000,
+    "meta": 1551605278000,
+    "relativePath": "Script/UI/DealCards.js"
+  },
+  "3da6cd8a-1675-4245-8838-df9f57253145": {
+    "asset": 1551605953000,
+    "meta": 1551605957000,
+    "relativePath": "Script/UI/MenuGame.js"
   }
 }

@@ -14,10 +14,12 @@ cc.Class({
         onlineList: require("OnlineList"),
         chatBox: require("ChatBox"),
         SeatMgr: require("SeatMgr"),
+        DealCards: require("DealCards"),
         ButtonLeave: cc.Node,
         ButtonStart: cc.Node,
         InGameButtons: cc.Node,
         myCardNode: cc.Node,
+        friendCardNode: cc.Node,
         rightPanelNode: cc.Node,
         showRightButton: cc.Button,
         showRightLabel: cc.Label
@@ -75,13 +77,24 @@ cc.Class({
     onStartGameClick: function onStartGameClick() {
         GSMgr.instance.startGame();
         this.ButtonStart.active = false;
+        this.friendCardNode.children.forEach(function (it) {
+            return it.active = false;
+        });
     },
     onCardsReceived: function onCardsReceived(cards) {
-        console.log("on Card Receive " + cards);
-        for (var i = 0; i < cards.length; i++) {
-            var card = ObjectPool.instance.getCard(cards[i]);
-            card.setParent(this.myCardNode);
-        }
+        var _this = this;
+
+        var cardCount = 0;
+        this.DealCards.startAnim(function () {
+            var card = ObjectPool.instance.getCard(cards[cardCount]);
+            card.setParent(_this.myCardNode);
+            if (cardCount == 0) {
+                _this.friendCardNode.children.forEach(function (it) {
+                    return it.active = true;
+                });
+            }
+            cardCount += 1;
+        });
         this.InGameButtons.active = true;
     },
     onShowRightMenuClick: function onShowRightMenuClick() {
