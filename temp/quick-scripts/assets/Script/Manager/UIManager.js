@@ -91,6 +91,9 @@ var UIManager = cc.Class({
     },
     getSelectedCards: function getSelectedCards() {
         return this.MenuGame.getSelectedCards();
+    },
+    onTurnChange: function onTurnChange(playerId, startTime, timeout) {
+        this.MenuGame.onTurnChange(playerId, startTime, timeout);
     }
 });
 

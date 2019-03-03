@@ -13,6 +13,7 @@ var ServerCode = {
     RP_CARD_DELIVER: 2003,
     RP_HOST_CHANGE: 2100,
     RP_GET_CARDS: 2101,
+    RP_TURN_CHANGE: 2102,
 
     //error handle
     RP_REQUEST_ERROR: 5000,

@@ -116,8 +116,8 @@ cc.Class({
 
     onShowRightMenuClick()
     {
-        var position =  this.showRightButton.node.getPosition();
-        if(this.rightPanelNode.active == true) {
+        var position = this.showRightButton.node.getPosition();
+        if (this.rightPanelNode.active == true) {
             this.rightPanelNode.active = false;
             this.showRightLabel.string = "<<";
             return;
@@ -141,5 +141,10 @@ cc.Class({
     {
         let cards = this.getSelectedCards();
         console.log(cards);
+    },
+
+    onTurnChange(playerId, startTime, timeout)
+    {
+        this.SeatMgr.onTurnChange(playerId, startTime, timeout);
     }
 });

@@ -118,6 +118,9 @@ cc.Class({
     throwCards: function throwCards() {
         var cards = this.getSelectedCards();
         console.log(cards);
+    },
+    onTurnChange: function onTurnChange(playerId, startTime, timeout) {
+        this.SeatMgr.onTurnChange(playerId, startTime, timeout);
     }
 });
 

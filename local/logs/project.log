@@ -58,3 +58,14 @@
 2019-03-03T02:52:59.000Z - normal: Loading packages
 2019-03-03T02:52:59.032Z - normal: Watching packages
 2019-03-03T02:52:59.119Z - normal: Run Application
+2019-03-03T10:51:49.421Z - warn: ProgressBar non-FILLED mode only works when barSprite's Type is non-FILLED!
+2019-03-03T11:10:50.715Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:95572
+2019-03-03T11:10:50.719Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:95574
+2019-03-03T11:10:50.721Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:95575
+2019-03-03T11:10:50.722Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:95576
+2019-03-03T11:10:50.723Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:95577
+2019-03-03T11:10:50.723Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:95578
+2019-03-03T11:10:50.724Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:95579
+2019-03-03T11:17:41.276Z - warn: object already destroyed
+2019-03-03T11:17:41.278Z - warn: object already destroyed
+2019-03-03T12:41:10.304Z - info: shutdown preview server

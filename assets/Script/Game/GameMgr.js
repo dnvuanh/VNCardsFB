@@ -21,6 +21,7 @@ var GameMgr = cc.Class({
         GSMgr.instance.registerOpCodeCallback(ServerCode.RP_HOST_CHANGE, this.onHostChange.bind(this));
         GSMgr.instance.registerOpCodeCallback(ServerCode.RP_STATE_UPDATE, this.onGameStateUpdate.bind(this));
         GSMgr.instance.registerOpCodeCallback(ServerCode.RP_GET_CARDS, this.onCardsReceived.bind(this));
+        GSMgr.instance.registerOpCodeCallback(ServerCode.RP_TURN_CHANGE, this.onTurnChange.bind(this));
     },
 
     onInit()
@@ -165,8 +166,18 @@ var GameMgr = cc.Class({
 
     onCardsReceived(message)
     {
-        var cards = JSON.parse(message.getString(1));
+        let cards = JSON.parse(message.getString(1));
         cards.sort((a,b) => a - b);
         UIManager.instance.onCardsReceived(cards);
     },
+
+    onTurnChange(message)
+    {
+        let playerId = message.getString(1);
+        let startTime = message.getLong(2);
+        let timeout = message.getLong(3);
+        this.matchData.TurnKeeper = playerId;
+        this.matchData.TimeBeginTurn = startTime;
+        UIManager.instance.onTurnChange(playerId, startTime, timeout);
+    }
 });

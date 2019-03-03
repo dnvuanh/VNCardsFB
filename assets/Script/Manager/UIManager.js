@@ -118,5 +118,10 @@ var UIManager = cc.Class({
     getSelectedCards()
     {
         return this.MenuGame.getSelectedCards();
+    },
+
+    onTurnChange(playerId, startTime, timeout)
+    {
+        this.MenuGame.onTurnChange(playerId, startTime, timeout);
     }
 });
