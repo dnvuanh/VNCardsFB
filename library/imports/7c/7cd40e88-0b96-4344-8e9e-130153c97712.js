@@ -219,6 +219,13 @@ var GSMgr = cc.Class({
         data.setLong(1, 1);
 
         this.sendRTData(ServerCode.RQ_START_GAME, data);
+    },
+    throwCards: function throwCards(cards) {
+        cc.log("throwCards" + cards);
+        var cardString = JSON.stringify(cards);
+        var data = RTData.get();
+        data.setString(1, cardString);
+        this.sendRTData(ServerCode.RQ_THROW_CARDS, data);
     }
 });
 

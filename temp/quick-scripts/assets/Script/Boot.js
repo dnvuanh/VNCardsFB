@@ -2,7 +2,7 @@
 cc._RF.push(module, '80631w+RZ5H+7f9tY+E1ACU', 'Boot', __filename);
 // Script/Boot.js
 
-"use strict";
+'use strict';
 
 cc.Class({
     extends: cc.Component,
@@ -18,14 +18,19 @@ cc.Class({
     // onLoad () {},
 
     start: function start() {
+        this.userId = '';
         if (FBInstantHelper.isReady()) {
             this.login.node.active = false;
             this.username.node.active = false;
             this.startLoading();
         }
     },
-    loginButtonPressed: function loginButtonPressed() {
+    loginButtonClick: function loginButtonClick() {
         this.startLoading();
+    },
+    quickLoginButtonClick: function quickLoginButtonClick(sender, id) {
+        this.startLoading();
+        this.userId = id;
     },
     startLoading: function startLoading() {
         this.loadResource();
@@ -38,7 +43,13 @@ cc.Class({
         this.loadingBar.progress = 0.6;
     },
     LoginServer: function LoginServer() {
-        this.userId = this.username.string; //FBInstantHelper.getPlayerID();
+        if (FBInstantHelper.isReady()) {
+            this.userId = FBInstantHelper.getPlayerID();
+        } else {
+            if (this.userId == '') {
+                this.userId = this.username.string;
+            }
+        }
         GSMgr.instance.authenticationRequest(this.userId, this.userId, this.OnTryLogin.bind(this));
     },
     OnTryLogin: function OnTryLogin(response) {

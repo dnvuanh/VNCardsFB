@@ -5,3 +5,4 @@ window.GameMgr = new require("GameMgr");
 window.UIManager = new require("UIManager");
 window.ServerCode = require("ServerCode");
 window.ImageCache = require("ImageCache");
+window.GameHelper = require("GameHelper");

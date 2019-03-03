@@ -107,11 +107,18 @@ var UIManager = cc.Class({
         this.MenuGame.setHost(playerId);
     },
 
-    setEnableStartButton(enable) {
-        this.MenuGame.setEnableStartButton(enable);
+    enableStartButton(enable) 
+    {
+        this.MenuGame.enableStartButton(enable);
     },
 
-    onCardsReceived(cards) {
+    onCardsReceived(cards) 
+    {
         this.MenuGame.onCardsReceived(cards);
+    },
+
+    enableThrowButton(enable)
+    {
+        this.MenuGame.enableThrowButton(enable);
     }
 });

@@ -16,6 +16,7 @@ cc.Class({
         rightPanelNode: cc.Node,
         showRightButton: cc.Button,
         showRightLabel: cc.Label,
+        throwButton: cc.Button,
     },
 
     start()
@@ -64,7 +65,7 @@ cc.Class({
         if (GameMgr.instance.getMySeat() == seat)
         {
             this.ButtonLeave.active = false;
-            this.setEnableStartButton(false);
+            this.enableStartButton(false);
         }
         this.SeatMgr.onPlayerLeave(seat);
     },
@@ -74,7 +75,7 @@ cc.Class({
         this.SeatMgr.setHost(playerId);
     },
 
-    setEnableStartButton(enable) {
+    enableStartButton(enable) {
         this.ButtonStart.active = enable;
     },
 
@@ -104,6 +105,7 @@ cc.Class({
             let card = ObjectPool.instance.getCard(cards[i]);
                 card.setParent(this.myCardNode);
         }
+        this.InGameButtons.active = true;
     },
 
     onShowRightMenuClick()
@@ -116,5 +118,15 @@ cc.Class({
         }
         this.rightPanelNode.active = true;
         this.showRightLabel.string = ">>";
+    },
+
+    enableThrowButton(enable)
+    {
+        this.throwButton.node.active = enable;
+    },
+
+    throwButtonClick()
+    {
+        GSMgr.instance.throwCards(GameMgr.instance.getSetCards());
     }
 });

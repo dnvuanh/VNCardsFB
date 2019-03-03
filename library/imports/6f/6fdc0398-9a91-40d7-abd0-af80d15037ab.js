@@ -83,11 +83,14 @@ var UIManager = cc.Class({
     setHost: function setHost(playerId) {
         this.MenuGame.setHost(playerId);
     },
-    setEnableStartButton: function setEnableStartButton(enable) {
-        this.MenuGame.setEnableStartButton(enable);
+    enableStartButton: function enableStartButton(enable) {
+        this.MenuGame.enableStartButton(enable);
     },
     onCardsReceived: function onCardsReceived(cards) {
         this.MenuGame.onCardsReceived(cards);
+    },
+    enableThrowButton: function enableThrowButton(enable) {
+        this.MenuGame.enableThrowButton(enable);
     }
 });
 

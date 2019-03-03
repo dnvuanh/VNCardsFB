@@ -20,7 +20,8 @@ cc.Class({
         myCardNode: cc.Node,
         rightPanelNode: cc.Node,
         showRightButton: cc.Button,
-        showRightLabel: cc.Label
+        showRightLabel: cc.Label,
+        throwButton: cc.Button
     },
 
     start: function start() {
@@ -54,14 +55,14 @@ cc.Class({
     playerLeaveSeat: function playerLeaveSeat(seat) {
         if (GameMgr.instance.getMySeat() == seat) {
             this.ButtonLeave.active = false;
-            this.setEnableStartButton(false);
+            this.enableStartButton(false);
         }
         this.SeatMgr.onPlayerLeave(seat);
     },
     setHost: function setHost(playerId) {
         this.SeatMgr.setHost(playerId);
     },
-    setEnableStartButton: function setEnableStartButton(enable) {
+    enableStartButton: function enableStartButton(enable) {
         this.ButtonStart.active = enable;
     },
     chatBoxClick: function chatBoxClick() {
@@ -82,6 +83,7 @@ cc.Class({
             var card = ObjectPool.instance.getCard(cards[i]);
             card.setParent(this.myCardNode);
         }
+        this.InGameButtons.active = true;
     },
     onShowRightMenuClick: function onShowRightMenuClick() {
         var position = this.showRightButton.node.getPosition();
@@ -92,6 +94,12 @@ cc.Class({
         }
         this.rightPanelNode.active = true;
         this.showRightLabel.string = ">>";
+    },
+    enableThrowButton: function enableThrowButton(enable) {
+        this.throwButton.node.active = enable;
+    },
+    throwButtonClick: function throwButtonClick() {
+        GSMgr.instance.throwCards(GameMgr.instance.getSetCards());
     }
 });
 

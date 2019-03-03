@@ -21,6 +21,8 @@ var GameMgr = cc.Class({
         GSMgr.instance.registerOpCodeCallback(ServerCode.RP_HOST_CHANGE, this.onHostChange.bind(this));
         GSMgr.instance.registerOpCodeCallback(ServerCode.RP_STATE_UPDATE, this.onGameStateUpdate.bind(this));
         GSMgr.instance.registerOpCodeCallback(ServerCode.RP_GET_CARDS, this.onCardsReceived.bind(this));
+        GSMgr.instance.registerOpCodeCallback(ServerCode.RP_TURN_CHANGE, this.onTurnChange.bind(this));
+        GSMgr.instance.registerOpCodeCallback(ServerCode.RP_THROW_SUCCESS, this.onThrowSuccess.bind(this));
     },
 
     onInit()
@@ -138,6 +140,7 @@ var GameMgr = cc.Class({
 
     onGameStateUpdate(message)
     {
+        cc.log("onGameStateUpdate");
         this.matchData.State = message.getLong(1);
         switch (this.matchData.State)
         {
@@ -154,19 +157,64 @@ var GameMgr = cc.Class({
     onGameStateWaiting()
     {
         if (this.IsMyId(this.matchData.Host))
-            UIManager.instance.setEnableStartButton(false);
+            UIManager.instance.enableStartButton(false);
     },
 
     onGameStateReady()
     {
         if (this.IsMyId(this.matchData.Host))
-            UIManager.instance.setEnableStartButton(true);
+            UIManager.instance.enableStartButton(true);
     },
 
     onCardsReceived(message)
     {
+        cc.log("onCardsReceived:" + message);
         var cards = JSON.parse(message.getString(1));
         cards.sort((a,b) => a - b);
         UIManager.instance.onCardsReceived(cards);
+        this.setCards = [];
+        this.preSet = null;
     },
+
+    pushCard(cardValue)
+    {
+        this.setCards.push(cardValue);
+        this.checkSetValid();
+    },
+
+    popCard(cardValue)
+    {
+        this.setCards.splice(this.setCards.indexOf(cardValue), 1);
+        this.checkSetValid();
+    },
+
+    checkSetValid()
+    {
+        var set = GameHelper.parseCards(this.setCards);
+        if(set.setType != Define.SetType.ERROR && GameHelper.validTurn(this.preSet, set)) {
+            UIManager.instance.enableThrowButton(true);
+        }
+        else {
+            UIManager.instance.enableThrowButton(false);
+        }
+    },
+
+    getSetCards()
+    {
+        return this.setCards;
+    },
+
+    onTurnChange(message)
+    {
+        var playerId = message.getString(1);
+        var timeBeginTurn = message.getNumber(2);
+        var turnTimeout = message.getNumber(3);
+    },
+
+    onThrowSuccess(message)
+    {
+        var playerId = message.getString(1);
+        var cards = JSON.parse(message.getString(2));
+        cc.log("THROW SUCCESS!" + cards);
+    }
 });

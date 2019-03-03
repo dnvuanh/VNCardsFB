@@ -4,7 +4,8 @@ cc._RF.push(module, 'c8f00BKqNNGzLGxlZAjVkvn', 'GameHelper');
 
 "use strict";
 
-cc.Class({
+var Define = require("Define");
+var GameHelper = cc.Class({
     cardValue: function cardValue(card) {
         return card / 4 | 0;
     },
@@ -80,6 +81,9 @@ cc.Class({
     },
     validTurn: function validTurn(previous, current) {
         var HEO = 15;
+        if (previous === null) {
+            return true;
+        }
         if (previous.setType >= Define.SetType.THREEPAIRS) {
             return current.SetType * 100 + current.topCard > previous.SetType * 100 + previous.topCard;
         } else if (this.cardValue(previous.topCard) == HEO && current.setType >= Define.SetType.THREEPAIRS) {
@@ -90,5 +94,7 @@ cc.Class({
         return false;
     }
 });
+
+module.exports = new GameHelper();
 
 cc._RF.pop();

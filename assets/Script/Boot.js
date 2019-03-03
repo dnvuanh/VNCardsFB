@@ -12,6 +12,7 @@ cc.Class({
     // onLoad () {},
 
     start () {
+        this.userId = '';
         if(FBInstantHelper.isReady()) {
             this.login.node.active = false;
             this.username.node.active = false;
@@ -19,8 +20,13 @@ cc.Class({
         }
     },
 
-    loginButtonPressed() {
+    loginButtonClick() {
         this.startLoading();
+    },
+
+    quickLoginButtonClick(sender, id) {
+        this.startLoading();
+        this.userId = id;
     },
 
     startLoading()
@@ -41,7 +47,13 @@ cc.Class({
 
     LoginServer()
     {      
-        this.userId = this.username.string; //FBInstantHelper.getPlayerID();
+        if(FBInstantHelper.isReady()) {
+            this.userId = FBInstantHelper.getPlayerID();
+        } else {
+            if(this.userId == '') {
+                this.userId = this.username.string;
+            }
+        }
         GSMgr.instance.authenticationRequest(this.userId, this.userId, this.OnTryLogin.bind(this));
     },
 
