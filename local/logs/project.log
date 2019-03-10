@@ -77,3 +77,5 @@
     at Parser.pp$1.parseTopLevel (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:1778:8)
     at Parser.parse (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:1673:17)
     at parse (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:7305:37)
+2019-03-05T01:32:15.970Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:102701
+2019-03-05T03:12:45.417Z - info: shutdown preview server
