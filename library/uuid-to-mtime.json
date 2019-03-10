@@ -530,7 +530,7 @@
     "relativePath": "Script\\UI\\OnlinePlayer.js"
   },
   "bd0403a4-1210-44a3-9dd6-f209eef5f2b6": {
-    "asset": 1552193177711,
+    "asset": 1552225789307,
     "meta": 1548729709597,
     "relativePath": "resources"
   },
@@ -924,11 +924,6 @@
     "meta": 1552212396364,
     "relativePath": "Script\\Card.js"
   },
-  "a5fb6e06-2a67-4334-aa57-7bb75a6d7df7": {
-    "asset": 1552211426367,
-    "meta": 1552212396397,
-    "relativePath": "Script\\Game\\GameMgr.js"
-  },
   "6fdc0398-9a91-40d7-abd0-af80d15037ab": {
     "asset": 1552211453013,
     "meta": 1552212396451,
@@ -939,9 +934,14 @@
     "meta": 1552212396495,
     "relativePath": "Script\\Util\\GameHelper.js"
   },
+  "a5fb6e06-2a67-4334-aa57-7bb75a6d7df7": {
+    "asset": 1552226053742,
+    "meta": 1552226057973,
+    "relativePath": "Script\\Game\\GameMgr.js"
+  },
   "3da6cd8a-1675-4245-8838-df9f57253145": {
-    "asset": 1552214335333,
-    "meta": 1552214346464,
+    "asset": 1552230119271,
+    "meta": 1552230120506,
     "relativePath": "Script\\UI\\MenuGame.js"
   }
 }

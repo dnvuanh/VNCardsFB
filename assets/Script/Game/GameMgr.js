@@ -140,7 +140,6 @@ var GameMgr = cc.Class({
 
     onGameStateUpdate(message)
     {
-        cc.log("onGameStateUpdate");
         this.matchData.State = message.getLong(1);
         switch (this.matchData.State)
         {
@@ -188,6 +187,5 @@ var GameMgr = cc.Class({
         var playerId = message.getString(1);
         var cards = JSON.parse(message.getString(2));
         UIManager.instance.onThrowSuccess(playerId, cards);
-        cc.log("THROW SUCCESS!" + cards);
     }
 });

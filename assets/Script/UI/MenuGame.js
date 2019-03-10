@@ -170,14 +170,25 @@ cc.Class({
     onThrowSuccess(playerId, cards)
     {
         this.previousCards = GameHelper.parseCards(cards);
-        this.removeCardsFromHand(cards);
+        this.removeCardsFromHand(playerId, cards);
     },
 
-    removeCardsFromHand(cards)
+    removeCardsFromHand(playerId, cards)
     {
-        cards.forEach(it => {
-            let card = ObjectPool.instance.getCard(it);
-            card.setParent(this.playZoneNode);
-        });
+        let idx = 0;
+        const OFFSET = 50;
+        if(GameMgr.instance.IsMyId(playerId)) {
+            cards.forEach(it => {
+                let card = this.myCardNode.getChildByName("Card_" + it);
+                card.setParent(this.playZoneNode);
+                card.x = idx++ * OFFSET;
+            });
+        } else {
+            cards.forEach(it => {
+                let card = ObjectPool.instance.getCard(it);
+                card.setParent(this.playZoneNode);
+                card.x = idx++ * OFFSET;
+            });
+        }
     }
 });

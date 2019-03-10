@@ -140,15 +140,26 @@ cc.Class({
     },
     onThrowSuccess: function onThrowSuccess(playerId, cards) {
         this.previousCards = GameHelper.parseCards(cards);
-        this.removeCardsFromHand(cards);
+        this.removeCardsFromHand(playerId, cards);
     },
-    removeCardsFromHand: function removeCardsFromHand(cards) {
+    removeCardsFromHand: function removeCardsFromHand(playerId, cards) {
         var _this2 = this;
 
-        cards.forEach(function (it) {
-            var card = ObjectPool.instance.getCard(it);
-            card.setParent(_this2.playZoneNode);
-        });
+        var idx = 0;
+        var OFFSET = 50;
+        if (GameMgr.instance.IsMyId(playerId)) {
+            cards.forEach(function (it) {
+                var card = _this2.myCardNode.getChildByName("Card_" + it);
+                card.setParent(_this2.playZoneNode);
+                card.x = idx++ * OFFSET;
+            });
+        } else {
+            cards.forEach(function (it) {
+                var card = ObjectPool.instance.getCard(it);
+                card.setParent(_this2.playZoneNode);
+                card.x = idx++ * OFFSET;
+            });
+        }
     }
 });
 
