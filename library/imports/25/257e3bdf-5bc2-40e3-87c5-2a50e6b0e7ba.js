@@ -8,7 +8,8 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        display: cc.Sprite
+        display: cc.Sprite,
+        selectedPosition: 0
     },
 
     setCard: function setCard(value) {
@@ -20,17 +21,24 @@ cc.Class({
     getCard: function getCard() {
         return this.cardValue;
     },
+    onSelect: function onSelect() {
+        this.isSelected = true;
+        this.node.y = this.selectedPosition;
+    },
+    onDeselect: function onDeselect() {
+        this.isSelected = false;
+        this.node.y = 0;
+    },
     onClick: function onClick() {
-        var position = this.node.getPosition();
-        if (!this.up) {
-            this.node.setPosition(position.x, position.y + 50);
-            this.up = true;
-            GameMgr.instance.pushCard(this.getCard());
+        if (this.isSelected) {
+            this.onDeselect();
         } else {
-            this.node.setPosition(position.x, position.y - 50);
-            this.up = false;
-            GameMgr.instance.popCard(this.getCard());
+            this.onSelect();
         }
+        UIManager.instance.checkThrowable();
+    },
+    IsSelected: function IsSelected() {
+        return this.isSelected;
     }
 });
 

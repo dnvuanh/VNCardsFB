@@ -117,8 +117,23 @@ var UIManager = cc.Class({
         this.MenuGame.onCardsReceived(cards);
     },
 
-    enableThrowButton(enable)
+    getSelectedCards()
     {
-        this.MenuGame.enableThrowButton(enable);
+        return this.MenuGame.getSelectedCards();
+    },
+
+    onTurnChange(playerId, startTime, timeout)
+    {
+        this.MenuGame.onTurnChange(playerId, startTime, timeout);
+    },
+
+    checkThrowable(enable)
+    {
+        this.MenuGame.checkThrowable(enable);
+    },
+
+    onThrowSuccess(playerId, cards)
+    {
+        this.MenuGame.onThrowSuccess(playerId, cards);
     }
 });

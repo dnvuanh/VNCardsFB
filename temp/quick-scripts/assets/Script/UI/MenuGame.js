@@ -14,14 +14,17 @@ cc.Class({
         onlineList: require("OnlineList"),
         chatBox: require("ChatBox"),
         SeatMgr: require("SeatMgr"),
+        DealCards: require("DealCards"),
         ButtonLeave: cc.Node,
         ButtonStart: cc.Node,
         InGameButtons: cc.Node,
         myCardNode: cc.Node,
+        friendCardNode: cc.Node,
         rightPanelNode: cc.Node,
         showRightButton: cc.Button,
         showRightLabel: cc.Label,
-        throwButton: cc.Button
+        throwButton: cc.Button,
+        playZoneNode: cc.Node
     },
 
     start: function start() {
@@ -76,14 +79,26 @@ cc.Class({
     onStartGameClick: function onStartGameClick() {
         GSMgr.instance.startGame();
         this.ButtonStart.active = false;
+        this.friendCardNode.children.forEach(function (it) {
+            return it.active = false;
+        });
     },
     onCardsReceived: function onCardsReceived(cards) {
-        console.log("on Card Receive " + cards);
-        for (var i = 0; i < cards.length; i++) {
-            var card = ObjectPool.instance.getCard(cards[i]);
-            card.setParent(this.myCardNode);
-        }
+        var _this = this;
+
+        var cardCount = 0;
+        this.DealCards.startAnim(function () {
+            var card = ObjectPool.instance.getCard(cards[cardCount]);
+            card.setParent(_this.myCardNode);
+            if (cardCount == 0) {
+                _this.friendCardNode.children.forEach(function (it) {
+                    return it.active = true;
+                });
+            }
+            cardCount += 1;
+        });
         this.InGameButtons.active = true;
+        this.previousCards = null;
     },
     onShowRightMenuClick: function onShowRightMenuClick() {
         var position = this.showRightButton.node.getPosition();
@@ -95,11 +110,45 @@ cc.Class({
         this.rightPanelNode.active = true;
         this.showRightLabel.string = ">>";
     },
-    enableThrowButton: function enableThrowButton(enable) {
-        this.throwButton.node.active = enable;
+    getSelectedCards: function getSelectedCards() {
+        var SelectedCards = [];
+        var cardList = this.myCardNode.getComponentsInChildren("Card");
+        cardList.forEach(function (card) {
+            if (card.IsSelected()) SelectedCards.push(card.getCard());
+        });
+        return SelectedCards;
     },
-    throwButtonClick: function throwButtonClick() {
-        GSMgr.instance.throwCards(GameMgr.instance.getSetCards());
+    throwCards: function throwCards() {
+        var cards = this.getSelectedCards();
+        GSMgr.instance.throwCards(cards);
+        console.log(cards);
+    },
+    onTurnChange: function onTurnChange(playerId, startTime, timeout) {
+        this.SeatMgr.onTurnChange(playerId, startTime, timeout);
+        if (GameMgr.instance.IsMyId(playerId)) {
+            this.InGameButtons.active = true;
+        } else {
+            this.InGameButtons.active = false;
+        }
+    },
+    checkThrowable: function checkThrowable(enable) {
+        if (GameHelper.validTurn(this.previousCards, this.getSelectedCards())) {
+            this.throwButton.node.active = true;
+        } else {
+            this.throwButton.node.active = false;
+        }
+    },
+    onThrowSuccess: function onThrowSuccess(playerId, cards) {
+        this.previousCards = GameHelper.parseCards(cards);
+        this.removeCardsFromHand(cards);
+    },
+    removeCardsFromHand: function removeCardsFromHand(cards) {
+        var _this2 = this;
+
+        cards.forEach(function (it) {
+            var card = ObjectPool.instance.getCard(it);
+            card.setParent(_this2.playZoneNode);
+        });
     }
 });
 

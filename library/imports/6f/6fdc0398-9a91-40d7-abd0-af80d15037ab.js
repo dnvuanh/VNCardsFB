@@ -89,8 +89,17 @@ var UIManager = cc.Class({
     onCardsReceived: function onCardsReceived(cards) {
         this.MenuGame.onCardsReceived(cards);
     },
-    enableThrowButton: function enableThrowButton(enable) {
-        this.MenuGame.enableThrowButton(enable);
+    getSelectedCards: function getSelectedCards() {
+        return this.MenuGame.getSelectedCards();
+    },
+    onTurnChange: function onTurnChange(playerId, startTime, timeout) {
+        this.MenuGame.onTurnChange(playerId, startTime, timeout);
+    },
+    checkThrowable: function checkThrowable(enable) {
+        this.MenuGame.checkThrowable(enable);
+    },
+    onThrowSuccess: function onThrowSuccess(playerId, cards) {
+        this.MenuGame.onThrowSuccess(playerId, cards);
     }
 });
 

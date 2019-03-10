@@ -87,19 +87,23 @@ var GameHelper = cc.Class({
         return result;
     },
 
-    validTurn(previous, current)
+    validTurn(previousSet, current)
     {
         const HEO = 15;
-        if(previous === null) {
+        var currentSet = this.parseCards(current);
+        if(currentSet.setType == Define.SetType.ERROR)  {
+            return false;
+        }
+        if(previousSet === null) {
             return true;
         }
-        if(previous.setType >= Define.SetType.THREEPAIRS){
-            return current.SetType * 100 + current.topCard > previous.SetType * 100 + previous.topCard;
-        } else if(this.cardValue(previous.topCard) == HEO && current.setType >= Define.SetType.THREEPAIRS) {
+        if(previousSet.setType >= Define.SetType.THREEPAIRS){
+            return currentSet.SetType * 100 + currentSet.topCard > previousSet.SetType * 100 + previousSet.topCard;
+        } else if(this.cardValue(previousSet.topCard) == HEO && currentSet.setType >= Define.SetType.THREEPAIRS) {
             return true;
-        } else if(current.setType == previous.setType 
-            && current.numOfCard == previous.numOfCard 
-            && current.topCard > previous.topCard)  {
+        } else if(currentSet.setType == previousSet.setType 
+            && currentSet.numOfCard == previousSet.numOfCard 
+            && currentSet.topCard > previousSet.topCard)  {
             return true;
         }
         return false;

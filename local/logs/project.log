@@ -1,81 +1,81 @@
-2019-03-02T06:33:57.609Z - normal: Load ~/.CocosCreator/settings.json
-2019-03-02T06:33:59.192Z - normal: Initializing Asset Database
-2019-03-02T06:33:59.196Z - normal: checking language setting...
-2019-03-02T06:33:59.196Z - normal: Language: en
-2019-03-02T06:34:01.232Z - success: preview server running at http://localhost:7456
-2019-03-02T06:34:01.235Z - success: protocol editor-framework registered
-2019-03-02T06:34:01.235Z - success: protocol app registered
-2019-03-02T06:34:01.235Z - success: protocol theme registered
-2019-03-02T06:34:01.235Z - success: protocol packages registered
-2019-03-02T06:34:01.235Z - success: protocol uuid registerred
-2019-03-02T06:34:01.235Z - success: protocol db registerred
-2019-03-02T06:34:01.235Z - success: protocol thumbnail registerred
-2019-03-02T06:34:01.235Z - success: protocol unpack registerred
-2019-03-02T06:34:01.236Z - success: protocol disable-commonjs registerred
-2019-03-02T06:34:02.406Z - normal: connected!
-2019-03-02T06:34:02.407Z - normal: Check project D:\Projects\VNCardsFB
-2019-03-02T06:34:02.409Z - normal: Initializing project D:\Projects\VNCardsFB
-2019-03-02T06:34:03.960Z - normal: Initializing Cocos2d
-2019-03-02T06:34:05.959Z - normal: Initializing engine extends
-2019-03-02T06:34:05.967Z - normal: Loading editor/builtin packages from C:\CocosCreator\resources\app.asar\editor\builtin
-2019-03-02T06:34:05.995Z - normal: Loading builtin packages from C:\CocosCreator\resources\builtin
-2019-03-02T06:34:07.881Z - success: assets loaded
-2019-03-02T06:34:07.882Z - success: asset-db-debugger loaded
-2019-03-02T06:34:08.185Z - success: builder loaded
-2019-03-02T06:34:08.186Z - success: code-editor loaded
-2019-03-02T06:34:08.296Z - success: cocos-analytics loaded
-2019-03-02T06:34:08.297Z - success: color-picker loaded
-2019-03-02T06:34:08.467Z - success: console loaded
-2019-03-02T06:34:08.468Z - success: google-play-instant loaded
-2019-03-02T06:34:08.520Z - success: fb-instant-games loaded
-2019-03-02T06:34:08.520Z - success: jsb-adapter loaded
-2019-03-02T06:34:08.551Z - success: google-instant-games loaded
-2019-03-02T06:34:08.552Z - success: oppo-runtime loaded
-2019-03-02T06:34:09.366Z - success: hierarchy loaded
-2019-03-02T06:34:09.367Z - success: package-manager loaded
-2019-03-02T06:34:09.618Z - success: inspector loaded
-2019-03-02T06:34:09.618Z - success: qqplay-adapter loaded
-2019-03-02T06:34:09.843Z - success: keystore loaded
-2019-03-02T06:34:09.843Z - success: sdkbox loaded
-2019-03-02T06:34:09.964Z - success: node-library loaded
-2019-03-02T06:34:09.965Z - success: tester loaded
-2019-03-02T06:34:10.026Z - success: package-asset loaded
-2019-03-02T06:34:10.027Z - success: ui-grid loaded
-2019-03-02T06:34:10.295Z - success: preferences loaded
-2019-03-02T06:34:10.296Z - success: ui-kit-preview-extra loaded
-2019-03-02T06:34:10.345Z - success: project-exporter loaded
-2019-03-02T06:34:10.345Z - success: ui-kit-preview loaded
-2019-03-02T06:34:10.366Z - success: project-importer loaded
-2019-03-02T06:34:10.366Z - success: ui-kit loaded
-2019-03-02T06:34:10.506Z - success: project-settings loaded
-2019-03-02T06:34:10.507Z - success: ui-tree loaded
-2019-03-02T06:34:11.113Z - success: scene loaded
-2019-03-02T06:34:11.113Z - success: vivo-runtime loaded
-2019-03-02T06:34:11.144Z - success: simulator-debugger loaded
-2019-03-02T06:34:11.144Z - success: weapp-adapter loaded
-2019-03-02T06:34:11.146Z - success: sprite-editor loaded
-2019-03-02T06:34:11.152Z - success: store loaded
-2019-03-02T06:34:11.158Z - success: timeline loaded
-2019-03-02T06:34:11.516Z - normal: Loading packages
-2019-03-02T06:34:11.521Z - normal: Watching packages
-2019-03-02T06:34:12.444Z - normal: Run Application
-2019-03-02T12:18:30.585Z - failed: [db-task][sync-changes] Failed to import asset D:\Projects\VNCardsFB\assets\Script\Define\ServerCode.js, message: Compile error: SyntaxError: D:/Projects/VNCardsFB/assets/Script/Define/ServerCode.js: Unexpected token (17:19)
-  15 |     RP_HOST_CHANGE: 2100,
-  16 |     RP_GET_CARDS: 2101,
-> 17 |     RP_TURN_CHANGE = 2102,
-     |                    ^
-  18 |     RP_THROW_SUCCESS: 2103,
-  19 | 
-  20 |     //error handle
+2019-03-10T04:46:10.255Z - normal: Load ~/.CocosCreator/settings.json
+2019-03-10T04:46:11.521Z - normal: Initializing Asset Database
+2019-03-10T04:46:11.524Z - normal: checking language setting...
+2019-03-10T04:46:11.524Z - normal: Language: en
+2019-03-10T04:46:12.372Z - success: preview server running at http://localhost:7456
+2019-03-10T04:46:12.374Z - success: protocol editor-framework registered
+2019-03-10T04:46:12.374Z - success: protocol app registered
+2019-03-10T04:46:12.374Z - success: protocol theme registered
+2019-03-10T04:46:12.374Z - success: protocol packages registered
+2019-03-10T04:46:12.375Z - success: protocol uuid registerred
+2019-03-10T04:46:12.375Z - success: protocol db registerred
+2019-03-10T04:46:12.375Z - success: protocol thumbnail registerred
+2019-03-10T04:46:12.375Z - success: protocol unpack registerred
+2019-03-10T04:46:12.375Z - success: protocol disable-commonjs registerred
+2019-03-10T04:46:12.783Z - normal: connected!
+2019-03-10T04:46:12.784Z - normal: Check project D:\Projects\VNCardsFB
+2019-03-10T04:46:12.786Z - normal: Initializing project D:\Projects\VNCardsFB
+2019-03-10T04:46:13.535Z - normal: Initializing Cocos2d
+2019-03-10T04:46:15.029Z - normal: Initializing engine extends
+2019-03-10T04:46:15.033Z - normal: Loading editor/builtin packages from C:\CocosCreator\resources\app.asar\editor\builtin
+2019-03-10T04:46:15.048Z - normal: Loading builtin packages from C:\CocosCreator\resources\builtin
+2019-03-10T04:46:15.873Z - success: assets loaded
+2019-03-10T04:46:15.874Z - success: asset-db-debugger loaded
+2019-03-10T04:46:15.991Z - success: builder loaded
+2019-03-10T04:46:15.991Z - success: code-editor loaded
+2019-03-10T04:46:16.058Z - success: cocos-analytics loaded
+2019-03-10T04:46:16.059Z - success: color-picker loaded
+2019-03-10T04:46:16.175Z - success: console loaded
+2019-03-10T04:46:16.175Z - success: google-play-instant loaded
+2019-03-10T04:46:16.216Z - success: fb-instant-games loaded
+2019-03-10T04:46:16.216Z - success: jsb-adapter loaded
+2019-03-10T04:46:16.515Z - success: google-instant-games loaded
+2019-03-10T04:46:16.515Z - success: oppo-runtime loaded
+2019-03-10T04:46:16.539Z - success: hierarchy loaded
+2019-03-10T04:46:16.539Z - success: package-manager loaded
+2019-03-10T04:46:16.774Z - success: inspector loaded
+2019-03-10T04:46:16.774Z - success: qqplay-adapter loaded
+2019-03-10T04:46:16.801Z - success: keystore loaded
+2019-03-10T04:46:16.802Z - success: sdkbox loaded
+2019-03-10T04:46:16.818Z - success: node-library loaded
+2019-03-10T04:46:16.818Z - success: tester loaded
+2019-03-10T04:46:16.831Z - success: package-asset loaded
+2019-03-10T04:46:16.832Z - success: ui-grid loaded
+2019-03-10T04:46:16.842Z - success: preferences loaded
+2019-03-10T04:46:16.843Z - success: ui-kit-preview-extra loaded
+2019-03-10T04:46:16.850Z - success: project-exporter loaded
+2019-03-10T04:46:16.851Z - success: ui-kit-preview loaded
+2019-03-10T04:46:16.873Z - success: project-importer loaded
+2019-03-10T04:46:16.873Z - success: ui-kit loaded
+2019-03-10T04:46:16.888Z - success: project-settings loaded
+2019-03-10T04:46:16.889Z - success: ui-tree loaded
+2019-03-10T04:46:16.903Z - success: scene loaded
+2019-03-10T04:46:16.903Z - success: vivo-runtime loaded
+2019-03-10T04:46:16.906Z - success: simulator-debugger loaded
+2019-03-10T04:46:16.906Z - success: weapp-adapter loaded
+2019-03-10T04:46:16.907Z - success: sprite-editor loaded
+2019-03-10T04:46:16.926Z - success: store loaded
+2019-03-10T04:46:16.933Z - success: timeline loaded
+2019-03-10T04:46:17.711Z - warn: [db-task][init] Backup unused meta file: db://assets/resources/prefabs.meta
+2019-03-10T04:47:49.994Z - failed: [db-task][init] Failed to import asset D:\Projects\VNCardsFB\assets\Script\Game\GameMgr.js, message: Compile error: SyntaxError: D:/Projects/VNCardsFB/assets/Script/Game/GameMgr.js: Unexpected token, expected , (188:4)
+  186 |     }
+  187 | 
+> 188 |     pushCard(cardValue)
+      |     ^
+  189 |     {
+  190 |         this.setCards.push(cardValue);
+  191 |         this.checkSetValid();
     at Parser.pp$5.raise (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:4454:13)
     at Parser.pp.unexpected (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:1761:8)
-    at Parser.pp$3.parseMaybeAssign (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3370:10)
-    at Parser.pp$1.parseVar (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:2340:24)
-    at Parser.pp$1.parseVarStatement (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:2169:8)
-    at Parser.pp$1.parseStatement (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:1861:19)
-    at Parser.pp$1.parseBlockBody (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:2268:21)
-    at Parser.pp$1.parseTopLevel (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:1778:8)
-    at Parser.parse (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:1673:17)
-    at parse (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:7305:37)
-2019-03-05T01:32:15.970Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:102701
-2019-03-05T03:12:45.417Z - info: shutdown preview server
+    at Parser.pp.expect (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:1749:33)
+    at Parser.pp$3.parseObj (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3978:12)
+    at Parser.pp$3.parseExprAtom (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3719:19)
+    at Parser.pp$3.parseExprSubscripts (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3494:19)
+    at Parser.pp$3.parseMaybeUnary (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3474:19)
+    at Parser.pp$3.parseExprOps (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3404:19)
+    at Parser.pp$3.parseMaybeConditional (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3381:19)
+    at Parser.pp$3.parseMaybeAssign (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3344:19)
+2019-03-10T04:47:51.065Z - normal: Loading packages
+2019-03-10T04:47:51.070Z - normal: Watching packages
+2019-03-10T04:47:51.605Z - normal: Run Application
+2019-03-10T09:33:59.183Z - warn: [db-task][sync-changes] Delete unused meta file: db://assets/resources/prefabs.meta

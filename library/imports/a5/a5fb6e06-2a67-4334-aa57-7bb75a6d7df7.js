@@ -127,42 +127,24 @@ var GameMgr = cc.Class({
         if (this.IsMyId(this.matchData.Host)) UIManager.instance.enableStartButton(true);
     },
     onCardsReceived: function onCardsReceived(message) {
-        cc.log("onCardsReceived:" + message);
         var cards = JSON.parse(message.getString(1));
         cards.sort(function (a, b) {
             return a - b;
         });
         UIManager.instance.onCardsReceived(cards);
-        this.setCards = [];
-        this.preSet = null;
-    },
-    pushCard: function pushCard(cardValue) {
-        this.setCards.push(cardValue);
-        this.checkSetValid();
-    },
-    popCard: function popCard(cardValue) {
-        this.setCards.splice(this.setCards.indexOf(cardValue), 1);
-        this.checkSetValid();
-    },
-    checkSetValid: function checkSetValid() {
-        var set = GameHelper.parseCards(this.setCards);
-        if (set.setType != Define.SetType.ERROR && GameHelper.validTurn(this.preSet, set)) {
-            UIManager.instance.enableThrowButton(true);
-        } else {
-            UIManager.instance.enableThrowButton(false);
-        }
-    },
-    getSetCards: function getSetCards() {
-        return this.setCards;
     },
     onTurnChange: function onTurnChange(message) {
         var playerId = message.getString(1);
-        var timeBeginTurn = message.getNumber(2);
-        var turnTimeout = message.getNumber(3);
+        var startTime = message.getLong(2);
+        var timeout = message.getLong(3);
+        this.matchData.TurnKeeper = playerId;
+        this.matchData.TimeBeginTurn = startTime;
+        UIManager.instance.onTurnChange(playerId, startTime, timeout);
     },
     onThrowSuccess: function onThrowSuccess(message) {
         var playerId = message.getString(1);
         var cards = JSON.parse(message.getString(2));
+        UIManager.instance.onThrowSuccess(playerId, cards);
         cc.log("THROW SUCCESS!" + cards);
     }
 });
