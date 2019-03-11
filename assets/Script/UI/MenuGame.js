@@ -160,7 +160,7 @@ cc.Class({
         } else {
             this.InGameButtons.active = false;
         }
-        this.throwButton.node.active = false;
+        this.throwButton.interactable = false;
         if(this.previousThrowPlayer == playerId)
         {
             this.previousCards = null;
@@ -170,10 +170,10 @@ cc.Class({
     checkThrowable(enable)
     {
         if(GameHelper.validTurn(this.previousCards, this.getSelectedCards())) {
-            this.throwButton.node.active = true;
+            this.throwButton.interactable = true;
         }
         else {
-            this.throwButton.node.active = false;
+            this.throwButton.interactable = false;
         }
     },
 

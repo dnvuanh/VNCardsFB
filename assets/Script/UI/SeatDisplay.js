@@ -64,6 +64,12 @@ cc.Class({
         this.IsMyTurn = true;
     },
 
+    disableCountDown()
+    {
+        this.IsMyTurn = false;
+        this.turnCountDown.node.active = false;
+    },
+
     update(dt)
     {
         if (this.IsMyTurn)

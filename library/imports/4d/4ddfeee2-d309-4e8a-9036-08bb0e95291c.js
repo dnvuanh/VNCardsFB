@@ -57,6 +57,10 @@ cc.Class({
         this.timeEndTurn = this.timeStartTurn + this.timeoutTurnMill;
         this.IsMyTurn = true;
     },
+    disableCountDown: function disableCountDown() {
+        this.IsMyTurn = false;
+        this.turnCountDown.node.active = false;
+    },
     update: function update(dt) {
         if (this.IsMyTurn) {
             var timeNow = Date.now();

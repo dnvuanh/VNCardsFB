@@ -184,8 +184,8 @@ var GameMgr = cc.Class({
 
     onThrowSuccess(message)
     {
-        var playerId = message.getString(1);
-        var cards = JSON.parse(message.getString(2));
+        let playerId = message.getString(1);
+        let cards = JSON.parse(message.getString(2));
         UIManager.instance.onThrowSuccess(playerId, cards);
     }
 });

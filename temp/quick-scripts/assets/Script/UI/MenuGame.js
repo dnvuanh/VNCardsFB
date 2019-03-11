@@ -133,16 +133,16 @@ cc.Class({
         } else {
             this.InGameButtons.active = false;
         }
-        this.throwButton.node.active = false;
+        this.throwButton.interactable = false;
         if (this.previousThrowPlayer == playerId) {
             this.previousCards = null;
         }
     },
     checkThrowable: function checkThrowable(enable) {
         if (GameHelper.validTurn(this.previousCards, this.getSelectedCards())) {
-            this.throwButton.node.active = true;
+            this.throwButton.interactable = true;
         } else {
-            this.throwButton.node.active = false;
+            this.throwButton.interactable = false;
         }
     },
     onThrowSuccess: function onThrowSuccess(playerId, cards) {

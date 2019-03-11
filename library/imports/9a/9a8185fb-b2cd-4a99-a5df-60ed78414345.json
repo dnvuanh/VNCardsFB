@@ -26,9 +26,6 @@
     "_components": [
       {
         "__id__": 7
-      },
-      {
-        "__id__": 6
       }
     ],
     "_prefab": {
@@ -259,7 +256,7 @@
     "asset": {
       "__uuid__": "9a8185fb-b2cd-4a99-a5df-60ed78414345"
     },
-    "fileId": "41ng0i/kdB74oJm/R4/U74",
+    "fileId": "885oIBhxtI2rV8hLjAtv+x",
     "sync": false
   },
   {
@@ -344,27 +341,6 @@
     "hoverSprite": null,
     "_N$disabledSprite": null,
     "_N$target": null,
-    "_id": ""
-  },
-  {
-    "__type__": "cc.ClickEvent",
-    "target": {
-      "__id__": 1
-    },
-    "component": "",
-    "_componentId": "257e3vfW8JA44fFKlDmsOe6",
-    "handler": "onClick",
-    "customEventData": ""
-  },
-  {
-    "__type__": "cc.PrefabInfo",
-    "root": {
-      "__id__": 1
-    },
-    "asset": {
-      "__uuid__": "9a8185fb-b2cd-4a99-a5df-60ed78414345"
-    },
-    "fileId": "56mFHr3R9PMrCmHlL9pya3",
-    "sync": false
+    "_id": "c7JszS/VtBM6Fgv3ofAOE4"
   }
 ]

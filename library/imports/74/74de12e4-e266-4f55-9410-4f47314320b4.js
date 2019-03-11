@@ -46,7 +46,8 @@ cc.Class({
             var seatDisplay = this.node.children[i].getComponent("SeatDisplay");
             if (seatDisplay && seatDisplay.getPlayerId() == playerId) {
                 seatDisplay.displayTurn(startTime, timeout);
-                break;
+            } else {
+                seatDisplay.disableCountDown();
             }
         }
     }

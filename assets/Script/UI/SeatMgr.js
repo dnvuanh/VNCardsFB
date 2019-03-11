@@ -61,7 +61,10 @@ cc.Class({
             if (seatDisplay && seatDisplay.getPlayerId() == playerId)
             {
                 seatDisplay.displayTurn(startTime, timeout);
-                break;
+            }
+            else
+            {
+                seatDisplay.disableCountDown();
             }
         }
     }

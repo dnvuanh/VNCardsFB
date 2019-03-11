@@ -1,69 +1,80 @@
-2019-03-11T06:40:50.416Z - normal: Load ~/.CocosCreator/settings.json
-2019-03-11T06:40:51.733Z - normal: Initializing Asset Database
-2019-03-11T06:40:51.736Z - normal: checking language setting...
-2019-03-11T06:40:51.736Z - normal: Language: en
-2019-03-11T06:40:52.519Z - success: preview server running at http://localhost:7456
-2019-03-11T06:40:52.522Z - success: protocol editor-framework registered
-2019-03-11T06:40:52.522Z - success: protocol app registered
-2019-03-11T06:40:52.522Z - success: protocol theme registered
-2019-03-11T06:40:52.522Z - success: protocol packages registered
-2019-03-11T06:40:52.522Z - success: protocol uuid registerred
-2019-03-11T06:40:52.522Z - success: protocol db registerred
-2019-03-11T06:40:52.522Z - success: protocol thumbnail registerred
-2019-03-11T06:40:52.522Z - success: protocol unpack registerred
-2019-03-11T06:40:52.523Z - success: protocol disable-commonjs registerred
-2019-03-11T06:40:53.333Z - normal: connected!
-2019-03-11T06:40:53.338Z - normal: Check project D:\Projects\VNCardsFB
-2019-03-11T06:40:53.346Z - normal: Initializing project D:\Projects\VNCardsFB
-2019-03-11T06:40:54.260Z - normal: Initializing Cocos2d
-2019-03-11T06:40:55.204Z - normal: Initializing engine extends
-2019-03-11T06:40:55.208Z - normal: Loading editor/builtin packages from C:\CocosCreator\resources\app.asar\editor\builtin
-2019-03-11T06:40:55.214Z - normal: Loading builtin packages from C:\CocosCreator\resources\builtin
-2019-03-11T06:40:55.955Z - success: assets loaded
-2019-03-11T06:40:55.956Z - success: asset-db-debugger loaded
-2019-03-11T06:40:55.967Z - success: builder loaded
-2019-03-11T06:40:55.967Z - success: code-editor loaded
-2019-03-11T06:40:56.018Z - success: cocos-analytics loaded
-2019-03-11T06:40:56.019Z - success: color-picker loaded
-2019-03-11T06:40:56.208Z - success: console loaded
-2019-03-11T06:40:56.209Z - success: google-play-instant loaded
-2019-03-11T06:40:56.251Z - success: fb-instant-games loaded
-2019-03-11T06:40:56.251Z - success: jsb-adapter loaded
-2019-03-11T06:40:56.347Z - success: google-instant-games loaded
-2019-03-11T06:40:56.347Z - success: oppo-runtime loaded
-2019-03-11T06:40:56.358Z - success: hierarchy loaded
-2019-03-11T06:40:56.358Z - success: package-manager loaded
-2019-03-11T06:40:56.642Z - success: inspector loaded
-2019-03-11T06:40:56.642Z - success: qqplay-adapter loaded
-2019-03-11T06:40:56.671Z - success: keystore loaded
-2019-03-11T06:40:56.672Z - success: sdkbox loaded
-2019-03-11T06:40:56.685Z - success: node-library loaded
-2019-03-11T06:40:56.686Z - success: tester loaded
-2019-03-11T06:40:56.695Z - success: package-asset loaded
-2019-03-11T06:40:56.695Z - success: ui-grid loaded
-2019-03-11T06:40:56.700Z - success: preferences loaded
-2019-03-11T06:40:56.701Z - success: ui-kit-preview-extra loaded
-2019-03-11T06:40:56.711Z - success: project-exporter loaded
-2019-03-11T06:40:56.712Z - success: ui-kit-preview loaded
-2019-03-11T06:40:56.731Z - success: project-importer loaded
-2019-03-11T06:40:56.731Z - success: ui-kit loaded
-2019-03-11T06:40:56.932Z - success: project-settings loaded
-2019-03-11T06:40:56.933Z - success: ui-tree loaded
-2019-03-11T06:40:56.947Z - success: scene loaded
-2019-03-11T06:40:56.947Z - success: vivo-runtime loaded
-2019-03-11T06:40:57.189Z - success: simulator-debugger loaded
-2019-03-11T06:40:57.189Z - success: weapp-adapter loaded
-2019-03-11T06:40:57.191Z - success: sprite-editor loaded
-2019-03-11T06:40:57.195Z - success: store loaded
-2019-03-11T06:40:57.201Z - success: timeline loaded
-2019-03-11T06:40:57.217Z - error: Window "importing" crashed: [object Object]
-    at WebContents.nativeWin.webContents.on.e (C:\CocosCreator\resources\app.asar\editor-framework\lib\main\window.js:1:2607)
-    at emitTwo (events.js:106:13)
-    at WebContents.emit (events.js:194:7)
-2019-03-11T06:40:57.618Z - normal: Loading packages
-2019-03-11T06:40:57.627Z - normal: Watching packages
-2019-03-11T06:40:58.139Z - normal: Run Application
-2019-03-11T06:41:01.803Z - error: Window "importing" unresponsive: [object Object]
-    at BrowserWindow.nativeWin.on.e (C:\CocosCreator\resources\app.asar\editor-framework\lib\main\window.js:1:2237)
-    at emitOne (events.js:96:13)
-    at BrowserWindow.emit (events.js:191:7)
+2019-03-11T15:38:19.343Z - normal: Load ~/.CocosCreator/settings.json
+2019-03-11T15:38:19.407Z - normal: Initializing Asset Database
+2019-03-11T15:38:19.411Z - normal: checking language setting...
+2019-03-11T15:38:19.411Z - normal: Language: en
+2019-03-11T15:38:20.448Z - success: preview server running at http://localhost:7456
+2019-03-11T15:38:20.486Z - success: protocol editor-framework registered
+2019-03-11T15:38:20.486Z - success: protocol app registered
+2019-03-11T15:38:20.487Z - success: protocol theme registered
+2019-03-11T15:38:20.487Z - success: protocol packages registered
+2019-03-11T15:38:20.487Z - success: protocol uuid registerred
+2019-03-11T15:38:20.487Z - success: protocol db registerred
+2019-03-11T15:38:20.487Z - success: protocol thumbnail registerred
+2019-03-11T15:38:20.487Z - success: protocol unpack registerred
+2019-03-11T15:38:20.487Z - success: protocol disable-commonjs registerred
+2019-03-11T15:38:22.646Z - normal: connected!
+2019-03-11T15:38:22.648Z - normal: Check project /Users/anhdinh/Documents/GitHub/VNCardsFB
+2019-03-11T15:38:22.649Z - normal: Initializing project /Users/anhdinh/Documents/GitHub/VNCardsFB
+2019-03-11T15:38:23.528Z - normal: Initializing Cocos2d
+2019-03-11T15:38:24.472Z - normal: Initializing engine extends
+2019-03-11T15:38:24.475Z - normal: Loading editor/builtin packages from /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin
+2019-03-11T15:38:24.494Z - normal: Loading builtin packages from /Applications/CocosCreator.app/Contents/Resources/builtin
+2019-03-11T15:38:25.338Z - success: assets loaded
+2019-03-11T15:38:25.339Z - success: asset-db-debugger loaded
+2019-03-11T15:38:25.422Z - success: builder loaded
+2019-03-11T15:38:25.423Z - success: color-picker loaded
+2019-03-11T15:38:25.584Z - success: cocos-analytics loaded
+2019-03-11T15:38:25.585Z - success: google-play-instant loaded
+2019-03-11T15:38:25.620Z - success: console loaded
+2019-03-11T15:38:25.621Z - success: jsb-adapter loaded
+2019-03-11T15:38:25.816Z - success: fb-instant-games loaded
+2019-03-11T15:38:25.817Z - success: oppo-runtime loaded
+2019-03-11T15:38:25.852Z - success: google-instant-games loaded
+2019-03-11T15:38:25.853Z - success: package-manager loaded
+2019-03-11T15:38:26.095Z - success: hierarchy loaded
+2019-03-11T15:38:26.096Z - success: qqplay-adapter loaded
+2019-03-11T15:38:26.133Z - success: inspector loaded
+2019-03-11T15:38:26.133Z - success: sdkbox loaded
+2019-03-11T15:38:26.291Z - success: keystore loaded
+2019-03-11T15:38:26.291Z - success: tester loaded
+2019-03-11T15:38:26.324Z - success: node-library loaded
+2019-03-11T15:38:26.325Z - success: ui-grid loaded
+2019-03-11T15:38:26.360Z - success: package-asset loaded
+2019-03-11T15:38:26.361Z - success: ui-kit-preview-extra loaded
+2019-03-11T15:38:26.391Z - success: preferences loaded
+2019-03-11T15:38:26.391Z - success: ui-kit-preview loaded
+2019-03-11T15:38:26.421Z - success: project-exporter loaded
+2019-03-11T15:38:26.422Z - success: ui-kit loaded
+2019-03-11T15:38:26.473Z - success: project-importer loaded
+2019-03-11T15:38:26.473Z - success: ui-tree loaded
+2019-03-11T15:38:26.503Z - success: project-settings loaded
+2019-03-11T15:38:26.504Z - success: vivo-runtime loaded
+2019-03-11T15:38:26.543Z - success: scene loaded
+2019-03-11T15:38:26.544Z - success: weapp-adapter loaded
+2019-03-11T15:38:26.547Z - success: simulator-debugger loaded
+2019-03-11T15:38:26.555Z - success: sprite-editor loaded
+2019-03-11T15:38:26.599Z - success: store loaded
+2019-03-11T15:38:26.635Z - success: timeline loaded
+2019-03-11T15:38:30.305Z - normal: Loading packages
+2019-03-11T15:38:30.315Z - normal: Watching packages
+2019-03-11T15:38:30.397Z - normal: Run Application
+2019-03-11T15:52:46.610Z - error: Sorry, the component of 'Card' which with an index of 1 is corrupted! It has been removed.
+    at Object.cc.errorID (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/CCDebug.js:167:16)
+    at _componentCorrupted (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/node-activator.js:75:20)
+    at CCClass._activateNodeRecursively (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/node-activator.js:115:25)
+    at CCClass.activateNode (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/node-activator.js:163:26)
+    at cc_Node._onHierarchyChanged (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/utils/base-node.js:623:48)
+    at cc_Node._onHierarchyChanged (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/CCNode.js:696:22)
+    at cc_Node.setParent (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/utils/base-node.js:219:26)
+    at n.createNodeFromAsset (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/utils/scene.js:1:1424)
+    at cc_Prefab.cc.Class.createNode (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/assets/CCPrefab.js:43:17)
+2019-03-11T15:53:27.802Z - error: Error: Can not revert prefab, the file id of "Card" is missing, please save the prefab to a new asset by dragging and drop the node from Node Tree into Assets.
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/utils/prefab.js:1:5613
+    at f (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/utils/prefab.js:1:795)
+    at Object.c._doRevertPrefab (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/utils/prefab.js:1:5562)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/utils/prefab.js:1:6618
+    at CCLoader.<anonymous> (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/CCAssetLibrary.js:63:25)
+    at /Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/load-pipeline/CCLoader.js:139:46
+    at /Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/utils.js:48:25
+    at _combinedTickCallback (internal/process/next_tick.js:73:7)
+    at process._tickCallback (internal/process/next_tick.js:104:9)
