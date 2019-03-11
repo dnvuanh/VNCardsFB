@@ -535,8 +535,8 @@
     "relativePath": "resources"
   },
   "9ffd88a0-3d4f-4db6-a9cd-d7b5af9553ae": {
-    "asset": 1552214374520,
-    "meta": 1552214374632,
+    "asset": 1552297519352,
+    "meta": 1552297519476,
     "relativePath": "Scene\\Game.fire"
   },
   "49ee16f5-074d-4a52-b51d-b95f36ac0fc3": {
@@ -559,11 +559,6 @@
     "meta": 1552193270268,
     "relativePath": "Script\\UI\\ChatBox.js"
   },
-  "7cd40e88-0b96-4344-8e9e-130153c97712": {
-    "asset": 1551526028769,
-    "meta": 1552193270176,
-    "relativePath": "Script\\Manager\\GSMgr.js"
-  },
   "898242b9-7ce3-42fb-9a03-e8da0092373c": {
     "asset": 1548729709516,
     "meta": 1552193269931,
@@ -575,8 +570,8 @@
     "relativePath": "Script\\GameSparks\\gamesparks.js"
   },
   "b4a54cdb-1228-4d16-97a8-3170c6226a88": {
-    "asset": 1552192402003,
-    "meta": 1552193268157,
+    "asset": 1552297529846,
+    "meta": 1552297529950,
     "relativePath": "Prefabs\\MenuGame.prefab"
   },
   "9a8185fb-b2cd-4a99-a5df-60ed78414345": {
@@ -904,11 +899,6 @@
     "meta": 1552193270275,
     "relativePath": "Script\\UI\\DealCards.js"
   },
-  "098f2e6d-0359-4d0b-b86f-d0e154700bde": {
-    "asset": 1552192595129,
-    "meta": 1552193269974,
-    "relativePath": "Script\\Define\\ServerCode.js"
-  },
   "74de12e4-e266-4f55-9410-4f47314320b4": {
     "asset": 1552192401513,
     "meta": 1552193270413,
@@ -935,13 +925,23 @@
     "relativePath": "Script\\Util\\GameHelper.js"
   },
   "a5fb6e06-2a67-4334-aa57-7bb75a6d7df7": {
-    "asset": 1552226053742,
-    "meta": 1552226057973,
+    "asset": 1552230259410,
+    "meta": 1552230343308,
     "relativePath": "Script\\Game\\GameMgr.js"
   },
+  "098f2e6d-0359-4d0b-b86f-d0e154700bde": {
+    "asset": 1552270848626,
+    "meta": 1552270860647,
+    "relativePath": "Script\\Define\\ServerCode.js"
+  },
+  "7cd40e88-0b96-4344-8e9e-130153c97712": {
+    "asset": 1552297435603,
+    "meta": 1552297437530,
+    "relativePath": "Script\\Manager\\GSMgr.js"
+  },
   "3da6cd8a-1675-4245-8838-df9f57253145": {
-    "asset": 1552230119271,
-    "meta": 1552230120506,
+    "asset": 1552304463940,
+    "meta": 1552304465288,
     "relativePath": "Script\\UI\\MenuGame.js"
   }
 }

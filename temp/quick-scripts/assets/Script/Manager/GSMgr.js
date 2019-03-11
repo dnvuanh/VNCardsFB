@@ -217,15 +217,18 @@ var GSMgr = cc.Class({
     startGame: function startGame() {
         var data = RTData.get();
         data.setLong(1, 1);
-
         this.sendRTData(ServerCode.RQ_START_GAME, data);
     },
     throwCards: function throwCards(cards) {
-        cc.log("throwCards" + cards);
         var cardString = JSON.stringify(cards);
         var data = RTData.get();
         data.setString(1, cardString);
         this.sendRTData(ServerCode.RQ_THROW_CARDS, data);
+    },
+    skipTurn: function skipTurn() {
+        var data = RTData.get();
+        data.setLong(1, 1);
+        this.sendRTData(ServerCode.RQ_SKIP_TURN, data);
     }
 });
 

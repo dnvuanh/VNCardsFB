@@ -115,6 +115,7 @@ cc.Class({
         });
         this.InGameButtons.active = true;
         this.previousCards = null;
+        this.previousThrowPlayer = null;
     },
 
     onShowRightMenuClick()
@@ -144,7 +145,11 @@ cc.Class({
     {
         let cards = this.getSelectedCards();
         GSMgr.instance.throwCards(cards);
-        console.log(cards);
+    },
+
+    skipTurn()
+    {
+        GSMgr.instance.skipTurn();
     },
 
     onTurnChange(playerId, startTime, timeout)
@@ -154,6 +159,11 @@ cc.Class({
             this.InGameButtons.active = true;
         } else {
             this.InGameButtons.active = false;
+        }
+        this.throwButton.node.active = false;
+        if(this.previousThrowPlayer == playerId)
+        {
+            this.previousCards = null;
         }
     },
 
@@ -171,12 +181,14 @@ cc.Class({
     {
         this.previousCards = GameHelper.parseCards(cards);
         this.removeCardsFromHand(playerId, cards);
+        this.previousThrowPlayer = playerId;
     },
 
     removeCardsFromHand(playerId, cards)
     {
         let idx = 0;
         const OFFSET = 50;
+        cards.sort((a,b) => a - b);
         if(GameMgr.instance.IsMyId(playerId)) {
             cards.forEach(it => {
                 let card = this.myCardNode.getChildByName("Card_" + it);

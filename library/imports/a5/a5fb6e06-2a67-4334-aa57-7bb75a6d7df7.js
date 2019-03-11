@@ -108,7 +108,6 @@ var GameMgr = cc.Class({
         UIManager.instance.setHost(playerId);
     },
     onGameStateUpdate: function onGameStateUpdate(message) {
-        cc.log("onGameStateUpdate");
         this.matchData.State = message.getLong(1);
         switch (this.matchData.State) {
             case Define.GameState.WAITING:
@@ -144,7 +143,6 @@ var GameMgr = cc.Class({
     onThrowSuccess: function onThrowSuccess(message) {
         var playerId = message.getString(1);
         var cards = JSON.parse(message.getString(2));
-        cc.log("THROW SUCCESS!" + cards);
         UIManager.instance.onThrowSuccess(playerId, cards);
     }
 });

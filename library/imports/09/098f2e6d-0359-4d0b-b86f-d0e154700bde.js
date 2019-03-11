@@ -11,6 +11,7 @@ var ServerCode = {
     RQ_LEAVE_SEAT: 1001,
     RQ_START_GAME: 1002,
     RQ_THROW_CARDS: 1003,
+    RQ_SKIP_TURN: 1004,
 
     //response
     RP_LOAD_MATCH: 1999,
@@ -22,6 +23,7 @@ var ServerCode = {
     RP_GET_CARDS: 2101,
     RP_TURN_CHANGE: 2102,
     RP_THROW_SUCCESS: 2103,
+    RP_TURN_SKIPPED: 2104,
 
     //error handle
     RP_REQUEST_ERROR: 5000,

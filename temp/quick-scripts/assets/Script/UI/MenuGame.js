@@ -99,6 +99,7 @@ cc.Class({
         });
         this.InGameButtons.active = true;
         this.previousCards = null;
+        this.previousThrowPlayer = null;
     },
     onShowRightMenuClick: function onShowRightMenuClick() {
         var position = this.showRightButton.node.getPosition();
@@ -121,7 +122,9 @@ cc.Class({
     throwCards: function throwCards() {
         var cards = this.getSelectedCards();
         GSMgr.instance.throwCards(cards);
-        console.log(cards);
+    },
+    skipTurn: function skipTurn() {
+        GSMgr.instance.skipTurn();
     },
     onTurnChange: function onTurnChange(playerId, startTime, timeout) {
         this.SeatMgr.onTurnChange(playerId, startTime, timeout);
@@ -129,6 +132,10 @@ cc.Class({
             this.InGameButtons.active = true;
         } else {
             this.InGameButtons.active = false;
+        }
+        this.throwButton.node.active = false;
+        if (this.previousThrowPlayer == playerId) {
+            this.previousCards = null;
         }
     },
     checkThrowable: function checkThrowable(enable) {
@@ -141,12 +148,16 @@ cc.Class({
     onThrowSuccess: function onThrowSuccess(playerId, cards) {
         this.previousCards = GameHelper.parseCards(cards);
         this.removeCardsFromHand(playerId, cards);
+        this.previousThrowPlayer = playerId;
     },
     removeCardsFromHand: function removeCardsFromHand(playerId, cards) {
         var _this2 = this;
 
         var idx = 0;
         var OFFSET = 50;
+        cards.sort(function (a, b) {
+            return a - b;
+        });
         if (GameMgr.instance.IsMyId(playerId)) {
             cards.forEach(function (it) {
                 var card = _this2.myCardNode.getChildByName("Card_" + it);
