@@ -6,15 +6,13 @@ var GameMgr = cc.Class({
         instance: null
     },
 
-    onLoad()
-    {
+    onLoad() {
         GameMgr.instance = this;
         cc.game.addPersistRootNode(this.node);
-        this.matchData={};
+        this.matchData = {};
     },
 
-    start()
-    {
+    start() {
         GSMgr.instance.registerOpCodeCallback(ServerCode.RP_ENTER_SEAT, this.onPlayerEnterSeat.bind(this));
         GSMgr.instance.registerOpCodeCallback(ServerCode.RP_LEAVE_SEAT, this.onPlayerLeaveSeat.bind(this));
         GSMgr.instance.registerOpCodeCallback(ServerCode.RP_LOAD_MATCH, this.onMatchLoad.bind(this));
@@ -23,66 +21,56 @@ var GameMgr = cc.Class({
         GSMgr.instance.registerOpCodeCallback(ServerCode.RP_GET_CARDS, this.onCardsReceived.bind(this));
         GSMgr.instance.registerOpCodeCallback(ServerCode.RP_TURN_CHANGE, this.onTurnChange.bind(this));
         GSMgr.instance.registerOpCodeCallback(ServerCode.RP_THROW_SUCCESS, this.onThrowSuccess.bind(this));
+        GSMgr.instance.registerOpCodeCallback(ServerCode.RP_GAME_RESULT, this.onGameResult.bind(this));
     },
 
-    onInit()
-    {
+    onInit() {
         this.startGameScene = true;
     },
 
-    OnMatchFound(message)
-    {
+    OnMatchFound(message) {
         console.log("Game on match found " + JSON.stringify(message));
         this.onlineList = message.participants;
     },
 
-    OnMatchUpdate(message)
-    {
+    OnMatchUpdate(message) {
         console.log("Game on match update " + JSON.stringify(message));
         this.onlineList = message.participants;
-        if (message.hasOwnProperty("addedPlayers"))
-        {
+        if (message.hasOwnProperty("addedPlayers")) {
             let player = this.onlineList.filter(player => player.id == message.addedPlayers)[0];
-                UIManager.instance.addPlayer(player);
+            UIManager.instance.addPlayer(player);
         }
-        if (message.hasOwnProperty("removedPlayers"))
-        {
+        if (message.hasOwnProperty("removedPlayers")) {
             let player = message.removedPlayers[0];
-                UIManager.instance.removePlayer(player);
+            UIManager.instance.removePlayer(player);
         }
     },
 
-    onMatchLoaded(callback)
-    {
+    onMatchLoaded(callback) {
         this.onMatchLoadedCb = callback;
     },
 
-    onMatchLoad(message)
-    {
+    onMatchLoad(message) {
         this.matchData = JSON.parse(message.getString(1));
         if (this.onMatchLoadedCb)
             this.onMatchLoadedCb();
     },
 
-    getCurrentSeats()
-    {
+    getCurrentSeats() {
         if (this.matchData)
             return this.matchData.Seats;
         return {};
     },
 
-    getPlayer(id)
-    {
+    getPlayer(id) {
         return this.onlineList.filter(player => player.id == id)[0];
     },
 
-    getOnlineList()
-    {
+    getOnlineList() {
         return this.onlineList;
     },
 
-    getHost()
-    {
+    getHost() {
         return this.matchData.Host;
     },
 
@@ -90,90 +78,85 @@ var GameMgr = cc.Class({
         this.userId = message.userId;
     },
 
-    getMyId()
-    {
+    getMyId() {
         return this.userId;
     },
 
-    getMySeat()
-    {
+    getMySeat() {
         return this.MySeat;
     },
 
-    IsMyId(id)
-    {
+    IsMyId(id) {
         return this.userId == id;
     },
 
-    onPlayerEnterSeat(message)
-    {
+    onPlayerEnterSeat(message) {
         let playerId = message.getString(1);
         let seat = message.getLong(2);
-            this.matchData.Seats[seat] = playerId;
-            UIManager.instance.playerEnterSeat(this.getPlayer(playerId), seat);
+        this.matchData.Seats[seat] = playerId;
+        UIManager.instance.playerEnterSeat(this.getPlayer(playerId), seat);
 
-        if (this.IsMyId(playerId))
-        {
+        if (this.IsMyId(playerId)) {
             this.MySeat = seat;
         }
     },
 
-    onPlayerLeaveSeat(message)
-    {
+    onPlayerLeaveSeat(message) {
         let playerId = message.getString(1);
         let seat = message.getLong(2);
-            this.matchData.Seats[seat] = null;
-            UIManager.instance.playerLeaveSeat(seat);
-        
-        if (this.IsMyId(playerId))
-        {
+        this.matchData.Seats[seat] = null;
+        UIManager.instance.playerLeaveSeat(seat);
+
+        if (this.IsMyId(playerId)) {
             this.MySeat = null;
         }
     },
 
-    onHostChange(message)
-    {
+    onHostChange(message) {
         let playerId = message.getString(1);
-            this.matchData.Host = playerId;
-            UIManager.instance.setHost(playerId);
+        this.matchData.Host = playerId;
+        UIManager.instance.setHost(playerId);
     },
 
-    onGameStateUpdate(message)
-    {
+    onGameStateUpdate(message) {
         this.matchData.State = message.getLong(1);
-        switch (this.matchData.State)
-        {
+        console.log('GameState Change ' + this.matchData.State);
+        switch (this.matchData.State) {
             case Define.GameState.WAITING:
                 this.onGameStateWaiting();
-            break;
+                break;
 
             case Define.GameState.READY:
                 this.onGameStateReady();
-            break;
+                break;
+
+            case Define.GameState.GAMEOVER:
+                this.onGameOver();
+                break;
         }
     },
 
-    onGameStateWaiting()
-    {
+    onGameStateWaiting() {
         if (this.IsMyId(this.matchData.Host))
             UIManager.instance.enableStartButton(false);
     },
 
-    onGameStateReady()
-    {
+    onGameStateReady() {
         if (this.IsMyId(this.matchData.Host))
             UIManager.instance.enableStartButton(true);
     },
 
-    onCardsReceived(message)
-    {
+    onGameOver() {
+        UIManager.instance.onGameOver();
+    },
+
+    onCardsReceived(message) {
         let cards = JSON.parse(message.getString(1));
-        cards.sort((a,b) => a - b);
+        cards.sort((a, b) => a - b);
         UIManager.instance.onCardsReceived(cards);
     },
 
-    onTurnChange(message)
-    {
+    onTurnChange(message) {
         let playerId = message.getString(1);
         let startTime = message.getLong(2);
         let timeout = message.getLong(3);
@@ -182,10 +165,15 @@ var GameMgr = cc.Class({
         UIManager.instance.onTurnChange(playerId, startTime, timeout);
     },
 
-    onThrowSuccess(message)
-    {
+    onThrowSuccess(message) {
         let playerId = message.getString(1);
         let cards = JSON.parse(message.getString(2));
         UIManager.instance.onThrowSuccess(playerId, cards);
+    },
+
+    onGameResult(message)
+    {
+        let scores = JSON.parse(message.getString(1));
+        UIManager.instance.displayResult(scores);
     }
 });

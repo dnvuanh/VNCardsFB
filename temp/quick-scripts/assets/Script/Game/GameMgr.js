@@ -26,6 +26,7 @@ var GameMgr = cc.Class({
         GSMgr.instance.registerOpCodeCallback(ServerCode.RP_GET_CARDS, this.onCardsReceived.bind(this));
         GSMgr.instance.registerOpCodeCallback(ServerCode.RP_TURN_CHANGE, this.onTurnChange.bind(this));
         GSMgr.instance.registerOpCodeCallback(ServerCode.RP_THROW_SUCCESS, this.onThrowSuccess.bind(this));
+        GSMgr.instance.registerOpCodeCallback(ServerCode.RP_GAME_RESULT, this.onGameResult.bind(this));
     },
     onInit: function onInit() {
         this.startGameScene = true;
@@ -109,6 +110,7 @@ var GameMgr = cc.Class({
     },
     onGameStateUpdate: function onGameStateUpdate(message) {
         this.matchData.State = message.getLong(1);
+        console.log('GameState Change ' + this.matchData.State);
         switch (this.matchData.State) {
             case Define.GameState.WAITING:
                 this.onGameStateWaiting();
@@ -117,6 +119,10 @@ var GameMgr = cc.Class({
             case Define.GameState.READY:
                 this.onGameStateReady();
                 break;
+
+            case Define.GameState.GAMEOVER:
+                this.onGameOver();
+                break;
         }
     },
     onGameStateWaiting: function onGameStateWaiting() {
@@ -124,6 +130,9 @@ var GameMgr = cc.Class({
     },
     onGameStateReady: function onGameStateReady() {
         if (this.IsMyId(this.matchData.Host)) UIManager.instance.enableStartButton(true);
+    },
+    onGameOver: function onGameOver() {
+        UIManager.instance.onGameOver();
     },
     onCardsReceived: function onCardsReceived(message) {
         var cards = JSON.parse(message.getString(1));
@@ -144,6 +153,10 @@ var GameMgr = cc.Class({
         var playerId = message.getString(1);
         var cards = JSON.parse(message.getString(2));
         UIManager.instance.onThrowSuccess(playerId, cards);
+    },
+    onGameResult: function onGameResult(message) {
+        var scores = JSON.parse(message.getString(1));
+        UIManager.instance.displayResult(scores);
     }
 });
 

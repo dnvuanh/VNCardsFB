@@ -171,6 +171,12 @@ cc.Class({
                 card.x = idx++ * OFFSET;
             });
         }
+    },
+    onGameOver: function onGameOver() {
+        this.SeatMgr.stopAllTurn();
+    },
+    displayResult: function displayResult(scores) {
+        console.log(scores);
     }
 });
 

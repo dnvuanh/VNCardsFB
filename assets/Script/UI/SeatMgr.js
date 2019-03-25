@@ -67,5 +67,14 @@ cc.Class({
                 seatDisplay.disableCountDown();
             }
         }
+    },
+
+    stopAllTurn()
+    {
+        for (var i=0; i<this.node.children.length; i++)
+        {
+            var seatDisplay = this.node.children[i].getComponent("SeatDisplay");
+                seatDisplay.disableCountDown();
+        }
     }
 });

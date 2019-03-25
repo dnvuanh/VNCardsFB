@@ -100,6 +100,12 @@ var UIManager = cc.Class({
     },
     onThrowSuccess: function onThrowSuccess(playerId, cards) {
         this.MenuGame.onThrowSuccess(playerId, cards);
+    },
+    onGameOver: function onGameOver() {
+        this.MenuGame.onGameOver();
+    },
+    displayResult: function displayResult(scores) {
+        this.MenuGame.displayResult(scores);
     }
 });
 

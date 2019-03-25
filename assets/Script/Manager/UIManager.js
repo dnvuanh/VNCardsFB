@@ -135,5 +135,15 @@ var UIManager = cc.Class({
     onThrowSuccess(playerId, cards)
     {
         this.MenuGame.onThrowSuccess(playerId, cards);
+    },
+
+    onGameOver()
+    {
+        this.MenuGame.onGameOver();
+    },
+
+    displayResult(scores)
+    {
+        this.MenuGame.displayResult(scores);
     }
 });

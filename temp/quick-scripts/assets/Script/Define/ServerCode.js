@@ -24,6 +24,7 @@ var ServerCode = {
     RP_TURN_CHANGE: 2102,
     RP_THROW_SUCCESS: 2103,
     RP_TURN_SKIPPED: 2104,
+    RP_GAME_RESULT: 2105,
 
     //error handle
     RP_REQUEST_ERROR: 5000,
