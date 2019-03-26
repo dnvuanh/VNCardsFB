@@ -1,80 +1,63 @@
-2019-03-11T15:38:19.343Z - normal: Load ~/.CocosCreator/settings.json
-2019-03-11T15:38:19.407Z - normal: Initializing Asset Database
-2019-03-11T15:38:19.411Z - normal: checking language setting...
-2019-03-11T15:38:19.411Z - normal: Language: en
-2019-03-11T15:38:20.448Z - success: preview server running at http://localhost:7456
-2019-03-11T15:38:20.486Z - success: protocol editor-framework registered
-2019-03-11T15:38:20.486Z - success: protocol app registered
-2019-03-11T15:38:20.487Z - success: protocol theme registered
-2019-03-11T15:38:20.487Z - success: protocol packages registered
-2019-03-11T15:38:20.487Z - success: protocol uuid registerred
-2019-03-11T15:38:20.487Z - success: protocol db registerred
-2019-03-11T15:38:20.487Z - success: protocol thumbnail registerred
-2019-03-11T15:38:20.487Z - success: protocol unpack registerred
-2019-03-11T15:38:20.487Z - success: protocol disable-commonjs registerred
-2019-03-11T15:38:22.646Z - normal: connected!
-2019-03-11T15:38:22.648Z - normal: Check project /Users/anhdinh/Documents/GitHub/VNCardsFB
-2019-03-11T15:38:22.649Z - normal: Initializing project /Users/anhdinh/Documents/GitHub/VNCardsFB
-2019-03-11T15:38:23.528Z - normal: Initializing Cocos2d
-2019-03-11T15:38:24.472Z - normal: Initializing engine extends
-2019-03-11T15:38:24.475Z - normal: Loading editor/builtin packages from /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin
-2019-03-11T15:38:24.494Z - normal: Loading builtin packages from /Applications/CocosCreator.app/Contents/Resources/builtin
-2019-03-11T15:38:25.338Z - success: assets loaded
-2019-03-11T15:38:25.339Z - success: asset-db-debugger loaded
-2019-03-11T15:38:25.422Z - success: builder loaded
-2019-03-11T15:38:25.423Z - success: color-picker loaded
-2019-03-11T15:38:25.584Z - success: cocos-analytics loaded
-2019-03-11T15:38:25.585Z - success: google-play-instant loaded
-2019-03-11T15:38:25.620Z - success: console loaded
-2019-03-11T15:38:25.621Z - success: jsb-adapter loaded
-2019-03-11T15:38:25.816Z - success: fb-instant-games loaded
-2019-03-11T15:38:25.817Z - success: oppo-runtime loaded
-2019-03-11T15:38:25.852Z - success: google-instant-games loaded
-2019-03-11T15:38:25.853Z - success: package-manager loaded
-2019-03-11T15:38:26.095Z - success: hierarchy loaded
-2019-03-11T15:38:26.096Z - success: qqplay-adapter loaded
-2019-03-11T15:38:26.133Z - success: inspector loaded
-2019-03-11T15:38:26.133Z - success: sdkbox loaded
-2019-03-11T15:38:26.291Z - success: keystore loaded
-2019-03-11T15:38:26.291Z - success: tester loaded
-2019-03-11T15:38:26.324Z - success: node-library loaded
-2019-03-11T15:38:26.325Z - success: ui-grid loaded
-2019-03-11T15:38:26.360Z - success: package-asset loaded
-2019-03-11T15:38:26.361Z - success: ui-kit-preview-extra loaded
-2019-03-11T15:38:26.391Z - success: preferences loaded
-2019-03-11T15:38:26.391Z - success: ui-kit-preview loaded
-2019-03-11T15:38:26.421Z - success: project-exporter loaded
-2019-03-11T15:38:26.422Z - success: ui-kit loaded
-2019-03-11T15:38:26.473Z - success: project-importer loaded
-2019-03-11T15:38:26.473Z - success: ui-tree loaded
-2019-03-11T15:38:26.503Z - success: project-settings loaded
-2019-03-11T15:38:26.504Z - success: vivo-runtime loaded
-2019-03-11T15:38:26.543Z - success: scene loaded
-2019-03-11T15:38:26.544Z - success: weapp-adapter loaded
-2019-03-11T15:38:26.547Z - success: simulator-debugger loaded
-2019-03-11T15:38:26.555Z - success: sprite-editor loaded
-2019-03-11T15:38:26.599Z - success: store loaded
-2019-03-11T15:38:26.635Z - success: timeline loaded
-2019-03-11T15:38:30.305Z - normal: Loading packages
-2019-03-11T15:38:30.315Z - normal: Watching packages
-2019-03-11T15:38:30.397Z - normal: Run Application
-2019-03-11T15:52:46.610Z - error: Sorry, the component of 'Card' which with an index of 1 is corrupted! It has been removed.
-    at Object.cc.errorID (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/CCDebug.js:167:16)
-    at _componentCorrupted (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/node-activator.js:75:20)
-    at CCClass._activateNodeRecursively (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/node-activator.js:115:25)
-    at CCClass.activateNode (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/node-activator.js:163:26)
-    at cc_Node._onHierarchyChanged (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/utils/base-node.js:623:48)
-    at cc_Node._onHierarchyChanged (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/CCNode.js:696:22)
-    at cc_Node.setParent (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/utils/base-node.js:219:26)
-    at n.createNodeFromAsset (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/utils/scene.js:1:1424)
-    at cc_Prefab.cc.Class.createNode (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/assets/CCPrefab.js:43:17)
-2019-03-11T15:53:27.802Z - error: Error: Can not revert prefab, the file id of "Card" is missing, please save the prefab to a new asset by dragging and drop the node from Node Tree into Assets.
-    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/utils/prefab.js:1:5613
-    at f (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/utils/prefab.js:1:795)
-    at Object.c._doRevertPrefab (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/utils/prefab.js:1:5562)
-    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/utils/prefab.js:1:6618
-    at CCLoader.<anonymous> (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/CCAssetLibrary.js:63:25)
-    at /Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/load-pipeline/CCLoader.js:139:46
-    at /Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/utils.js:48:25
-    at _combinedTickCallback (internal/process/next_tick.js:73:7)
-    at process._tickCallback (internal/process/next_tick.js:104:9)
+2019-03-25T01:35:31.469Z - normal: Load ~/.CocosCreator/settings.json
+2019-03-25T01:35:32.688Z - normal: Initializing Asset Database
+2019-03-25T01:35:32.693Z - normal: checking language setting...
+2019-03-25T01:35:32.693Z - normal: Language: en
+2019-03-25T01:35:33.587Z - success: preview server running at http://localhost:7456
+2019-03-25T01:35:33.590Z - success: protocol editor-framework registered
+2019-03-25T01:35:33.590Z - success: protocol app registered
+2019-03-25T01:35:33.590Z - success: protocol theme registered
+2019-03-25T01:35:33.590Z - success: protocol packages registered
+2019-03-25T01:35:33.590Z - success: protocol uuid registerred
+2019-03-25T01:35:33.590Z - success: protocol db registerred
+2019-03-25T01:35:33.590Z - success: protocol thumbnail registerred
+2019-03-25T01:35:33.591Z - success: protocol unpack registerred
+2019-03-25T01:35:33.591Z - success: protocol disable-commonjs registerred
+2019-03-25T01:35:33.951Z - normal: connected!
+2019-03-25T01:35:33.952Z - normal: Check project D:\Projects\VNCardsFB
+2019-03-25T01:35:33.955Z - normal: Initializing project D:\Projects\VNCardsFB
+2019-03-25T01:35:34.792Z - normal: Initializing Cocos2d
+2019-03-25T01:35:36.376Z - normal: Initializing engine extends
+2019-03-25T01:35:36.379Z - normal: Loading editor/builtin packages from C:\CocosCreator\resources\app.asar\editor\builtin
+2019-03-25T01:35:36.392Z - normal: Loading builtin packages from C:\CocosCreator\resources\builtin
+2019-03-25T01:35:37.203Z - success: assets loaded
+2019-03-25T01:35:37.204Z - success: asset-db-debugger loaded
+2019-03-25T01:35:37.221Z - success: builder loaded
+2019-03-25T01:35:37.222Z - success: code-editor loaded
+2019-03-25T01:35:37.321Z - success: cocos-analytics loaded
+2019-03-25T01:35:37.322Z - success: color-picker loaded
+2019-03-25T01:35:37.490Z - success: console loaded
+2019-03-25T01:35:37.491Z - success: google-play-instant loaded
+2019-03-25T01:35:37.529Z - success: fb-instant-games loaded
+2019-03-25T01:35:37.530Z - success: jsb-adapter loaded
+2019-03-25T01:35:37.546Z - success: google-instant-games loaded
+2019-03-25T01:35:37.547Z - success: oppo-runtime loaded
+2019-03-25T01:35:37.735Z - success: hierarchy loaded
+2019-03-25T01:35:37.736Z - success: package-manager loaded
+2019-03-25T01:35:37.909Z - success: inspector loaded
+2019-03-25T01:35:37.910Z - success: qqplay-adapter loaded
+2019-03-25T01:35:38.032Z - success: keystore loaded
+2019-03-25T01:35:38.033Z - success: sdkbox loaded
+2019-03-25T01:35:38.072Z - success: node-library loaded
+2019-03-25T01:35:38.073Z - success: tester loaded
+2019-03-25T01:35:38.179Z - success: package-asset loaded
+2019-03-25T01:35:38.179Z - success: ui-grid loaded
+2019-03-25T01:35:38.219Z - success: preferences loaded
+2019-03-25T01:35:38.219Z - success: ui-kit-preview-extra loaded
+2019-03-25T01:35:38.254Z - success: project-exporter loaded
+2019-03-25T01:35:38.254Z - success: ui-kit-preview loaded
+2019-03-25T01:35:38.278Z - success: project-importer loaded
+2019-03-25T01:35:38.278Z - success: ui-kit loaded
+2019-03-25T01:35:38.285Z - success: project-settings loaded
+2019-03-25T01:35:38.286Z - success: ui-tree loaded
+2019-03-25T01:35:38.395Z - success: scene loaded
+2019-03-25T01:35:38.395Z - success: vivo-runtime loaded
+2019-03-25T01:35:38.414Z - success: simulator-debugger loaded
+2019-03-25T01:35:38.414Z - success: weapp-adapter loaded
+2019-03-25T01:35:38.420Z - success: sprite-editor loaded
+2019-03-25T01:35:38.424Z - success: store loaded
+2019-03-25T01:35:38.428Z - success: timeline loaded
+2019-03-25T01:35:38.663Z - normal: Loading packages
+2019-03-25T01:35:38.668Z - normal: Watching packages
+2019-03-25T01:35:39.196Z - normal: Run Application
+2019-03-25T14:21:54.022Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:87524
+2019-03-25T15:05:51.946Z - info: shutdown preview server

@@ -8,6 +8,7 @@ cc.Class({
         money: cc.Label,
         hostIcon: cc.Node,
         turnCountDown: cc.ProgressBar,
+        resultIcon: cc.Node,
     },
 
     onLoad()
@@ -16,6 +17,7 @@ cc.Class({
         this.hostIcon.active = false;
         this.turnCountDown.node.active = false;
         this.IsMyTurn = false;
+        this.resultIcon.active = false;
     },
 
     display(playerInfo)
@@ -68,6 +70,11 @@ cc.Class({
     {
         this.IsMyTurn = false;
         this.turnCountDown.node.active = false;
+    },
+
+    onPlayerFinished()
+    {
+        this.resultIcon.active = true;
     },
 
     update(dt)

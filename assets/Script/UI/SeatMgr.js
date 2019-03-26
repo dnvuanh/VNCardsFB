@@ -67,5 +67,17 @@ cc.Class({
                 seatDisplay.disableCountDown();
             }
         }
+    },
+
+    onPlayerFinished(playerId)
+    {
+        for (var i=0; i<this.node.children.length; i++)
+        {
+            var seatDisplay = this.node.children[i].getComponent("SeatDisplay");
+            if (seatDisplay && seatDisplay.getPlayerId() == playerId)
+            {
+                seatDisplay.onPlayerFinished();
+            }
+        }        
     }
 });
