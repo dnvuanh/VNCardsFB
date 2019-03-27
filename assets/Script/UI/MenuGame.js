@@ -214,6 +214,16 @@ cc.Class({
                 card.x = idx++ * OFFSET;
             });
         }
+    },
+
+    onGameOver()
+    {
+        this.SeatMgr.stopAllTurn();
+    },
+
+    displayResult(scores)
+    {
+        console.log(scores);
 
         this.CheckPlayerFinished(playerId);
     },
