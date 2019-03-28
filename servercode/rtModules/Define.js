@@ -20,10 +20,12 @@ function Define()
         SINGLE:     1,
         PAIR:       2,
         TRIPLE:     3,
-        QUADS:      4,
-        STRAIGHT:   5,
-        THREEPAIRS: 6,
+        STRAIGHT:   4,
+        THREEPAIRS: 5,
+        QUADS:      6,
         FOURPAIRS:  7,
-    }
+    },
+    
+    this.TIME_PER_TURN = 60;
 }
 module.exports = new Define();
