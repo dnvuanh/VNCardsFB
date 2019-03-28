@@ -52,6 +52,12 @@ cc.Class({
             }
         }
     },
+    stopAllTurn: function stopAllTurn() {
+        for (var i = 0; i < this.node.children.length; i++) {
+            var seatDisplay = this.node.children[i].getComponent("SeatDisplay");
+            seatDisplay.disableCountDown();
+        }
+    },
     onPlayerFinished: function onPlayerFinished(playerId) {
         for (var i = 0; i < this.node.children.length; i++) {
             var seatDisplay = this.node.children[i].getComponent("SeatDisplay");

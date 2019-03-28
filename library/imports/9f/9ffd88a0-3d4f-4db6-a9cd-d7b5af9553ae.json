@@ -1574,6 +1574,7 @@
     "turnCountDown": {
       "__id__": 21
     },
+    "resultIcon": null,
     "_id": "4aldQ0JhFDYYMKqcJRogyP"
   },
   {
@@ -2498,6 +2499,7 @@
     "turnCountDown": {
       "__id__": 48
     },
+    "resultIcon": null,
     "_id": "220igZqkpHcJwUjeiipkih"
   },
   {
@@ -3422,6 +3424,7 @@
     "turnCountDown": {
       "__id__": 75
     },
+    "resultIcon": null,
     "_id": "ccAPoGZJpHe5FYJNRwphJz"
   },
   {
@@ -4346,6 +4349,7 @@
     "turnCountDown": {
       "__id__": 102
     },
+    "resultIcon": null,
     "_id": "244j2y341CqJY2J8jJeYCX"
   },
   {
@@ -14302,6 +14306,9 @@
     },
     "throwButton": {
       "__id__": 166
+    },
+    "skipButton": {
+      "__id__": 157
     },
     "playZoneNode": {
       "__id__": 401
