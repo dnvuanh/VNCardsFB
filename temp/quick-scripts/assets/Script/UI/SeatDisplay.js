@@ -73,6 +73,13 @@ cc.Class({
                 this.turnCountDown.node.active = false;
             }
         }
+    },
+    setReady: function setReady(isReady) {
+        if (isReady) {
+            this.node.opacity = 255;
+        } else {
+            this.node.opacity = 125;
+        }
     }
 });
 

@@ -25,6 +25,7 @@ cc.Class({
         {
             var seatDisplay = this.node.children[seat].getComponent("SeatDisplay");
                 seatDisplay.display(playerInfo);
+                seatDisplay.setReady(GameMgr.instance.IsHost(playerInfo.id));
         }
     },
 
@@ -76,5 +77,17 @@ cc.Class({
             var seatDisplay = this.node.children[i].getComponent("SeatDisplay");
                 seatDisplay.disableCountDown();
         }
-    }
+    },
+
+    onPlayerReady(playerId, isReady)
+    {
+        for (var i=0; i<this.node.children.length; i++)
+        {
+            var seatDisplay = this.node.children[i].getComponent("SeatDisplay");
+            if (seatDisplay && seatDisplay.getPlayerId() == playerId)
+            {
+                seatDisplay.setReady(isReady);
+            }
+        }
+    },
 });
