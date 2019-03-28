@@ -534,11 +534,6 @@
     "meta": 1548513678000,
     "relativePath": "resources"
   },
-  "9ffd88a0-3d4f-4db6-a9cd-d7b5af9553ae": {
-    "asset": 1553734659000,
-    "meta": 1553734659000,
-    "relativePath": "Scene/Game.fire"
-  },
   "49ee16f5-074d-4a52-b51d-b95f36ac0fc3": {
     "asset": 1552319658000,
     "meta": 1552319658000,
@@ -568,11 +563,6 @@
     "asset": 1550244309000,
     "meta": 1552318709000,
     "relativePath": "Script/GameSparks/gamesparks.js"
-  },
-  "b4a54cdb-1228-4d16-97a8-3170c6226a88": {
-    "asset": 1552318611000,
-    "meta": 1552318707000,
-    "relativePath": "Prefabs/MenuGame.prefab"
   },
   "9a8185fb-b2cd-4a99-a5df-60ed78414345": {
     "asset": 1552319634000,
@@ -914,11 +904,6 @@
     "meta": 1552318709000,
     "relativePath": "Script/Manager/GSMgr.js"
   },
-  "e8dfe2c7-3dc7-4c73-b9b9-a29659317236": {
-    "asset": 1550249922000,
-    "meta": 1552318706000,
-    "relativePath": "resources/prefabs"
-  },
   "098f2e6d-0359-4d0b-b86f-d0e154700bde": {
     "asset": 1553693418000,
     "meta": 1553696006000,
@@ -929,24 +914,94 @@
     "meta": 1553696006000,
     "relativePath": "Script/Manager/UIManager.js"
   },
-  "4ddfeee2-d309-4e8a-9036-08bb0e95291c": {
-    "asset": 1553732217000,
-    "meta": 1553733774000,
-    "relativePath": "Script/UI/SeatDisplay.js"
-  },
-  "74de12e4-e266-4f55-9410-4f47314320b4": {
-    "asset": 1553733900000,
-    "meta": 1553733905000,
-    "relativePath": "Script/UI/SeatMgr.js"
-  },
   "a5fb6e06-2a67-4334-aa57-7bb75a6d7df7": {
     "asset": 1553734097000,
     "meta": 1553734101000,
     "relativePath": "Script/Game/GameMgr.js"
   },
+  "e8dfe2c7-3dc7-4c73-b9b9-a29659317236": {
+    "asset": 1550249922000,
+    "meta": 1553736001000,
+    "relativePath": "resources/prefabs"
+  },
+  "b4a54cdb-1228-4d16-97a8-3170c6226a88": {
+    "asset": 1553735879000,
+    "meta": 1553736001000,
+    "relativePath": "Prefabs/MenuGame.prefab"
+  },
+  "adb19d95-9082-4cba-a05f-138d6fe3a631": {
+    "asset": 1553735879000,
+    "meta": 1553735879000,
+    "relativePath": "resources/Texture/Result"
+  },
+  "4ddfeee2-d309-4e8a-9036-08bb0e95291c": {
+    "asset": 1553735879000,
+    "meta": 1553736001000,
+    "relativePath": "Script/UI/SeatDisplay.js"
+  },
+  "74922ec7-2b1c-40e8-92e9-0813eb003741": {
+    "asset": 1553735879000,
+    "meta": 1553736001000,
+    "relativePath": "resources/Texture/Result/dead2.png"
+  },
+  "936324fb-95a7-484f-9b7d-426ba1c3ea59": {
+    "asset": 1553735879000,
+    "meta": 1553736001000,
+    "relativePath": "resources/Texture/Result/burned.png"
+  },
+  "a5b391aa-6fc2-4fd8-984d-4fe72fee7906": {
+    "asset": 1553735879000,
+    "meta": 1553736001000,
+    "relativePath": "resources/Texture/Result/frozen.png"
+  },
+  "c803abcd-2b91-4c54-883a-158b98b80d4c": {
+    "asset": 1553735879000,
+    "meta": 1553736001000,
+    "relativePath": "resources/Texture/Result/first.png"
+  },
+  "ecf41326-477f-46f5-b7a6-db36fa16f3f0": {
+    "asset": 1553735879000,
+    "meta": 1553736001000,
+    "relativePath": "resources/Texture/Result/Last.png"
+  },
+  "1aa4293b-8f43-4c72-97bc-c5a78bf18013": {
+    "asset": 1553735879000,
+    "meta": 1553736001000,
+    "relativePath": "resources/Texture/Result/InstantWin.png"
+  },
+  "e78ccdd1-7ea1-4fe4-babe-a0bc418c3e7f": {
+    "asset": 1553735879000,
+    "meta": 1553736001000,
+    "relativePath": "resources/Texture/Result/lose.png"
+  },
+  "4990967c-6433-47a9-85ad-443d8fe2a8e1": {
+    "asset": 1553735879000,
+    "meta": 1553736001000,
+    "relativePath": "resources/Texture/Result/Second.png"
+  },
+  "ee758622-0554-44f7-adc0-cf3b8274d405": {
+    "asset": 1553735879000,
+    "meta": 1553736001000,
+    "relativePath": "resources/Texture/Result/skipTurn.png"
+  },
+  "20257cee-6200-451e-a789-3727caf7547d": {
+    "asset": 1553735879000,
+    "meta": 1553736001000,
+    "relativePath": "resources/Texture/Result/Third.png"
+  },
   "3da6cd8a-1675-4245-8838-df9f57253145": {
-    "asset": 1553735765000,
-    "meta": 1553735772000,
+    "asset": 1553736298000,
+    "meta": 1553736658000,
     "relativePath": "Script/UI/MenuGame.js"
+  },
+  "74de12e4-e266-4f55-9410-4f47314320b4": {
+    "asset": 1553736196000,
+    "meta": 1553736658000,
+    "relativePath": "Script/UI/SeatMgr.js"
+  },
+  "9ffd88a0-3d4f-4db6-a9cd-d7b5af9553ae": {
+    "asset": 1553736805000,
+    "meta": 1553736809000,
+    "relativePath": "Scene/Game.fire"
   }
 }

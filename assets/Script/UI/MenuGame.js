@@ -20,6 +20,7 @@ cc.Class({
         showRightButton: cc.Button,
         showRightLabel: cc.Label,
         throwButton: cc.Button,
+        skipButton: cc.Button,
         playZoneNode: cc.Node,
     },
 
@@ -164,10 +165,21 @@ cc.Class({
             this.PlayingButtons.active = false;
         }
         this.throwButton.interactable = false;
+        this.skipButton.interactable = true;
         if(this.previousThrowPlayer == playerId)
         {
-            this.previousCards = null;
+            this.beginNewTurn();
         }
+    },
+
+    beginNewTurn()
+    {
+        this.previousCards = null;
+        this.skipButton.interactable = false;
+        let cardList = this.playZoneNode.getComponentsInChildren("Card");
+            cardList.forEach(card => {
+                card.node.active = false;
+            });
     },
 
     checkThrowable(enable)
@@ -215,10 +227,23 @@ cc.Class({
     displayResult(scores)
     {
         console.log(scores);
+        this.CheckPlayerFinished(playerId);
     },
 
     onPlayerReady(playerId, isReady)
     {
         this.SeatMgr.onPlayerReady(playerId, isReady);
     },
+
+    CheckPlayerFinished(playerId)
+    {
+        let cardList = this.myCardNode.getComponentsInChildren("Card");
+        if(cardList.length == 0)
+        {
+            if(GameMgr.instance.IsMyId(playerId)) {
+                //TODO: win popup
+            }
+            this.SeatMgr.onPlayerFinished(playerId);
+        }
+    }
 });

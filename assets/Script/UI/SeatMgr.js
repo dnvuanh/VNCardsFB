@@ -79,6 +79,18 @@ cc.Class({
         }
     },
 
+    onPlayerFinished(playerId)
+    {
+        for (var i=0; i<this.node.children.length; i++)
+        {
+            var seatDisplay = this.node.children[i].getComponent("SeatDisplay");
+            if (seatDisplay && seatDisplay.getPlayerId() == playerId)
+            {
+                seatDisplay.onPlayerFinished();
+            }
+        }
+    },
+
     onPlayerReady(playerId, isReady)
     {
         for (var i=0; i<this.node.children.length; i++)
@@ -89,5 +101,6 @@ cc.Class({
                 seatDisplay.setReady(isReady);
             }
         }
-    },
+    }
+    
 });

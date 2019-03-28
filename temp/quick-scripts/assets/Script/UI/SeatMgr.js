@@ -52,10 +52,12 @@ cc.Class({
             }
         }
     },
-    stopAllTurn: function stopAllTurn() {
+    onPlayerFinished: function onPlayerFinished(playerId) {
         for (var i = 0; i < this.node.children.length; i++) {
             var seatDisplay = this.node.children[i].getComponent("SeatDisplay");
-            seatDisplay.disableCountDown();
+            if (seatDisplay && seatDisplay.getPlayerId() == playerId) {
+                seatDisplay.onPlayerFinished();
+            }
         }
     },
     onPlayerReady: function onPlayerReady(playerId, isReady) {

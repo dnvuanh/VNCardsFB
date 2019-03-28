@@ -13643,6 +13643,9 @@
     "throwButton": {
       "__id__": 152
     },
+    "skipButton": {
+      "__id__": 144
+    },
     "playZoneNode": {
       "__id__": 385
     },

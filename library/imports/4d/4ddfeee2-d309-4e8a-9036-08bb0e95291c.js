@@ -13,7 +13,8 @@ cc.Class({
         userName: cc.Label,
         money: cc.Label,
         hostIcon: cc.Node,
-        turnCountDown: cc.ProgressBar
+        turnCountDown: cc.ProgressBar,
+        resultIcon: cc.Node
     },
 
     onLoad: function onLoad() {
@@ -21,6 +22,7 @@ cc.Class({
         this.hostIcon.active = false;
         this.turnCountDown.node.active = false;
         this.IsMyTurn = false;
+        this.resultIcon.active = false;
     },
     display: function display(playerInfo) {
         var _this = this;
@@ -60,6 +62,9 @@ cc.Class({
     disableCountDown: function disableCountDown() {
         this.IsMyTurn = false;
         this.turnCountDown.node.active = false;
+    },
+    onPlayerFinished: function onPlayerFinished() {
+        this.resultIcon.active = true;
     },
     update: function update(dt) {
         if (this.IsMyTurn) {
