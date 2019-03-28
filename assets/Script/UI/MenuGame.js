@@ -224,19 +224,5 @@ cc.Class({
     displayResult(scores)
     {
         console.log(scores);
-
-        this.CheckPlayerFinished(playerId);
     },
-
-    CheckPlayerFinished(playerId)
-    {
-        let cardList = this.myCardNode.getComponentsInChildren("Card");
-        if(cardList.length == 0)
-        {
-            if(GameMgr.instance.IsMyId(playerId)) {
-                //TODO: win popup
-            }
-            this.SeatMgr.onPlayerFinished(playerId);
-        }
-    }
 });
