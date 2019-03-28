@@ -145,5 +145,10 @@ var UIManager = cc.Class({
     displayResult(scores)
     {
         this.MenuGame.displayResult(scores);
-    }
+    },
+
+    onPlayerReady(playerId, isReady)
+    {
+        this.MenuGame.onPlayerReady(playerId, isReady);
+    },
 });

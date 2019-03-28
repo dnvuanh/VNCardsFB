@@ -12,7 +12,8 @@ cc.Class({
         DealCards: require("DealCards"),
         ButtonLeave: cc.Node,
         ButtonStart: cc.Node,
-        InGameButtons: cc.Node,
+        ButtonReady: cc.Node,
+        PlayingButtons: cc.Node,
         myCardNode: cc.Node,
         friendCardNode: cc.Node,
         rightPanelNode: cc.Node,
@@ -27,7 +28,8 @@ cc.Class({
     {
         this.ButtonLeave.active = false;
         this.ButtonStart.active = false;
-        this.InGameButtons.active = false;
+        this.ButtonReady.active = false;
+        this.PlayingButtons.active = false;
         this.onlineList.node.active = true;
         this.chatBox.node.active = false;
         this.seatOccupied = [false, false, false, false];
@@ -61,6 +63,7 @@ cc.Class({
         if (GameMgr.instance.IsMyId(playerInfo.id))
         {
             this.ButtonLeave.active = true;
+            this.ButtonReady.active = !GameMgr.instance.IsHost(playerInfo.id);
         }
     },
 
@@ -114,7 +117,7 @@ cc.Class({
             }
             cardCount += 1;
         });
-        this.InGameButtons.active = true;
+        this.PlayingButtons.active = true;
         this.previousCards = null;
         this.previousThrowPlayer = null;
     },
@@ -157,9 +160,9 @@ cc.Class({
     {
         this.SeatMgr.onTurnChange(playerId, startTime, timeout);
         if(GameMgr.instance.IsMyId(playerId))   {
-            this.InGameButtons.active = true;
+            this.PlayingButtons.active = true;
         } else {
-            this.InGameButtons.active = false;
+            this.PlayingButtons.active = false;
         }
         this.throwButton.interactable = false;
         this.skipButton.interactable = true;

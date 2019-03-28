@@ -10,6 +10,7 @@ var GameMgr = cc.Class({
         GameMgr.instance = this;
         cc.game.addPersistRootNode(this.node);
         this.matchData = {};
+        this.matchData.PlayerReady = [];
     },
 
     start() {
@@ -22,6 +23,7 @@ var GameMgr = cc.Class({
         GSMgr.instance.registerOpCodeCallback(ServerCode.RP_TURN_CHANGE, this.onTurnChange.bind(this));
         GSMgr.instance.registerOpCodeCallback(ServerCode.RP_THROW_SUCCESS, this.onThrowSuccess.bind(this));
         GSMgr.instance.registerOpCodeCallback(ServerCode.RP_GAME_RESULT, this.onGameResult.bind(this));
+        GSMgr.instance.registerOpCodeCallback(ServerCode.RP_PLAYER_READY, this.onPlayerReady.bind(this));
     },
 
     onInit() {
@@ -74,6 +76,11 @@ var GameMgr = cc.Class({
         return this.matchData.Host;
     },
 
+    IsHost(playerId)
+    {
+        return (playerId == this.matchData.Host || this.matchData.Host == null);
+    },
+
     UpdateUserInfo(message) {
         this.userId = message.userId;
     },
@@ -99,6 +106,21 @@ var GameMgr = cc.Class({
         if (this.IsMyId(playerId)) {
             this.MySeat = seat;
         }
+    },
+
+    onPlayerReady(message) {
+        let playerId = message.getString(1);
+        let isReady = message.getLong(2);
+        if (isReady)
+        {
+            this.matchData.PlayerReady.push(playerId);
+        }
+        else
+        {
+            let index = this.matchData.PlayerReady.indexOf(playerId);
+            this.matchData.PlayerReady.splice(index, 1);
+        }
+        UIManager.instance.onPlayerReady(playerId, isReady);
     },
 
     onPlayerLeaveSeat(message) {

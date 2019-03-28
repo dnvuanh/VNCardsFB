@@ -17,7 +17,7 @@ cc.Class({
         this.hostIcon.active = false;
         this.turnCountDown.node.active = false;
         this.IsMyTurn = false;
-        this.resultIcon.active = false;
+        //this.resultIcon.active = false;
     },
 
     display(playerInfo)
@@ -93,6 +93,18 @@ cc.Class({
                 this.turnCountDown.progress = 0;
                 this.turnCountDown.node.active = false;
             }
+        }
+    },
+
+    setReady(isReady)
+    {
+        if (isReady)
+        {
+            this.node.opacity = 255;
+        }
+        else
+        {
+            this.node.opacity = 125;
         }
     }
 });

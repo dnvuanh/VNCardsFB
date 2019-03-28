@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "burned",
+    "texture": "936324fb-95a7-484f-9b7d-426ba1c3ea59",
+    "atlas": "",
+    "rect": [
+      13,
+      7,
+      95,
+      105
+    ],
+    "offset": [
+      0.5,
+      0.5
+    ],
+    "originalSize": [
+      120,
+      120
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

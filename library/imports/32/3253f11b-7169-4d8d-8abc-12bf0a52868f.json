@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "skipTurn",
+    "texture": "ee758622-0554-44f7-adc0-cf3b8274d405",
+    "atlas": "",
+    "rect": [
+      15,
+      43,
+      91,
+      33
+    ],
+    "offset": [
+      0.5,
+      0.5
+    ],
+    "originalSize": [
+      120,
+      120
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

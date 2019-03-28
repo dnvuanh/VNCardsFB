@@ -23,6 +23,7 @@ cc.Class({
         if (seat < this.node.children.length) {
             var seatDisplay = this.node.children[seat].getComponent("SeatDisplay");
             seatDisplay.display(playerInfo);
+            seatDisplay.setReady(GameMgr.instance.IsHost(playerInfo.id));
         }
     },
     onPlayerLeave: function onPlayerLeave(seat) {
@@ -51,11 +52,25 @@ cc.Class({
             }
         }
     },
+    stopAllTurn: function stopAllTurn() {
+        for (var i = 0; i < this.node.children.length; i++) {
+            var seatDisplay = this.node.children[i].getComponent("SeatDisplay");
+            seatDisplay.disableCountDown();
+        }
+    },
     onPlayerFinished: function onPlayerFinished(playerId) {
         for (var i = 0; i < this.node.children.length; i++) {
             var seatDisplay = this.node.children[i].getComponent("SeatDisplay");
             if (seatDisplay && seatDisplay.getPlayerId() == playerId) {
                 seatDisplay.onPlayerFinished();
+            }
+        }
+    },
+    onPlayerReady: function onPlayerReady(playerId, isReady) {
+        for (var i = 0; i < this.node.children.length; i++) {
+            var seatDisplay = this.node.children[i].getComponent("SeatDisplay");
+            if (seatDisplay && seatDisplay.getPlayerId() == playerId) {
+                seatDisplay.setReady(isReady);
             }
         }
     }

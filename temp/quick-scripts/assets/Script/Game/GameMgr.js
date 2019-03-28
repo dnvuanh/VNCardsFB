@@ -16,6 +16,7 @@ var GameMgr = cc.Class({
         GameMgr.instance = this;
         cc.game.addPersistRootNode(this.node);
         this.matchData = {};
+        this.matchData.PlayerReady = [];
     },
     start: function start() {
         GSMgr.instance.registerOpCodeCallback(ServerCode.RP_ENTER_SEAT, this.onPlayerEnterSeat.bind(this));
@@ -26,6 +27,8 @@ var GameMgr = cc.Class({
         GSMgr.instance.registerOpCodeCallback(ServerCode.RP_GET_CARDS, this.onCardsReceived.bind(this));
         GSMgr.instance.registerOpCodeCallback(ServerCode.RP_TURN_CHANGE, this.onTurnChange.bind(this));
         GSMgr.instance.registerOpCodeCallback(ServerCode.RP_THROW_SUCCESS, this.onThrowSuccess.bind(this));
+        GSMgr.instance.registerOpCodeCallback(ServerCode.RP_GAME_RESULT, this.onGameResult.bind(this));
+        GSMgr.instance.registerOpCodeCallback(ServerCode.RP_PLAYER_READY, this.onPlayerReady.bind(this));
     },
     onInit: function onInit() {
         this.startGameScene = true;
@@ -70,6 +73,9 @@ var GameMgr = cc.Class({
     getHost: function getHost() {
         return this.matchData.Host;
     },
+    IsHost: function IsHost(playerId) {
+        return playerId == this.matchData.Host || this.matchData.Host == null;
+    },
     UpdateUserInfo: function UpdateUserInfo(message) {
         this.userId = message.userId;
     },
@@ -92,6 +98,17 @@ var GameMgr = cc.Class({
             this.MySeat = seat;
         }
     },
+    onPlayerReady: function onPlayerReady(message) {
+        var playerId = message.getString(1);
+        var isReady = message.getLong(2);
+        if (isReady) {
+            this.matchData.PlayerReady.push(playerId);
+        } else {
+            var index = this.matchData.PlayerReady.indexOf(playerId);
+            this.matchData.PlayerReady.splice(index, 1);
+        }
+        UIManager.instance.onPlayerReady(playerId, isReady);
+    },
     onPlayerLeaveSeat: function onPlayerLeaveSeat(message) {
         var playerId = message.getString(1);
         var seat = message.getLong(2);
@@ -109,6 +126,7 @@ var GameMgr = cc.Class({
     },
     onGameStateUpdate: function onGameStateUpdate(message) {
         this.matchData.State = message.getLong(1);
+        console.log('GameState Change ' + this.matchData.State);
         switch (this.matchData.State) {
             case Define.GameState.WAITING:
                 this.onGameStateWaiting();
@@ -117,6 +135,10 @@ var GameMgr = cc.Class({
             case Define.GameState.READY:
                 this.onGameStateReady();
                 break;
+
+            case Define.GameState.GAMEOVER:
+                this.onGameOver();
+                break;
         }
     },
     onGameStateWaiting: function onGameStateWaiting() {
@@ -124,6 +146,9 @@ var GameMgr = cc.Class({
     },
     onGameStateReady: function onGameStateReady() {
         if (this.IsMyId(this.matchData.Host)) UIManager.instance.enableStartButton(true);
+    },
+    onGameOver: function onGameOver() {
+        UIManager.instance.onGameOver();
     },
     onCardsReceived: function onCardsReceived(message) {
         var cards = JSON.parse(message.getString(1));
@@ -144,6 +169,10 @@ var GameMgr = cc.Class({
         var playerId = message.getString(1);
         var cards = JSON.parse(message.getString(2));
         UIManager.instance.onThrowSuccess(playerId, cards);
+    },
+    onGameResult: function onGameResult(message) {
+        var scores = JSON.parse(message.getString(1));
+        UIManager.instance.displayResult(scores);
     }
 });
 
