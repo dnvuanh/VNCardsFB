@@ -228,4 +228,22 @@ cc.Class({
     {
         console.log(scores);
     },
+
+    onPlayerReady(playerId, isReady)
+    {
+        this.SeatMgr.onPlayerReady(playerId, isReady);
+        if (GameMgr.instance.IsMyId(playerId))
+        {
+            if (isReady)
+                this.ButtonReady.active = false;
+            else
+                this.ButtonReady.active = true;
+        }
+    },
+
+
+    onReadyPressed()
+    {
+        GSMgr.instance.requestPlayerReady(true);
+    }
 });

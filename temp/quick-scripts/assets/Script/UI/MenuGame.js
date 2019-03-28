@@ -190,21 +190,14 @@ cc.Class({
     },
     displayResult: function displayResult(scores) {
         console.log(scores);
-        this.CheckPlayerFinished(playerId);
     },
     onPlayerReady: function onPlayerReady(playerId, isReady) {
         this.SeatMgr.onPlayerReady(playerId, isReady);
-    },
-    CheckPlayerFinished: function CheckPlayerFinished(playerId) {
-        var cardList = this.myCardNode.getComponentsInChildren("Card");
-        if (cardList.length == 0) {
-            if (GameMgr.instance.IsMyId(playerId)) {
-                //TODO: win popup
-            }
-            this.SeatMgr.onPlayerFinished(playerId);
+        if (GameMgr.instance.IsMyId(playerId)) {
+            if (isReady) this.ButtonReady.active = false;else this.ButtonReady.active = true;
         }
     },
-    onButtonReadyPressed: function onButtonReadyPressed() {
+    onReadyPressed: function onReadyPressed() {
         GSMgr.instance.requestPlayerReady(true);
     }
 });
