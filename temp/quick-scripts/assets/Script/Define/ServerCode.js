@@ -12,6 +12,7 @@ var ServerCode = {
     RQ_START_GAME: 1002,
     RQ_THROW_CARDS: 1003,
     RQ_SKIP_TURN: 1004,
+    RQ_PLAYER_READY: 1106,
 
     //response
     RP_LOAD_MATCH: 1999,

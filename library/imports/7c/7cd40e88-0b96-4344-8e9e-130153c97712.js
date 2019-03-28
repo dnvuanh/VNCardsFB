@@ -208,6 +208,12 @@ var GSMgr = cc.Class({
 
         this.sendRTData(ServerCode.RQ_ENTER_SEAT, data);
     },
+    requestPlayerReady: function requestPlayerReady(isReady) {
+        var data = RTData.get();
+        data.setLong(1, isReady ? 1 : 0);
+
+        this.sendRTData(ServerCode.RQ_PLAYER_READY, data);
+    },
     leaveSeat: function leaveSeat(seat) {
         var data = RTData.get();
         data.setLong(1, seat);

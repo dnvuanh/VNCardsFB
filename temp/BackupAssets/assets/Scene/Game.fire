@@ -4750,7 +4750,7 @@
     },
     "component": "",
     "_componentId": "3da6c2KFnVCRYg4359XJTFF",
-    "handler": "onStartGameClick",
+    "handler": "onButtonReadyPressed",
     "customEventData": ""
   },
   {

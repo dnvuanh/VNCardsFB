@@ -245,5 +245,10 @@ cc.Class({
             }
             this.SeatMgr.onPlayerFinished(playerId);
         }
+    },
+
+    onButtonReadyPressed()
+    {
+        GSMgr.instance.requestPlayerReady(true);
     }
 });
