@@ -31,6 +31,7 @@ cc.Class({
     },
     onCardDelivery: function onCardDelivery(card) {
         this.deliveryCount += 1;
+        card.setPosition(0, 0);
         card.active = false;
         if (this.deliveryCount % this.destination.length == 0) {
             this.callbackEveryTurn();

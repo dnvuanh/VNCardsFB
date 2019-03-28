@@ -10,7 +10,7 @@ var GameMgr = cc.Class({
         GameMgr.instance = this;
         cc.game.addPersistRootNode(this.node);
         this.matchData = {};
-        this.matchData.PlayerReady = [];
+        //this.matchData.PlayerReady = [];
     },
 
     start() {
@@ -23,7 +23,8 @@ var GameMgr = cc.Class({
         GSMgr.instance.registerOpCodeCallback(ServerCode.RP_TURN_CHANGE, this.onTurnChange.bind(this));
         GSMgr.instance.registerOpCodeCallback(ServerCode.RP_THROW_SUCCESS, this.onThrowSuccess.bind(this));
         GSMgr.instance.registerOpCodeCallback(ServerCode.RP_GAME_RESULT, this.onGameResult.bind(this));
-        GSMgr.instance.registerOpCodeCallback(ServerCode.RP_PLAYER_READY, this.onPlayerReady.bind(this));
+        //GSMgr.instance.registerOpCodeCallback(ServerCode.RP_PLAYER_READY, this.onPlayerReady.bind(this));
+        //remove design ready
     },
 
     onInit() {
@@ -74,6 +75,11 @@ var GameMgr = cc.Class({
 
     getHost() {
         return this.matchData.Host;
+    },
+
+    IsMeHost()
+    {
+        return (this.userId == this.matchData.Host || this.matchData.Host == null);
     },
 
     IsHost(playerId)
@@ -159,8 +165,7 @@ var GameMgr = cc.Class({
     },
 
     onGameStateWaiting() {
-        if (this.IsMyId(this.matchData.Host))
-            UIManager.instance.enableStartButton(false);
+        UIManager.instance.onGameWaiting();
     },
 
     onGameStateReady() {

@@ -60,11 +60,11 @@ cc.Class({
     {
         this.seatOccupied[seat] = true;
         this.SeatMgr.onPlayerEnter(playerInfo, seat);
-        if (GameMgr.instance.IsMyId(playerInfo.id))
+        /*if (GameMgr.instance.IsMyId(playerInfo.id))
         {
             this.ButtonLeave.active = true;
             this.ButtonReady.active = !GameMgr.instance.IsHost(playerInfo.id);
-        }
+        }*/
     },
 
     playerLeaveSeat(seat)
@@ -219,9 +219,30 @@ cc.Class({
         }
     },
 
+    onGameWaiting()
+    {
+        if (GameMgr.instance.IsMeHost())
+            this.enableStartButton(false);
+        
+        while (this.myCardNode.children.length > 0)
+        {
+            this.myCardNode.children[0].setPosition(0,0);
+            ObjectPool.instance.recall(this.myCardNode.children[0]);
+        }
+
+        while (this.playZoneNode.children.length > 0)
+        {
+            this.playZoneNode.children[0].setPosition(0,0);
+            ObjectPool.instance.recall(this.playZoneNode.children[0]);
+        }
+
+        this.friendCardNode.children.forEach(it => it.active = false);
+    },
+
     onGameOver()
     {
         this.SeatMgr.stopAllTurn();
+        this.PlayingButtons.active = false;
     },
 
     displayResult(scores)
@@ -240,7 +261,6 @@ cc.Class({
                 this.ButtonReady.active = true;
         }
     },
-
 
     onReadyPressed()
     {

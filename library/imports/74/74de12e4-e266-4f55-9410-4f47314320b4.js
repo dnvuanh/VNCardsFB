@@ -23,7 +23,7 @@ cc.Class({
         if (seat < this.node.children.length) {
             var seatDisplay = this.node.children[seat].getComponent("SeatDisplay");
             seatDisplay.display(playerInfo);
-            seatDisplay.setReady(GameMgr.instance.IsHost(playerInfo.id));
+            //seatDisplay.setReady(GameMgr.instance.IsHost(playerInfo.id));
         }
     },
     onPlayerLeave: function onPlayerLeave(seat) {

@@ -101,6 +101,9 @@ var UIManager = cc.Class({
     onThrowSuccess: function onThrowSuccess(playerId, cards) {
         this.MenuGame.onThrowSuccess(playerId, cards);
     },
+    onGameWaiting: function onGameWaiting() {
+        this.MenuGame.onGameWaiting();
+    },
     onGameOver: function onGameOver() {
         this.MenuGame.onGameOver();
     },

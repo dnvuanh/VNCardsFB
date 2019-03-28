@@ -25,7 +25,7 @@ cc.Class({
         {
             var seatDisplay = this.node.children[seat].getComponent("SeatDisplay");
                 seatDisplay.display(playerInfo);
-                seatDisplay.setReady(GameMgr.instance.IsHost(playerInfo.id));
+                //seatDisplay.setReady(GameMgr.instance.IsHost(playerInfo.id));
         }
     },
 

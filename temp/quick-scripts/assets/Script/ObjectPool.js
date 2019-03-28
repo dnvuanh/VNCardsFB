@@ -23,8 +23,6 @@ var ObjectPool = cc.Class({
     },
     InitPool: function InitPool() {
         this.InitPoolCard();
-        /*if (callback)
-            callback();*/
     },
     InitPoolCard: function InitPoolCard() {
         for (var i = 0; i < 52; i++) {
@@ -40,6 +38,10 @@ var ObjectPool = cc.Class({
             card.active = true;
             return card;
         } else return null;
+    },
+    recall: function recall(obj) {
+        obj.setParent(this.node);
+        obj.active = false;
     }
 });
 

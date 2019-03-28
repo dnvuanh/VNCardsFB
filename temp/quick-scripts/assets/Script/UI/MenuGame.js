@@ -54,10 +54,11 @@ cc.Class({
     playerEnterSeat: function playerEnterSeat(playerInfo, seat) {
         this.seatOccupied[seat] = true;
         this.SeatMgr.onPlayerEnter(playerInfo, seat);
-        if (GameMgr.instance.IsMyId(playerInfo.id)) {
+        /*if (GameMgr.instance.IsMyId(playerInfo.id))
+        {
             this.ButtonLeave.active = true;
             this.ButtonReady.active = !GameMgr.instance.IsHost(playerInfo.id);
-        }
+        }*/
     },
     playerLeaveSeat: function playerLeaveSeat(seat) {
         if (GameMgr.instance.getMySeat() == seat) {
@@ -185,8 +186,26 @@ cc.Class({
             });
         }
     },
+    onGameWaiting: function onGameWaiting() {
+        if (GameMgr.instance.IsMeHost()) this.enableStartButton(false);
+
+        while (this.myCardNode.children.length > 0) {
+            this.myCardNode.children[0].setPosition(0, 0);
+            ObjectPool.instance.recall(this.myCardNode.children[0]);
+        }
+
+        while (this.playZoneNode.children.length > 0) {
+            this.playZoneNode.children[0].setPosition(0, 0);
+            ObjectPool.instance.recall(this.playZoneNode.children[0]);
+        }
+
+        this.friendCardNode.children.forEach(function (it) {
+            return it.active = false;
+        });
+    },
     onGameOver: function onGameOver() {
         this.SeatMgr.stopAllTurn();
+        this.PlayingButtons.active = false;
     },
     displayResult: function displayResult(scores) {
         console.log(scores);
