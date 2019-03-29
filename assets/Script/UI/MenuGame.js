@@ -110,7 +110,7 @@ cc.Class({
         let cardCount = 0;
         this.DealCards.startAnim(()=>{
             let card = ObjectPool.instance.getCard(cards[cardCount]);
-                card.setParent(this.myCardNode);
+            card.setParent(this.myCardNode);
             if (cardCount == 0)
             {
                 this.friendCardNode.children.forEach(it => it.active = true);
@@ -207,12 +207,13 @@ cc.Class({
         if(GameMgr.instance.IsMyId(playerId)) {
             cards.forEach(it => {
                 let card = this.myCardNode.getChildByName("Card_" + it);
+                card.getComponent("Card").onDeselect();
                 card.setParent(this.playZoneNode);
                 card.x = idx++ * OFFSET;
             });
         } else {
             cards.forEach(it => {
-                let card = ObjectPool.instance.getCard(it);
+                let card = ObjectPool.instance.getCard(it);                
                 card.setParent(this.playZoneNode);
                 card.x = idx++ * OFFSET;
             });
@@ -243,6 +244,7 @@ cc.Class({
     {
         this.SeatMgr.stopAllTurn();
         this.PlayingButtons.active = false;
+        this.previousCards = null;
     },
 
     displayResult(scores)
