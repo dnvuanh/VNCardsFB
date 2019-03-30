@@ -112,6 +112,9 @@ var UIManager = cc.Class({
     },
     onPlayerReady: function onPlayerReady(playerId, isReady) {
         this.MenuGame.onPlayerReady(playerId, isReady);
+    },
+    onPlayerRegisterLeave: function onPlayerRegisterLeave(isLeave) {
+        this.MenuGame.onPlayerRegisterLeave(isLeave);
     }
 });
 

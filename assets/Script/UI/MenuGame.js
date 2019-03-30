@@ -53,18 +53,18 @@ cc.Class({
 
     requestLeaveSeat()
     {
-        GSMgr.instance.leaveSeat(GameMgr.instance.getMySeat());
+        GSMgr.instance.leaveSeat(1 - GameMgr.instance.IsRegisterLeave());
     },
 
     playerEnterSeat(playerInfo, seat)
     {
         this.seatOccupied[seat] = true;
         this.SeatMgr.onPlayerEnter(playerInfo, seat);
-        /*if (GameMgr.instance.IsMyId(playerInfo.id))
+        if (GameMgr.instance.IsMyId(playerInfo.id))
         {
             this.ButtonLeave.active = true;
-            this.ButtonReady.active = !GameMgr.instance.IsHost(playerInfo.id);
-        }*/
+            //this.ButtonReady.active = !GameMgr.instance.IsHost(playerInfo.id);
+        }
     },
 
     playerLeaveSeat(seat)
@@ -267,5 +267,13 @@ cc.Class({
     onReadyPressed()
     {
         GSMgr.instance.requestPlayerReady(true);
+    },
+
+    onPlayerRegisterLeave(isLeave)
+    {
+        if (isLeave)
+            this.ButtonLeave.getComponentInChildren(cc.Label).string = "Unleave";
+        else
+            this.ButtonLeave.getComponentInChildren(cc.Label).string = "Leave";
     }
 });

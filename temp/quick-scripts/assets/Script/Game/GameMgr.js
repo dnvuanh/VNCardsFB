@@ -16,6 +16,7 @@ var GameMgr = cc.Class({
         GameMgr.instance = this;
         cc.game.addPersistRootNode(this.node);
         this.matchData = {};
+        this.RegisterLeave = 0;
         //this.matchData.PlayerReady = [];
     },
     start: function start() {
@@ -28,6 +29,7 @@ var GameMgr = cc.Class({
         GSMgr.instance.registerOpCodeCallback(ServerCode.RP_TURN_CHANGE, this.onTurnChange.bind(this));
         GSMgr.instance.registerOpCodeCallback(ServerCode.RP_THROW_SUCCESS, this.onThrowSuccess.bind(this));
         GSMgr.instance.registerOpCodeCallback(ServerCode.RP_GAME_RESULT, this.onGameResult.bind(this));
+        GSMgr.instance.registerOpCodeCallback(ServerCode.RP_REGISTER_LEAVE, this.onPlayerRegisterLeave.bind(this));
         //GSMgr.instance.registerOpCodeCallback(ServerCode.RP_PLAYER_READY, this.onPlayerReady.bind(this));
         //remove design ready
     },
@@ -177,6 +179,14 @@ var GameMgr = cc.Class({
     onGameResult: function onGameResult(message) {
         var scores = JSON.parse(message.getString(1));
         UIManager.instance.displayResult(scores);
+    },
+    onPlayerRegisterLeave: function onPlayerRegisterLeave(message) {
+        var isLeave = message.getLong(1);
+        this.RegisterLeave = isLeave;
+        UIManager.instance.onPlayerRegisterLeave(isLeave);
+    },
+    IsRegisterLeave: function IsRegisterLeave() {
+        return this.RegisterLeave;
     }
 });
 

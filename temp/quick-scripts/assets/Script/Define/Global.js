@@ -12,6 +12,7 @@ window.UIManager = new require("UIManager");
 window.ServerCode = require("ServerCode");
 window.ImageCache = require("ImageCache");
 window.GameHelper = require("GameHelper");
+window.Notification = require("Notification");
 
 cc._RF.pop();
         }

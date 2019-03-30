@@ -49,16 +49,15 @@ cc.Class({
         GSMgr.instance.requestSeat(parseInt(seat));
     },
     requestLeaveSeat: function requestLeaveSeat() {
-        GSMgr.instance.leaveSeat(GameMgr.instance.getMySeat());
+        GSMgr.instance.leaveSeat(1 - GameMgr.instance.IsRegisterLeave());
     },
     playerEnterSeat: function playerEnterSeat(playerInfo, seat) {
         this.seatOccupied[seat] = true;
         this.SeatMgr.onPlayerEnter(playerInfo, seat);
-        /*if (GameMgr.instance.IsMyId(playerInfo.id))
-        {
+        if (GameMgr.instance.IsMyId(playerInfo.id)) {
             this.ButtonLeave.active = true;
-            this.ButtonReady.active = !GameMgr.instance.IsHost(playerInfo.id);
-        }*/
+            //this.ButtonReady.active = !GameMgr.instance.IsHost(playerInfo.id);
+        }
     },
     playerLeaveSeat: function playerLeaveSeat(seat) {
         if (GameMgr.instance.getMySeat() == seat) {
@@ -175,6 +174,7 @@ cc.Class({
         if (GameMgr.instance.IsMyId(playerId)) {
             cards.forEach(function (it) {
                 var card = _this2.myCardNode.getChildByName("Card_" + it);
+                card.getComponent("Card").onDeselect();
                 card.setParent(_this2.playZoneNode);
                 card.x = idx++ * OFFSET;
             });
@@ -206,6 +206,7 @@ cc.Class({
     onGameOver: function onGameOver() {
         this.SeatMgr.stopAllTurn();
         this.PlayingButtons.active = false;
+        this.previousCards = null;
     },
     displayResult: function displayResult(scores) {
         console.log(scores);
@@ -218,6 +219,9 @@ cc.Class({
     },
     onReadyPressed: function onReadyPressed() {
         GSMgr.instance.requestPlayerReady(true);
+    },
+    onPlayerRegisterLeave: function onPlayerRegisterLeave(isLeave) {
+        if (isLeave) this.ButtonLeave.getComponentInChildren(cc.Label).string = "Unleave";else this.ButtonLeave.getComponentInChildren(cc.Label).string = "Leave";
     }
 });
 
