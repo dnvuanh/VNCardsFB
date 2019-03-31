@@ -22,6 +22,7 @@ cc.Class({
         throwButton: cc.Button,
         skipButton: cc.Button,
         playZoneNode: cc.Node,
+        countDown: require("CountDown"),
     },
 
     start()
@@ -275,5 +276,15 @@ cc.Class({
             this.ButtonLeave.getComponentInChildren(cc.Label).string = "Unleave";
         else
             this.ButtonLeave.getComponentInChildren(cc.Label).string = "Leave";
+    },
+
+    onGameStateReady(timeStamp)
+    {
+        if (GameMgr.instance.IsMeHost())
+        {
+            this.enableStartButton(true);
+        }
+        this.countDown.node.active = true;
+        this.countDown.show(timeStamp, Define.TIME_FORCE_START);
     }
 });

@@ -58,3 +58,6 @@
 2019-03-30T12:52:20.449Z - normal: Loading packages
 2019-03-30T12:52:20.458Z - normal: Watching packages
 2019-03-30T12:52:20.622Z - normal: Run Application
+2019-03-30T15:44:19.326Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:39074
+2019-03-30T15:44:42.973Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:39314
+2019-03-30T15:45:46.754Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:39959

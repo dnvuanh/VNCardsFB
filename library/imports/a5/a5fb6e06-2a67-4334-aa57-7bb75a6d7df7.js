@@ -4,7 +4,6 @@ cc._RF.push(module, 'a5fb64GKmdDNKpXe7dabX33', 'GameMgr');
 
 "use strict";
 
-var Define = require("Define");
 var GameMgr = cc.Class({
     extends: cc.Component,
 
@@ -139,7 +138,8 @@ var GameMgr = cc.Class({
                 break;
 
             case Define.GameState.READY:
-                this.onGameStateReady();
+                var timeStamp = message.getLong(2);
+                this.onGameStateReady(timeStamp);
                 break;
 
             case Define.GameState.GAMEOVER:
@@ -150,8 +150,8 @@ var GameMgr = cc.Class({
     onGameStateWaiting: function onGameStateWaiting() {
         UIManager.instance.onGameWaiting();
     },
-    onGameStateReady: function onGameStateReady() {
-        if (this.IsMyId(this.matchData.Host)) UIManager.instance.enableStartButton(true);
+    onGameStateReady: function onGameStateReady(timeStamp) {
+        UIManager.instance.onGameStateReady(timeStamp);
     },
     onGameOver: function onGameOver() {
         UIManager.instance.onGameOver();

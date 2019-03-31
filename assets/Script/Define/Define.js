@@ -16,7 +16,9 @@ var Define = {
         THREEPAIRS: 5,
         QUADS: 6,
         FOURPAIRS: 7,
-    }
+    },
+
+    TIME_FORCE_START: 15,
 }
 
 module.exports = Define;

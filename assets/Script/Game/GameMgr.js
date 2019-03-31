@@ -1,4 +1,3 @@
-var Define = require("Define");
 var GameMgr = cc.Class({
     extends: cc.Component,
 
@@ -157,7 +156,8 @@ var GameMgr = cc.Class({
                 break;
 
             case Define.GameState.READY:
-                this.onGameStateReady();
+                let timeStamp = message.getLong(2);
+                this.onGameStateReady(timeStamp);
                 break;
 
             case Define.GameState.GAMEOVER:
@@ -170,9 +170,8 @@ var GameMgr = cc.Class({
         UIManager.instance.onGameWaiting();
     },
 
-    onGameStateReady() {
-        if (this.IsMyId(this.matchData.Host))
-            UIManager.instance.enableStartButton(true);
+    onGameStateReady(timeStamp) {
+        UIManager.instance.onGameStateReady(timeStamp);
     },
 
     onGameOver() {

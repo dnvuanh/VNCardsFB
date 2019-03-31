@@ -4,7 +4,6 @@ cc._RF.push(module, 'c8f00BKqNNGzLGxlZAjVkvn', 'GameHelper');
 
 "use strict";
 
-var Define = require("Define");
 var GameHelper = cc.Class({
     cardValue: function cardValue(card) {
         return card / 4 | 0;

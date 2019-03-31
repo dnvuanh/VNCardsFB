@@ -160,5 +160,10 @@ var UIManager = cc.Class({
     onPlayerRegisterLeave(isLeave)
     {
         this.MenuGame.onPlayerRegisterLeave(isLeave);
+    },
+
+    onGameStateReady(timeStamp)
+    {
+        this.MenuGame.onGameStateReady(timeStamp);
     }
 });

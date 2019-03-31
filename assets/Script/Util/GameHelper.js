@@ -1,4 +1,3 @@
-var Define = require("Define");
 var GameHelper = cc.Class({
     cardValue(card) 
     {

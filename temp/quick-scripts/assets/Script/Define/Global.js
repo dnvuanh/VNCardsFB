@@ -13,6 +13,7 @@ window.ServerCode = require("ServerCode");
 window.ImageCache = require("ImageCache");
 window.GameHelper = require("GameHelper");
 window.Notification = require("Notification");
+window.Define = require("Define");
 
 cc._RF.pop();
         }

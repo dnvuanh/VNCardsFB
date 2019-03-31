@@ -12,7 +12,7 @@ cc.Class({
 
     start: function start() {
         cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, function (event) {
-            Notification.instance.add(messageTest[Math.floor(Math.random() * 6)]);
+            if (event.keyCode == 32) Notification.instance.add(messageTest[Math.floor(Math.random() * 6)]);
         });
     }
 });
