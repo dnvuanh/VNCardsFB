@@ -206,7 +206,6 @@ cc.Class({
         } else {
             this.CardsOnHand[playerId] = MAX_CARD_ON_HAND - cards.length;
         }
-        cc.log(this.CardsOnHand);
         if(this.CardsOnHand[playerId] == 0)
         {
             this.SeatMgr.onPlayerFinished(playerId);
