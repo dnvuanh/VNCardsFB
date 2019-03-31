@@ -63,6 +63,10 @@ cc.Class({
         {
             let playerName = FBInstantHelper.getPlayerName();
             let playerPhoto = FBInstantHelper.getPlayerPhoto();
+            if(playerName == "Mayc") 
+            {
+                playerName = this.userId;
+            }
             GSMgr.instance.registrationRequest(playerName, this.userId, this.userId, playerPhoto, this.OnTryRegister.bind(this));
         }
         else

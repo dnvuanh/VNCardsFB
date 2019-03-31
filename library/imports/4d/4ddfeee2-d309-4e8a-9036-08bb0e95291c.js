@@ -22,7 +22,7 @@ cc.Class({
         this.hostIcon.active = false;
         this.turnCountDown.node.active = false;
         this.IsMyTurn = false;
-        //this.resultIcon.active = false;
+        this.resultIcon.active = false;
     },
     display: function display(playerInfo) {
         var _this = this;

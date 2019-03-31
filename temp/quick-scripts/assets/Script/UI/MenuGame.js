@@ -4,6 +4,8 @@ cc._RF.push(module, '3da6c2KFnVCRYg4359XJTFF', 'MenuGame', __filename);
 
 "use strict";
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 var MenuScene = require("MenuScene");
 var ObjectPool = require("ObjectPool");
 
@@ -83,7 +85,6 @@ cc.Class({
     },
     onStartGameClick: function onStartGameClick() {
         GSMgr.instance.startGame();
-        this.ButtonStart.active = false;
         this.friendCardNode.children.forEach(function (it) {
             return it.active = false;
         });
@@ -91,6 +92,7 @@ cc.Class({
     onCardsReceived: function onCardsReceived(cards) {
         var _this = this;
 
+        this.ButtonStart.active = false;
         var cardCount = 0;
         this.DealCards.startAnim(function () {
             var card = ObjectPool.instance.getCard(cards[cardCount]);
@@ -105,6 +107,8 @@ cc.Class({
         this.PlayingButtons.active = true;
         this.previousCards = null;
         this.previousThrowPlayer = null;
+        var myid = GameMgr.instance.getMyId();
+        this.CardsOnHand = _defineProperty({}, myid, 13);
     },
     onShowRightMenuClick: function onShowRightMenuClick() {
         var position = this.showRightButton.node.getPosition();
@@ -160,9 +164,22 @@ cc.Class({
         }
     },
     onThrowSuccess: function onThrowSuccess(playerId, cards) {
+        var MAX_CARD_ON_HAND = 13;
         this.previousCards = GameHelper.parseCards(cards);
         this.removeCardsFromHand(playerId, cards);
         this.previousThrowPlayer = playerId;
+        if (this.CardsOnHand.hasOwnProperty(playerId)) {
+            this.CardsOnHand[playerId] -= cards.length;
+        } else {
+            this.CardsOnHand[playerId] = MAX_CARD_ON_HAND - cards.length;
+        }
+        cc.log(this.CardsOnHand);
+        if (this.CardsOnHand[playerId] == 0) {
+            this.SeatMgr.onPlayerFinished(playerId);
+            this.friendCardNode.children.forEach(function (it) {
+                return it.active = false;
+            });
+        }
     },
     removeCardsFromHand: function removeCardsFromHand(playerId, cards) {
         var _this2 = this;

@@ -102,12 +102,12 @@ cc.Class({
     onStartGameClick()
     {
         GSMgr.instance.startGame();
-        this.ButtonStart.active = false;
         this.friendCardNode.children.forEach(it => it.active = false);
     },
 
     onCardsReceived(cards)
     {
+        this.ButtonStart.active = false;
         let cardCount = 0;
         this.DealCards.startAnim(()=>{
             let card = ObjectPool.instance.getCard(cards[cardCount]);
@@ -121,6 +121,8 @@ cc.Class({
         this.PlayingButtons.active = true;
         this.previousCards = null;
         this.previousThrowPlayer = null;
+        var myid = GameMgr.instance.getMyId();
+        this.CardsOnHand = {[myid] : 13};
     },
 
     onShowRightMenuClick()
@@ -195,9 +197,21 @@ cc.Class({
 
     onThrowSuccess(playerId, cards)
     {
+        const MAX_CARD_ON_HAND = 13;
         this.previousCards = GameHelper.parseCards(cards);
         this.removeCardsFromHand(playerId, cards);
         this.previousThrowPlayer = playerId;
+        if(this.CardsOnHand.hasOwnProperty(playerId)) {
+            this.CardsOnHand[playerId] -= cards.length;
+        } else {
+            this.CardsOnHand[playerId] = MAX_CARD_ON_HAND - cards.length;
+        }
+        cc.log(this.CardsOnHand);
+        if(this.CardsOnHand[playerId] == 0)
+        {
+            this.SeatMgr.onPlayerFinished(playerId);
+            this.friendCardNode.children.forEach(it => it.active = false);
+        }
     },
 
     removeCardsFromHand(playerId, cards)

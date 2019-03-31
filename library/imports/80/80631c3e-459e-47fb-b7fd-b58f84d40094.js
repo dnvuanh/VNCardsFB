@@ -56,6 +56,9 @@ cc.Class({
         if (response.error) {
             var playerName = FBInstantHelper.getPlayerName();
             var playerPhoto = FBInstantHelper.getPlayerPhoto();
+            if (playerName == "Mayc") {
+                playerName = this.userId;
+            }
             GSMgr.instance.registrationRequest(playerName, this.userId, this.userId, playerPhoto, this.OnTryRegister.bind(this));
         } else {
             this.EnterRoom();
