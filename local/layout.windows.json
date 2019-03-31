@@ -7,7 +7,7 @@
       "windowType": "dockable",
       "x": 0,
       "y": 23,
-      "width": 1237,
+      "width": 1235,
       "height": 777,
       "layout": {
         "children": [
@@ -20,7 +20,7 @@
                 ],
                 "height": 328,
                 "type": "panel",
-                "width": 286
+                "width": 285.53125
               },
               {
                 "active": 0,
@@ -29,12 +29,12 @@
                 ],
                 "height": 365,
                 "type": "panel",
-                "width": 286
+                "width": 285.53125
               }
             ],
             "height": 695,
             "type": "dock-v",
-            "width": 286
+            "width": 285.53125
           },
           {
             "children": [
@@ -45,7 +45,7 @@
                 ],
                 "height": 365,
                 "type": "panel",
-                "width": 575
+                "width": 574.0625
               },
               {
                 "active": 0,
@@ -55,12 +55,12 @@
                 ],
                 "height": 328,
                 "type": "panel",
-                "width": 575
+                "width": 574.0625
               }
             ],
             "height": 695,
             "type": "dock-v",
-            "width": 575
+            "width": 574.0625
           },
           {
             "active": 0,
@@ -69,7 +69,7 @@
             ],
             "height": 695,
             "type": "panel",
-            "width": 372
+            "width": 371.390625
           }
         ],
         "type": "dock-h"
@@ -82,17 +82,6 @@
         "inspector",
         "scene"
       ]
-    },
-    "about": {
-      "main": false,
-      "url": "app://editor/page/app-about.html",
-      "windowType": "dockable",
-      "x": 418,
-      "y": 321,
-      "width": 400,
-      "height": 200,
-      "layout": null,
-      "panels": []
     }
   },
   "panels": {}

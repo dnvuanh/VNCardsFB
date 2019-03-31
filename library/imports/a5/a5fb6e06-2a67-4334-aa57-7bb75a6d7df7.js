@@ -145,6 +145,10 @@ var GameMgr = cc.Class({
             case Define.GameState.GAMEOVER:
                 this.onGameOver();
                 break;
+
+            case Define.GameState.STARTED:
+                this.onGameStart();
+                break;
         }
     },
     onGameStateWaiting: function onGameStateWaiting() {
@@ -187,6 +191,9 @@ var GameMgr = cc.Class({
     },
     IsRegisterLeave: function IsRegisterLeave() {
         return this.RegisterLeave;
+    },
+    onGameStart: function onGameStart() {
+        UIManager.instance.onGameStart();
     }
 });
 

@@ -163,6 +163,10 @@ var GameMgr = cc.Class({
             case Define.GameState.GAMEOVER:
                 this.onGameOver();
                 break;
+
+            case Define.GameState.STARTED:
+                this.onGameStart();
+                break;
         }
     },
 
@@ -215,5 +219,10 @@ var GameMgr = cc.Class({
     IsRegisterLeave()
     {
         return this.RegisterLeave;
+    },
+
+    onGameStart()
+    {
+        UIManager.instance.onGameStart();
     }
 });

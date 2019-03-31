@@ -45,7 +45,7 @@
     "relativePath": "Scene"
   },
   "4734c20c-0db8-4eb2-92ea-e692f4d70934": {
-    "asset": 1552318611000,
+    "asset": 1553960834000,
     "meta": 1531532681000,
     "relativePath": "Script"
   },
@@ -979,39 +979,39 @@
     "meta": 1553960639000,
     "relativePath": "Script/Manager/InputMgr.js"
   },
-  "6fdc0398-9a91-40d7-abd0-af80d15037ab": {
-    "asset": 1553959756000,
-    "meta": 1553960640000,
-    "relativePath": "Script/Manager/UIManager.js"
-  },
   "269d918a-8a79-47e7-836d-4d2a19072455": {
     "asset": 1553960944000,
     "meta": 1553965204000,
     "relativePath": "Script/Define/Define.js"
-  },
-  "3da6cd8a-1675-4245-8838-df9f57253145": {
-    "asset": 1553966051000,
-    "meta": 1553966054000,
-    "relativePath": "Script/UI/MenuGame.js"
   },
   "9601f76c-b9d7-4871-88ed-764bd9c1a9d5": {
     "asset": 1553966122000,
     "meta": 1553966170000,
     "relativePath": "Script/Define/Global.js"
   },
-  "a5fb6e06-2a67-4334-aa57-7bb75a6d7df7": {
-    "asset": 1553966138000,
-    "meta": 1553966170000,
-    "relativePath": "Script/Game/GameMgr.js"
-  },
   "c8f0004a-a8d3-46cc-b1b1-959023564be7": {
     "asset": 1553966165000,
     "meta": 1553966170000,
     "relativePath": "Script/Util/GameHelper.js"
   },
+  "a5fb6e06-2a67-4334-aa57-7bb75a6d7df7": {
+    "asset": 1554023298000,
+    "meta": 1554023501000,
+    "relativePath": "Script/Game/GameMgr.js"
+  },
+  "6fdc0398-9a91-40d7-abd0-af80d15037ab": {
+    "asset": 1554023323000,
+    "meta": 1554023501000,
+    "relativePath": "Script/Manager/UIManager.js"
+  },
+  "3da6cd8a-1675-4245-8838-df9f57253145": {
+    "asset": 1554025375000,
+    "meta": 1554025377000,
+    "relativePath": "Script/UI/MenuGame.js"
+  },
   "f1a42143-a2e1-4a52-b784-63e0829e0dff": {
-    "asset": 1553966661000,
-    "meta": 1553966663000,
+    "asset": 1554025912000,
+    "meta": 1554025918000,
     "relativePath": "Script/CountDown.js"
   }
 }

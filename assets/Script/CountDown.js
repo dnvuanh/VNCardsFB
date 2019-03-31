@@ -40,7 +40,7 @@ cc.Class({
         let remainSecond = this.totalSecond - Math.floor((timeNow - this.timeStart)/1000);
         if (remainSecond > 0)
         {
-            if (remainSecond != this.currentDisplay)
+            if (remainSecond <= this.currentDisplay)
             {
                 this.secondString.string = remainSecond;
                 this.currentDisplay = remainSecond;

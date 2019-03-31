@@ -190,6 +190,7 @@ cc.Class({
     onGameWaiting: function onGameWaiting() {
         if (GameMgr.instance.IsMeHost()) this.enableStartButton(false);
 
+        this.countDown.hide();
         while (this.myCardNode.children.length > 0) {
             this.myCardNode.children[0].setPosition(0, 0);
             ObjectPool.instance.recall(this.myCardNode.children[0]);
@@ -230,6 +231,11 @@ cc.Class({
         }
         this.countDown.node.active = true;
         this.countDown.show(timeStamp, Define.TIME_FORCE_START);
+    },
+    onGameStart: function onGameStart() {
+        this.ButtonStart.active = false;
+        this.ButtonReady.active = false;
+        this.countDown.hide();
     }
 });
 

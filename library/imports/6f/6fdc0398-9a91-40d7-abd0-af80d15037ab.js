@@ -118,6 +118,9 @@ var UIManager = cc.Class({
     },
     onGameStateReady: function onGameStateReady(timeStamp) {
         this.MenuGame.onGameStateReady(timeStamp);
+    },
+    onGameStart: function onGameStart() {
+        this.MenuGame.onGameStart();
     }
 });
 
