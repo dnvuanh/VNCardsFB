@@ -89,9 +89,18 @@ cc.Class({
             return it.active = false;
         });
     },
+    beginNewGame: function beginNewGame() {
+        this.SeatMgr.hideResultIcon();
+        this.PlayingButtons.active = true;
+        this.previousCards = null;
+        this.previousThrowPlayer = null;
+        var myid = GameMgr.instance.getMyId();
+        this.CardsOnHand = _defineProperty({}, myid, 13);
+    },
     onCardsReceived: function onCardsReceived(cards) {
         var _this = this;
 
+        this.beginNewGame();
         this.ButtonStart.active = false;
         var cardCount = 0;
         this.DealCards.startAnim(function () {
@@ -104,11 +113,6 @@ cc.Class({
             }
             cardCount += 1;
         });
-        this.PlayingButtons.active = true;
-        this.previousCards = null;
-        this.previousThrowPlayer = null;
-        var myid = GameMgr.instance.getMyId();
-        this.CardsOnHand = _defineProperty({}, myid, 13);
     },
     onShowRightMenuClick: function onShowRightMenuClick() {
         var position = this.showRightButton.node.getPosition();
@@ -137,18 +141,14 @@ cc.Class({
     },
     onTurnChange: function onTurnChange(playerId, startTime, timeout) {
         this.SeatMgr.onTurnChange(playerId, startTime, timeout);
-        if (GameMgr.instance.IsMyId(playerId)) {
-            this.PlayingButtons.active = true;
-        } else {
-            this.PlayingButtons.active = false;
-        }
-        this.throwButton.interactable = false;
+        this.PlayingButtons.active = GameMgr.instance.IsMyId(playerId);
+        this.checkThrowable();
         this.skipButton.interactable = true;
         if (this.previousThrowPlayer == playerId) {
-            this.beginNewTurn();
+            this.beginNewWave();
         }
     },
-    beginNewTurn: function beginNewTurn() {
+    beginNewWave: function beginNewWave() {
         this.previousCards = null;
         this.skipButton.interactable = false;
         var cardList = this.playZoneNode.getComponentsInChildren("Card");
@@ -156,12 +156,8 @@ cc.Class({
             card.node.active = false;
         });
     },
-    checkThrowable: function checkThrowable(enable) {
-        if (GameHelper.validTurn(this.previousCards, this.getSelectedCards())) {
-            this.throwButton.interactable = true;
-        } else {
-            this.throwButton.interactable = false;
-        }
+    checkThrowable: function checkThrowable() {
+        this.throwButton.interactable = GameHelper.validTurn(this.previousCards, this.getSelectedCards());
     },
     onThrowSuccess: function onThrowSuccess(playerId, cards) {
         var MAX_CARD_ON_HAND = 13;
@@ -173,7 +169,6 @@ cc.Class({
         } else {
             this.CardsOnHand[playerId] = MAX_CARD_ON_HAND - cards.length;
         }
-        cc.log(this.CardsOnHand);
         if (this.CardsOnHand[playerId] == 0) {
             this.SeatMgr.onPlayerFinished(playerId);
             this.friendCardNode.children.forEach(function (it) {
@@ -233,7 +228,7 @@ cc.Class({
     onPlayerReady: function onPlayerReady(playerId, isReady) {
         this.SeatMgr.onPlayerReady(playerId, isReady);
         if (GameMgr.instance.IsMyId(playerId)) {
-            if (isReady) this.ButtonReady.active = false;else this.ButtonReady.active = true;
+            this.ButtonReady.active = !isReady;
         }
     },
     onReadyPressed: function onReadyPressed() {

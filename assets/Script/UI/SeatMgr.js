@@ -86,8 +86,17 @@ cc.Class({
             var seatDisplay = this.node.children[i].getComponent("SeatDisplay");
             if (seatDisplay && seatDisplay.getPlayerId() == playerId)
             {
-                seatDisplay.onPlayerFinished();
+                seatDisplay.enableResultIcon(true);
             }
+        }
+    },
+
+    hideResultIcon()
+    {
+        for (var i=0; i<this.node.children.length; i++)
+        {
+            var seatDisplay = this.node.children[i].getComponent("SeatDisplay");
+            seatDisplay.enableResultIcon(false);
         }
     },
 

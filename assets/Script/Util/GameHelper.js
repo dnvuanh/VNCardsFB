@@ -96,8 +96,9 @@ var GameHelper = cc.Class({
         if(previousSet === null) {
             return true;
         }
+        cc.log(JSON.stringify(currentSet));
         if(previousSet.setType >= Define.SetType.THREEPAIRS){
-            return currentSet.SetType * 100 + currentSet.topCard > previousSet.SetType * 100 + previousSet.topCard;
+            return currentSet.setType * 100 + currentSet.topCard > previousSet.setType * 100 + previousSet.topCard;
         } else if(this.cardValue(previousSet.topCard) == HEO && currentSet.setType >= Define.SetType.THREEPAIRS) {
             return true;
         } else if(currentSet.setType == previousSet.setType 

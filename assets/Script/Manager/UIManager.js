@@ -127,9 +127,9 @@ var UIManager = cc.Class({
         this.MenuGame.onTurnChange(playerId, startTime, timeout);
     },
 
-    checkThrowable(enable)
+    checkThrowable()
     {
-        this.MenuGame.checkThrowable(enable);
+        this.MenuGame.checkThrowable();
     },
 
     onThrowSuccess(playerId, cards)

@@ -929,11 +929,6 @@
     "meta": 1554046847563,
     "relativePath": "Scene\\Game.fire"
   },
-  "74de12e4-e266-4f55-9410-4f47314320b4": {
-    "asset": 1553832329619,
-    "meta": 1554039367676,
-    "relativePath": "Script\\UI\\SeatMgr.js"
-  },
   "cee324ea-8e17-421c-9844-f961fce7328c": {
     "asset": 1553850270944,
     "meta": 1554039367491,
@@ -969,20 +964,10 @@
     "meta": 1554039367192,
     "relativePath": "Script\\Define\\Global.js"
   },
-  "c8f0004a-a8d3-46cc-b1b1-959023564be7": {
-    "asset": 1554039091513,
-    "meta": 1554039367701,
-    "relativePath": "Script\\Util\\GameHelper.js"
-  },
   "a5fb6e06-2a67-4334-aa57-7bb75a6d7df7": {
     "asset": 1554039091491,
     "meta": 1554039367278,
     "relativePath": "Script\\Game\\GameMgr.js"
-  },
-  "6fdc0398-9a91-40d7-abd0-af80d15037ab": {
-    "asset": 1554039091509,
-    "meta": 1554039367452,
-    "relativePath": "Script\\Manager\\UIManager.js"
   },
   "f1a42143-a2e1-4a52-b784-63e0829e0dff": {
     "asset": 1554039091486,
@@ -994,19 +979,34 @@
     "meta": 1554041098053,
     "relativePath": "Script\\Boot.js"
   },
-  "7cd40e88-0b96-4344-8e9e-130153c97712": {
-    "asset": 1554041087448,
-    "meta": 1554041098055,
-    "relativePath": "Script\\Manager\\GSMgr.js"
-  },
   "4ddfeee2-d309-4e8a-9036-08bb0e95291c": {
-    "asset": 1554046879013,
-    "meta": 1554046880629,
+    "asset": 1554084952921,
+    "meta": 1554085170425,
     "relativePath": "Script\\UI\\SeatDisplay.js"
   },
+  "74de12e4-e266-4f55-9410-4f47314320b4": {
+    "asset": 1554084971482,
+    "meta": 1554085170438,
+    "relativePath": "Script\\UI\\SeatMgr.js"
+  },
+  "6fdc0398-9a91-40d7-abd0-af80d15037ab": {
+    "asset": 1554086634200,
+    "meta": 1554086661645,
+    "relativePath": "Script\\Manager\\UIManager.js"
+  },
   "3da6cd8a-1675-4245-8838-df9f57253145": {
-    "asset": 1554049140372,
-    "meta": 1554049144944,
+    "asset": 1554088379686,
+    "meta": 1554088484155,
     "relativePath": "Script\\UI\\MenuGame.js"
+  },
+  "c8f0004a-a8d3-46cc-b1b1-959023564be7": {
+    "asset": 1554091108188,
+    "meta": 1554091112524,
+    "relativePath": "Script\\Util\\GameHelper.js"
+  },
+  "7cd40e88-0b96-4344-8e9e-130153c97712": {
+    "asset": 1554091899865,
+    "meta": 1554091901602,
+    "relativePath": "Script\\Manager\\GSMgr.js"
   }
 }

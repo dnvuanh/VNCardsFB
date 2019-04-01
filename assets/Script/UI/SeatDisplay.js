@@ -72,9 +72,9 @@ cc.Class({
         this.turnCountDown.node.active = false;
     },
 
-    onPlayerFinished()
+    enableResultIcon(visible)
     {
-        this.resultIcon.active = true;
+        this.resultIcon.active = visible;
     },
 
     update(dt)

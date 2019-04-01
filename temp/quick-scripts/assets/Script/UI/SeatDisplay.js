@@ -63,8 +63,8 @@ cc.Class({
         this.IsMyTurn = false;
         this.turnCountDown.node.active = false;
     },
-    onPlayerFinished: function onPlayerFinished() {
-        this.resultIcon.active = true;
+    enableResultIcon: function enableResultIcon(visible) {
+        this.resultIcon.active = visible;
     },
     update: function update(dt) {
         if (this.IsMyTurn) {

@@ -105,8 +105,20 @@ cc.Class({
         this.friendCardNode.children.forEach(it => it.active = false);
     },
 
+    beginNewGame()
+    {
+        this.SeatMgr.hideResultIcon();
+        this.PlayingButtons.active = true;
+        this.previousCards = null;
+        this.previousThrowPlayer = null;
+        var myid = GameMgr.instance.getMyId();
+        this.CardsOnHand = {[myid] : 13};
+
+    },
+
     onCardsReceived(cards)
     {
+        this.beginNewGame();
         this.ButtonStart.active = false;
         let cardCount = 0;
         this.DealCards.startAnim(()=>{
@@ -118,11 +130,6 @@ cc.Class({
             }
             cardCount += 1;
         });
-        this.PlayingButtons.active = true;
-        this.previousCards = null;
-        this.previousThrowPlayer = null;
-        var myid = GameMgr.instance.getMyId();
-        this.CardsOnHand = {[myid] : 13};
     },
 
     onShowRightMenuClick()
@@ -162,20 +169,16 @@ cc.Class({
     onTurnChange(playerId, startTime, timeout)
     {
         this.SeatMgr.onTurnChange(playerId, startTime, timeout);
-        if(GameMgr.instance.IsMyId(playerId))   {
-            this.PlayingButtons.active = true;
-        } else {
-            this.PlayingButtons.active = false;
-        }
-        this.throwButton.interactable = false;
+        this.PlayingButtons.active = GameMgr.instance.IsMyId(playerId);
+        this.checkThrowable();
         this.skipButton.interactable = true;
         if(this.previousThrowPlayer == playerId)
         {
-            this.beginNewTurn();
+            this.beginNewWave();
         }
     },
 
-    beginNewTurn()
+    beginNewWave()
     {
         this.previousCards = null;
         this.skipButton.interactable = false;
@@ -185,14 +188,9 @@ cc.Class({
             });
     },
 
-    checkThrowable(enable)
+    checkThrowable()
     {
-        if(GameHelper.validTurn(this.previousCards, this.getSelectedCards())) {
-            this.throwButton.interactable = true;
-        }
-        else {
-            this.throwButton.interactable = false;
-        }
+        this.throwButton.interactable = GameHelper.validTurn(this.previousCards, this.getSelectedCards());
     },
 
     onThrowSuccess(playerId, cards)
@@ -272,10 +270,7 @@ cc.Class({
         this.SeatMgr.onPlayerReady(playerId, isReady);
         if (GameMgr.instance.IsMyId(playerId))
         {
-            if (isReady)
-                this.ButtonReady.active = false;
-            else
-                this.ButtonReady.active = true;
+            this.ButtonReady.active = !isReady;
         }
     },
 
