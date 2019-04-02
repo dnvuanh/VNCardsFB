@@ -13,15 +13,17 @@ var MatchPublicData = {
     Winner:null,
     State: Define.GameState.WAITING,
     SkipState: [],
-    ThrowPlayerId: 0,
-    PlayerReady: [],
+    PreviousThrowPlayerId: 0,
+    RegisterLeave: [],
 }
 
 var MatchPrivateData = {
+    Deck: [],
     Cards:{},
 }
 
 var TurnLoopId = null;
+var startGameTimeout = null;
 
 var SendErrorCode = function(code, peers)
 {
@@ -72,24 +74,24 @@ var SendMessageLeaveSeat = function(player, seat)
     .send();
 }
 
-var SendPlayerReady = function(player, isReady)
+var SendPlayerRegisterLeave = function(peerId, isLeave)
 {
-    Log.debug("Sending message Leave seat " + player);
     var message = RTSession.newData();
-        message.setString(1, player);
-        message.setNumber(2, isReady);
+        message.setNumber(1, isLeave);
     
     RTSession.newPacket()
-    .setOpCode(ServerCode.RP_PLAYER_READY)
+    .setOpCode(ServerCode.RP_REGISTER_LEAVE)
+    .setTargetPeers([peerId])
     .setData(message)
     .send();
 }
 
-var SendStateChange = function()
+var SendStateChange = function(timestamp)
 {
     Log.debug("Sending state change ");
     var message = RTSession.newData();
         message.setNumber(1, MatchPublicData.State);
+        message.setNumber(2, timestamp);
         
     RTSession.newPacket()
     .setOpCode(ServerCode.RP_STATE_UPDATE)
@@ -151,8 +153,16 @@ var SendPlayerThrowSuccess = function(playerId, cards)
 
 var SendGameResult = function(scores)
 {
+    var players = RTSession.getPlayers();
     var message = RTSession.newData();
-        message.setString(1, JSON.stringify(scores));
+    message.setString(1, JSON.stringify(scores));
+    message.setString(2, MatchPublicData.Winner);
+    for(var i = 0; i < players.length; i++)
+    {
+        message.setString(3 + i * 2, players[i].getPlayerId());
+        var cardsString = JSON.stringify(MatchPrivateData.Cards[players[i].getPlayerId()]);
+        message.setString(3 + i * 2 + 1, cardsString);
+    }  
 
     RTSession.newPacket()
     .setOpCode(ServerCode.RP_GAME_RESULT)
@@ -196,32 +206,34 @@ var OnSeatsRequest = function(packet)
     }
 }
 
-var OnPlayerReady = function(packet)
+var OnPlayerRegisterLeave = function(packet)
 {
     var playerId = packet.getSender().getPlayerId();
-    var IsReady = packet.getData().getNumber(1);
-    if (IsReady)
+    var pearId = packet.getSender().getPeerId();
+    var isLeave = packet.getData().getNumber(1);
+    if (isLeave)
     {
-        MatchPublicData.PlayerReady.push(playerId);
+        MatchPublicData.RegisterLeave.push(playerId);
     }
     else
     {
-        var index = MatchPublicData.PlayerReady.indexOf(playerId);
-        MatchPublicData.PlayerReady.slice(index, 1);
+        var index = MatchPublicData.RegisterLeave.indexOf(playerId);
+        MatchPublicData.RegisterLeave.slice(index, 1);
     }
-    SendPlayerReady(playerId, IsReady);
-    
-    Log.debug("Player Ready " + MatchPublicData.PlayerReady.length + " Total Seats " + Object.keys(MatchPublicData.Seats).length);
-    if ((MatchPublicData.State == Define.GameState.WAITING || MatchPublicData.State == Define.GameState.GAMEOVER) && MatchPublicData.PlayerReady.length == Object.keys(MatchPublicData.Seats).length)
-    {
-        UpdateGameState(Define.GameState.READY);
-    }
+    SendPlayerRegisterLeave(pearId, isLeave);
 }
 
 var OnSeatLeave = function(packet)
 {
     var playerId = packet.getSender().getPlayerId();
-    LeaveCurrentSeat(playerId);
+    if (MatchPublicData.State != Define.GameState.RUNNING)
+    {
+        LeaveCurrentSeat(playerId);
+    }
+    else
+    {
+        OnPlayerRegisterLeave(packet);
+    }
 }
 
 var EnterSeat = function(position, playerId)
@@ -231,8 +243,10 @@ var EnterSeat = function(position, playerId)
     if (!MatchPublicData.Host)
     {
         setMatchHost(playerId);
-        MatchPublicData.PlayerReady.push(playerId);
+        //MatchPublicData.PlayerReady.push(playerId);
     }
+    
+    CheckEnoughPlayer();
 }
 
 var UpdateGameState = function(state)
@@ -240,7 +254,12 @@ var UpdateGameState = function(state)
     if (MatchPublicData.State != state)
     {
         MatchPublicData.State = state;
-        SendStateChange();
+        SendStateChange(Date.now());
+    }
+    
+    if (state == Define.GameState.WAITING || state == Define.GameState.STARTED)
+    {
+        RTSession.clearTimeout(startGameTimeout);
     }
 }
 
@@ -309,26 +328,92 @@ var onPlayerDisconnect = function(player)
     LeaveCurrentSeat(playerId);
 }
 
-var DealCards = function()
+var CheckInstantWin = function()
 {
-    var CARD_NUM = 52;
-    var CARD_PER_PLAYER = 13;
-    var deck = Define.DefaultCards.slice();
-    //shuffle
-    for(var i = CARD_NUM; i > 1; i--) {
-        var randomIdx = Math.random() * i | 0;
-        var temp = deck[i - 1];
-        deck[i - 1] = deck[randomIdx];
-        deck[randomIdx] = temp;
+    var players = RTSession.getPlayers();
+    for(var i = 0; i < players.length; i++)
+    {
+        var playerId = players[i].getPlayerId();
+        if(GameHelper.isInstantWin(MatchPrivateData.Cards[playerId]))
+        {
+            MatchPublicData.Winner = playerId;
+            return true;
+        }
     }
+    return false;
+}
+
+var ShuffleDeck = function()
+{
+    var CARD_QUANTITY = 52;
+    var CARD_PER_PLAYER = 13;
+    var players = RTSession.getPlayers();
     
-    //send cards to players
+    MatchPrivateData.Deck = Define.DefaultCards.slice();
+    //shuffle
+    for(var i = CARD_QUANTITY; i > 1; i--) {
+        var randomIdx = Math.random() * i | 0;
+        var temp = MatchPrivateData.Deck[i - 1];
+        MatchPrivateData.Deck[i - 1] = MatchPrivateData.Deck[randomIdx];
+        MatchPrivateData.Deck[randomIdx] = temp;
+    } 
+    
+    for(var i = 0; i < players.length; i++)
+    {
+        var playerId = players[i].getPlayerId();
+        MatchPrivateData.Cards[playerId] = MatchPrivateData.Deck.slice(i * CARD_PER_PLAYER, (i + 1) * CARD_PER_PLAYER);
+    }
+}
+
+var EndGame = function()
+{
+    UpdateGameState(Define.GameState.GAMEOVER);
+        
+    RTSession.setTimeout(function(){
+        PrepareNewGame();
+    },Define.TIME_BREAK_GAME * 1000);
+    
+    var scores = CanculateScores(MatchPublicData.Winner);
+    SendGameResult(scores);
+}
+
+var SendCardsToAllPlayers = function()
+{
     var players = RTSession.getPlayers();
     for(var i = 0; i < players.length; i++)
     {
         var player = players[i];
-        MatchPrivateData.Cards[player.getPlayerId()] = deck.slice(i * CARD_PER_PLAYER, (i + 1) * CARD_PER_PLAYER);
         SendCardsToPlayer(player.getPlayerId(), player.getPeerId());
+    }
+}
+
+var ShuffleDeckDebug = function(debugCode)
+{
+    var CARD_QUANTITY = 52;
+    var CARD_PER_PLAYER = 13;
+    var players = RTSession.getPlayers();
+    
+    switch (debugCode)
+    {
+        case 101:
+            MatchPrivateData.Deck = Define.DragonCards.slice();
+            break;
+        case 102:
+            MatchPrivateData.Deck = Define.FourPigsCards.slice();
+            break;
+        case 103:
+            MatchPrivateData.Deck = Define.SixPairsCards.slice();
+            break;
+        case 104:
+            MatchPrivateData.Deck = Define.FiveContPairsCards.slice();
+            break;
+        default:
+            MatchPrivateData.Deck = Define.DefaultCards.slice();
+    }
+    for(var i = 0; i < players.length; i++)
+    {
+        var playerId = players[i].getPlayerId();
+        MatchPrivateData.Cards[playerId] = MatchPrivateData.Deck.slice(i * CARD_PER_PLAYER, (i + 1) * CARD_PER_PLAYER);
     }
 }
 
@@ -361,12 +446,34 @@ var FindFirstTurn = function()
     ResetSkipState();
 }
 
-var OnStartGame = function()
+var OnStartGame = function(message)
 {
-    DealCards();
-    UpdateGameState(Define.GameState.STARTED);
-    FindFirstTurn();
-    UpdateGameState(Define.GameState.RUNNING);
+    var debugCode = message.getData().getNumber(1);
+    if (MatchPublicData.State == Define.GameState.READY)
+    {
+        UpdateGameState(Define.GameState.STARTED);
+        if(debugCode >= 100)    
+        {
+            ShuffleDeckDebug(debugCode);
+        } 
+        else 
+        {
+            ShuffleDeck();
+        }
+        if(CheckInstantWin())
+        {
+            EndGame();
+            return;
+        }
+        SendCardsToAllPlayers();
+        FindFirstTurn();
+        UpdateGameState(Define.GameState.RUNNING);
+    }
+    else
+    {
+        //TODO: error game already start
+        Log.debug("OnStartGame " + MatchPublicData.State);
+    }
 }
 
 var GetPlayerSeat = function(playerId)
@@ -408,13 +515,14 @@ var ResetSkipState = function()
 {
     MatchPublicData.SkipState = [false, false, false, false];
     MatchPublicData.CurrentCards = null;
+    MatchPublicData.PreviousThrowPlayerId = 0;
 }
 
 var SwitchTurn = function(playerId)
 {
     var nextPlayer = FindNextPlayerCanPlay(playerId);
     this.StartTurn(nextPlayer);
-    if(MatchPublicData.ThrowPlayerId == nextPlayer)
+    if(MatchPublicData.PreviousThrowPlayerId == nextPlayer || MatchPublicData.PreviousThrowPlayerId == 0)
     {
         ResetSkipState();
     }
@@ -424,20 +532,49 @@ var RemoveCardsFromPlayer = function(playerId, cards)
 {
     for (var i = 0; i < cards.length; i++) 
     {
-        MatchPrivateData.Cards[playerId].splice(MatchPrivateData.Cards[playerId].indexOf(cards[i]), 1);
+        var cardIdx = MatchPrivateData.Cards[playerId].indexOf(cards[i]);
+        if(cardIdx == -1)
+        {
+            //TODO: Send error, hack card
+            return false;
+        }
     }
-    SendPlayerThrowSuccess(playerId, cards);
+    
+    for (var i = 0; i < cards.length; i++) 
+    {
+        var cardIdx = MatchPrivateData.Cards[playerId].indexOf(cards[i]);
+        MatchPrivateData.Cards[playerId].splice(cardIdx, 1);
+    }
+    return true;
+}
+
+var PrepareNewGame = function()
+{
+    //remove player who registered leave game
+    for (var i=0; i<MatchPublicData.RegisterLeave.length; i++)
+    {
+        LeaveCurrentSeat(MatchPublicData.RegisterLeave[i]);
+    }
+    MatchPrivateData.Cards = {};
+    UpdateGameState(Define.GameState.WAITING);
+    CheckEnoughPlayer();
+}
+
+var CheckEnoughPlayer = function()
+{
+    if (Object.keys(MatchPublicData.Seats).length >= 2)
+    {
+        UpdateGameState(Define.GameState.READY);
+        startGameTimeout = RTSession.setTimeout(function(){
+            OnStartGame();
+        }, Define.TIME_FORCE_START * 1000)
+    }
 }
 
 var CheckEndGame = function(playerId)
 {
-    if (MatchPrivateData.Cards[playerId].length == 0)
+    if (MatchPrivateData.Cards[playerId].length == 0) // GameOver
     {
-        MatchPublicData.Winner = playerId;
-        UpdateGameState(Define.GameState.GAMEOVER);
-        
-        var scores = CanculateScores(playerId);
-            SendGameResult(scores);
         return true;
     }
     return false;
@@ -463,21 +600,23 @@ var OnCardsThrown = function(packet)
 {
     var cards = JSON.parse(packet.getData().getString(1));
     var playerId = packet.getSender().getPlayerId();
-    Log.debug("OnCardsThrown: " + MatchPublicData.CurrentCards + "cards: " + cards);
+    //Log.debug("OnCardsThrown: " + MatchPublicData.CurrentCards + "cards: " + cards);
     if(playerId != MatchPublicData.TurnKeeper)
     {
         //TODO: Send error, hack turn.
         return;
     }
     
-    if (GameHelper.validTurn(MatchPublicData.CurrentCards, cards))
+    if (RemoveCardsFromPlayer(playerId, cards) 
+        && GameHelper.validTurn(MatchPublicData.CurrentCards, cards))
     {
         MatchPublicData.CurrentCards = cards;
-        MatchPublicData.ThrowPlayerId = playerId;
-        RemoveCardsFromPlayer(playerId, cards);
-        var gameEnded = CheckEndGame(playerId);
-        if (gameEnded)
+        MatchPublicData.PreviousThrowPlayerId = playerId;
+        SendPlayerThrowSuccess(playerId, cards);
+        if (CheckEndGame(playerId))
         {
+            MatchPublicData.Winner = playerId;
+            EndGame();
             RTSession.clearTimeout(TurnLoopId);
         }
         else
@@ -489,7 +628,7 @@ var OnCardsThrown = function(packet)
 
 var SkipTurn = function(playerId)
 {
-    SendPlayerSkipTurn(playerId);
+    //SendPlayerSkipTurn(playerId); No need to send event.
     MatchPublicData.SkipState[GetPlayerSeat(playerId)] = true;
     SwitchTurn(playerId);
 }
@@ -497,7 +636,7 @@ var SkipTurn = function(playerId)
 var OnSkipTurn = function(packet)
 {
     var playerId = packet.getSender().getPlayerId();
-    if(playerId != MatchPublicData.TurnKeeper)
+    if(playerId != MatchPublicData.TurnKeeper || MatchPublicData.State != Define.GameState.RUNNING)
     {
         //TODO: Send error, hack turn.
         return;
@@ -511,7 +650,7 @@ var main = function(){
     RTSession.onPacket(ServerCode.RQ_LEAVE_SEAT, OnSeatLeave.bind(this));
     RTSession.onPacket(ServerCode.RQ_START_GAME, OnStartGame.bind(this));
     RTSession.onPacket(ServerCode.RQ_THROW_CARDS, OnCardsThrown.bind(this));
-    RTSession.onPacket(ServerCode.RQ_PLAYER_READY, OnPlayerReady.bind(this));
+    RTSession.onPacket(ServerCode.RQ_REGISTER_LEAVE, OnPlayerRegisterLeave.bind(this));
     RTSession.onPacket(ServerCode.RQ_SKIP_TURN, OnSkipTurn.bind(this));
     RTSession.onPlayerConnect(onPlayerConnect.bind(this));
     RTSession.onPlayerDisconnect(onPlayerDisconnect.bind(this));

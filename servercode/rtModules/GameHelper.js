@@ -120,36 +120,23 @@ var parseCards = function(cards)
     return result;
 }
 
+var IsPig = function(cardIdx)
+{
+    return cardValue(cardIdx) == 15;
+}
+
 var FourPigs = function(cards)
 {
     cards.sort(compareGreater);
-    if(cards[3] == Define.DefaultCards[48]) // Define.DefaultCards[48] = 60 is 2-Spades
+    if(IsPig(cards[3]))
     {
         return true;
     }
     return false;
 }
 
-var IsPig = function(card)
-{
-    return cardValue(card) == 15;
-}
-
 var DragonStraight = function(cards)
 {
-    /*-- old
-    cards.sort(compareGreater);
-    var index = 0, sameCount = 0;
-    while(index < 12 && sameCount < 2)
-    {
-        if(cardValue(cards[index]) == cardValue(cards[index + 1]) || IsPig(cards[index])) {
-            sameCount++;
-        }
-        index++;
-    }
-    return sameCount < 2;
-    --old */
-    
     var weight = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
     var CARD_QUANTITY = 13;
     var singleCount = 0;
@@ -186,21 +173,6 @@ var FiveContinuousPairs = function(cards)
 
 var SixPairs = function(cards)
 {
-    /*--old
-    cards.sort(compareGreater);
-    var index = 0, singleCount = 0;
-    while(index < 12 && singleCount < 2)
-    {
-        if(cardValue(cards[index]) == cardValue(cards[index + 1]))    {
-            index++;
-        } else {
-            singleCount++;
-        }
-        index++;
-    }
-    return singleCount < 2;
-    --old*/
-    
     var weight = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
     var CARD_QUANTITY = 13;
     var pairCount;
