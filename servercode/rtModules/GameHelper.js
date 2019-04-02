@@ -1,3 +1,5 @@
+var Define = require("Define");
+
 function GameHelper()
 {
     
@@ -41,7 +43,6 @@ var compareGreater = function(a, b)
     return b - a;
 }
 
-
 GameHelper.prototype.validTurn = function(previousCards, currentCards)
 {
     var HEO = 15;
@@ -54,7 +55,7 @@ GameHelper.prototype.validTurn = function(previousCards, currentCards)
     }
     var previous = parseCards(previousCards);
     if(previous.setType >= Define.SetType.THREEPAIRS){
-        return current.SetType * 100 + current.topCard > previous.SetType * 100 + previous.topCard;
+        return current.setType * 100 + current.topCard > previous.setType * 100 + previous.topCard;
     } else if(cardValue(previous.topCard) == HEO && current.setType >= Define.SetType.THREEPAIRS) {
         return true;
     } else if(current.setType == previous.setType 
@@ -117,6 +118,114 @@ var parseCards = function(cards)
     default:
     }
     return result;
+}
+
+var FourPigs = function(cards)
+{
+    cards.sort(compareGreater);
+    if(cards[3] == Define.DefaultCards[48]) // Define.DefaultCards[48] = 60 is 2-Spades
+    {
+        return true;
+    }
+    return false;
+}
+
+var IsPig = function(card)
+{
+    return cardValue(card) == 15;
+}
+
+var DragonStraight = function(cards)
+{
+    /*-- old
+    cards.sort(compareGreater);
+    var index = 0, sameCount = 0;
+    while(index < 12 && sameCount < 2)
+    {
+        if(cardValue(cards[index]) == cardValue(cards[index + 1]) || IsPig(cards[index])) {
+            sameCount++;
+        }
+        index++;
+    }
+    return sameCount < 2;
+    --old */
+    
+    var weight = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    var CARD_QUANTITY = 13;
+    var singleCount = 0;
+    for(var i = 0; i < CARD_QUANTITY; i++)
+    {
+        var card = cardValue(cards[i]) - 3;
+        if(!IsPig(cards[i]) && weight[card] == 0)
+        {
+           singleCount++;
+           weight[card]++;
+        }
+    }
+    return singleCount == 12;
+}
+
+var FiveContinuousPairs = function(cards)
+{
+    var weight = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    var CARD_QUANTITY = 13;
+    for(var i = 0; i < CARD_QUANTITY; i++)
+    {
+        weight[cardValue(cards[i]) - 3]++;
+    }
+    
+    for(var i = 0, lastIdx = CARD_QUANTITY - 6; i < lastIdx; i++)
+    {
+        if(weight[i] > 2 && weight[i+1] > 2 && weight[i+2] > 2 && weight[i+3] > 2 && weight[i+4] > 2)
+        {
+            return true;
+        }
+    }
+    return false;
+}
+
+var SixPairs = function(cards)
+{
+    /*--old
+    cards.sort(compareGreater);
+    var index = 0, singleCount = 0;
+    while(index < 12 && singleCount < 2)
+    {
+        if(cardValue(cards[index]) == cardValue(cards[index + 1]))    {
+            index++;
+        } else {
+            singleCount++;
+        }
+        index++;
+    }
+    return singleCount < 2;
+    --old*/
+    
+    var weight = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    var CARD_QUANTITY = 13;
+    var pairCount;
+    for(var i = 0; i < CARD_QUANTITY; i++)
+    {
+        var card = cardValue(cards[i]) - 3;
+        if(weight[card] < 2)
+        {
+            weight[card]++;
+            if(weight[card] == 2)
+            {
+                pairCount++;
+            }
+        }
+    }
+    return pairCount > 5;
+}
+
+GameHelper.prototype.isInstantWin = function(cards)
+{
+    if(FourPigs(cards) || DragonStraight(cards) || FiveContinuousPairs(cards) || SixPairs(cards))
+    {
+        return true;
+    }
+    return false;
 }
 
 module.exports = new GameHelper();
