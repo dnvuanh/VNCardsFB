@@ -190,11 +190,12 @@ var GameMgr = cc.Class({
         for (var i = 0, seats = this.getOnlineSeatCount(); i < seats; i++) {
             var playerId = message.getString(3 + i * 2);
             var cards = JSON.parse(message.getString(3 + i * 2 + 1));
+            cards.sort(function (a, b) {
+                return a - b;
+            });
             playersCards[playerId] = cards;
         }
         UIManager.instance.displayResult(scores, playerWinId, playersCards);
-        cc.log(playerWinId);
-        cc.log(JSON.stringify(playersCards));
     },
     onPlayerRegisterLeave: function onPlayerRegisterLeave(message) {
         var isLeave = message.getLong(1);

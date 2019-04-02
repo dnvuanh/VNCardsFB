@@ -89,6 +89,7 @@ cc.Class({
                 seatDisplay.displayCards(playersCards[seatDisplay.getPlayerId()]);
                 if(seatDisplay.getPlayerId() == playerWinId)
                 {
+                    cc.log(seatDisplay.getPlayerId());
                     seatDisplay.enableResultIcon(true);
                 }
             }
@@ -101,6 +102,10 @@ cc.Class({
         {
             var seatDisplay = this.node.children[i].getComponent("SeatDisplay");
             seatDisplay.enableResultIcon(false);
+            if (seatDisplay && seatDisplay.getPlayerId() != null)
+            {
+                seatDisplay.RecallCards();
+            }
         }
     },
 

@@ -16,7 +16,8 @@ cc.Class({
         money: cc.Label,
         hostIcon: cc.Node,
         turnCountDown: cc.ProgressBar,
-        resultIcon: cc.Node
+        resultIcon: cc.Node,
+        cardsNode: cc.Node
     },
 
     onLoad: function onLoad() {
@@ -25,6 +26,7 @@ cc.Class({
         this.turnCountDown.node.active = false;
         this.IsMyTurn = false;
         this.resultIcon.active = false;
+        this.cardsNode.active = false;
     },
     display: function display(playerInfo) {
         var _this = this;
@@ -73,14 +75,23 @@ cc.Class({
 
         var idx = 0;
         var OFFSET = 50;
-        this.resultIcon.active = true;
+        this.cardsNode.active = true;
         cards.forEach(function (it) {
             var card = ObjectPool.instance.getCard(it);
             if (card != null) {
-                card.setParent(_this2.resultIcon);
+                card.setParent(_this2.cardsNode);
+                card.setScale(0.75, 0.75);
                 card.x = idx++ * OFFSET;
             }
         });
+    },
+    RecallCards: function RecallCards() {
+        while (this.cardsNode.children.length > 0) {
+            this.cardsNode.children[0].setPosition(0, 0);
+            this.cardsNode.children[0].setScale(1, 1);
+            ObjectPool.instance.recall(this.cardsNode.children[0]);
+        }
+        this.cardsNode.active = false;
     },
     update: function update(dt) {
         if (this.IsMyTurn) {

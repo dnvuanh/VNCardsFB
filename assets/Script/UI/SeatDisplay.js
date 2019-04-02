@@ -11,6 +11,7 @@ cc.Class({
         hostIcon: cc.Node,
         turnCountDown: cc.ProgressBar,
         resultIcon: cc.Node,
+        cardsNode: cc.Node,
     },
 
     onLoad()
@@ -20,6 +21,7 @@ cc.Class({
         this.turnCountDown.node.active = false;
         this.IsMyTurn = false;
         this.resultIcon.active = false;
+        this.cardsNode.active = false;
     },
 
     display(playerInfo)
@@ -83,15 +85,27 @@ cc.Class({
     {
         let idx = 0;
         const OFFSET = 50;
-        this.resultIcon.active = true;
+        this.cardsNode.active = true;
         cards.forEach(it => {
             let card = ObjectPool.instance.getCard(it);
             if(card != null)                
             {
-                card.setParent(this.resultIcon);
+                card.setParent(this.cardsNode);
+                card.setScale(0.75, 0.75);
                 card.x = idx++ * OFFSET;
             }
         });
+    },
+
+    RecallCards()
+    {
+        while (this.cardsNode.children.length > 0)
+        {
+            this.cardsNode.children[0].setPosition(0, 0);
+            this.cardsNode.children[0].setScale(1, 1);
+            ObjectPool.instance.recall(this.cardsNode.children[0]);
+        }
+        this.cardsNode.active = false;
     },
 
     update(dt)

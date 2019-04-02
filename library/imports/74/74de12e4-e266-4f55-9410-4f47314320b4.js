@@ -64,6 +64,7 @@ cc.Class({
             if (seatDisplay && seatDisplay.getPlayerId() != null) {
                 seatDisplay.displayCards(playersCards[seatDisplay.getPlayerId()]);
                 if (seatDisplay.getPlayerId() == playerWinId) {
+                    cc.log(seatDisplay.getPlayerId());
                     seatDisplay.enableResultIcon(true);
                 }
             }
@@ -73,6 +74,9 @@ cc.Class({
         for (var i = 0; i < this.node.children.length; i++) {
             var seatDisplay = this.node.children[i].getComponent("SeatDisplay");
             seatDisplay.enableResultIcon(false);
+            if (seatDisplay && seatDisplay.getPlayerId() != null) {
+                seatDisplay.RecallCards();
+            }
         }
     },
     onPlayerReady: function onPlayerReady(playerId, isReady) {
