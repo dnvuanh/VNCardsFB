@@ -147,9 +147,9 @@ var UIManager = cc.Class({
         this.MenuGame.onGameOver();
     },
 
-    displayResult(scores)
+    displayResult(scores, playerWinId, playersCards)
     {
-        this.MenuGame.displayResult(scores);
+        this.MenuGame.displayResult(scores, playerWinId, playersCards);
     },
 
     onPlayerReady(playerId, isReady)

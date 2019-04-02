@@ -58,11 +58,14 @@ cc.Class({
             seatDisplay.disableCountDown();
         }
     },
-    onPlayerFinished: function onPlayerFinished(playerId) {
+    displayResult: function displayResult(playerWinId, playersCards) {
         for (var i = 0; i < this.node.children.length; i++) {
             var seatDisplay = this.node.children[i].getComponent("SeatDisplay");
-            if (seatDisplay && seatDisplay.getPlayerId() == playerId) {
-                seatDisplay.enableResultIcon(true);
+            if (seatDisplay && seatDisplay.getPlayerId() != null) {
+                seatDisplay.displayCards(playersCards[seatDisplay.getPlayerId()]);
+                if (seatDisplay.getPlayerId() == playerWinId) {
+                    seatDisplay.enableResultIcon(true);
+                }
             }
         }
     },

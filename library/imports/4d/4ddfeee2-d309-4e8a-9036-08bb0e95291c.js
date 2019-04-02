@@ -4,6 +4,8 @@ cc._RF.push(module, '4ddfe7i0wlOipA2CLsOlSkc', 'SeatDisplay');
 
 "use strict";
 
+var ObjectPool = require("ObjectPool");
+
 cc.Class({
     extends: cc.Component,
 
@@ -65,6 +67,20 @@ cc.Class({
     },
     enableResultIcon: function enableResultIcon(visible) {
         this.resultIcon.active = visible;
+    },
+    displayCards: function displayCards(cards) {
+        var _this2 = this;
+
+        var idx = 0;
+        var OFFSET = 50;
+        this.resultIcon.active = true;
+        cards.forEach(function (it) {
+            var card = ObjectPool.instance.getCard(it);
+            if (card != null) {
+                card.setParent(_this2.resultIcon);
+                card.x = idx++ * OFFSET;
+            }
+        });
     },
     update: function update(dt) {
         if (this.IsMyTurn) {

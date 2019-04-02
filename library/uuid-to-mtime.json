@@ -925,24 +925,14 @@
     "relativePath": "resources\\Texture\\Result\\Third.png"
   },
   "9ffd88a0-3d4f-4db6-a9cd-d7b5af9553ae": {
-    "asset": 1554046847438,
-    "meta": 1554046847563,
+    "asset": 1554214709081,
+    "meta": 1554214709214,
     "relativePath": "Scene\\Game.fire"
   },
   "cee324ea-8e17-421c-9844-f961fce7328c": {
     "asset": 1553850270944,
     "meta": 1554039367491,
     "relativePath": "Script\\ObjectPool.js"
-  },
-  "c4fdc573-2da4-4dda-bf4c-48c469e45f6f": {
-    "asset": 1553832329613,
-    "meta": 1554039367524,
-    "relativePath": "Script\\UI\\DealCards.js"
-  },
-  "098f2e6d-0359-4d0b-b86f-d0e154700bde": {
-    "asset": 1554039091490,
-    "meta": 1554039367193,
-    "relativePath": "Script\\Define\\ServerCode.js"
   },
   "81fccbd6-9089-47a8-ae6c-024a7cc90083": {
     "asset": 1554039091507,
@@ -964,11 +954,6 @@
     "meta": 1554039367192,
     "relativePath": "Script\\Define\\Global.js"
   },
-  "a5fb6e06-2a67-4334-aa57-7bb75a6d7df7": {
-    "asset": 1554039091491,
-    "meta": 1554039367278,
-    "relativePath": "Script\\Game\\GameMgr.js"
-  },
   "f1a42143-a2e1-4a52-b784-63e0829e0dff": {
     "asset": 1554039091486,
     "meta": 1554039367148,
@@ -979,34 +964,49 @@
     "meta": 1554041098053,
     "relativePath": "Script\\Boot.js"
   },
-  "4ddfeee2-d309-4e8a-9036-08bb0e95291c": {
-    "asset": 1554084952921,
-    "meta": 1554085170425,
-    "relativePath": "Script\\UI\\SeatDisplay.js"
-  },
-  "74de12e4-e266-4f55-9410-4f47314320b4": {
-    "asset": 1554084971482,
-    "meta": 1554085170438,
-    "relativePath": "Script\\UI\\SeatMgr.js"
-  },
-  "6fdc0398-9a91-40d7-abd0-af80d15037ab": {
-    "asset": 1554086634200,
-    "meta": 1554086661645,
-    "relativePath": "Script\\Manager\\UIManager.js"
-  },
-  "3da6cd8a-1675-4245-8838-df9f57253145": {
-    "asset": 1554088379686,
-    "meta": 1554088484155,
-    "relativePath": "Script\\UI\\MenuGame.js"
-  },
   "c8f0004a-a8d3-46cc-b1b1-959023564be7": {
     "asset": 1554091108188,
     "meta": 1554091112524,
     "relativePath": "Script\\Util\\GameHelper.js"
   },
+  "098f2e6d-0359-4d0b-b86f-d0e154700bde": {
+    "asset": 1554206052539,
+    "meta": 1554206796831,
+    "relativePath": "Script\\Define\\ServerCode.js"
+  },
+  "a5fb6e06-2a67-4334-aa57-7bb75a6d7df7": {
+    "asset": 1554206495963,
+    "meta": 1554206796899,
+    "relativePath": "Script\\Game\\GameMgr.js"
+  },
+  "6fdc0398-9a91-40d7-abd0-af80d15037ab": {
+    "asset": 1554206513067,
+    "meta": 1554206797040,
+    "relativePath": "Script\\Manager\\UIManager.js"
+  },
+  "3da6cd8a-1675-4245-8838-df9f57253145": {
+    "asset": 1554206727638,
+    "meta": 1554206797070,
+    "relativePath": "Script\\UI\\MenuGame.js"
+  },
+  "c4fdc573-2da4-4dda-bf4c-48c469e45f6f": {
+    "asset": 1554213367124,
+    "meta": 1554213996144,
+    "relativePath": "Script\\UI\\DealCards.js"
+  },
   "7cd40e88-0b96-4344-8e9e-130153c97712": {
-    "asset": 1554091899865,
-    "meta": 1554091901602,
+    "asset": 1554215003407,
+    "meta": 1554215004309,
     "relativePath": "Script\\Manager\\GSMgr.js"
+  },
+  "74de12e4-e266-4f55-9410-4f47314320b4": {
+    "asset": 1554215719715,
+    "meta": 1554215721666,
+    "relativePath": "Script\\UI\\SeatMgr.js"
+  },
+  "4ddfeee2-d309-4e8a-9036-08bb0e95291c": {
+    "asset": 1554216081956,
+    "meta": 1554216083076,
+    "relativePath": "Script\\UI\\SeatDisplay.js"
   }
 }

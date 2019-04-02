@@ -107,8 +107,8 @@ var UIManager = cc.Class({
     onGameOver: function onGameOver() {
         this.MenuGame.onGameOver();
     },
-    displayResult: function displayResult(scores) {
-        this.MenuGame.displayResult(scores);
+    displayResult: function displayResult(scores, playerWinId, playersCards) {
+        this.MenuGame.displayResult(scores, playerWinId, playersCards);
     },
     onPlayerReady: function onPlayerReady(playerId, isReady) {
         this.MenuGame.onPlayerReady(playerId, isReady);

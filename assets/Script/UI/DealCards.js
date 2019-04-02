@@ -21,8 +21,8 @@ cc.Class({
             let moveTo = new cc.MoveTo(this.flyingTime, position);
             let finish = new cc.callFunc(this.onCardDelivery, this, this.node.children[i]);
             let sequence = new cc.Sequence(delayTime, moveTo, finish);
-                this.node.children[i].active = true;
-                this.node.children[i].runAction(sequence);
+            this.node.children[i].active = true;
+            this.node.children[i].runAction(sequence);
         }
     },
 

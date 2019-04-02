@@ -4,8 +4,6 @@ cc._RF.push(module, '3da6c2KFnVCRYg4359XJTFF', 'MenuGame', __filename);
 
 "use strict";
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 var MenuScene = require("MenuScene");
 var ObjectPool = require("ObjectPool");
 
@@ -95,7 +93,6 @@ cc.Class({
         this.previousCards = null;
         this.previousThrowPlayer = null;
         var myid = GameMgr.instance.getMyId();
-        this.CardsOnHand = _defineProperty({}, myid, 13);
     },
     onCardsReceived: function onCardsReceived(cards) {
         var _this = this;
@@ -164,17 +161,6 @@ cc.Class({
         this.previousCards = GameHelper.parseCards(cards);
         this.removeCardsFromHand(playerId, cards);
         this.previousThrowPlayer = playerId;
-        if (this.CardsOnHand.hasOwnProperty(playerId)) {
-            this.CardsOnHand[playerId] -= cards.length;
-        } else {
-            this.CardsOnHand[playerId] = MAX_CARD_ON_HAND - cards.length;
-        }
-        if (this.CardsOnHand[playerId] == 0) {
-            this.SeatMgr.onPlayerFinished(playerId);
-            this.friendCardNode.children.forEach(function (it) {
-                return it.active = false;
-            });
-        }
     },
     removeCardsFromHand: function removeCardsFromHand(playerId, cards) {
         var _this2 = this;
@@ -222,8 +208,12 @@ cc.Class({
         this.PlayingButtons.active = false;
         this.previousCards = null;
     },
-    displayResult: function displayResult(scores) {
+    displayResult: function displayResult(scores, playerWinId, playersCards) {
         console.log(scores);
+        this.friendCardNode.children.forEach(function (it) {
+            return it.active = false;
+        });
+        this.SeatMgr.displayResult(playerWinId, playersCards);
     },
     onPlayerReady: function onPlayerReady(playerId, isReady) {
         this.SeatMgr.onPlayerReady(playerId, isReady);

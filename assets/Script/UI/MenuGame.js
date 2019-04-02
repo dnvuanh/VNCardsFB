@@ -112,8 +112,6 @@ cc.Class({
         this.previousCards = null;
         this.previousThrowPlayer = null;
         var myid = GameMgr.instance.getMyId();
-        this.CardsOnHand = {[myid] : 13};
-
     },
 
     onCardsReceived(cards)
@@ -199,16 +197,6 @@ cc.Class({
         this.previousCards = GameHelper.parseCards(cards);
         this.removeCardsFromHand(playerId, cards);
         this.previousThrowPlayer = playerId;
-        if(this.CardsOnHand.hasOwnProperty(playerId)) {
-            this.CardsOnHand[playerId] -= cards.length;
-        } else {
-            this.CardsOnHand[playerId] = MAX_CARD_ON_HAND - cards.length;
-        }
-        if(this.CardsOnHand[playerId] == 0)
-        {
-            this.SeatMgr.onPlayerFinished(playerId);
-            this.friendCardNode.children.forEach(it => it.active = false);
-        }
     },
 
     removeCardsFromHand(playerId, cards)
@@ -260,9 +248,11 @@ cc.Class({
         this.previousCards = null;
     },
 
-    displayResult(scores)
+    displayResult(scores, playerWinId, playersCards)
     {
         console.log(scores);
+        this.friendCardNode.children.forEach(it => it.active = false);
+        this.SeatMgr.displayResult(playerWinId, playersCards);
     },
 
     onPlayerReady(playerId, isReady)

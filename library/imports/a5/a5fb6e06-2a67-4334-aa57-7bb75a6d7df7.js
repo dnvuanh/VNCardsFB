@@ -93,6 +93,9 @@ var GameMgr = cc.Class({
     IsMyId: function IsMyId(id) {
         return this.userId == id;
     },
+    getOnlineSeatCount: function getOnlineSeatCount() {
+        return Object.keys(this.matchData.Seats).length;
+    },
     onPlayerEnterSeat: function onPlayerEnterSeat(message) {
         var playerId = message.getString(1);
         var seat = message.getLong(2);
@@ -182,7 +185,16 @@ var GameMgr = cc.Class({
     },
     onGameResult: function onGameResult(message) {
         var scores = JSON.parse(message.getString(1));
-        UIManager.instance.displayResult(scores);
+        var playerWinId = message.getString(2);
+        var playersCards = {};
+        for (var i = 0, seats = this.getOnlineSeatCount(); i < seats; i++) {
+            var playerId = message.getString(3 + i * 2);
+            var cards = JSON.parse(message.getString(3 + i * 2 + 1));
+            playersCards[playerId] = cards;
+        }
+        UIManager.instance.displayResult(scores, playerWinId, playersCards);
+        cc.log(playerWinId);
+        cc.log(JSON.stringify(playersCards));
     },
     onPlayerRegisterLeave: function onPlayerRegisterLeave(message) {
         var isLeave = message.getLong(1);

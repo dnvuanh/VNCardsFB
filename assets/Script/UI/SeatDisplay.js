@@ -1,3 +1,5 @@
+var ObjectPool = require("ObjectPool");
+
 cc.Class({
     extends: cc.Component,
 
@@ -75,6 +77,21 @@ cc.Class({
     enableResultIcon(visible)
     {
         this.resultIcon.active = visible;
+    },
+
+    displayCards(cards)
+    {
+        let idx = 0;
+        const OFFSET = 50;
+        this.resultIcon.active = true;
+        cards.forEach(it => {
+            let card = ObjectPool.instance.getCard(it);
+            if(card != null)                
+            {
+                card.setParent(this.resultIcon);
+                card.x = idx++ * OFFSET;
+            }
+        });
     },
 
     update(dt)

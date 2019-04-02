@@ -79,14 +79,18 @@ cc.Class({
         }
     },
 
-    onPlayerFinished(playerId)
+    displayResult(playerWinId, playersCards)
     {
         for (var i=0; i<this.node.children.length; i++)
         {
             var seatDisplay = this.node.children[i].getComponent("SeatDisplay");
-            if (seatDisplay && seatDisplay.getPlayerId() == playerId)
+            if (seatDisplay && seatDisplay.getPlayerId() != null)
             {
-                seatDisplay.enableResultIcon(true);
+                seatDisplay.displayCards(playersCards[seatDisplay.getPlayerId()]);
+                if(seatDisplay.getPlayerId() == playerWinId)
+                {
+                    seatDisplay.enableResultIcon(true);
+                }
             }
         }
     },

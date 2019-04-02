@@ -104,6 +104,10 @@ var GameMgr = cc.Class({
         return this.userId == id;
     },
 
+    getOnlineSeatCount() {
+        return Object.keys(this.matchData.Seats).length;
+    },
+
     onPlayerEnterSeat(message) {
         let playerId = message.getString(1);
         let seat = message.getLong(2);
@@ -206,7 +210,15 @@ var GameMgr = cc.Class({
     onGameResult(message)
     {
         let scores = JSON.parse(message.getString(1));
-        UIManager.instance.displayResult(scores);
+        let playerWinId = message.getString(2);
+        let playersCards = {};
+        for(var i = 0, seats = this.getOnlineSeatCount(); i < seats; i++)
+        {
+            let playerId = message.getString(3 + i * 2);
+            let cards = JSON.parse(message.getString(3 + i * 2 + 1));
+            playersCards[playerId] = cards;
+        }
+        UIManager.instance.displayResult(scores, playerWinId, playersCards);
     },
 
     onPlayerRegisterLeave(message)
