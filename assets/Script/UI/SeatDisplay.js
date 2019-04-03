@@ -84,15 +84,14 @@ cc.Class({
     displayCards(cards)
     {
         let idx = 0;
-        const OFFSET = 50;
         this.cardsNode.active = true;
         cards.forEach(it => {
             let card = ObjectPool.instance.getCard(it);
             if(card != null)                
             {
                 card.setParent(this.cardsNode);
-                card.setScale(0.75, 0.75);
-                card.x = idx++ * OFFSET;
+                card.setScale(0.5, 0.5);
+                card.setPosition(0, 0);
             }
         });
     },

@@ -165,8 +165,11 @@ cc.Class({
     removeCardsFromHand: function removeCardsFromHand(playerId, cards) {
         var _this2 = this;
 
-        var idx = 0;
-        var OFFSET = 50;
+        var cardList = this.playZoneNode.getComponentsInChildren("Card");
+        cardList.forEach(function (card) {
+            card.node.active = false;
+        });
+
         cards.sort(function (a, b) {
             return a - b;
         });
@@ -175,13 +178,13 @@ cc.Class({
                 var card = _this2.myCardNode.getChildByName("Card_" + it);
                 card.getComponent("Card").onDeselect();
                 card.setParent(_this2.playZoneNode);
-                card.x = idx++ * OFFSET;
+                card.setPosition(0, 0);
             });
         } else {
             cards.forEach(function (it) {
                 var card = ObjectPool.instance.getCard(it);
                 card.setParent(_this2.playZoneNode);
-                card.x = idx++ * OFFSET;
+                card.setPosition(0, 0);
             });
         }
     },

@@ -201,21 +201,24 @@ cc.Class({
 
     removeCardsFromHand(playerId, cards)
     {
-        let idx = 0;
-        const OFFSET = 50;
+        let cardList = this.playZoneNode.getComponentsInChildren("Card");
+            cardList.forEach(card => {
+                card.node.active = false;
+            });
+            
         cards.sort((a,b) => a - b);
         if(GameMgr.instance.IsMyId(playerId)) {
             cards.forEach(it => {
                 let card = this.myCardNode.getChildByName("Card_" + it);
                 card.getComponent("Card").onDeselect();
                 card.setParent(this.playZoneNode);
-                card.x = idx++ * OFFSET;
+                card.setPosition(0, 0);
             });
         } else {
             cards.forEach(it => {
                 let card = ObjectPool.instance.getCard(it);                
                 card.setParent(this.playZoneNode);
-                card.x = idx++ * OFFSET;
+                card.setPosition(0, 0);
             });
         }
     },
