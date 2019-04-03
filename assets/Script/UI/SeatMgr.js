@@ -1,6 +1,9 @@
 cc.Class({
     extends: cc.Component,
 
+    properties: {
+
+    },
     
     start()
     {
@@ -17,6 +20,12 @@ cc.Class({
         let host = GameMgr.instance.getHost();
         if (host)
             this.setHost(host);
+
+        this.cachedPlayersPos = [];
+        for (let i=0; i<this.node.children.length; i++)
+        {
+            this.cachedPlayersPos[i] = this.node.children[i].position;
+        }
     },
 
     onPlayerEnter(playerInfo, seat)
@@ -25,7 +34,24 @@ cc.Class({
         {
             var seatDisplay = this.node.children[seat].getComponent("SeatDisplay");
                 seatDisplay.display(playerInfo);
-                //seatDisplay.setReady(GameMgr.instance.IsHost(playerInfo.id));
+        }
+        if (GameMgr.instance.IsMyId(playerInfo.id))
+        {
+            this.RotateSeats(seat);
+        }
+    },
+
+    RotateSeats(mySeat)
+    {
+        for (let i=0; i < this.node.children.length; i++)
+        {
+            let offset = (i - mySeat) >= 0 ? (i - mySeat) : (i - mySeat + 4);
+            let fadeOut = cc.fadeOut(0.2);
+            let movePosition = cc.callFunc(() => this.node.children[i].position = this.cachedPlayersPos[offset]);
+            let fadeIn = cc.fadeIn(0.2);
+            this.node.children[i].runAction(cc.sequence(fadeOut, cc.delayTime(0.1), movePosition, fadeIn));
+            /*var movePosition = cc.moveTo(0.2,this.cachedPlayersPos[offset]);
+            this.node.children[i].runAction(movePosition);*/
         }
     },
 

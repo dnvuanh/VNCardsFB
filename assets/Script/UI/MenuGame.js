@@ -33,7 +33,7 @@ cc.Class({
         this.PlayingButtons.active = false;
         this.onlineList.node.active = true;
         this.chatBox.node.active = false;
-        this.seatOccupied = [false, false, false, false];
+        //this.seatOccupied = [false, false, false, false];
     },
 
     addPlayer(player)
@@ -59,12 +59,11 @@ cc.Class({
 
     playerEnterSeat(playerInfo, seat)
     {
-        this.seatOccupied[seat] = true;
+        //this.seatOccupied[seat] = true;
         this.SeatMgr.onPlayerEnter(playerInfo, seat);
         if (GameMgr.instance.IsMyId(playerInfo.id))
         {
             this.ButtonLeave.active = true;
-            //this.ButtonReady.active = !GameMgr.instance.IsHost(playerInfo.id);
         }
     },
 

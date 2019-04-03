@@ -1,5 +1,4 @@
-
-temp/
-build/
-library/
-settings/
+temp/*
+build/*
+library/*
+settings/*
