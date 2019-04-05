@@ -21,6 +21,7 @@ cc.Class({
         this.turnCountDown.node.active = false;
         this.IsMyTurn = false;
         this.resultIcon.active = false;
+        this.resultIcon = this.resultIcon.getComponent("ResultIcon");
         this.cardsNode.active = false;
     },
 
@@ -76,9 +77,29 @@ cc.Class({
         this.turnCountDown.node.active = false;
     },
 
-    enableResultIcon(visible)
+    hideResultIcon()
     {
-        this.resultIcon.active = visible;
+        this.resultIcon.hide();
+    }, 
+
+    displayWinResult(bInstantWin, cards)
+    {
+        if(bInstantWin) 
+        {
+            this.displayCards(cards);
+            this.resultIcon.display(Define.RESULT.INSTANT);
+        }
+        else 
+        {
+            this.resultIcon.display(Define.RESULT.WIN);
+        }
+    },
+
+    displayLoseResult(bInstantWin, cards)
+    {   
+        this.displayCards(cards);
+        var resultType = GameHelper.getLoseResultType(bInstantWin, cards);
+        this.resultIcon.display(resultType);
     },
 
     displayCards(cards)

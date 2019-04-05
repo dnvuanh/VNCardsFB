@@ -93,11 +93,9 @@ cc.Class({
         this.previousThrowPlayer = null;
         var myid = GameMgr.instance.getMyId();
     },
-    onCardsReceived: function onCardsReceived(cards) {
+    PlayDealCardAnim: function PlayDealCardAnim(cards) {
         var _this = this;
 
-        this.beginNewGame();
-        this.ButtonStart.active = false;
         var cardCount = 0;
         this.DealCards.startAnim(function () {
             var card = ObjectPool.instance.getCard(cards[cardCount]);
@@ -109,6 +107,11 @@ cc.Class({
             }
             cardCount += 1;
         });
+    },
+    onCardsReceived: function onCardsReceived(cards) {
+        this.beginNewGame();
+        this.ButtonStart.active = false;
+        this.PlayDealCardAnim(cards);
     },
     onShowRightMenuClick: function onShowRightMenuClick() {
         var position = this.showRightButton.node.getPosition();
@@ -211,6 +214,10 @@ cc.Class({
         this.previousCards = null;
     },
     displayResult: function displayResult(scores, playerWinId, playersCards) {
+        // if(playersCards[playerWinId].length == 13)
+        // {
+        //     this.PlayDealCardAnim(playersCards[GameMgr.instance.getMyId()]);
+        // }
         console.log(scores);
         this.friendCardNode.children.forEach(function (it) {
             return it.active = false;

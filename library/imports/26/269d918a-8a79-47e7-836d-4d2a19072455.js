@@ -24,6 +24,15 @@ var Define = {
         FOURPAIRS: 7
     },
 
+    RESULT: {
+        WIN: 0,
+        INSTANT: 1,
+        LOSE: 2,
+        DEAD2: 3,
+        BURNED: 4,
+        FROZEN: 5
+    },
+
     TIME_FORCE_START: 15
 };
 

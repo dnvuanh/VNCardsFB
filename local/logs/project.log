@@ -76,3 +76,41 @@
 2019-04-05T06:32:35.352Z - warn: object already destroyed
 2019-04-05T06:32:35.352Z - warn: object already destroyed
 2019-04-05T06:32:35.352Z - warn: object already destroyed
+2019-04-05T09:53:03.051Z - warn: The Node referenced by component "SeatDisplay" is invalid. Detailed information:
+Node path: "Canvas/MenuGame/Seats/Seat_0"
+
+2019-04-05T09:53:03.052Z - warn: The Node referenced by component "SeatDisplay" is invalid. Detailed information:
+Node path: "Canvas/MenuGame/Seats/Seat_1"
+
+2019-04-05T09:53:03.053Z - warn: The Node referenced by component "SeatDisplay" is invalid. Detailed information:
+Node path: "Canvas/MenuGame/Seats/Seat_2"
+
+2019-04-05T09:53:03.053Z - warn: The Node referenced by component "SeatDisplay" is invalid. Detailed information:
+Node path: "Canvas/MenuGame/Seats/Seat_3"
+
+2019-04-05T14:58:27.243Z - error: Failed to apply "result" because the prefab asset is missing, please save the prefab to a new asset by dragging and drop the node from Node Tree into Assets.
+    at Object.applyPrefab (C:\CocosCreator\resources\app.asar\editor\page\scene-utils\index.js:1:5853)
+    at Object.save (C:\CocosCreator\resources\app.asar\editor\page\scene-utils\edit-mode\modes\prefab.js:1:2317)
+    at Object.close (C:\CocosCreator\resources\app.asar\editor\page\scene-utils\edit-mode\modes\prefab.js:1:1772)
+    at Object.run (C:\CocosCreator\resources\app.asar\editor\page\scene-utils\edit-mode\index.js:1:817)
+    at _queue.s.queue (C:\CocosCreator\resources\app.asar\editor\page\scene-utils\lib\tasks.js:1:539)
+    at C:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:987:13
+    at Immediate.process (C:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:953:21)
+    at runCallback (timers.js:672:20)
+    at tryOnImmediate (timers.js:645:5)
+2019-04-05T14:58:49.181Z - warn: object already destroyed
+2019-04-05T14:58:49.181Z - warn: object already destroyed
+2019-04-05T14:58:49.181Z - warn: object already destroyed
+2019-04-05T14:58:49.181Z - warn: object already destroyed
+2019-04-05T14:58:49.181Z - warn: object already destroyed
+2019-04-05T14:58:49.181Z - warn: object already destroyed
+2019-04-05T14:58:49.181Z - warn: object already destroyed
+2019-04-05T14:58:49.181Z - warn: object already destroyed
+2019-04-05T14:58:49.181Z - warn: object already destroyed
+2019-04-05T14:58:49.181Z - warn: object already destroyed
+2019-04-05T14:58:49.181Z - warn: object already destroyed
+2019-04-05T14:58:49.182Z - warn: object already destroyed
+2019-04-05T14:58:49.182Z - warn: object already destroyed
+2019-04-05T14:58:49.182Z - warn: object already destroyed
+2019-04-05T14:58:49.182Z - warn: object already destroyed
+2019-04-05T14:58:49.182Z - warn: object already destroyed

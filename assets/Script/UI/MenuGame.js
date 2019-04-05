@@ -113,10 +113,8 @@ cc.Class({
         var myid = GameMgr.instance.getMyId();
     },
 
-    onCardsReceived(cards)
+    PlayDealCardAnim(cards)
     {
-        this.beginNewGame();
-        this.ButtonStart.active = false;
         let cardCount = 0;
         this.DealCards.startAnim(()=>{
             let card = ObjectPool.instance.getCard(cards[cardCount]);
@@ -127,6 +125,13 @@ cc.Class({
             }
             cardCount += 1;
         });
+    },
+
+    onCardsReceived(cards)
+    {
+        this.beginNewGame();
+        this.ButtonStart.active = false;
+        this.PlayDealCardAnim(cards);
     },
 
     onShowRightMenuClick()
@@ -252,6 +257,10 @@ cc.Class({
 
     displayResult(scores, playerWinId, playersCards)
     {
+        // if(playersCards[playerWinId].length == 13)
+        // {
+        //     this.PlayDealCardAnim(playersCards[GameMgr.instance.getMyId()]);
+        // }
         console.log(scores);
         this.friendCardNode.children.forEach(it => it.active = false);
         this.SeatMgr.displayResult(playerWinId, playersCards);

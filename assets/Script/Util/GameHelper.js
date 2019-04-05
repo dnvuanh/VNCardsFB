@@ -88,7 +88,7 @@ var GameHelper = cc.Class({
 
     validTurn(previousSet, current)
     {
-        const HEO = 15;
+        const PIG = 15;
         var currentSet = this.parseCards(current);
         if(currentSet.setType == Define.SetType.ERROR)  {
             return false;
@@ -98,7 +98,7 @@ var GameHelper = cc.Class({
         }
         if(previousSet.setType >= Define.SetType.THREEPAIRS){
             return currentSet.setType * 100 + currentSet.topCard > previousSet.setType * 100 + previousSet.topCard;
-        } else if(this.cardValue(previousSet.topCard) == HEO && currentSet.setType >= Define.SetType.THREEPAIRS) {
+        } else if(this.cardValue(previousSet.topCard) == PIG && currentSet.setType >= Define.SetType.THREEPAIRS) {
             return true;
         } else if(currentSet.setType == previousSet.setType 
             && currentSet.numOfCard == previousSet.numOfCard 
@@ -106,7 +106,90 @@ var GameHelper = cc.Class({
             return true;
         }
         return false;
-    }
+    },
+
+    getLoseResultType(bInstant, cards)
+    {
+        if(!bInstant && cards.length == 13)  {
+            return Define.RESULT.FROZEN;
+        }
+        if(this.HasDeadPig(cards)) {
+            return Define.RESULT.DEAD2;
+        }
+        if(this.HasBurned(cards))
+        {
+            return Define.RESULT.BURNED;
+        }
+
+        return Define.RESULT.LOSE;
+    },
+
+    HasDeadPig(cards)
+    {
+        const PIG = 15;
+        for(var i = 0, len = cards.length; i < len; i++)
+        {
+            if(this.cardValue(cards[i]) == PIG) {
+                return true;
+            }
+        }
+        return false;
+    },
+
+    HasBurned(cards)
+    {
+        var weight = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+        for(var i = 0, len = cards.length; i < len; i++)
+        {
+            weight[this.cardValue(cards[i]) - 3]++;
+            if(weight[i] == 4) {
+                return true;
+            }
+        }
+
+        //do not need at current. just check if burned or not.
+        //if(this.HasQuads(weight) || this.Has4ContPairs(weight) || this.Has3ContPairs(weight))
+        if(this.Has3ContPairs(weight))
+        {
+            return true;
+        }
+        return false;
+    },
+
+    HasQuads(weight)
+    {
+        // already did when building weight array
+        // for(var i = 0; i < 13; i++)
+        // {
+        //     if(weight[i] == 4) {
+        //         return true;
+        //     }
+        // }
+        return false;
+    },
+
+    Has4ContPairs(weight)
+    {
+        for(var i = 0; i < 10; i++)
+        {
+            if(weight[i] > 1 && weight[i+1] > 1 && weight[i+2]  > 1 && weight[i+3]) {
+                return true;
+            }
+        }
+        return false;
+    },
+
+    Has3ContPairs(weight)
+    {
+        for(var i = 0; i < 10; i++)
+        {
+            if(weight[i] > 1 && weight[i+1] > 1 && weight[i+2]  > 1) {
+                return true;
+            }
+        }
+        return false;
+    },
+
 });
 
 module.exports = new GameHelper();

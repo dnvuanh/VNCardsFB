@@ -9,6 +9,15 @@ var ImageCache = cc.Class({
         this.addRes("default", "Texture/default");
         for (var i=12; i<64; i++)
             this.addRes("Card_" + i, "Texture/Cards/" + "Card_" + i);
+
+        this.addRes("Result_Win", "Texture/Result/first");
+        this.addRes("Result_InstantWin", "Texture/Result/InstantWin");
+        this.addRes("Result_Lose", "Texture/Result/lose");
+        this.addRes("Result_Burned", "Texture/Result/burned");
+        this.addRes("Result_Dead2", "Texture/Result/dead2");
+        this.addRes("Result_Frozen", "Texture/Result/frozen");
+
+        this.Sprites = {};
         callback();
     },
 
@@ -74,7 +83,11 @@ var ImageCache = cc.Class({
     },
 
     getSprite(id) {
-        return new cc.SpriteFrame(this.getImage(id));
+        if(this.Sprites[id] == null)
+        {
+            this.Sprites[id] = new cc.SpriteFrame(this.getImage(id));
+        }
+        return this.Sprites[id];
     },
 });
 

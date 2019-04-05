@@ -26,7 +26,7 @@ cc.Class({
         this.cachedCardsPos = [];
         for (var i = 0; i < this.node.children.length; i++) {
             this.cachedPlayersPos[i] = this.node.children[i].position;
-            this.cachedResultPos[i] = this.node.children[i].getChildByName("display").getChildByName("result").position;
+            this.cachedResultPos[i] = this.node.children[i].getChildByName("display").getChildByName("ResultIcon").position;
             this.cachedCardsPos[i] = this.node.children[i].getChildByName("display").getChildByName("cards").position;
         }
     },
@@ -50,8 +50,8 @@ cc.Class({
             var movePosition = cc.moveTo(0.5, this.cachedPlayersPos[offset]);
             this.node.children[i].runAction(movePosition);
             var cardsNode = this.node.children[i].getChildByName("display").getChildByName("cards");
-            var resultNode = this.node.children[i].getChildByName("display").getChildByName("result");
-            cardsNode.setRotation(90 * (offset % 2));
+            var resultNode = this.node.children[i].getChildByName("display").getChildByName("ResultIcon");
+            cardsNode.angle = 90 * (offset % 2);
             cardsNode.setPosition(this.cachedCardsPos[offset]);
             resultNode.setPosition(this.cachedResultPos[offset]);
         }
@@ -92,10 +92,12 @@ cc.Class({
         for (var i = 0; i < this.node.children.length; i++) {
             var seatDisplay = this.node.children[i].getComponent("SeatDisplay");
             if (seatDisplay && seatDisplay.getPlayerId() != null) {
-                seatDisplay.displayCards(playersCards[seatDisplay.getPlayerId()]);
+                var cards = playersCards[seatDisplay.getPlayerId()];
+                var bInstantWin = playersCards[playerWinId].length == 13;
                 if (seatDisplay.getPlayerId() == playerWinId) {
-                    cc.log(seatDisplay.getPlayerId());
-                    seatDisplay.enableResultIcon(true);
+                    seatDisplay.displayWinResult(bInstantWin, cards);
+                } else {
+                    seatDisplay.displayLoseResult(bInstantWin, cards);
                 }
             }
         }
@@ -103,7 +105,7 @@ cc.Class({
     hideResultIcon: function hideResultIcon() {
         for (var i = 0; i < this.node.children.length; i++) {
             var seatDisplay = this.node.children[i].getComponent("SeatDisplay");
-            seatDisplay.enableResultIcon(false);
+            seatDisplay.hideResultIcon();
             if (seatDisplay && seatDisplay.getPlayerId() != null) {
                 seatDisplay.RecallCards();
             }
