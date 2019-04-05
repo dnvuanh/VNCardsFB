@@ -104,7 +104,12 @@ cc.Class({
 
     WaitMatchData() //it's sent automatically when user enter room
     {
-        GameMgr.instance.onMatchLoaded(this.LoadGameScene.bind(this));
+        GameMgr.instance.onMatchLoaded(this.LoadSoundGame.bind(this));
+    },
+
+    LoadSoundGame()
+    {
+        SoundMgr.instance.preload(this.LoadGameScene.bind(this));
     },
 
     LoadGameScene()

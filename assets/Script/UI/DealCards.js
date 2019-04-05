@@ -3,7 +3,7 @@ cc.Class({
 
     properties: {
         cardsOfEach: 13,
-        flyingTime: 0.2,
+        flyingTime: 0.4,
         delayTime: 0.1,
         destination: [cc.Node]
     },
@@ -20,7 +20,7 @@ cc.Class({
             let delayTime = new cc.DelayTime(cardOrder * this.delayTime);
             let moveTo = new cc.MoveTo(this.flyingTime, position);
             let finish = new cc.callFunc(this.onCardDelivery, this, this.node.children[i]);
-            let sequence = new cc.Sequence(delayTime, moveTo, finish);
+            let sequence = new cc.Sequence(delayTime, cc.callFunc(() => SoundMgr.instance.play("deal", false, 0.6)), moveTo, finish);
             this.node.children[i].active = true;
             this.node.children[i].runAction(sequence);
         }

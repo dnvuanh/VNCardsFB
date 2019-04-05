@@ -36,22 +36,15 @@ cc.Class({
         }
     },
     RotateSeats: function RotateSeats(mySeat) {
-        var _this = this;
-
-        var _loop = function _loop(i) {
-            var offset = i - mySeat >= 0 ? i - mySeat : i - mySeat + 4;
-            var fadeOut = cc.fadeOut(0.2);
-            var movePosition = cc.callFunc(function () {
-                return _this.node.children[i].position = _this.cachedPlayersPos[offset];
-            });
-            var fadeIn = cc.fadeIn(0.2);
-            _this.node.children[i].runAction(cc.sequence(fadeOut, cc.delayTime(0.1), movePosition, fadeIn));
-            /*var movePosition = cc.moveTo(0.2,this.cachedPlayersPos[offset]);
-            this.node.children[i].runAction(movePosition);*/
-        };
-
+        Notification.instance.add("Moving Player Position");
         for (var i = 0; i < this.node.children.length; i++) {
-            _loop(i);
+            var offset = i - mySeat >= 0 ? i - mySeat : i - mySeat + 4;
+            /*let fadeOut = cc.fadeOut(0.2);
+            let movePosition = cc.callFunc(() => this.node.children[i].position = this.cachedPlayersPos[offset]);
+            let fadeIn = cc.fadeIn(0.2);
+            this.node.children[i].runAction(cc.sequence(fadeOut, cc.delayTime(0.1), movePosition, fadeIn));*/
+            var movePosition = cc.moveTo(0.5, this.cachedPlayersPos[offset]);
+            this.node.children[i].runAction(movePosition);
         }
     },
     onPlayerLeave: function onPlayerLeave(seat) {

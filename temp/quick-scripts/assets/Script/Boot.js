@@ -83,7 +83,10 @@ cc.Class({
     },
     WaitMatchData: function WaitMatchData() //it's sent automatically when user enter room
     {
-        GameMgr.instance.onMatchLoaded(this.LoadGameScene.bind(this));
+        GameMgr.instance.onMatchLoaded(this.LoadSoundGame.bind(this));
+    },
+    LoadSoundGame: function LoadSoundGame() {
+        SoundMgr.instance.preload(this.LoadGameScene.bind(this));
     },
     LoadGameScene: function LoadGameScene() {
         cc.director.preloadScene("Game", this.Finished);

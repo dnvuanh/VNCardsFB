@@ -535,8 +535,8 @@
     "relativePath": "resources"
   },
   "49ee16f5-074d-4a52-b51d-b95f36ac0fc3": {
-    "asset": 1553965666000,
-    "meta": 1554307586000,
+    "asset": 1554395680000,
+    "meta": 1554395680000,
     "relativePath": "Scene/Boot.fire"
   },
   "69eded2c-82bf-4e07-a329-b15f1e2e2cf3": {
@@ -925,8 +925,8 @@
     "relativePath": "resources/Texture/Result/Third.png"
   },
   "9ffd88a0-3d4f-4db6-a9cd-d7b5af9553ae": {
-    "asset": 1554311117000,
-    "meta": 1554311117000,
+    "asset": 1554400048000,
+    "meta": 1554400048000,
     "relativePath": "Scene/Game.fire"
   },
   "cee324ea-8e17-421c-9844-f961fce7328c": {
@@ -949,20 +949,10 @@
     "meta": 1554307586000,
     "relativePath": "Script/Define/Define.js"
   },
-  "9601f76c-b9d7-4871-88ed-764bd9c1a9d5": {
-    "asset": 1553966122000,
-    "meta": 1554307586000,
-    "relativePath": "Script/Define/Global.js"
-  },
   "f1a42143-a2e1-4a52-b784-63e0829e0dff": {
     "asset": 1554025912000,
     "meta": 1554307586000,
     "relativePath": "Script/CountDown.js"
-  },
-  "80631c3e-459e-47fb-b7fd-b58f84d40094": {
-    "asset": 1554049477000,
-    "meta": 1554307586000,
-    "relativePath": "Script/Boot.js"
   },
   "098f2e6d-0359-4d0b-b86f-d0e154700bde": {
     "asset": 1553881146000,
@@ -973,11 +963,6 @@
     "asset": 1554216353000,
     "meta": 1554307587000,
     "relativePath": "Script/Manager/UIManager.js"
-  },
-  "c4fdc573-2da4-4dda-bf4c-48c469e45f6f": {
-    "asset": 1554216353000,
-    "meta": 1554307587000,
-    "relativePath": "Script/UI/DealCards.js"
   },
   "c8f0004a-a8d3-46cc-b1b1-959023564be7": {
     "asset": 1554216353000,
@@ -1002,7 +987,7 @@
   "cc852e15-0e8f-4adb-8714-2deea8acd8a0": {
     "asset": 1550249922000,
     "meta": 1554307584000,
-    "relativePath": "resources/prefabs"
+    "relativePath": "resources/Prefabs"
   },
   "3da6cd8a-1675-4245-8838-df9f57253145": {
     "asset": 1554308413000,
@@ -1010,8 +995,43 @@
     "relativePath": "Script/UI/MenuGame.js"
   },
   "74de12e4-e266-4f55-9410-4f47314320b4": {
-    "asset": 1554311971000,
-    "meta": 1554311974000,
+    "asset": 1554385046000,
+    "meta": 1554385051000,
     "relativePath": "Script/UI/SeatMgr.js"
+  },
+  "f3f0581d-49f7-44e7-9a5f-143b77edd9c9": {
+    "asset": 1554386061000,
+    "meta": 1554386853000,
+    "relativePath": "resources/Sounds"
+  },
+  "04d08cb9-11b3-46d5-a400-0262c3908caa": {
+    "asset": 1554386060000,
+    "meta": 1554386061000,
+    "relativePath": "resources/Sounds/deal.wav"
+  },
+  "9601f76c-b9d7-4871-88ed-764bd9c1a9d5": {
+    "asset": 1554392959000,
+    "meta": 1554395405000,
+    "relativePath": "Script/Define/Global.js"
+  },
+  "80631c3e-459e-47fb-b7fd-b58f84d40094": {
+    "asset": 1554395790000,
+    "meta": 1554395792000,
+    "relativePath": "Script/Boot.js"
+  },
+  "f0555c46-a76e-4cea-8a69-c6211421b4da": {
+    "asset": 1554396587000,
+    "meta": 1554396587000,
+    "relativePath": "resources/Sounds/cardhit.wav"
+  },
+  "83744650-1787-4d08-8527-1c17b05907ab": {
+    "asset": 1554400254000,
+    "meta": 1554400302000,
+    "relativePath": "Script/Manager/SoundMgr.js"
+  },
+  "c4fdc573-2da4-4dda-bf4c-48c469e45f6f": {
+    "asset": 1554400298000,
+    "meta": 1554400302000,
+    "relativePath": "Script/UI/DealCards.js"
   }
 }

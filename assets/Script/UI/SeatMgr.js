@@ -43,15 +43,16 @@ cc.Class({
 
     RotateSeats(mySeat)
     {
+        Notification.instance.add("Moving Player Position");
         for (let i=0; i < this.node.children.length; i++)
         {
             let offset = (i - mySeat) >= 0 ? (i - mySeat) : (i - mySeat + 4);
-            let fadeOut = cc.fadeOut(0.2);
+            /*let fadeOut = cc.fadeOut(0.2);
             let movePosition = cc.callFunc(() => this.node.children[i].position = this.cachedPlayersPos[offset]);
             let fadeIn = cc.fadeIn(0.2);
-            this.node.children[i].runAction(cc.sequence(fadeOut, cc.delayTime(0.1), movePosition, fadeIn));
-            /*var movePosition = cc.moveTo(0.2,this.cachedPlayersPos[offset]);
-            this.node.children[i].runAction(movePosition);*/
+            this.node.children[i].runAction(cc.sequence(fadeOut, cc.delayTime(0.1), movePosition, fadeIn));*/
+            var movePosition = cc.moveTo(0.5,this.cachedPlayersPos[offset]);
+            this.node.children[i].runAction(movePosition);
         }
     },
 

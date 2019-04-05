@@ -7,4 +7,5 @@ window.ServerCode = require("ServerCode");
 window.ImageCache = require("ImageCache");
 window.GameHelper = require("GameHelper");
 window.Notification = require("Notification");
+window.SoundMgr = require("SoundMgr");
 window.Define = require("Define");
