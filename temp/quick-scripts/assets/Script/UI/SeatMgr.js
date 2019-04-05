@@ -22,8 +22,12 @@ cc.Class({
         if (host) this.setHost(host);
 
         this.cachedPlayersPos = [];
+        this.cachedResultPos = [];
+        this.cachedCardsPos = [];
         for (var i = 0; i < this.node.children.length; i++) {
             this.cachedPlayersPos[i] = this.node.children[i].position;
+            this.cachedResultPos[i] = this.node.children[i].getChildByName("display").getChildByName("result").position;
+            this.cachedCardsPos[i] = this.node.children[i].getChildByName("display").getChildByName("cards").position;
         }
     },
     onPlayerEnter: function onPlayerEnter(playerInfo, seat) {
@@ -45,6 +49,11 @@ cc.Class({
             this.node.children[i].runAction(cc.sequence(fadeOut, cc.delayTime(0.1), movePosition, fadeIn));*/
             var movePosition = cc.moveTo(0.5, this.cachedPlayersPos[offset]);
             this.node.children[i].runAction(movePosition);
+            var cardsNode = this.node.children[i].getChildByName("display").getChildByName("cards");
+            var resultNode = this.node.children[i].getChildByName("display").getChildByName("result");
+            cardsNode.setRotation(90 * (offset % 2));
+            cardsNode.setPosition(this.cachedCardsPos[offset]);
+            resultNode.setPosition(this.cachedResultPos[offset]);
         }
     },
     onPlayerLeave: function onPlayerLeave(seat) {
