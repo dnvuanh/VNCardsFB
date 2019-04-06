@@ -222,7 +222,7 @@ var GSMgr = cc.Class({
     },
     startGame: function startGame() {
         var data = RTData.get();
-        data.setLong(1, 101);
+        data.setLong(1, 1);
         this.sendRTData(ServerCode.RQ_START_GAME, data);
     },
     throwCards: function throwCards(cards) {

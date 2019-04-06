@@ -110,18 +110,19 @@ var GameHelper = cc.Class({
 
     getLoseResultType(bInstant, cards)
     {
+        var result = Define.RESULT.LOSE;
         if(!bInstant && cards.length == 13)  {
-            return Define.RESULT.FROZEN;
+            result |= Define.RESULT.FROZEN;
         }
         if(this.HasDeadPig(cards)) {
-            return Define.RESULT.DEAD2;
+            result |= Define.RESULT.DEAD2;
         }
         if(this.HasBurned(cards))
         {
-            return Define.RESULT.BURNED;
+            result |= Define.RESULT.BURNED;
         }
 
-        return Define.RESULT.LOSE;
+        return result;
     },
 
     HasDeadPig(cards)

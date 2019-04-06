@@ -8,11 +8,10 @@ cc.Class({
 
     },
 
-    display(resultType)
+    init(type)
     {
-        this.node.active = true;
         var sprite = ImageCache.getSprite("Result_Lose");
-        switch(resultType)
+        switch(type)
         {
             case Define.RESULT.WIN:
                 sprite = ImageCache.getSprite("Result_Win");
@@ -32,11 +31,7 @@ cc.Class({
             default: // LOSE
                 //sprite = ImageCache.getSprite("Result_Lose");
         }
+        this.node.setPosition(0, 0);
         this.node.getComponent(cc.Sprite).spriteFrame = sprite;
-    },
-
-    hide()
-    {
-        this.node.active = false;
     },
 });

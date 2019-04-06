@@ -97,17 +97,18 @@ var GameHelper = cc.Class({
         return false;
     },
     getLoseResultType: function getLoseResultType(bInstant, cards) {
+        var result = Define.RESULT.LOSE;
         if (!bInstant && cards.length == 13) {
-            return Define.RESULT.FROZEN;
+            result |= Define.RESULT.FROZEN;
         }
         if (this.HasDeadPig(cards)) {
-            return Define.RESULT.DEAD2;
+            result |= Define.RESULT.DEAD2;
         }
         if (this.HasBurned(cards)) {
-            return Define.RESULT.BURNED;
+            result |= Define.RESULT.BURNED;
         }
 
-        return Define.RESULT.LOSE;
+        return result;
     },
     HasDeadPig: function HasDeadPig(cards) {
         var PIG = 15;

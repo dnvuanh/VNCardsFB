@@ -10,8 +10,10 @@ cc.Class({
         money: cc.Label,
         hostIcon: cc.Node,
         turnCountDown: cc.ProgressBar,
-        resultIcon: cc.Node,
+        resultNode: cc.Node,
         cardsNode: cc.Node,
+        ResultIconPrefab : cc.Prefab,
+        resultNode : cc.Node,
     },
 
     onLoad()
@@ -20,8 +22,7 @@ cc.Class({
         this.hostIcon.active = false;
         this.turnCountDown.node.active = false;
         this.IsMyTurn = false;
-        this.resultIcon.active = false;
-        this.resultIcon = this.resultIcon.getComponent("ResultIcon");
+        this.resultNode.active = false;
         this.cardsNode.active = false;
     },
 
@@ -77,9 +78,16 @@ cc.Class({
         this.turnCountDown.node.active = false;
     },
 
+    GetResultIcon(resultType)
+    {
+        let icon = cc.instantiate(this.ResultIconPrefab).getComponent("ResultIcon");
+        icon.init(resultType);
+        return icon.node;
+    },
+
     hideResultIcon()
     {
-        this.resultIcon.hide();
+        this.resultNode.active = false;
     }, 
 
     displayWinResult(bInstantWin, cards)
@@ -87,19 +95,36 @@ cc.Class({
         if(bInstantWin) 
         {
             this.displayCards(cards);
-            this.resultIcon.display(Define.RESULT.INSTANT);
+            this.resultNode.addChild(this.GetResultIcon(Define.RESULT.INSTANT));
         }
         else 
         {
-            this.resultIcon.display(Define.RESULT.WIN);
+            this.resultNode.addChild(this.GetResultIcon(Define.RESULT.WIN));
         }
+        this.resultNode.active = true;
     },
 
     displayLoseResult(bInstantWin, cards)
     {   
         this.displayCards(cards);
         var resultType = GameHelper.getLoseResultType(bInstantWin, cards);
-        this.resultIcon.display(resultType);
+        if(resultType & Define.RESULT.DEAD2)
+        {
+            this.resultNode.addChild(this.GetResultIcon(Define.RESULT.DEAD2));
+        }
+        if(resultType & Define.RESULT.BURNED)
+        {
+            this.resultNode.addChild(this.GetResultIcon(Define.RESULT.BURNED));
+        }
+        if(resultType & Define.RESULT.FROZEN)
+        {
+            this.resultNode.addChild(this.GetResultIcon(Define.RESULT.FROZEN));
+        }
+        if(resultType == Define.RESULT.LOSE)
+        {
+            this.resultNode.addChild(this.GetResultIcon(Define.RESULT.LOSE));
+        }
+        this.resultNode.active = true;
     },
 
     displayCards(cards)
