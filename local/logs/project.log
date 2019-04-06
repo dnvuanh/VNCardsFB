@@ -1,109 +1,222 @@
-2019-04-06T02:50:34.036Z - normal: Load ~/.CocosCreator/settings.json
-2019-04-06T02:50:35.266Z - normal: Initializing Asset Database
-2019-04-06T02:50:35.270Z - normal: checking language setting...
-2019-04-06T02:50:35.270Z - normal: Language: en
-2019-04-06T02:50:36.030Z - success: preview server running at http://localhost:7456
-2019-04-06T02:50:36.032Z - success: protocol editor-framework registered
-2019-04-06T02:50:36.032Z - success: protocol app registered
-2019-04-06T02:50:36.032Z - success: protocol theme registered
-2019-04-06T02:50:36.032Z - success: protocol packages registered
-2019-04-06T02:50:36.032Z - success: protocol uuid registerred
-2019-04-06T02:50:36.033Z - success: protocol db registerred
-2019-04-06T02:50:36.033Z - success: protocol thumbnail registerred
-2019-04-06T02:50:36.033Z - success: protocol unpack registerred
-2019-04-06T02:50:36.033Z - success: protocol disable-commonjs registerred
-2019-04-06T02:50:36.428Z - normal: connected!
-2019-04-06T02:50:36.429Z - normal: Check project D:\Projects\VNCardsFB
-2019-04-06T02:50:36.431Z - normal: Initializing project D:\Projects\VNCardsFB
-2019-04-06T02:50:37.164Z - normal: Initializing Cocos2d
-2019-04-06T02:50:37.957Z - normal: Initializing engine extends
-2019-04-06T02:50:37.960Z - normal: Loading editor/builtin packages from C:\CocosCreator\resources\app.asar\editor\builtin
-2019-04-06T02:50:37.974Z - normal: Loading builtin packages from C:\CocosCreator\resources\builtin
-2019-04-06T02:50:38.695Z - success: assets loaded
-2019-04-06T02:50:38.695Z - success: asset-db-debugger loaded
-2019-04-06T02:50:38.756Z - success: builder loaded
-2019-04-06T02:50:38.756Z - success: code-editor loaded
-2019-04-06T02:50:38.820Z - success: cocos-analytics loaded
-2019-04-06T02:50:38.820Z - success: color-picker loaded
-2019-04-06T02:50:38.925Z - success: console loaded
-2019-04-06T02:50:38.925Z - success: google-play-instant loaded
-2019-04-06T02:50:38.979Z - success: fb-instant-games loaded
-2019-04-06T02:50:38.979Z - success: jsb-adapter loaded
-2019-04-06T02:50:39.092Z - success: google-instant-games loaded
-2019-04-06T02:50:39.093Z - success: oppo-runtime loaded
-2019-04-06T02:50:39.228Z - success: hierarchy loaded
-2019-04-06T02:50:39.229Z - success: package-manager loaded
-2019-04-06T02:50:39.368Z - success: inspector loaded
-2019-04-06T02:50:39.369Z - success: qqplay-adapter loaded
-2019-04-06T02:50:39.494Z - success: keystore loaded
-2019-04-06T02:50:39.495Z - success: sdkbox loaded
-2019-04-06T02:50:39.598Z - success: node-library loaded
-2019-04-06T02:50:39.599Z - success: tester loaded
-2019-04-06T02:50:39.608Z - success: package-asset loaded
-2019-04-06T02:50:39.608Z - success: ui-grid loaded
-2019-04-06T02:50:39.720Z - success: preferences loaded
-2019-04-06T02:50:39.720Z - success: ui-kit-preview-extra loaded
-2019-04-06T02:50:39.724Z - success: project-exporter loaded
-2019-04-06T02:50:39.726Z - success: ui-kit-preview loaded
-2019-04-06T02:50:39.744Z - success: project-importer loaded
-2019-04-06T02:50:39.744Z - success: ui-kit loaded
-2019-04-06T02:50:39.749Z - success: project-settings loaded
-2019-04-06T02:50:39.750Z - success: ui-tree loaded
-2019-04-06T02:50:39.756Z - success: scene loaded
-2019-04-06T02:50:39.757Z - success: vivo-runtime loaded
-2019-04-06T02:50:39.759Z - success: simulator-debugger loaded
-2019-04-06T02:50:39.759Z - success: weapp-adapter loaded
-2019-04-06T02:50:39.760Z - success: sprite-editor loaded
-2019-04-06T02:50:39.763Z - success: store loaded
-2019-04-06T02:50:39.768Z - success: timeline loaded
-2019-04-06T02:50:40.028Z - normal: Loading packages
-2019-04-06T02:50:40.034Z - normal: Watching packages
-2019-04-06T02:50:40.468Z - normal: Run Application
-2019-04-06T03:08:22.951Z - warn: object already destroyed
-2019-04-06T03:08:22.953Z - warn: object already destroyed
-2019-04-06T03:08:22.953Z - warn: object already destroyed
-2019-04-06T03:08:22.953Z - warn: object already destroyed
-2019-04-06T03:08:22.953Z - warn: object already destroyed
-2019-04-06T03:08:22.953Z - warn: object already destroyed
-2019-04-06T03:08:22.954Z - warn: object already destroyed
-2019-04-06T03:08:22.954Z - warn: object already destroyed
-2019-04-06T03:08:22.954Z - warn: object already destroyed
-2019-04-06T03:08:22.954Z - warn: object already destroyed
-2019-04-06T03:08:22.954Z - warn: object already destroyed
-2019-04-06T03:08:22.954Z - warn: object already destroyed
-2019-04-06T03:08:22.954Z - warn: object already destroyed
-2019-04-06T03:08:22.954Z - warn: object already destroyed
-2019-04-06T03:08:22.954Z - warn: object already destroyed
-2019-04-06T03:08:22.954Z - warn: object already destroyed
-2019-04-06T03:11:03.348Z - warn: object already destroyed
-2019-04-06T03:11:03.350Z - warn: object already destroyed
-2019-04-06T03:11:03.350Z - warn: object already destroyed
-2019-04-06T03:11:03.350Z - warn: object already destroyed
-2019-04-06T03:11:03.350Z - warn: object already destroyed
-2019-04-06T03:11:03.350Z - warn: object already destroyed
-2019-04-06T03:11:03.350Z - warn: object already destroyed
-2019-04-06T03:11:03.350Z - warn: object already destroyed
-2019-04-06T03:11:03.350Z - warn: object already destroyed
-2019-04-06T03:11:03.350Z - warn: object already destroyed
-2019-04-06T03:11:03.350Z - warn: object already destroyed
-2019-04-06T03:11:03.351Z - warn: object already destroyed
-2019-04-06T03:11:03.351Z - warn: object already destroyed
-2019-04-06T03:11:03.351Z - warn: object already destroyed
-2019-04-06T03:11:03.351Z - warn: object already destroyed
-2019-04-06T03:11:03.351Z - warn: object already destroyed
-2019-04-06T07:13:50.489Z - warn: object already destroyed
-2019-04-06T07:13:50.490Z - warn: object already destroyed
-2019-04-06T07:13:50.490Z - warn: object already destroyed
-2019-04-06T07:13:50.490Z - warn: object already destroyed
-2019-04-06T07:13:50.490Z - warn: object already destroyed
-2019-04-06T07:13:50.491Z - warn: object already destroyed
-2019-04-06T07:13:50.491Z - warn: object already destroyed
-2019-04-06T07:13:50.491Z - warn: object already destroyed
-2019-04-06T07:13:50.491Z - warn: object already destroyed
-2019-04-06T07:13:50.491Z - warn: object already destroyed
-2019-04-06T07:13:50.491Z - warn: object already destroyed
-2019-04-06T07:13:50.491Z - warn: object already destroyed
-2019-04-06T07:13:50.491Z - warn: object already destroyed
-2019-04-06T07:13:50.491Z - warn: object already destroyed
-2019-04-06T07:13:50.491Z - warn: object already destroyed
-2019-04-06T07:13:50.491Z - warn: object already destroyed
+2019-04-06T07:31:14.359Z - normal: Load ~/.CocosCreator/settings.json
+2019-04-06T07:31:15.607Z - normal: Initializing Asset Database
+2019-04-06T07:31:15.609Z - normal: checking language setting...
+2019-04-06T07:31:15.609Z - normal: Language: en
+2019-04-06T07:31:16.365Z - success: preview server running at http://localhost:7456
+2019-04-06T07:31:16.367Z - success: protocol editor-framework registered
+2019-04-06T07:31:16.367Z - success: protocol app registered
+2019-04-06T07:31:16.367Z - success: protocol theme registered
+2019-04-06T07:31:16.367Z - success: protocol packages registered
+2019-04-06T07:31:16.368Z - success: protocol uuid registerred
+2019-04-06T07:31:16.368Z - success: protocol db registerred
+2019-04-06T07:31:16.368Z - success: protocol thumbnail registerred
+2019-04-06T07:31:16.368Z - success: protocol unpack registerred
+2019-04-06T07:31:16.368Z - success: protocol disable-commonjs registerred
+2019-04-06T07:31:16.761Z - normal: connected!
+2019-04-06T07:31:16.763Z - normal: Check project D:\Projects\VNCardsFB
+2019-04-06T07:31:16.766Z - normal: Initializing project D:\Projects\VNCardsFB
+2019-04-06T07:31:17.515Z - normal: Initializing Cocos2d
+2019-04-06T07:31:18.282Z - normal: Initializing engine extends
+2019-04-06T07:31:18.285Z - normal: Loading editor/builtin packages from C:\CocosCreator\resources\app.asar\editor\builtin
+2019-04-06T07:31:18.291Z - normal: Loading builtin packages from C:\CocosCreator\resources\builtin
+2019-04-06T07:31:19.004Z - success: assets loaded
+2019-04-06T07:31:19.005Z - success: asset-db-debugger loaded
+2019-04-06T07:31:19.017Z - success: builder loaded
+2019-04-06T07:31:19.017Z - success: code-editor loaded
+2019-04-06T07:31:19.066Z - success: cocos-analytics loaded
+2019-04-06T07:31:19.067Z - success: color-picker loaded
+2019-04-06T07:31:19.249Z - success: console loaded
+2019-04-06T07:31:19.249Z - success: google-play-instant loaded
+2019-04-06T07:31:19.289Z - success: fb-instant-games loaded
+2019-04-06T07:31:19.289Z - success: jsb-adapter loaded
+2019-04-06T07:31:19.303Z - success: google-instant-games loaded
+2019-04-06T07:31:19.304Z - success: oppo-runtime loaded
+2019-04-06T07:31:19.401Z - success: hierarchy loaded
+2019-04-06T07:31:19.401Z - success: package-manager loaded
+2019-04-06T07:31:19.550Z - warn: [db-task][init] Backup unused meta file: db://assets/resources/Prefabs.meta
+2019-04-06T07:31:24.332Z - success: inspector loaded
+2019-04-06T07:31:24.336Z - success: qqplay-adapter loaded
+2019-04-06T07:31:24.404Z - success: keystore loaded
+2019-04-06T07:31:24.405Z - success: sdkbox loaded
+2019-04-06T07:31:24.421Z - success: node-library loaded
+2019-04-06T07:31:24.421Z - success: tester loaded
+2019-04-06T07:31:24.427Z - success: package-asset loaded
+2019-04-06T07:31:24.428Z - success: ui-grid loaded
+2019-04-06T07:31:24.438Z - success: preferences loaded
+2019-04-06T07:31:24.439Z - success: ui-kit-preview-extra loaded
+2019-04-06T07:31:24.444Z - success: project-exporter loaded
+2019-04-06T07:31:24.445Z - success: ui-kit-preview loaded
+2019-04-06T07:31:24.856Z - success: project-importer loaded
+2019-04-06T07:31:24.857Z - success: ui-kit loaded
+2019-04-06T07:31:24.905Z - success: project-settings loaded
+2019-04-06T07:31:24.906Z - success: ui-tree loaded
+2019-04-06T07:31:24.919Z - success: scene loaded
+2019-04-06T07:31:24.919Z - success: vivo-runtime loaded
+2019-04-06T07:31:24.923Z - success: simulator-debugger loaded
+2019-04-06T07:31:24.923Z - success: weapp-adapter loaded
+2019-04-06T07:31:24.955Z - success: sprite-editor loaded
+2019-04-06T07:31:25.078Z - success: store loaded
+2019-04-06T07:31:25.090Z - success: timeline loaded
+2019-04-06T07:31:25.468Z - normal: Loading packages
+2019-04-06T07:31:25.477Z - normal: Watching packages
+2019-04-06T07:31:25.919Z - normal: Run Application
+2019-04-06T07:32:02.554Z - warn: Script attached to "ResultIcon" in scene "Game.fire" is missing or invalid. Detailed information:
+Node path: "Canvas/MenuGame/Seats/Seat_0/display/ResultIcon"
+Asset url: "db://assets/Scene/Game.fire"
+Script UUID: "52a8b91f-c824-4f1e-89e7-bdbdd0f15052"
+Class ID: "52a8bkfyCRPHonnvb3Q8VBS"
+
+2019-04-06T07:32:02.558Z - warn: Script attached to "ResultIcon" in scene "Game.fire" is missing or invalid. Detailed information:
+Node path: "Canvas/MenuGame/Seats/Seat_1/display/ResultIcon"
+Asset url: "db://assets/Scene/Game.fire"
+Script UUID: "52a8b91f-c824-4f1e-89e7-bdbdd0f15052"
+Class ID: "52a8bkfyCRPHonnvb3Q8VBS"
+
+2019-04-06T07:32:02.561Z - warn: Script attached to "ResultIcon" in scene "Game.fire" is missing or invalid. Detailed information:
+Node path: "Canvas/MenuGame/Seats/Seat_2/display/ResultIcon"
+Asset url: "db://assets/Scene/Game.fire"
+Script UUID: "52a8b91f-c824-4f1e-89e7-bdbdd0f15052"
+Class ID: "52a8bkfyCRPHonnvb3Q8VBS"
+
+2019-04-06T07:32:02.570Z - warn: Script attached to "ResultIcon" in scene "Game.fire" is missing or invalid. Detailed information:
+Node path: "Canvas/MenuGame/Seats/Seat_3/display/ResultIcon"
+Asset url: "db://assets/Scene/Game.fire"
+Script UUID: "52a8b91f-c824-4f1e-89e7-bdbdd0f15052"
+Class ID: "52a8bkfyCRPHonnvb3Q8VBS"
+
+2019-04-06T07:32:02.647Z - warn: Script attached to "ResultIcon" in prefab "MenuGame.prefab" is missing or invalid. Detailed information:
+Node path: "MenuGame/Seats/Seat_0/display/ResultIcon"
+Asset url: "db://assets/Prefabs/MenuGame.prefab"
+Script UUID: "52a8b91f-c824-4f1e-89e7-bdbdd0f15052"
+Class ID: "52a8bkfyCRPHonnvb3Q8VBS"
+
+2019-04-06T07:32:02.649Z - warn: Script attached to "ResultIcon" in prefab "MenuGame.prefab" is missing or invalid. Detailed information:
+Node path: "MenuGame/Seats/Seat_1/display/ResultIcon"
+Asset url: "db://assets/Prefabs/MenuGame.prefab"
+Script UUID: "52a8b91f-c824-4f1e-89e7-bdbdd0f15052"
+Class ID: "52a8bkfyCRPHonnvb3Q8VBS"
+
+2019-04-06T07:32:02.652Z - warn: Script attached to "ResultIcon" in prefab "MenuGame.prefab" is missing or invalid. Detailed information:
+Node path: "MenuGame/Seats/Seat_2/display/ResultIcon"
+Asset url: "db://assets/Prefabs/MenuGame.prefab"
+Script UUID: "52a8b91f-c824-4f1e-89e7-bdbdd0f15052"
+Class ID: "52a8bkfyCRPHonnvb3Q8VBS"
+
+2019-04-06T07:32:02.653Z - warn: Script attached to "ResultIcon" in prefab "MenuGame.prefab" is missing or invalid. Detailed information:
+Node path: "MenuGame/Seats/Seat_3/display/ResultIcon"
+Asset url: "db://assets/Prefabs/MenuGame.prefab"
+Script UUID: "52a8b91f-c824-4f1e-89e7-bdbdd0f15052"
+Class ID: "52a8bkfyCRPHonnvb3Q8VBS"
+
+2019-04-06T07:32:52.826Z - warn: Script attached to "ResultIcon" in scene "Game.fire" is missing or invalid. Detailed information:
+Node path: "Canvas/MenuGame/Seats/Seat_0/display/ResultIcon"
+Asset url: "db://assets/Scene/Game.fire"
+Script UUID: "52a8b91f-c824-4f1e-89e7-bdbdd0f15052"
+Class ID: "52a8bkfyCRPHonnvb3Q8VBS"
+
+2019-04-06T07:32:52.827Z - warn: Script attached to "ResultIcon" in scene "Game.fire" is missing or invalid. Detailed information:
+Node path: "Canvas/MenuGame/Seats/Seat_1/display/ResultIcon"
+Asset url: "db://assets/Scene/Game.fire"
+Script UUID: "52a8b91f-c824-4f1e-89e7-bdbdd0f15052"
+Class ID: "52a8bkfyCRPHonnvb3Q8VBS"
+
+2019-04-06T07:32:52.827Z - warn: Script attached to "ResultIcon" in scene "Game.fire" is missing or invalid. Detailed information:
+Node path: "Canvas/MenuGame/Seats/Seat_2/display/ResultIcon"
+Asset url: "db://assets/Scene/Game.fire"
+Script UUID: "52a8b91f-c824-4f1e-89e7-bdbdd0f15052"
+Class ID: "52a8bkfyCRPHonnvb3Q8VBS"
+
+2019-04-06T07:32:52.828Z - warn: Script attached to "ResultIcon" in scene "Game.fire" is missing or invalid. Detailed information:
+Node path: "Canvas/MenuGame/Seats/Seat_3/display/ResultIcon"
+Asset url: "db://assets/Scene/Game.fire"
+Script UUID: "52a8b91f-c824-4f1e-89e7-bdbdd0f15052"
+Class ID: "52a8bkfyCRPHonnvb3Q8VBS"
+
+2019-04-06T07:32:53.060Z - warn: Script attached to "ResultIcon" in prefab "MenuGame.prefab" is missing or invalid. Detailed information:
+Node path: "MenuGame/Seats/Seat_0/display/ResultIcon"
+Asset url: "db://assets/Prefabs/MenuGame.prefab"
+Script UUID: "52a8b91f-c824-4f1e-89e7-bdbdd0f15052"
+Class ID: "52a8bkfyCRPHonnvb3Q8VBS"
+
+2019-04-06T07:32:53.061Z - warn: Script attached to "ResultIcon" in prefab "MenuGame.prefab" is missing or invalid. Detailed information:
+Node path: "MenuGame/Seats/Seat_1/display/ResultIcon"
+Asset url: "db://assets/Prefabs/MenuGame.prefab"
+Script UUID: "52a8b91f-c824-4f1e-89e7-bdbdd0f15052"
+Class ID: "52a8bkfyCRPHonnvb3Q8VBS"
+
+2019-04-06T07:32:53.063Z - warn: Script attached to "ResultIcon" in prefab "MenuGame.prefab" is missing or invalid. Detailed information:
+Node path: "MenuGame/Seats/Seat_2/display/ResultIcon"
+Asset url: "db://assets/Prefabs/MenuGame.prefab"
+Script UUID: "52a8b91f-c824-4f1e-89e7-bdbdd0f15052"
+Class ID: "52a8bkfyCRPHonnvb3Q8VBS"
+
+2019-04-06T07:32:53.064Z - warn: Script attached to "ResultIcon" in prefab "MenuGame.prefab" is missing or invalid. Detailed information:
+Node path: "MenuGame/Seats/Seat_3/display/ResultIcon"
+Asset url: "db://assets/Prefabs/MenuGame.prefab"
+Script UUID: "52a8b91f-c824-4f1e-89e7-bdbdd0f15052"
+Class ID: "52a8bkfyCRPHonnvb3Q8VBS"
+
+2019-04-06T07:32:53.353Z - warn: object already destroyed
+2019-04-06T07:32:53.353Z - warn: object already destroyed
+2019-04-06T07:32:53.353Z - warn: object already destroyed
+2019-04-06T07:32:53.353Z - warn: object already destroyed
+2019-04-06T07:32:53.353Z - warn: object already destroyed
+2019-04-06T07:32:53.353Z - warn: object already destroyed
+2019-04-06T07:32:53.353Z - warn: object already destroyed
+2019-04-06T07:32:53.353Z - warn: object already destroyed
+2019-04-06T07:32:53.354Z - warn: object already destroyed
+2019-04-06T07:32:53.354Z - warn: object already destroyed
+2019-04-06T07:32:53.354Z - warn: object already destroyed
+2019-04-06T07:32:53.354Z - warn: object already destroyed
+2019-04-06T07:32:53.354Z - warn: object already destroyed
+2019-04-06T07:32:53.354Z - warn: object already destroyed
+2019-04-06T07:32:53.354Z - warn: object already destroyed
+2019-04-06T07:32:53.354Z - warn: object already destroyed
+2019-04-06T07:36:58.442Z - warn: Script attached to "ResultIcon" in prefab "MenuGame.prefab" is missing or invalid. Detailed information:
+Node path: "MenuGame/Seats/Seat_0/display/ResultIcon"
+Asset url: "db://assets/Prefabs/MenuGame.prefab"
+Script UUID: "52a8b91f-c824-4f1e-89e7-bdbdd0f15052"
+Class ID: "52a8bkfyCRPHonnvb3Q8VBS"
+
+2019-04-06T07:36:58.446Z - warn: Script attached to "ResultIcon" in prefab "MenuGame.prefab" is missing or invalid. Detailed information:
+Node path: "MenuGame/Seats/Seat_1/display/ResultIcon"
+Asset url: "db://assets/Prefabs/MenuGame.prefab"
+Script UUID: "52a8b91f-c824-4f1e-89e7-bdbdd0f15052"
+Class ID: "52a8bkfyCRPHonnvb3Q8VBS"
+
+2019-04-06T07:36:58.448Z - warn: Script attached to "ResultIcon" in prefab "MenuGame.prefab" is missing or invalid. Detailed information:
+Node path: "MenuGame/Seats/Seat_2/display/ResultIcon"
+Asset url: "db://assets/Prefabs/MenuGame.prefab"
+Script UUID: "52a8b91f-c824-4f1e-89e7-bdbdd0f15052"
+Class ID: "52a8bkfyCRPHonnvb3Q8VBS"
+
+2019-04-06T07:36:58.449Z - warn: Script attached to "ResultIcon" in prefab "MenuGame.prefab" is missing or invalid. Detailed information:
+Node path: "MenuGame/Seats/Seat_3/display/ResultIcon"
+Asset url: "db://assets/Prefabs/MenuGame.prefab"
+Script UUID: "52a8b91f-c824-4f1e-89e7-bdbdd0f15052"
+Class ID: "52a8bkfyCRPHonnvb3Q8VBS"
+
+2019-04-06T07:40:41.386Z - warn: Script attached to "ResultIcon" in prefab "MenuGame.prefab" is missing or invalid. Detailed information:
+Node path: "MenuGame/Seats/Seat_0/display/ResultIcon"
+Asset url: "db://assets/Prefabs/MenuGame.prefab"
+Script UUID: "52a8b91f-c824-4f1e-89e7-bdbdd0f15052"
+Class ID: "52a8bkfyCRPHonnvb3Q8VBS"
+
+2019-04-06T07:40:41.390Z - warn: Script attached to "ResultIcon" in prefab "MenuGame.prefab" is missing or invalid. Detailed information:
+Node path: "MenuGame/Seats/Seat_1/display/ResultIcon"
+Asset url: "db://assets/Prefabs/MenuGame.prefab"
+Script UUID: "52a8b91f-c824-4f1e-89e7-bdbdd0f15052"
+Class ID: "52a8bkfyCRPHonnvb3Q8VBS"
+
+2019-04-06T07:40:41.393Z - warn: Script attached to "ResultIcon" in prefab "MenuGame.prefab" is missing or invalid. Detailed information:
+Node path: "MenuGame/Seats/Seat_2/display/ResultIcon"
+Asset url: "db://assets/Prefabs/MenuGame.prefab"
+Script UUID: "52a8b91f-c824-4f1e-89e7-bdbdd0f15052"
+Class ID: "52a8bkfyCRPHonnvb3Q8VBS"
+
+2019-04-06T07:40:41.394Z - warn: Script attached to "ResultIcon" in prefab "MenuGame.prefab" is missing or invalid. Detailed information:
+Node path: "MenuGame/Seats/Seat_3/display/ResultIcon"
+Asset url: "db://assets/Prefabs/MenuGame.prefab"
+Script UUID: "52a8b91f-c824-4f1e-89e7-bdbdd0f15052"
+Class ID: "52a8bkfyCRPHonnvb3Q8VBS"
+

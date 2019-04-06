@@ -30,6 +30,7 @@ cc.Class({
         this.IsMyTurn = false;
         this.resultNode.active = false;
         this.cardsNode.active = false;
+        this.ResultNodes = {};
     },
     display: function display(playerInfo) {
         var _this = this;
@@ -71,19 +72,26 @@ cc.Class({
         this.turnCountDown.node.active = false;
     },
     GetResultIcon: function GetResultIcon(resultType) {
-        var icon = cc.instantiate(this.ResultIconPrefab).getComponent("ResultIcon");
-        icon.init(resultType);
-        return icon.node;
+        if (this.ResultNodes[resultType] == null) {
+            var icon = cc.instantiate(this.ResultIconPrefab).getComponent("ResultIcon");
+            icon.init(resultType);
+            this.ResultNodes[resultType] = icon.node;
+        }
+        return this.ResultNodes[resultType];
     },
     hideResultIcon: function hideResultIcon() {
+        this.resultNode.removeAllChildren();
         this.resultNode.active = false;
+    },
+    showResultIcon: function showResultIcon(resultType) {
+        this.resultNode.addChild(this.GetResultIcon(resultType));
     },
     displayWinResult: function displayWinResult(bInstantWin, cards) {
         if (bInstantWin) {
             this.displayCards(cards);
-            this.resultNode.addChild(this.GetResultIcon(Define.RESULT.INSTANT));
+            this.showResultIcon(Define.RESULT.INSTANT);
         } else {
-            this.resultNode.addChild(this.GetResultIcon(Define.RESULT.WIN));
+            this.showResultIcon(Define.RESULT.WIN);
         }
         this.resultNode.active = true;
     },
@@ -91,16 +99,16 @@ cc.Class({
         this.displayCards(cards);
         var resultType = GameHelper.getLoseResultType(bInstantWin, cards);
         if (resultType & Define.RESULT.DEAD2) {
-            this.resultNode.addChild(this.GetResultIcon(Define.RESULT.DEAD2));
+            this.showResultIcon(Define.RESULT.DEAD2);
         }
         if (resultType & Define.RESULT.BURNED) {
-            this.resultNode.addChild(this.GetResultIcon(Define.RESULT.BURNED));
+            this.showResultIcon(Define.RESULT.BURNED);
         }
         if (resultType & Define.RESULT.FROZEN) {
-            this.resultNode.addChild(this.GetResultIcon(Define.RESULT.FROZEN));
+            this.showResultIcon(Define.RESULT.FROZEN);
         }
         if (resultType == Define.RESULT.LOSE) {
-            this.resultNode.addChild(this.GetResultIcon(Define.RESULT.LOSE));
+            this.showResultIcon(Define.RESULT.LOSE);
         }
         this.resultNode.active = true;
     },
