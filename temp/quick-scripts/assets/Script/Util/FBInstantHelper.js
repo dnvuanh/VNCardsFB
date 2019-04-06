@@ -6,7 +6,7 @@ cc._RF.push(module, '5ed8fWDHDFIy6C45JGovLW5', 'FBInstantHelper', __filename);
 
 var FBFakeData = {
     "context": {
-        "id": "1991595654288655"
+        "id": "1991595654288654"
     },
     "player": {
         "name": "Mayc",
