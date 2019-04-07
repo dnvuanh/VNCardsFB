@@ -4,30 +4,33 @@ cc._RF.push(module, '4ddfe7i0wlOipA2CLsOlSkc', 'SeatDisplay', __filename);
 
 "use strict";
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 var ObjectPool = require("ObjectPool");
 
 cc.Class({
     extends: cc.Component,
 
-    properties: {
+    properties: _defineProperty({
         displayNode: cc.Node,
         avatar: cc.Sprite,
         userName: cc.Label,
         money: cc.Label,
         hostIcon: cc.Node,
         turnCountDown: cc.ProgressBar,
-        resultIcon: cc.Node,
-        cardsNode: cc.Node
-    },
+        resultNode: cc.Node,
+        cardsNode: cc.Node,
+        ResultIconPrefab: cc.Prefab
+    }, "resultNode", cc.Node),
 
     onLoad: function onLoad() {
         this.displayNode.active = false;
         this.hostIcon.active = false;
         this.turnCountDown.node.active = false;
         this.IsMyTurn = false;
-        this.resultIcon.active = false;
-        this.resultIcon = this.resultIcon.getComponent("ResultIcon");
+        this.resultNode.active = false;
         this.cardsNode.active = false;
+        this.ResultNodes = {};
     },
     display: function display(playerInfo) {
         var _this = this;
@@ -68,21 +71,46 @@ cc.Class({
         this.IsMyTurn = false;
         this.turnCountDown.node.active = false;
     },
+    GetResultIcon: function GetResultIcon(resultType) {
+        if (this.ResultNodes[resultType] == null) {
+            var icon = cc.instantiate(this.ResultIconPrefab).getComponent("ResultIcon");
+            icon.init(resultType);
+            this.ResultNodes[resultType] = icon.node;
+        }
+        return this.ResultNodes[resultType];
+    },
     hideResultIcon: function hideResultIcon() {
-        this.resultIcon.hide();
+        this.resultNode.removeAllChildren();
+        this.resultNode.active = false;
+    },
+    showResultIcon: function showResultIcon(resultType) {
+        this.resultNode.addChild(this.GetResultIcon(resultType));
     },
     displayWinResult: function displayWinResult(bInstantWin, cards) {
         if (bInstantWin) {
             this.displayCards(cards);
-            this.resultIcon.display(Define.RESULT.INSTANT);
+            this.showResultIcon(Define.RESULT.INSTANT);
         } else {
-            this.resultIcon.display(Define.RESULT.WIN);
+            this.showResultIcon(Define.RESULT.WIN);
         }
+        this.resultNode.active = true;
     },
     displayLoseResult: function displayLoseResult(bInstantWin, cards) {
         this.displayCards(cards);
         var resultType = GameHelper.getLoseResultType(bInstantWin, cards);
-        this.resultIcon.display(resultType);
+        if (resultType & Define.RESULT.DEAD2) {
+            this.showResultIcon(Define.RESULT.DEAD2);
+        }
+        if (resultType & Define.RESULT.BURNED) {
+            this.showResultIcon(Define.RESULT.BURNED);
+        }
+        if (resultType & Define.RESULT.FROZEN) {
+            this.showResultIcon(Define.RESULT.FROZEN);
+        }
+        if (resultType == Define.RESULT.LOSE) {
+            this.showResultIcon(Define.RESULT.LOSE);
+        }
+        this.resultNode.active = true;
     },
     displayCards: function displayCards(cards) {
         var _this2 = this;
