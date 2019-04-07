@@ -17,8 +17,6 @@ var ObjectPool = cc.Class({
 
     onLoad: function onLoad() {
         ObjectPool.instance = this;
-    },
-    start: function start() {
         this.InitPool();
     },
     InitPool: function InitPool() {

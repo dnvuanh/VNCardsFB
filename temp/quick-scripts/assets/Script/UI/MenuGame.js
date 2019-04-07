@@ -30,7 +30,7 @@ cc.Class({
         countDown: require("CountDown")
     },
 
-    start: function start() {
+    onLoad: function onLoad() {
         this.ButtonLeave.active = false;
         this.ButtonStart.active = false;
         this.ButtonReady.active = false;
@@ -99,7 +99,7 @@ cc.Class({
         var cardCount = 0;
         this.DealCards.startAnim(function () {
             var card = ObjectPool.instance.getCard(cards[cardCount]);
-            card.setParent(_this.myCardNode);
+            card && card.setParent(_this.myCardNode);
             if (cardCount == 0) {
                 _this.friendCardNode.children.forEach(function (it) {
                     return it.active = true;
@@ -108,10 +108,15 @@ cc.Class({
             cardCount += 1;
         });
     },
-    onCardsReceived: function onCardsReceived(cards) {
+    onCardsReceived: function onCardsReceived(cards, playAnim) {
         this.beginNewGame();
         this.ButtonStart.active = false;
-        this.PlayDealCardAnim(cards);
+        if (playAnim) this.PlayDealCardAnim(cards);else {
+            for (var i = 0; i < cards.length; i++) {
+                var card = ObjectPool.instance.getCard(cards[i]);
+                card && card.setParent(this.myCardNode);
+            }
+        }
     },
     onShowRightMenuClick: function onShowRightMenuClick() {
         var position = this.showRightButton.node.getPosition();
@@ -247,6 +252,9 @@ cc.Class({
         this.ButtonStart.active = false;
         this.ButtonReady.active = false;
         this.countDown.hide();
+    },
+    refreshSeats: function refreshSeats(Seats) {
+        this.SeatMgr.refreshSeats(Seats);
     }
 });
 

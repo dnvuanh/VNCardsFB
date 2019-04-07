@@ -112,9 +112,9 @@ var UIManager = cc.Class({
         this.MenuGame.enableStartButton(enable);
     },
 
-    onCardsReceived(cards) 
+    onCardsReceived(cards, playAnim)
     {
-        this.MenuGame.onCardsReceived(cards);
+        this.MenuGame.onCardsReceived(cards, playAnim);
     },
 
     getSelectedCards()
@@ -170,5 +170,10 @@ var UIManager = cc.Class({
     onGameStart()
     {
         this.MenuGame.onGameStart();
+    },
+
+    refreshSeats(Seats)
+    {
+        this.MenuGame.refreshSeats(Seats);
     }
 });

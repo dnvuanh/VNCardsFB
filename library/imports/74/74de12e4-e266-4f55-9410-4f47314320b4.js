@@ -9,10 +9,20 @@ cc.Class({
 
     properties: {},
 
-    start: function start() {
-        var seats = GameMgr.instance.getCurrentSeats();
-        for (var seat in seats) {
-            var playerId = seats[seat];
+    onLoad: function onLoad() {
+        this.cachedPlayersPos = [];
+        this.cachedResultPos = [];
+        this.cachedCardsPos = [];
+
+        for (var i = 0; i < this.node.children.length; i++) {
+            this.cachedPlayersPos[i] = this.node.children[i].position;
+            this.cachedResultPos[i] = this.node.children[i].getChildByName("display").getChildByName("ResultIcon").position;
+            this.cachedCardsPos[i] = this.node.children[i].getChildByName("display").getChildByName("cards").position;
+        }
+    },
+    refreshSeats: function refreshSeats(Seats) {
+        for (var seat in Seats) {
+            var playerId = Seats[seat];
             if (playerId) {
                 var playerInfo = GameMgr.instance.getPlayer(playerId);
                 this.onPlayerEnter(playerInfo, seat);
@@ -20,15 +30,6 @@ cc.Class({
         }
         var host = GameMgr.instance.getHost();
         if (host) this.setHost(host);
-
-        this.cachedPlayersPos = [];
-        this.cachedResultPos = [];
-        this.cachedCardsPos = [];
-        for (var i = 0; i < this.node.children.length; i++) {
-            this.cachedPlayersPos[i] = this.node.children[i].position;
-            this.cachedResultPos[i] = this.node.children[i].getChildByName("display").getChildByName("ResultIcon").position;
-            this.cachedCardsPos[i] = this.node.children[i].getChildByName("display").getChildByName("cards").position;
-        }
     },
     onPlayerEnter: function onPlayerEnter(playerInfo, seat) {
         if (seat < this.node.children.length) {

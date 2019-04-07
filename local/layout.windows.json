@@ -7,7 +7,7 @@
       "windowType": "dockable",
       "x": 0,
       "y": 23,
-      "width": 1237,
+      "width": 1238,
       "height": 777,
       "layout": {
         "children": [
@@ -45,7 +45,7 @@
                 ],
                 "height": 365,
                 "type": "panel",
-                "width": 533
+                "width": 534
               },
               {
                 "active": 0,
@@ -55,12 +55,12 @@
                 ],
                 "height": 328,
                 "type": "panel",
-                "width": 533
+                "width": 534
               }
             ],
             "height": 695,
             "type": "dock-v",
-            "width": 533
+            "width": 534
           },
           {
             "active": 0,
@@ -87,7 +87,7 @@
   "panels": {
     "sprite-editor": {
       "x": 702,
-      "y": 240,
+      "y": 239,
       "width": 516,
       "height": 539
     }

@@ -86,8 +86,8 @@ var UIManager = cc.Class({
     enableStartButton: function enableStartButton(enable) {
         this.MenuGame.enableStartButton(enable);
     },
-    onCardsReceived: function onCardsReceived(cards) {
-        this.MenuGame.onCardsReceived(cards);
+    onCardsReceived: function onCardsReceived(cards, playAnim) {
+        this.MenuGame.onCardsReceived(cards, playAnim);
     },
     getSelectedCards: function getSelectedCards() {
         return this.MenuGame.getSelectedCards();
@@ -121,6 +121,9 @@ var UIManager = cc.Class({
     },
     onGameStart: function onGameStart() {
         this.MenuGame.onGameStart();
+    },
+    refreshSeats: function refreshSeats(Seats) {
+        this.MenuGame.refreshSeats(Seats);
     }
 });
 

@@ -16,6 +16,7 @@ var GameMgr = cc.Class({
         cc.game.addPersistRootNode(this.node);
         this.matchData = {};
         this.RegisterLeave = 0;
+        this.myCards = null;
         //this.matchData.PlayerReady = [];
     },
     start: function start() {
@@ -34,6 +35,11 @@ var GameMgr = cc.Class({
     },
     onInit: function onInit() {
         this.startGameScene = true;
+        //this.matchData.Host && UIManager.instance.setHost(this.matchData.Host);
+        this.matchData.Seats && UIManager.instance.refreshSeats(this.matchData.Seats);
+        this.myCards && UIManager.instance.onCardsReceived(this.myCards, false);
+        this.matchData.TurnKeeper && UIManager.instance.onTurnChange(this.matchData.TurnKeeper, this.matchData.TimeBeginTurn, this.matchData.Timeout);
+        this.matchData.CurrentCards && UIManager.instance.onThrowSuccess(this.matchData.PreviousThrowPlayerId, this.matchData.CurrentCards);
     },
     OnMatchFound: function OnMatchFound(message) {
         console.log("Game on match found " + JSON.stringify(message));
@@ -63,6 +69,9 @@ var GameMgr = cc.Class({
     getCurrentSeats: function getCurrentSeats() {
         if (this.matchData) return this.matchData.Seats;
         return {};
+    },
+    getMycards: function getMycards() {
+        return this.myCards;
     },
     getPlayer: function getPlayer(id) {
         return this.onlineList.filter(function (player) {
@@ -130,7 +139,7 @@ var GameMgr = cc.Class({
     onHostChange: function onHostChange(message) {
         var playerId = message.getString(1);
         this.matchData.Host = playerId;
-        UIManager.instance.setHost(playerId);
+        UIManager.instance.setHost(this.matchData.Host);
     },
     onGameStateUpdate: function onGameStateUpdate(message) {
         this.matchData.State = message.getLong(1);
@@ -168,20 +177,19 @@ var GameMgr = cc.Class({
         cards.sort(function (a, b) {
             return a - b;
         });
-        UIManager.instance.onCardsReceived(cards);
+        this.myCards = cards;
+        UIManager.instance && UIManager.instance.onCardsReceived(this.myCards, true);
     },
     onTurnChange: function onTurnChange(message) {
-        var playerId = message.getString(1);
-        var startTime = message.getLong(2);
-        var timeout = message.getLong(3);
-        this.matchData.TurnKeeper = playerId;
-        this.matchData.TimeBeginTurn = startTime;
-        UIManager.instance.onTurnChange(playerId, startTime, timeout);
+        this.matchData.TurnKeeper = message.getString(1);
+        this.matchData.TimeBeginTurn = message.getLong(2);
+        this.matchData.Timeout = message.getLong(3);
+        UIManager.instance.onTurnChange(this.matchData.TurnKeeper, this.matchData.TimeBeginTurn, this.matchData.Timeout);
     },
     onThrowSuccess: function onThrowSuccess(message) {
-        var playerId = message.getString(1);
-        var cards = JSON.parse(message.getString(2));
-        UIManager.instance.onThrowSuccess(playerId, cards);
+        this.matchData.PreviousThrowPlayerId = message.getString(1);
+        this.matchData.CurrentCards = JSON.parse(message.getString(2));
+        UIManager.instance.onThrowSuccess(this.matchData.PreviousThrowPlayerId, this.matchData.CurrentCards);
     },
     onGameResult: function onGameResult(message) {
         var scores = JSON.parse(message.getString(1));

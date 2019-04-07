@@ -10,6 +10,7 @@ var GameMgr = cc.Class({
         cc.game.addPersistRootNode(this.node);
         this.matchData = {};
         this.RegisterLeave = 0;
+        this.myCards = null;
         //this.matchData.PlayerReady = [];
     },
 
@@ -30,6 +31,11 @@ var GameMgr = cc.Class({
 
     onInit() {
         this.startGameScene = true;
+        //this.matchData.Host && UIManager.instance.setHost(this.matchData.Host);
+        this.matchData.Seats && UIManager.instance.refreshSeats(this.matchData.Seats);
+        this.myCards && UIManager.instance.onCardsReceived(this.myCards, false);
+        this.matchData.TurnKeeper && UIManager.instance.onTurnChange(this.matchData.TurnKeeper, this.matchData.TimeBeginTurn, this.matchData.Timeout);
+        this.matchData.CurrentCards && UIManager.instance.onThrowSuccess(this.matchData.PreviousThrowPlayerId, this.matchData.CurrentCards);
     },
 
     OnMatchFound(message) {
@@ -64,6 +70,10 @@ var GameMgr = cc.Class({
         if (this.matchData)
             return this.matchData.Seats;
         return {};
+    },
+
+    getMycards() {
+        return this.myCards;
     },
 
     getPlayer(id) {
@@ -148,7 +158,7 @@ var GameMgr = cc.Class({
     onHostChange(message) {
         let playerId = message.getString(1);
         this.matchData.Host = playerId;
-        UIManager.instance.setHost(playerId);
+        UIManager.instance.setHost(this.matchData.Host);
     },
 
     onGameStateUpdate(message) {
@@ -189,22 +199,21 @@ var GameMgr = cc.Class({
     onCardsReceived(message) {
         let cards = JSON.parse(message.getString(1));
         cards.sort((a, b) => a - b);
-        UIManager.instance.onCardsReceived(cards);
+        this.myCards = cards;
+        UIManager.instance && UIManager.instance.onCardsReceived(this.myCards, true);
     },
 
     onTurnChange(message) {
-        let playerId = message.getString(1);
-        let startTime = message.getLong(2);
-        let timeout = message.getLong(3);
-        this.matchData.TurnKeeper = playerId;
-        this.matchData.TimeBeginTurn = startTime;
-        UIManager.instance.onTurnChange(playerId, startTime, timeout);
+        this.matchData.TurnKeeper = message.getString(1);
+        this.matchData.TimeBeginTurn = message.getLong(2);
+        this.matchData.Timeout = message.getLong(3);
+        UIManager.instance.onTurnChange(this.matchData.TurnKeeper, this.matchData.TimeBeginTurn, this.matchData.Timeout);
     },
 
     onThrowSuccess(message) {
-        let playerId = message.getString(1);
-        let cards = JSON.parse(message.getString(2));
-        UIManager.instance.onThrowSuccess(playerId, cards);
+        this.matchData.PreviousThrowPlayerId = message.getString(1);
+        this.matchData.CurrentCards = JSON.parse(message.getString(2));
+        UIManager.instance.onThrowSuccess(this.matchData.PreviousThrowPlayerId, this.matchData.CurrentCards);
     },
 
     onGameResult(message)
@@ -237,5 +246,5 @@ var GameMgr = cc.Class({
     onGameStart()
     {
         UIManager.instance.onGameStart();
-    }
+    },
 });

@@ -25,7 +25,7 @@ cc.Class({
         countDown: require("CountDown"),
     },
 
-    start()
+    onLoad()
     {
         this.ButtonLeave.active = false;
         this.ButtonStart.active = false;
@@ -118,7 +118,7 @@ cc.Class({
         let cardCount = 0;
         this.DealCards.startAnim(()=>{
             let card = ObjectPool.instance.getCard(cards[cardCount]);
-            card.setParent(this.myCardNode);
+                card && card.setParent(this.myCardNode);
             if (cardCount == 0)
             {
                 this.friendCardNode.children.forEach(it => it.active = true);
@@ -127,11 +127,20 @@ cc.Class({
         });
     },
 
-    onCardsReceived(cards)
+    onCardsReceived(cards, playAnim)
     {
         this.beginNewGame();
         this.ButtonStart.active = false;
-        this.PlayDealCardAnim(cards);
+        if (playAnim)
+            this.PlayDealCardAnim(cards);
+        else
+        {
+            for (let i=0; i<cards.length; i++)
+            {
+                let card = ObjectPool.instance.getCard(cards[i]);
+                    card && card.setParent(this.myCardNode);
+            }
+        }
     },
 
     onShowRightMenuClick()
@@ -303,5 +312,10 @@ cc.Class({
         this.ButtonStart.active = false;
         this.ButtonReady.active = false;
         this.countDown.hide();
+    },
+
+    refreshSeats(Seats)
+    {
+        this.SeatMgr.refreshSeats(Seats);
     }
 });

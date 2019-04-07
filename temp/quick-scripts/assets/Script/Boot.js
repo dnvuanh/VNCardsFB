@@ -36,11 +36,20 @@ cc.Class({
         this.loadResource();
     },
     loadResource: function loadResource() {
-        ImageCache.Init(this.InitGameSpark.bind(this));
+        ImageCache.Init(this.LoadSoundGame.bind(this));
+        this.loadingBar.progress = 0.2;
+    },
+    LoadSoundGame: function LoadSoundGame() {
+        SoundMgr.instance.preload(this.LoadGameScene.bind(this));
+        this.loadingBar.progress = 0.4;
+    },
+    LoadGameScene: function LoadGameScene() {
+        cc.director.preloadScene("Game", this.InitGameSpark.bind(this));
+        this.loadingBar.progress = 0.6;
     },
     InitGameSpark: function InitGameSpark() {
         GSMgr.instance.Init(this.LoginServer.bind(this));
-        this.loadingBar.progress = 0.6;
+        this.loadingBar.progress = 0.8;
     },
     LoginServer: function LoginServer() {
         if (FBInstantHelper.isReady()) {
@@ -83,16 +92,10 @@ cc.Class({
     },
     WaitMatchData: function WaitMatchData() //it's sent automatically when user enter room
     {
-        GameMgr.instance.onMatchLoaded(this.LoadSoundGame.bind(this));
-    },
-    LoadSoundGame: function LoadSoundGame() {
-        SoundMgr.instance.preload(this.LoadGameScene.bind(this));
-    },
-    LoadGameScene: function LoadGameScene() {
-        cc.director.preloadScene("Game", this.Finished);
-        this.loadingBar.progress = 1;
+        GameMgr.instance.onMatchLoaded(this.Finished.bind(this));
     },
     Finished: function Finished() {
+        this.loadingBar.progress = 1;
         cc.director.loadScene("Game");
     }
 });
