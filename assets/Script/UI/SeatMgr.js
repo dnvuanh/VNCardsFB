@@ -63,7 +63,6 @@ cc.Class({
             var cardsNode = this.node.children[i].getChildByName("display").getChildByName("cards");
             var resultNode = this.node.children[i].getChildByName("display").getChildByName("ResultIcon");
             resultNode.getComponent(cc.Layout).type = offset % 2 ? cc.Layout.Type.VERTICAL : cc.Layout.Type.HORIZONTAL;
-            cc.log(resultNode.getComponent(cc.Layout).type);
             cardsNode.angle = 90 * (offset % 2);
             cardsNode.setPosition(this.cachedCardsPos[offset]);
             resultNode.setPosition(this.cachedResultPos[offset]);
