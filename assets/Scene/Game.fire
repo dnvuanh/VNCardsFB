@@ -17,10 +17,7 @@
         "__id__": 2
       },
       {
-        "__id__": 462
-      },
-      {
-        "__id__": 464
+        "__id__": 460
       }
     ],
     "_active": false,
@@ -47,9 +44,9 @@
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 0.17841782576866763,
-      "y": 0.17841782576866763,
-      "z": 0.17841782576866763
+      "x": 0.2643229166666667,
+      "y": 0.2643229166666667,
+      "z": 0.2643229166666667
     },
     "_quat": {
       "__type__": "cc.Quat",
@@ -82,17 +79,20 @@
         "__id__": 441
       },
       {
-        "__id__": 455
+        "__id__": 451
+      },
+      {
+        "__id__": 456
       }
     ],
     "_active": true,
     "_level": 1,
     "_components": [
       {
-        "__id__": 460
+        "__id__": 458
       },
       {
-        "__id__": 461
+        "__id__": 459
       }
     ],
     "_prefab": null,
@@ -6432,7 +6432,7 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": -1190,
+      "x": -1191,
       "y": -648,
       "z": 0
     },
@@ -6456,7 +6456,7 @@
     "groupIndex": 0,
     "_rotationX": 0,
     "_rotationY": 0,
-    "_id": "06Tdwr/uJOsZIbr67Z5+7t"
+    "_id": "268rZcBRlD6oOkn/aNMHBk"
   },
   {
     "__type__": "cc.Node",
@@ -6520,7 +6520,7 @@
     "groupIndex": 0,
     "_rotationX": 0,
     "_rotationY": 0,
-    "_id": "3fXPjesbRBkZ4FVB2CAtZo"
+    "_id": "24Vd53q51BO5r86izo6X+N"
   },
   {
     "__type__": "cc.Label",
@@ -6545,7 +6545,7 @@
     "_N$verticalAlign": 1,
     "_N$fontFamily": "Arial",
     "_N$overflow": 2,
-    "_id": "b00Quc3C1Hw6vjIJ63bYSQ"
+    "_id": "186eHZhxVGdYfofD4ZI0xg"
   },
   {
     "__type__": "cc.PrefabInfo",
@@ -6555,7 +6555,7 @@
     "asset": {
       "__uuid__": "b4a54cdb-1228-4d16-97a8-3170c6226a88"
     },
-    "fileId": "3fXPjesbRBkZ4FVB2CAtZo",
+    "fileId": "24Vd53q51BO5r86izo6X+N",
     "sync": false
   },
   {
@@ -6569,7 +6569,7 @@
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
-      "__uuid__": "f0048c10-f03e-4c97-b9d3-3506e1d58952"
+      "__uuid__": "3253f11b-7169-4d8d-8abc-12bf0a52868f"
     },
     "_type": 1,
     "_sizeMode": 0,
@@ -6584,7 +6584,7 @@
     "_isTrimmedMode": true,
     "_state": 0,
     "_atlas": null,
-    "_id": "a3Kl5IFw5AU6tdK3BTzES+"
+    "_id": "a4hurom3RJ57Ex8G4wO0lX"
   },
   {
     "__type__": "cc.Button",
@@ -6648,7 +6648,7 @@
       "a": 255
     },
     "_N$normalSprite": {
-      "__uuid__": "f0048c10-f03e-4c97-b9d3-3506e1d58952"
+      "__uuid__": "3253f11b-7169-4d8d-8abc-12bf0a52868f"
     },
     "_N$pressedSprite": {
       "__uuid__": "e9ec654c-97a2-4787-9325-e6a10375219a"
@@ -6668,7 +6668,7 @@
     "_N$target": {
       "__id__": 176
     },
-    "_id": "7eO0V7ogdMkIYQ7x2hgHFw"
+    "_id": "bdyR9ix4BPtqhxgrSsVafx"
   },
   {
     "__type__": "cc.ClickEvent",
@@ -6691,7 +6691,7 @@
     "alignMode": 1,
     "_target": null,
     "_alignFlags": 12,
-    "_left": 51,
+    "_left": 50,
     "_right": 0,
     "_top": 0,
     "_bottom": 50,
@@ -6705,7 +6705,7 @@
     "_isAbsVerticalCenter": true,
     "_originalWidth": 0,
     "_originalHeight": 0,
-    "_id": "f0+BiPrExCbKsc98zBpB8m"
+    "_id": "35WV10LNhLZ4O48QnSvQSH"
   },
   {
     "__type__": "cc.PrefabInfo",
@@ -6715,7 +6715,7 @@
     "asset": {
       "__uuid__": "b4a54cdb-1228-4d16-97a8-3170c6226a88"
     },
-    "fileId": "06Tdwr/uJOsZIbr67Z5+7t",
+    "fileId": "268rZcBRlD6oOkn/aNMHBk",
     "sync": false
   },
   {
@@ -16156,51 +16156,18 @@
     "_id": "6a44K7vYNKBbbODdUH6nsS"
   },
   {
-    "__type__": "cc.Canvas",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 2
-    },
-    "_enabled": true,
-    "_designResolution": {
-      "__type__": "cc.Size",
-      "width": 2732,
-      "height": 1536
-    },
-    "_fitWidth": true,
-    "_fitHeight": false,
-    "_id": "03nGNd5w9J7a9sd7LNIArN"
-  },
-  {
-    "__type__": "6fdc0OYmpFA16vQr4DRUDer",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 2
-    },
-    "_enabled": true,
-    "loadingscreen": {
-      "__id__": 454
-    },
-    "MenuGame": {
-      "__id__": 443
-    },
-    "_id": "73nzb1dBpAgJmVI0myf8Yy"
-  },
-  {
     "__type__": "cc.Node",
     "_name": "InputMgr",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 1
+      "__id__": 2
     },
     "_children": [],
     "_active": true,
-    "_level": 1,
+    "_level": 2,
     "_components": [
       {
-        "__id__": 463
+        "__id__": 457
       }
     ],
     "_prefab": null,
@@ -16224,8 +16191,8 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": 1366,
-      "y": 768,
+      "x": 0,
+      "y": 0,
       "z": 0
     },
     "_scale": {
@@ -16253,10 +16220,43 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 462
+      "__id__": 456
     },
     "_enabled": true,
     "_id": "a6YyLFB4lJea3TgvVgVm3U"
+  },
+  {
+    "__type__": "cc.Canvas",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 2
+    },
+    "_enabled": true,
+    "_designResolution": {
+      "__type__": "cc.Size",
+      "width": 2732,
+      "height": 1536
+    },
+    "_fitWidth": true,
+    "_fitHeight": false,
+    "_id": "03nGNd5w9J7a9sd7LNIArN"
+  },
+  {
+    "__type__": "6fdc0OYmpFA16vQr4DRUDer",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 2
+    },
+    "_enabled": true,
+    "loadingscreen": {
+      "__id__": 450
+    },
+    "MenuGame": {
+      "__id__": 439
+    },
+    "_id": "73nzb1dBpAgJmVI0myf8Yy"
   },
   {
     "__type__": "cc.Node",
@@ -16294,8 +16294,8 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": 1366,
-      "y": 768,
+      "x": 0,
+      "y": 0,
       "z": 0
     },
     "_scale": {
@@ -16316,7 +16316,7 @@
     "_zIndex": 0,
     "_is3DNode": false,
     "groupIndex": 0,
-    "_id": "0dMtsiO+9El6M8O5mMOaHE"
+    "_id": "1f0VegBfZDSL+OCI/JQPt5"
   },
   {
     "__type__": "cee32TqjhdCHJhE+WH85zKM",
@@ -16329,6 +16329,6 @@
     "Card": {
       "__uuid__": "9a8185fb-b2cd-4a99-a5df-60ed78414345"
     },
-    "_id": "3e/f+mp6BCbq5DPJWhlNha"
+    "_id": "dbSBZuyzpEwbxFj7TSRGdn"
   }
 ]

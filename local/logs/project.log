@@ -1,60 +1,72 @@
-2019-04-07T17:06:11.177Z - normal: Load ~/.CocosCreator/settings.json
-2019-04-07T17:06:11.239Z - normal: Initializing Asset Database
-2019-04-07T17:06:11.243Z - normal: checking language setting...
-2019-04-07T17:06:11.243Z - normal: Language: en
-2019-04-07T17:06:12.272Z - success: preview server running at http://localhost:7456
-2019-04-07T17:06:12.308Z - success: protocol editor-framework registered
-2019-04-07T17:06:12.308Z - success: protocol app registered
-2019-04-07T17:06:12.308Z - success: protocol theme registered
-2019-04-07T17:06:12.309Z - success: protocol packages registered
-2019-04-07T17:06:12.309Z - success: protocol uuid registerred
-2019-04-07T17:06:12.309Z - success: protocol db registerred
-2019-04-07T17:06:12.309Z - success: protocol thumbnail registerred
-2019-04-07T17:06:12.309Z - success: protocol unpack registerred
-2019-04-07T17:06:12.309Z - success: protocol disable-commonjs registerred
-2019-04-07T17:06:12.866Z - normal: connected!
-2019-04-07T17:06:12.868Z - normal: Check project /Users/anhdinh/Documents/GitHub/VNCardsFB
-2019-04-07T17:06:12.869Z - normal: Initializing project /Users/anhdinh/Documents/GitHub/VNCardsFB
-2019-04-07T17:06:13.711Z - normal: Initializing Cocos2d
-2019-04-07T17:06:14.702Z - normal: Initializing engine extends
-2019-04-07T17:06:14.706Z - normal: Loading editor/builtin packages from /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin
-2019-04-07T17:06:14.726Z - normal: Loading builtin packages from /Applications/CocosCreator.app/Contents/Resources/builtin
-2019-04-07T17:06:15.515Z - success: assets loaded
-2019-04-07T17:06:15.517Z - success: asset-db-debugger loaded
-2019-04-07T17:06:15.598Z - success: builder loaded
-2019-04-07T17:06:15.599Z - success: color-picker loaded
-2019-04-07T17:06:15.756Z - success: cocos-analytics loaded
-2019-04-07T17:06:15.757Z - success: google-play-instant loaded
-2019-04-07T17:06:15.791Z - success: console loaded
-2019-04-07T17:06:15.792Z - success: jsb-adapter loaded
-2019-04-07T17:06:15.934Z - success: fb-instant-games loaded
-2019-04-07T17:06:15.935Z - success: oppo-runtime loaded
-2019-04-07T17:06:16.047Z - success: google-instant-games loaded
-2019-04-07T17:06:16.048Z - success: package-manager loaded
-2019-04-07T17:06:16.906Z - success: hierarchy loaded
-2019-04-07T17:06:16.907Z - success: qqplay-adapter loaded
-2019-04-07T17:06:17.031Z - success: inspector loaded
-2019-04-07T17:06:17.032Z - success: sdkbox loaded
-2019-04-07T17:06:17.225Z - success: keystore loaded
-2019-04-07T17:06:17.226Z - success: tester loaded
-2019-04-07T17:06:17.287Z - success: node-library loaded
-2019-04-07T17:06:17.288Z - success: ui-grid loaded
-2019-04-07T17:06:17.308Z - success: package-asset loaded
-2019-04-07T17:06:17.309Z - success: ui-kit-preview-extra loaded
-2019-04-07T17:06:17.330Z - success: preferences loaded
-2019-04-07T17:06:17.330Z - success: ui-kit-preview loaded
-2019-04-07T17:06:17.351Z - success: project-exporter loaded
-2019-04-07T17:06:17.352Z - success: ui-kit loaded
-2019-04-07T17:06:17.393Z - success: project-importer loaded
-2019-04-07T17:06:17.393Z - success: ui-tree loaded
-2019-04-07T17:06:17.422Z - success: project-settings loaded
-2019-04-07T17:06:17.424Z - success: vivo-runtime loaded
-2019-04-07T17:06:17.445Z - success: scene loaded
-2019-04-07T17:06:17.446Z - success: weapp-adapter loaded
-2019-04-07T17:06:17.447Z - success: simulator-debugger loaded
-2019-04-07T17:06:17.449Z - success: sprite-editor loaded
-2019-04-07T17:06:17.469Z - success: store loaded
-2019-04-07T17:06:17.492Z - success: timeline loaded
-2019-04-07T17:06:17.872Z - normal: Loading packages
-2019-04-07T17:06:17.890Z - normal: Watching packages
-2019-04-07T17:06:17.978Z - normal: Run Application
+2019-04-08T03:37:39.521Z - normal: Load ~/.CocosCreator/settings.json
+2019-04-08T03:37:40.742Z - normal: Initializing Asset Database
+2019-04-08T03:37:40.744Z - normal: checking language setting...
+2019-04-08T03:37:40.745Z - normal: Language: en
+2019-04-08T03:37:41.562Z - success: preview server running at http://localhost:7456
+2019-04-08T03:37:41.565Z - success: protocol editor-framework registered
+2019-04-08T03:37:41.565Z - success: protocol app registered
+2019-04-08T03:37:41.566Z - success: protocol theme registered
+2019-04-08T03:37:41.566Z - success: protocol packages registered
+2019-04-08T03:37:41.566Z - success: protocol uuid registerred
+2019-04-08T03:37:41.566Z - success: protocol db registerred
+2019-04-08T03:37:41.566Z - success: protocol thumbnail registerred
+2019-04-08T03:37:41.566Z - success: protocol unpack registerred
+2019-04-08T03:37:41.566Z - success: protocol disable-commonjs registerred
+2019-04-08T03:37:44.563Z - normal: failed to connect login server due to request timeout
+2019-04-08T03:37:44.564Z - normal: Check project H:\Projects\VNCardsFB
+2019-04-08T03:37:44.566Z - normal: Initializing project H:\Projects\VNCardsFB
+2019-04-08T03:37:45.346Z - normal: Initializing Cocos2d
+2019-04-08T03:37:46.224Z - normal: Initializing engine extends
+2019-04-08T03:37:46.228Z - normal: Loading editor/builtin packages from C:\CocosCreator20\resources\app.asar\editor\builtin
+2019-04-08T03:37:46.237Z - normal: Loading builtin packages from C:\CocosCreator20\resources\builtin
+2019-04-08T03:37:47.002Z - success: assets loaded
+2019-04-08T03:37:47.003Z - success: asset-db-debugger loaded
+2019-04-08T03:37:47.065Z - success: builder loaded
+2019-04-08T03:37:47.066Z - success: code-editor loaded
+2019-04-08T03:37:47.119Z - success: cocos-analytics loaded
+2019-04-08T03:37:47.120Z - success: color-picker loaded
+2019-04-08T03:37:47.225Z - success: console loaded
+2019-04-08T03:37:47.225Z - success: google-play-instant loaded
+2019-04-08T03:37:47.351Z - success: fb-instant-games loaded
+2019-04-08T03:37:47.351Z - success: jsb-adapter loaded
+2019-04-08T03:37:47.362Z - success: google-instant-games loaded
+2019-04-08T03:37:47.363Z - success: oppo-runtime loaded
+2019-04-08T03:37:47.371Z - success: hierarchy loaded
+2019-04-08T03:37:47.371Z - success: package-manager loaded
+2019-04-08T03:37:47.526Z - success: inspector loaded
+2019-04-08T03:37:47.527Z - success: qqplay-adapter loaded
+2019-04-08T03:37:47.534Z - success: keystore loaded
+2019-04-08T03:37:47.534Z - success: sdkbox loaded
+2019-04-08T03:37:47.544Z - success: node-library loaded
+2019-04-08T03:37:47.545Z - success: tester loaded
+2019-04-08T03:37:47.549Z - success: package-asset loaded
+2019-04-08T03:37:47.550Z - success: ui-grid loaded
+2019-04-08T03:37:47.556Z - success: preferences loaded
+2019-04-08T03:37:47.556Z - success: ui-kit-preview-extra loaded
+2019-04-08T03:37:47.564Z - success: project-exporter loaded
+2019-04-08T03:37:47.564Z - success: ui-kit-preview loaded
+2019-04-08T03:37:47.583Z - success: project-importer loaded
+2019-04-08T03:37:47.584Z - success: ui-kit loaded
+2019-04-08T03:37:47.588Z - success: project-settings loaded
+2019-04-08T03:37:47.588Z - success: ui-tree loaded
+2019-04-08T03:37:47.602Z - success: scene loaded
+2019-04-08T03:37:47.602Z - success: vivo-runtime loaded
+2019-04-08T03:37:47.604Z - success: simulator-debugger loaded
+2019-04-08T03:37:47.604Z - success: weapp-adapter loaded
+2019-04-08T03:37:47.606Z - success: sprite-editor loaded
+2019-04-08T03:37:47.611Z - success: store loaded
+2019-04-08T03:37:47.621Z - success: timeline loaded
+2019-04-08T03:37:51.717Z - normal: Loading packages
+2019-04-08T03:37:51.721Z - normal: Watching packages
+2019-04-08T03:37:52.174Z - normal: Run Application
+2019-04-08T03:38:04.091Z - error: TypeError: children[i]._onBatchCreated is not a function
+    at cc_Node._onBatchCreated (C:\CocosCreator20\resources\engine\bin\.cache\dev\cocos2d\core\CCNode.js:761:33)
+    at cc_Scene._onBatchCreated (C:\CocosCreator20\resources\engine\bin\.cache\dev\cocos2d\core\CCNode.js:761:33)
+    at cc_Scene._load (C:\CocosCreator20\resources\engine\bin\.cache\dev\cocos2d\core\CCScene.js:60:30)
+    at cc.Director.runSceneImmediate (C:\CocosCreator20\resources\engine\bin\.cache\dev\cocos2d\core\CCDirector.js:179:23)
+    at C:\CocosCreator20\resources\engine\bin\.cache\dev\cocos2d\core\CCDirector.js:327:42
+    at CCLoader.<anonymous> (C:\CocosCreator20\resources\engine\bin\.cache\dev\cocos2d\core\platform\CCAssetLibrary.js:63:25)
+    at C:\CocosCreator20\resources\engine\bin\.cache\dev\cocos2d\core\load-pipeline\CCLoader.js:139:46
+    at C:\CocosCreator20\resources\engine\bin\.cache\dev\cocos2d\core\platform\utils.js:48:25
+    at _combinedTickCallback (internal/process/next_tick.js:73:7)
+    at process._tickCallback (internal/process/next_tick.js:104:9)
