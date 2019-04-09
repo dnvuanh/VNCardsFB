@@ -2,7 +2,7 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-
+        SeatPrefab : cc.Prefab,
     },
     
     onLoad()
@@ -10,12 +10,20 @@ cc.Class({
         this.cachedPlayersPos = [];
         this.cachedResultPos = [];
         this.cachedCardsPos = [];
+        this.Seats = [];
         
         for (let i=0; i<this.node.children.length; i++)
         {
             this.cachedPlayersPos[i] = this.node.children[i].position;
-            this.cachedResultPos[i] = this.node.children[i].getChildByName("display").getChildByName("ResultIcon").position;
-            this.cachedCardsPos[i] = this.node.children[i].getChildByName("display").getChildByName("cards").position;
+            this.cachedResultPos[i] = this.node.children[i].getChildByName("ResultIcon").position;
+            this.cachedCardsPos[i] = this.node.children[i].getChildByName("cards").position;
+            this.Seats[i] = cc.instantiate(this.SeatPrefab).getComponent("SeatDisplay");
+            this.node.children[i].active = false;
+            this.Seats[i].onInit(i, this.cachedPlayersPos[i]);
+        }
+        for(let i=0;i < 4;i++)
+        {
+            this.node.addChild(this.Seats[i].node);
         }
     },
 
@@ -37,9 +45,9 @@ cc.Class({
 
     onPlayerEnter(playerInfo, seat)
     {
-        if (seat < this.node.children.length)
+        if (seat < this.Seats.length)
         {
-            var seatDisplay = this.node.children[seat].getComponent("SeatDisplay");
+            var seatDisplay = this.Seats[seat];
                 seatDisplay.display(playerInfo);
         }
         if (GameMgr.instance.IsMyId(playerInfo.id))
@@ -51,17 +59,17 @@ cc.Class({
     RotateSeats(mySeat)
     {
         Notification.instance.add("Moving Player Position");
-        for (let i=0; i < this.node.children.length; i++)
+        for (let i=0; i < this.Seats.length; i++)
         {
             let offset = (i - mySeat) >= 0 ? (i - mySeat) : (i - mySeat + 4);
             /*let fadeOut = cc.fadeOut(0.2);
-            let movePosition = cc.callFunc(() => this.node.children[i].position = this.cachedPlayersPos[offset]);
+            let movePosition = cc.callFunc(() => this.Seats[i].node.position = this.cachedPlayersPos[offset]);
             let fadeIn = cc.fadeIn(0.2);
-            this.node.children[i].runAction(cc.sequence(fadeOut, cc.delayTime(0.1), movePosition, fadeIn));*/
+            this.Seats[i].node.runAction(cc.sequence(fadeOut, cc.delayTime(0.1), movePosition, fadeIn));*/
             var movePosition = cc.moveTo(0.5,this.cachedPlayersPos[offset]);
-            this.node.children[i].runAction(movePosition);
-            var cardsNode = this.node.children[i].getChildByName("display").getChildByName("cards");
-            var resultNode = this.node.children[i].getChildByName("display").getChildByName("ResultIcon");
+            this.Seats[i].node.runAction(movePosition);
+            var cardsNode = this.Seats[i].node.getChildByName("display").getChildByName("cards");
+            var resultNode = this.Seats[i].node.getChildByName("display").getChildByName("ResultIcon");
             resultNode.getComponent(cc.Layout).type = offset % 2 ? cc.Layout.Type.VERTICAL : cc.Layout.Type.HORIZONTAL;
             cardsNode.angle = 90 * (offset % 2);
             cardsNode.setPosition(this.cachedCardsPos[offset]);
@@ -71,18 +79,18 @@ cc.Class({
 
     onPlayerLeave(seat)
     {
-        if (seat < this.node.children.length)
+        if (seat < this.Seats.length)
         {
-            var seatDisplay = this.node.children[seat].getComponent("SeatDisplay");
+            var seatDisplay = this.Seats[seat];
                 seatDisplay.remove();
         }
     },
 
     setHost(playerId)
     {
-        for (var i=0; i<this.node.children.length; i++)
+        for (var i=0; i<this.Seats.length; i++)
         {
-            var seatDisplay = this.node.children[i].getComponent("SeatDisplay");
+            var seatDisplay = this.Seats[i];
             if (seatDisplay && seatDisplay.getPlayerId() == playerId)
             {
                 seatDisplay.setHost(true);
@@ -96,9 +104,9 @@ cc.Class({
 
     onTurnChange(playerId, startTime, timeout)
     {
-        for (var i=0; i<this.node.children.length; i++)
+        for (var i=0; i<this.Seats.length; i++)
         {
-            var seatDisplay = this.node.children[i].getComponent("SeatDisplay");
+            var seatDisplay = this.Seats[i];
             if (seatDisplay && seatDisplay.getPlayerId() == playerId)
             {
                 seatDisplay.displayTurn(startTime, timeout);
@@ -112,18 +120,18 @@ cc.Class({
 
     stopAllTurn()
     {
-        for (var i=0; i<this.node.children.length; i++)
+        for (var i=0; i<this.Seats.length; i++)
         {
-            var seatDisplay = this.node.children[i].getComponent("SeatDisplay");
+            var seatDisplay = this.Seats[i];
                 seatDisplay.disableCountDown();
         }
     },
 
     displayResult(playerWinId, playersCards)
     {
-        for (var i=0; i<this.node.children.length; i++)
+        for (var i=0; i<this.Seats.length; i++)
         {
-            var seatDisplay = this.node.children[i].getComponent("SeatDisplay");
+            var seatDisplay = this.Seats[i];
             if (seatDisplay && seatDisplay.getPlayerId() != null)
             {
                 var cards = playersCards[seatDisplay.getPlayerId()];
@@ -142,9 +150,9 @@ cc.Class({
 
     hideResultIcon()
     {
-        for (var i=0; i<this.node.children.length; i++)
+        for (var i=0; i<this.Seats.length; i++)
         {
-            var seatDisplay = this.node.children[i].getComponent("SeatDisplay");
+            var seatDisplay = this.Seats[i]
             seatDisplay.hideResultIcon();
             if (seatDisplay && seatDisplay.getPlayerId() != null)
             {
@@ -155,9 +163,9 @@ cc.Class({
 
     onPlayerReady(playerId, isReady)
     {
-        for (var i=0; i<this.node.children.length; i++)
+        for (var i=0; i<this.Seats.length; i++)
         {
-            var seatDisplay = this.node.children[i].getComponent("SeatDisplay");
+            var seatDisplay = this.Seats[i];
             if (seatDisplay && seatDisplay.getPlayerId() == playerId)
             {
                 seatDisplay.setReady(isReady);

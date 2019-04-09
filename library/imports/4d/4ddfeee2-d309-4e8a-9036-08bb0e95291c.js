@@ -23,7 +23,7 @@ cc.Class({
         ResultIconPrefab: cc.Prefab
     }, "resultNode", cc.Node),
 
-    onLoad: function onLoad() {
+    onInit: function onInit(index, position) {
         this.displayNode.active = false;
         this.hostIcon.active = false;
         this.turnCountDown.node.active = false;
@@ -31,6 +31,9 @@ cc.Class({
         this.resultNode.active = false;
         this.cardsNode.active = false;
         this.ResultNodes = {};
+        this.index = index;
+        this.node.setPosition(position);
+        cc.log(position);
     },
     display: function display(playerInfo) {
         var _this = this;
@@ -153,6 +156,9 @@ cc.Class({
         } else {
             this.node.opacity = 125;
         }
+    },
+    onClick: function onClick() {
+        GSMgr.instance.requestSeat(this.index);
     }
 });
 

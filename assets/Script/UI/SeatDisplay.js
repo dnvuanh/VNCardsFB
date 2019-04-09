@@ -16,7 +16,7 @@ cc.Class({
         resultNode : cc.Node,
     },
 
-    onLoad()
+    onInit(index, position)
     {
         this.displayNode.active = false;
         this.hostIcon.active = false;
@@ -25,6 +25,9 @@ cc.Class({
         this.resultNode.active = false;
         this.cardsNode.active = false;
         this.ResultNodes = {};
+        this.index = index;
+        this.node.setPosition(position);
+        cc.log(position);
     },
 
     display(playerInfo)
@@ -193,5 +196,10 @@ cc.Class({
         {
             this.node.opacity = 125;
         }
+    },
+
+    onClick()
+    {
+        GSMgr.instance.requestSeat(this.index);
     }
 });
