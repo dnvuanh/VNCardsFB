@@ -18,7 +18,6 @@ cc.Class({
         friendCardNode: cc.Node,
         rightPanelNode: cc.Node,
         showRightButton: cc.Button,
-        showRightLabel: cc.Label,
         throwButton: cc.Button,
         skipButton: cc.Button,
         playZoneNode: cc.Node,
@@ -148,11 +147,11 @@ cc.Class({
         var position = this.showRightButton.node.getPosition();
         if (this.rightPanelNode.active == true) {
             this.rightPanelNode.active = false;
-            this.showRightLabel.string = "<<";
+            //this.showRightLabel.string = "<<";
             return;
         }
         this.rightPanelNode.active = true;
-        this.showRightLabel.string = ">>";
+        //this.showRightLabel.string = ">>";
     },
 
     getSelectedCards()

@@ -1,63 +1,88 @@
-2019-04-09T12:26:07.255Z - normal: Load ~/.CocosCreator/settings.json
-2019-04-09T12:26:08.507Z - normal: Initializing Asset Database
-2019-04-09T12:26:08.510Z - normal: checking language setting...
-2019-04-09T12:26:08.511Z - normal: Language: en
-2019-04-09T12:26:09.342Z - success: preview server running at http://localhost:7456
-2019-04-09T12:26:09.344Z - success: protocol editor-framework registered
-2019-04-09T12:26:09.344Z - success: protocol app registered
-2019-04-09T12:26:09.344Z - success: protocol theme registered
-2019-04-09T12:26:09.344Z - success: protocol packages registered
-2019-04-09T12:26:09.345Z - success: protocol uuid registerred
-2019-04-09T12:26:09.345Z - success: protocol db registerred
-2019-04-09T12:26:09.345Z - success: protocol thumbnail registerred
-2019-04-09T12:26:09.345Z - success: protocol unpack registerred
-2019-04-09T12:26:09.345Z - success: protocol disable-commonjs registerred
-2019-04-09T12:26:10.083Z - normal: connected!
-2019-04-09T12:26:10.085Z - normal: Check project D:\Projects\VNCardsFB
-2019-04-09T12:26:10.086Z - normal: Initializing project D:\Projects\VNCardsFB
-2019-04-09T12:26:10.851Z - normal: Initializing Cocos2d
-2019-04-09T12:26:11.730Z - normal: Initializing engine extends
-2019-04-09T12:26:11.733Z - normal: Loading editor/builtin packages from C:\CocosCreator\resources\app.asar\editor\builtin
-2019-04-09T12:26:11.747Z - normal: Loading builtin packages from C:\CocosCreator\resources\builtin
-2019-04-09T12:26:12.562Z - success: assets loaded
-2019-04-09T12:26:12.563Z - success: asset-db-debugger loaded
-2019-04-09T12:26:12.632Z - success: builder loaded
-2019-04-09T12:26:12.632Z - success: code-editor loaded
-2019-04-09T12:26:12.710Z - success: cocos-analytics loaded
-2019-04-09T12:26:12.710Z - success: color-picker loaded
-2019-04-09T12:26:12.807Z - success: console loaded
-2019-04-09T12:26:12.808Z - success: google-play-instant loaded
-2019-04-09T12:26:12.846Z - success: fb-instant-games loaded
-2019-04-09T12:26:12.846Z - success: jsb-adapter loaded
-2019-04-09T12:26:12.858Z - success: google-instant-games loaded
-2019-04-09T12:26:12.858Z - success: oppo-runtime loaded
-2019-04-09T12:26:12.988Z - success: hierarchy loaded
-2019-04-09T12:26:12.988Z - success: package-manager loaded
-2019-04-09T12:26:13.135Z - success: inspector loaded
-2019-04-09T12:26:13.135Z - success: qqplay-adapter loaded
-2019-04-09T12:26:13.294Z - success: keystore loaded
-2019-04-09T12:26:13.294Z - success: sdkbox loaded
-2019-04-09T12:26:13.461Z - success: node-library loaded
-2019-04-09T12:26:13.461Z - success: tester loaded
-2019-04-09T12:26:13.500Z - success: package-asset loaded
-2019-04-09T12:26:13.501Z - success: ui-grid loaded
-2019-04-09T12:26:13.506Z - success: preferences loaded
-2019-04-09T12:26:13.506Z - success: ui-kit-preview-extra loaded
-2019-04-09T12:26:13.632Z - success: project-exporter loaded
-2019-04-09T12:26:13.633Z - success: ui-kit-preview loaded
-2019-04-09T12:26:13.653Z - success: project-importer loaded
-2019-04-09T12:26:13.653Z - success: ui-kit loaded
-2019-04-09T12:26:13.660Z - success: project-settings loaded
-2019-04-09T12:26:13.661Z - success: ui-tree loaded
-2019-04-09T12:26:13.670Z - success: scene loaded
-2019-04-09T12:26:13.671Z - success: vivo-runtime loaded
-2019-04-09T12:26:13.673Z - success: simulator-debugger loaded
-2019-04-09T12:26:13.673Z - success: weapp-adapter loaded
-2019-04-09T12:26:13.675Z - success: sprite-editor loaded
-2019-04-09T12:26:13.679Z - success: store loaded
-2019-04-09T12:26:13.683Z - success: timeline loaded
-2019-04-09T12:26:13.977Z - normal: Loading packages
-2019-04-09T12:26:13.983Z - normal: Watching packages
-2019-04-09T12:26:14.513Z - normal: Run Application
-2019-04-09T14:43:35.002Z - error: TypeError: Cannot read property 'uuid' of null
+2019-04-10T02:22:59.021Z - normal: Load ~/.CocosCreator/settings.json
+2019-04-10T02:23:00.279Z - normal: Initializing Asset Database
+2019-04-10T02:23:00.284Z - normal: checking language setting...
+2019-04-10T02:23:00.284Z - normal: Language: en
+2019-04-10T02:23:01.052Z - success: preview server running at http://localhost:7456
+2019-04-10T02:23:01.054Z - success: protocol editor-framework registered
+2019-04-10T02:23:01.055Z - success: protocol app registered
+2019-04-10T02:23:01.055Z - success: protocol theme registered
+2019-04-10T02:23:01.055Z - success: protocol packages registered
+2019-04-10T02:23:01.055Z - success: protocol uuid registerred
+2019-04-10T02:23:01.055Z - success: protocol db registerred
+2019-04-10T02:23:01.055Z - success: protocol thumbnail registerred
+2019-04-10T02:23:01.055Z - success: protocol unpack registerred
+2019-04-10T02:23:01.055Z - success: protocol disable-commonjs registerred
+2019-04-10T02:23:01.506Z - normal: connected!
+2019-04-10T02:23:01.507Z - normal: Check project D:\Projects\VNCardsFB
+2019-04-10T02:23:01.509Z - normal: Initializing project D:\Projects\VNCardsFB
+2019-04-10T02:23:02.208Z - normal: Initializing Cocos2d
+2019-04-10T02:23:02.900Z - normal: Initializing engine extends
+2019-04-10T02:23:02.903Z - normal: Loading editor/builtin packages from C:\CocosCreator\resources\app.asar\editor\builtin
+2019-04-10T02:23:02.909Z - normal: Loading builtin packages from C:\CocosCreator\resources\builtin
+2019-04-10T02:23:03.576Z - success: assets loaded
+2019-04-10T02:23:03.577Z - success: asset-db-debugger loaded
+2019-04-10T02:23:03.667Z - success: builder loaded
+2019-04-10T02:23:03.667Z - success: code-editor loaded
+2019-04-10T02:23:03.741Z - success: cocos-analytics loaded
+2019-04-10T02:23:03.741Z - success: color-picker loaded
+2019-04-10T02:23:03.837Z - success: console loaded
+2019-04-10T02:23:03.837Z - success: google-play-instant loaded
+2019-04-10T02:23:03.962Z - success: fb-instant-games loaded
+2019-04-10T02:23:03.962Z - success: jsb-adapter loaded
+2019-04-10T02:23:03.975Z - success: google-instant-games loaded
+2019-04-10T02:23:03.975Z - success: oppo-runtime loaded
+2019-04-10T02:23:04.108Z - success: hierarchy loaded
+2019-04-10T02:23:04.108Z - success: package-manager loaded
+2019-04-10T02:23:04.245Z - success: inspector loaded
+2019-04-10T02:23:04.246Z - success: qqplay-adapter loaded
+2019-04-10T02:23:04.251Z - success: keystore loaded
+2019-04-10T02:23:04.251Z - success: sdkbox loaded
+2019-04-10T02:23:04.264Z - success: node-library loaded
+2019-04-10T02:23:04.264Z - success: tester loaded
+2019-04-10T02:23:04.273Z - success: package-asset loaded
+2019-04-10T02:23:04.273Z - success: ui-grid loaded
+2019-04-10T02:23:04.276Z - success: preferences loaded
+2019-04-10T02:23:04.277Z - success: ui-kit-preview-extra loaded
+2019-04-10T02:23:04.280Z - success: project-exporter loaded
+2019-04-10T02:23:04.280Z - success: ui-kit-preview loaded
+2019-04-10T02:23:04.552Z - success: project-importer loaded
+2019-04-10T02:23:04.552Z - success: ui-kit loaded
+2019-04-10T02:23:04.556Z - success: project-settings loaded
+2019-04-10T02:23:04.557Z - success: ui-tree loaded
+2019-04-10T02:23:04.562Z - success: scene loaded
+2019-04-10T02:23:04.563Z - success: vivo-runtime loaded
+2019-04-10T02:23:04.565Z - success: simulator-debugger loaded
+2019-04-10T02:23:04.565Z - success: weapp-adapter loaded
+2019-04-10T02:23:04.567Z - success: sprite-editor loaded
+2019-04-10T02:23:04.570Z - success: store loaded
+2019-04-10T02:23:04.574Z - success: timeline loaded
+2019-04-10T02:23:05.878Z - normal: Loading packages
+2019-04-10T02:23:05.883Z - normal: Watching packages
+2019-04-10T02:23:06.341Z - normal: Run Application
+2019-04-10T02:57:46.558Z - error: TypeError: Cannot read property 'uuid' of null
     at SVGGElement.t.addEventListener (C:\CocosCreator\resources\app.asar\editor\page\gizmos\elements\gizmo.js:1:4491)
+2019-04-10T04:40:26.803Z - warn: The Asset used by component "cc.Sprite" in scene "Game.fire" is missing. Detailed information:
+Node path: "Canvas/MenuGame/ShowRightPanel"
+Asset url: "db://assets/Scene/Game.fire"
+Missing uuid: "006b6346-ceb0-4892-9b2d-3239be9163f1"
+
+2019-04-10T04:40:26.804Z - warn: The Asset used by component "cc.Button" in scene "Game.fire" is missing. Detailed information:
+Node path: "Canvas/MenuGame/ShowRightPanel"
+Asset url: "db://assets/Scene/Game.fire"
+Missing uuid: "006b6346-ceb0-4892-9b2d-3239be9163f1"
+
+2019-04-10T04:40:26.804Z - warn: The Asset used by component "cc.Button" in scene "Game.fire" is missing. Detailed information:
+Node path: "Canvas/MenuGame/ShowRightPanel"
+Asset url: "db://assets/Scene/Game.fire"
+Missing uuid: "006b6346-ceb0-4892-9b2d-3239be9163f1"
+
+2019-04-10T04:40:26.804Z - warn: The Asset used by component "cc.Button" in scene "Game.fire" is missing. Detailed information:
+Node path: "Canvas/MenuGame/ShowRightPanel"
+Asset url: "db://assets/Scene/Game.fire"
+Missing uuid: "006b6346-ceb0-4892-9b2d-3239be9163f1"
+
+2019-04-10T04:40:26.804Z - warn: The Asset used by component "cc.Button" in scene "Game.fire" is missing. Detailed information:
+Node path: "Canvas/MenuGame/ShowRightPanel"
+Asset url: "db://assets/Scene/Game.fire"
+Missing uuid: "006b6346-ceb0-4892-9b2d-3239be9163f1"
+
