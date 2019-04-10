@@ -27,7 +27,6 @@ cc.Class({
         this.ResultNodes = {};
         this.index = index;
         this.node.setPosition(position);
-        cc.log(position);
     },
 
     display(playerInfo)

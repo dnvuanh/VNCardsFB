@@ -192,15 +192,13 @@ var GameMgr = cc.Class({
         UIManager.instance.onThrowSuccess(this.matchData.PreviousThrowPlayerId, this.matchData.CurrentCards);
     },
     onGameResult: function onGameResult(message) {
+        cc.log(message);
         var scores = JSON.parse(message.getString(1));
         var playerWinId = message.getString(2);
         var playersCards = {};
         for (var i = 0, seats = this.getOnlineSeatCount(); i < seats; i++) {
             var playerId = message.getString(3 + i * 2);
             var cards = JSON.parse(message.getString(3 + i * 2 + 1));
-            cards.sort(function (a, b) {
-                return a - b;
-            });
             playersCards[playerId] = cards;
         }
         UIManager.instance.displayResult(scores, playerWinId, playersCards);

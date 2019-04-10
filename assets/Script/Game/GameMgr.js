@@ -225,7 +225,6 @@ var GameMgr = cc.Class({
         {
             let playerId = message.getString(3 + i * 2);
             let cards = JSON.parse(message.getString(3 + i * 2 + 1));
-            cards.sort((a, b) => a - b);
             playersCards[playerId] = cards;
         }
         UIManager.instance.displayResult(scores, playerWinId, playersCards);

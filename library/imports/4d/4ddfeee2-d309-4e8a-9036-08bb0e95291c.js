@@ -33,7 +33,6 @@ cc.Class({
         this.ResultNodes = {};
         this.index = index;
         this.node.setPosition(position);
-        cc.log(position);
     },
     display: function display(playerInfo) {
         var _this = this;

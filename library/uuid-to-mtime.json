@@ -979,11 +979,6 @@
     "meta": 1554695354407,
     "relativePath": "Script\\Util\\GameHelper.js"
   },
-  "7cd40e88-0b96-4344-8e9e-130153c97712": {
-    "asset": 1554537700471,
-    "meta": 1554695353965,
-    "relativePath": "Script\\Manager\\GSMgr.js"
-  },
   "898242b9-7ce3-42fb-9a03-e8da0092373c": {
     "asset": 1548729709516,
     "meta": 1554695353732,
@@ -1003,11 +998,6 @@
     "asset": 1554695086476,
     "meta": 1554695354095,
     "relativePath": "Script\\ObjectPool.js"
-  },
-  "a5fb6e06-2a67-4334-aa57-7bb75a6d7df7": {
-    "asset": 1554695086473,
-    "meta": 1554695353875,
-    "relativePath": "Script\\Game\\GameMgr.js"
   },
   "6fdc0398-9a91-40d7-abd0-af80d15037ab": {
     "asset": 1554695086475,
@@ -1109,11 +1099,6 @@
     "meta": 1554885505073,
     "relativePath": "Prefabs\\Seat.prefab"
   },
-  "4ddfeee2-d309-4e8a-9036-08bb0e95291c": {
-    "asset": 1554820081189,
-    "meta": 1554820092365,
-    "relativePath": "Script\\UI\\SeatDisplay.js"
-  },
   "74de12e4-e266-4f55-9410-4f47314320b4": {
     "asset": 1554821048933,
     "meta": 1554821050117,
@@ -1158,5 +1143,20 @@
     "asset": 1554885548293,
     "meta": 1554885551657,
     "relativePath": "resources\\Texture\\deckIcon.png"
+  },
+  "7cd40e88-0b96-4344-8e9e-130153c97712": {
+    "asset": 1554889395229,
+    "meta": 1554889396718,
+    "relativePath": "Script\\Manager\\GSMgr.js"
+  },
+  "4ddfeee2-d309-4e8a-9036-08bb0e95291c": {
+    "asset": 1554896418849,
+    "meta": 1554896427113,
+    "relativePath": "Script\\UI\\SeatDisplay.js"
+  },
+  "a5fb6e06-2a67-4334-aa57-7bb75a6d7df7": {
+    "asset": 1554897993501,
+    "meta": 1554897995321,
+    "relativePath": "Script\\Game\\GameMgr.js"
   }
 }
