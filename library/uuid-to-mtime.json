@@ -1141,8 +1141,8 @@
   },
   "84e82e0d-f2ee-4225-b3b5-815de0fa28d0": {
     "asset": 1554885548293,
-    "meta": 1554885551657,
-    "relativePath": "resources\\Texture\\deckIcon.png"
+    "meta": 1554898562249,
+    "relativePath": "resources\\Texture\\hostIcon.png"
   },
   "7cd40e88-0b96-4344-8e9e-130153c97712": {
     "asset": 1554889395229,
@@ -1155,8 +1155,8 @@
     "relativePath": "Script\\UI\\SeatDisplay.js"
   },
   "a5fb6e06-2a67-4334-aa57-7bb75a6d7df7": {
-    "asset": 1554897993501,
-    "meta": 1554897995321,
+    "asset": 1554898233455,
+    "meta": 1554898307428,
     "relativePath": "Script\\Game\\GameMgr.js"
   }
 }

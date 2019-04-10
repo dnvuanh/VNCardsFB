@@ -192,7 +192,6 @@ var GameMgr = cc.Class({
         UIManager.instance.onThrowSuccess(this.matchData.PreviousThrowPlayerId, this.matchData.CurrentCards);
     },
     onGameResult: function onGameResult(message) {
-        cc.log(message);
         var scores = JSON.parse(message.getString(1));
         var playerWinId = message.getString(2);
         var playersCards = {};
