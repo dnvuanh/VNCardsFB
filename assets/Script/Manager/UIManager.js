@@ -175,5 +175,10 @@ var UIManager = cc.Class({
     refreshSeats(Seats)
     {
         this.MenuGame.refreshSeats(Seats);
+    },
+
+    getPlayerSeat(playerId)
+    {
+        return this.MenuGame.getPlayerSeat(playerId);
     }
 });

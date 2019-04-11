@@ -8,23 +8,20 @@ cc.Class({
     onLoad()
     {
         this.cachedPlayersPos = [];
-        this.cachedResultPos = [];
-        this.cachedCardsPos = [];
         this.Seats = [];
         
         for (let i=0; i<this.node.children.length; i++)
         {
             this.cachedPlayersPos[i] = this.node.children[i].position;
-            this.cachedResultPos[i] = this.node.children[i].getChildByName("ResultIcon").position;
-            this.cachedCardsPos[i] = this.node.children[i].getChildByName("cards").position;
             this.Seats[i] = cc.instantiate(this.SeatPrefab).getComponent("SeatDisplay");
             this.node.children[i].active = false;
             this.Seats[i].onInit(i, this.cachedPlayersPos[i]);
         }
-        for(let i=0;i < 4;i++)
+        for(let i = 0; i < 4; i++)
         {
             this.node.addChild(this.Seats[i].node);
         }
+        this.seatOffset = 0;
     },
 
     refreshSeats(Seats)
@@ -68,12 +65,7 @@ cc.Class({
             this.Seats[i].node.runAction(cc.sequence(fadeOut, cc.delayTime(0.1), movePosition, fadeIn));*/
             var movePosition = cc.moveTo(0.5,this.cachedPlayersPos[offset]);
             this.Seats[i].node.runAction(movePosition);
-            var cardsNode = this.Seats[i].node.getChildByName("display").getChildByName("cards");
-            var resultNode = this.Seats[i].node.getChildByName("display").getChildByName("ResultIcon");
-            resultNode.getComponent(cc.Layout).type = offset % 2 ? cc.Layout.Type.VERTICAL : cc.Layout.Type.HORIZONTAL;
-            cardsNode.angle = 90 * (offset % 2);
-            cardsNode.setPosition(this.cachedCardsPos[offset]);
-            resultNode.setPosition(this.cachedResultPos[offset]);
+            this.Seats[i].setPositionAfterRotate(offset);
         }
     },
 
@@ -127,40 +119,6 @@ cc.Class({
         }
     },
 
-    displayResult(playerWinId, playersCards)
-    {
-        for (var i=0; i<this.Seats.length; i++)
-        {
-            var seatDisplay = this.Seats[i];
-            if (seatDisplay && seatDisplay.getPlayerId() != null)
-            {
-                var cards = playersCards[seatDisplay.getPlayerId()];
-                var bInstantWin = playersCards[playerWinId].length == 13;
-                if(seatDisplay.getPlayerId() == playerWinId)
-                {
-                    seatDisplay.displayWinResult(bInstantWin, cards);
-                }
-                else 
-                {
-                    seatDisplay.displayLoseResult(bInstantWin, cards);
-                }
-            }
-        }
-    },
-
-    hideResultIcon()
-    {
-        for (var i=0; i<this.Seats.length; i++)
-        {
-            var seatDisplay = this.Seats[i]
-            seatDisplay.hideResultIcon();
-            if (seatDisplay && seatDisplay.getPlayerId() != null)
-            {
-                seatDisplay.RecallCards();
-            }
-        }
-    },
-
     onPlayerReady(playerId, isReady)
     {
         for (var i=0; i<this.Seats.length; i++)
@@ -171,6 +129,19 @@ cc.Class({
                 seatDisplay.setReady(isReady);
             }
         }
+    },
+
+    getPlayerSeat(playerId)
+    {
+        for (var i = 0; i < this.Seats.length; i++)
+        {
+            var seatDisplay = this.Seats[i];
+            if (seatDisplay && seatDisplay.getPlayerId() == playerId)
+            {
+                return seatDisplay.getPositionAfterRotate();
+            }
+        }
+        return -1;
     }
     
 });

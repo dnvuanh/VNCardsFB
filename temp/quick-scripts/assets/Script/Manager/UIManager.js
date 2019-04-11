@@ -124,6 +124,9 @@ var UIManager = cc.Class({
     },
     refreshSeats: function refreshSeats(Seats) {
         this.MenuGame.refreshSeats(Seats);
+    },
+    getPlayerSeat: function getPlayerSeat(playerId) {
+        return this.MenuGame.getPlayerSeat(playerId);
     }
 });
 
