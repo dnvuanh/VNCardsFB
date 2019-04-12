@@ -2,19 +2,21 @@ var Log = RTSession.getLogger();
 var ServerCode = require("ServerCode");
 var Define = require("Define");
 var GameHelper = require("GameHelper");
+var Config = require("Config");
 
 var MatchPublicData = {
-    Seats:{},
+    Seats:[null, null, null, null],
     Turn:null,
     TimeBeginTurn:0,
     TurnKeeper:null,
-    CurrentCards:{},
+    CurrentCards:null,
     Host:null,
     Winner:null,
     State: Define.GameState.WAITING,
     SkipState: [],
     PreviousThrowPlayerId: 0,
     RegisterLeave: [],
+    Timeout: Define.TIME_PER_TURN
 }
 
 var MatchPrivateData = {
@@ -153,15 +155,19 @@ var SendPlayerThrowSuccess = function(playerId, cards)
 
 var SendGameResult = function(scores)
 {
-    var players = RTSession.getPlayers();
     var message = RTSession.newData();
     message.setString(1, JSON.stringify(scores));
     message.setString(2, MatchPublicData.Winner);
-    for(var i = 0; i < players.length; i++)
+    for(var i = 0, count = 0; i < MatchPublicData.Seats.length; i++)
     {
-        message.setString(3 + i * 2, players[i].getPlayerId());
-        var cardsString = JSON.stringify(MatchPrivateData.Cards[players[i].getPlayerId()]);
-        message.setString(3 + i * 2 + 1, cardsString);
+        var playerId = MatchPublicData.Seats[i];
+        if(playerId != null)
+        {
+            message.setString(3 + count * 2, playerId);
+            var cardsString = JSON.stringify(MatchPrivateData.Cards[playerId]);
+            message.setString(3 + count * 2 + 1, cardsString);
+            count++;
+        }
     }  
 
     RTSession.newPacket()
@@ -194,7 +200,7 @@ var OnSeatsRequest = function(packet)
         return;
     }
     
-    if (MatchPublicData.Seats[pos] == null || !MatchPublicData.Seats[pos].hasOwnProperty(pos))
+    if (MatchPublicData.Seats[pos] == null)
     {
         LeaveCurrentSeat(playerId);
         EnterSeat(pos, playerId);
@@ -265,26 +271,27 @@ var UpdateGameState = function(state)
 
 var LeaveCurrentSeat = function(playerId)
 {
-    Log.debug("Leave Current Seat " + playerId);
-    Log.debug("Current Seats " + JSON.stringify(MatchPublicData.Seats));
-    var currentSeats = Object.keys(MatchPublicData.Seats);
-    
-    for (var i=0; i<currentSeats.length; i++)
+    for (var i=0; i<MatchPublicData.Seats.length; i++)
     {
-        if (MatchPublicData.Seats[currentSeats[i]] == playerId)
+        if (MatchPublicData.Seats[i] == playerId)
         {
-            delete MatchPublicData.Seats[currentSeats[i]];
+            MatchPublicData.Seats[i] = null;
             if (playerId==MatchPublicData.Host)
             {
                 MatchPublicData.Host = null;
                 findNextHost();
             }
-            SendMessageLeaveSeat(playerId, currentSeats[i]);
+            delete MatchPrivateData.Cards[playerId];
+            SendMessageLeaveSeat(playerId, i);
             break;
         }
     }
     
-    if (Object.keys(MatchPublicData.Seats).length < 2)
+    currentSeats = MatchPublicData.Seats.filter(function(seat){
+        return seat != null;
+    })
+    
+    if (currentSeats.length < 2)
     {
         if (MatchPublicData.State == Define.GameState.READY)
             UpdateGameState(Define.GameState.WAITING);
@@ -293,12 +300,11 @@ var LeaveCurrentSeat = function(playerId)
 
 var findNextHost = function()
 {
-    var currentSeats = Object.keys(MatchPublicData.Seats);
-    for (var i=0; i<currentSeats.length; i++)
+    for (var i=0; i<MatchPublicData.Seats.length; i++)
     {
-        if (MatchPublicData.Seats[currentSeats[i]] != null)
+        if (MatchPublicData.Seats[i] != null)
         {
-            setMatchHost(MatchPublicData.Seats[currentSeats[i]]);
+            setMatchHost(MatchPublicData.Seats[i]);
             break;
         }
     }
@@ -319,22 +325,46 @@ var OnRequestMatch = function(packet)
 
 var onPlayerConnect = function(player)
 {
-    SendCurrentMatch(player.getPlayerId(), player.getPeerId());
+    var playerId = player.getPlayerId();
+    var peerID = player.getPeerId();
+
+    if (MatchPublicData.State == Define.GameState.RUNNING)
+    {
+        for (var i=0; i<MatchPublicData.Seats.length; i++)
+        {
+            if (MatchPublicData.Seats[i] == playerId) //check if player is still playing
+            {
+                Log.debug("Sending cards to player " + playerId);
+                SendCardsToPlayer(playerId, peerID);
+                break;
+            }
+        }
+    }
+    SendCurrentMatch(playerId, peerID);
+    
+    Log.debug("onPlayerConnect" + JSON.stringify(MatchPublicData.RegisterLeave));
+    Log.debug("PlayerId " + playerId);
+    var index = MatchPublicData.RegisterLeave.indexOf(playerId);
+        MatchPublicData.RegisterLeave.splice(index, 1);
+    Log.debug("onPlayerConnect" + JSON.stringify(MatchPublicData.RegisterLeave));
 }
 
 var onPlayerDisconnect = function(player)
 {
     var playerId = player.getPlayerId();
-    LeaveCurrentSeat(playerId);
+    if (MatchPublicData.State == Define.GameState.RUNNING)
+        MatchPublicData.RegisterLeave.push(playerId);
+    else
+        LeaveCurrentSeat(playerId);
+    Log.debug("onPlayerDisconnect" + JSON.stringify(MatchPublicData.RegisterLeave));
 }
 
 var CheckInstantWin = function()
 {
-    var players = RTSession.getPlayers();
-    for(var i = 0; i < players.length; i++)
+    for(var i = 0; i < MatchPublicData.Seats.length; i++)
     {
-        var playerId = players[i].getPlayerId();
-        if(GameHelper.isInstantWin(MatchPrivateData.Cards[playerId]))
+        var playerId = MatchPublicData.Seats[i];
+        if(playerId && GameHelper.isInstantWin(MatchPrivateData.Cards[playerId]))
         {
             MatchPublicData.Winner = playerId;
             return true;
@@ -347,8 +377,7 @@ var ShuffleDeck = function()
 {
     var CARD_QUANTITY = 52;
     var CARD_PER_PLAYER = 13;
-    var players = RTSession.getPlayers();
-    
+
     MatchPrivateData.Deck = Define.DefaultCards.slice();
     //shuffle
     for(var i = CARD_QUANTITY; i > 1; i--) {
@@ -358,10 +387,11 @@ var ShuffleDeck = function()
         MatchPrivateData.Deck[randomIdx] = temp;
     } 
     
-    for(var i = 0; i < players.length; i++)
+    for(var i = 0; i < MatchPublicData.Seats.length; i++)
     {
-        var playerId = players[i].getPlayerId();
-        MatchPrivateData.Cards[playerId] = MatchPrivateData.Deck.slice(i * CARD_PER_PLAYER, (i + 1) * CARD_PER_PLAYER);
+        var playerId = MatchPublicData.Seats[i];
+        if (playerId)
+            MatchPrivateData.Cards[playerId] = MatchPrivateData.Deck.slice(i * CARD_PER_PLAYER, (i + 1) * CARD_PER_PLAYER);
     }
 }
 
@@ -379,11 +409,18 @@ var EndGame = function()
 
 var SendCardsToAllPlayers = function()
 {
-    var players = RTSession.getPlayers();
-    for(var i = 0; i < players.length; i++)
+    for(var i = 0; i < MatchPublicData.Seats.length; i++)
     {
-        var player = players[i];
-        SendCardsToPlayer(player.getPlayerId(), player.getPeerId());
+        if (MatchPublicData.Seats[i] != null)
+        {
+            var player = RTSession.getPlayers().filter(function(it){
+                return it.getPlayerId() == MatchPublicData.Seats[i];
+            })
+            if (player[0])
+            {
+                SendCardsToPlayer(player[0].getPlayerId(), player[0].getPeerId());
+            }
+        }
     }
 }
 
@@ -391,7 +428,6 @@ var ShuffleDeckDebug = function(debugCode)
 {
     var CARD_QUANTITY = 52;
     var CARD_PER_PLAYER = 13;
-    var players = RTSession.getPlayers();
     
     switch (debugCode)
     {
@@ -410,10 +446,12 @@ var ShuffleDeckDebug = function(debugCode)
         default:
             MatchPrivateData.Deck = Define.DefaultCards.slice();
     }
-    for(var i = 0; i < players.length; i++)
+    for(var i = 0; i < MatchPublicData.Seats.length; i++)
     {
-        var playerId = players[i].getPlayerId();
-        MatchPrivateData.Cards[playerId] = MatchPrivateData.Deck.slice(i * CARD_PER_PLAYER, (i + 1) * CARD_PER_PLAYER);
+        if(MatchPublicData.Seats[i] != null)
+        {
+            MatchPrivateData.Cards[MatchPublicData.Seats[i]] = MatchPrivateData.Deck.slice(i * CARD_PER_PLAYER, (i + 1) * CARD_PER_PLAYER);
+        }
     }
 }
 
@@ -446,13 +484,18 @@ var FindFirstTurn = function()
     ResetSkipState();
 }
 
-var OnStartGame = function(message)
+var OnStartGame = function(packet)
 {
-    var debugCode = message.getData().getNumber(1);
+    var debugCode = packet.getData().getNumber(1);
+    StartGame(debugCode);
+}
+
+var StartGame = function(debugCode)
+{
     if (MatchPublicData.State == Define.GameState.READY)
     {
         UpdateGameState(Define.GameState.STARTED);
-        if(debugCode >= 100)    
+        if(debugCode && debugCode >= 100)    
         {
             ShuffleDeckDebug(debugCode);
         } 
@@ -478,13 +521,11 @@ var OnStartGame = function(message)
 
 var GetPlayerSeat = function(playerId)
 {
-    var currentSeats = Object.keys(MatchPublicData.Seats);
-    
-    for (var i=0; i<currentSeats.length; i++)
+    for (var i=0; i<MatchPublicData.Seats.length; i++)
     {
-        if (MatchPublicData.Seats[currentSeats[i]] == playerId)
+        if (MatchPublicData.Seats[i] == playerId)
         {
-            return currentSeats[i];
+            return i;
         }
     }
     return -1;
@@ -502,13 +543,13 @@ var PlayerHasSkipped = function(seatId)
 
 var FindNextPlayerCanPlay = function(playerId)
 {
-    var currentSeats = Object.keys(MatchPublicData.Seats);
-    var i = (currentSeats.indexOf(GetPlayerSeat(playerId)) + 1) % currentSeats.length;
-    while(PlayerHasSkipped(currentSeats[i]) || IsPlayerFinished(currentSeats[i])) 
+    var i = (GetPlayerSeat(playerId) + 1) % MatchPublicData.Seats.length;
+
+    while(MatchPublicData.Seats[i] == null || PlayerHasSkipped(i)) // || IsPlayerFinished(i)) 
     {
-        i = (i + 1) % currentSeats.length;
+        i = (i + 1) % MatchPublicData.Seats.length;
     }
-    return MatchPublicData.Seats[currentSeats[i]];
+    return MatchPublicData.Seats[i];
 }
 
 var ResetSkipState = function()
@@ -551,6 +592,7 @@ var RemoveCardsFromPlayer = function(playerId, cards)
 var PrepareNewGame = function()
 {
     //remove player who registered leave game
+    Log.debug("onPlayerConnect" + JSON.stringify(MatchPublicData.RegisterLeave));
     for (var i=0; i<MatchPublicData.RegisterLeave.length; i++)
     {
         LeaveCurrentSeat(MatchPublicData.RegisterLeave[i]);
@@ -562,11 +604,14 @@ var PrepareNewGame = function()
 
 var CheckEnoughPlayer = function()
 {
-    if (Object.keys(MatchPublicData.Seats).length >= 2)
+    var currentSeats = MatchPublicData.Seats.filter(function(seat){
+        return seat != null;
+    })
+    if (currentSeats.length >= 2)
     {
         UpdateGameState(Define.GameState.READY);
         startGameTimeout = RTSession.setTimeout(function(){
-            OnStartGame();
+            StartGame();
         }, Define.TIME_FORCE_START * 1000)
     }
 }
@@ -585,12 +630,14 @@ var CanculateScores = function(winner)
     var scores = {};
     var reward = 0;
     
-    var currentSeats = Object.keys(MatchPublicData.Seats);
-    for (var i=0; i<currentSeats.length; i++)
+    for (var i=0; i<MatchPublicData.Seats.length; i++)
     {
-        var playerId = MatchPublicData.Seats[currentSeats[i]];
-        scores[playerId] = -(MatchPrivateData.Cards[playerId].length * 200); //TODO: remove hardcore 200
-        reward += Math.abs(scores[playerId]);
+        var playerId = MatchPublicData.Seats[i];
+        if(playerId != null)
+        {
+            scores[playerId] = -(MatchPrivateData.Cards[playerId].length * 200); //TODO: remove hardcore 200
+            reward += Math.abs(scores[playerId]);
+        }
     }
     scores[winner] = reward;
     return scores;
@@ -607,8 +654,8 @@ var OnCardsThrown = function(packet)
         return;
     }
     
-    if (RemoveCardsFromPlayer(playerId, cards) 
-        && GameHelper.validTurn(MatchPublicData.CurrentCards, cards))
+    if (GameHelper.validTurn(MatchPublicData.CurrentCards, cards)
+        && RemoveCardsFromPlayer(playerId, cards))
     {
         MatchPublicData.CurrentCards = cards;
         MatchPublicData.PreviousThrowPlayerId = playerId;

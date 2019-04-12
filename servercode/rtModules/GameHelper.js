@@ -163,7 +163,7 @@ var FiveContinuousPairs = function(cards)
     
     for(var i = 0, lastIdx = CARD_QUANTITY - 6; i < lastIdx; i++)
     {
-        if(weight[i] > 2 && weight[i+1] > 2 && weight[i+2] > 2 && weight[i+3] > 2 && weight[i+4] > 2)
+        if(weight[i] > 1 && weight[i+1] > 1 && weight[i+2] > 1 && weight[i+3] > 1 && weight[i+4] > 1)
         {
             return true;
         }
@@ -175,7 +175,7 @@ var SixPairs = function(cards)
 {
     var weight = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
     var CARD_QUANTITY = 13;
-    var pairCount;
+    var pairCount = 0;
     for(var i = 0; i < CARD_QUANTITY; i++)
     {
         var card = cardValue(cards[i]) - 3;
