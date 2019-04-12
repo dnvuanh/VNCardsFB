@@ -50,9 +50,9 @@
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 0.3619791666666667,
-      "y": 0.3619791666666667,
-      "z": 0.3619791666666667
+      "x": 0.36248779296875,
+      "y": 0.36248779296875,
+      "z": 0.36248779296875
     },
     "_quat": {
       "__type__": "cc.Quat",
@@ -3800,8 +3800,8 @@
       "__id__": 82
     },
     "_enabled": true,
-    "APIKey": "j356603E53FA",
-    "Secret": "SCWcCimJ27E9MWBwAXn2kJ9lKes90KiC",
+    "APIKey": "U376425o7BLE",
+    "Secret": "jFCL29CmvyREVveMfZZb4VXVY45TiSAx",
     "_id": "68qDaWlkVDyKsKoJkMUwzx"
   },
   {

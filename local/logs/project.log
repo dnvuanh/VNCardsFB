@@ -1,88 +1,2181 @@
-2019-04-10T02:22:59.021Z - normal: Load ~/.CocosCreator/settings.json
-2019-04-10T02:23:00.279Z - normal: Initializing Asset Database
-2019-04-10T02:23:00.284Z - normal: checking language setting...
-2019-04-10T02:23:00.284Z - normal: Language: en
-2019-04-10T02:23:01.052Z - success: preview server running at http://localhost:7456
-2019-04-10T02:23:01.054Z - success: protocol editor-framework registered
-2019-04-10T02:23:01.055Z - success: protocol app registered
-2019-04-10T02:23:01.055Z - success: protocol theme registered
-2019-04-10T02:23:01.055Z - success: protocol packages registered
-2019-04-10T02:23:01.055Z - success: protocol uuid registerred
-2019-04-10T02:23:01.055Z - success: protocol db registerred
-2019-04-10T02:23:01.055Z - success: protocol thumbnail registerred
-2019-04-10T02:23:01.055Z - success: protocol unpack registerred
-2019-04-10T02:23:01.055Z - success: protocol disable-commonjs registerred
-2019-04-10T02:23:01.506Z - normal: connected!
-2019-04-10T02:23:01.507Z - normal: Check project D:\Projects\VNCardsFB
-2019-04-10T02:23:01.509Z - normal: Initializing project D:\Projects\VNCardsFB
-2019-04-10T02:23:02.208Z - normal: Initializing Cocos2d
-2019-04-10T02:23:02.900Z - normal: Initializing engine extends
-2019-04-10T02:23:02.903Z - normal: Loading editor/builtin packages from C:\CocosCreator\resources\app.asar\editor\builtin
-2019-04-10T02:23:02.909Z - normal: Loading builtin packages from C:\CocosCreator\resources\builtin
-2019-04-10T02:23:03.576Z - success: assets loaded
-2019-04-10T02:23:03.577Z - success: asset-db-debugger loaded
-2019-04-10T02:23:03.667Z - success: builder loaded
-2019-04-10T02:23:03.667Z - success: code-editor loaded
-2019-04-10T02:23:03.741Z - success: cocos-analytics loaded
-2019-04-10T02:23:03.741Z - success: color-picker loaded
-2019-04-10T02:23:03.837Z - success: console loaded
-2019-04-10T02:23:03.837Z - success: google-play-instant loaded
-2019-04-10T02:23:03.962Z - success: fb-instant-games loaded
-2019-04-10T02:23:03.962Z - success: jsb-adapter loaded
-2019-04-10T02:23:03.975Z - success: google-instant-games loaded
-2019-04-10T02:23:03.975Z - success: oppo-runtime loaded
-2019-04-10T02:23:04.108Z - success: hierarchy loaded
-2019-04-10T02:23:04.108Z - success: package-manager loaded
-2019-04-10T02:23:04.245Z - success: inspector loaded
-2019-04-10T02:23:04.246Z - success: qqplay-adapter loaded
-2019-04-10T02:23:04.251Z - success: keystore loaded
-2019-04-10T02:23:04.251Z - success: sdkbox loaded
-2019-04-10T02:23:04.264Z - success: node-library loaded
-2019-04-10T02:23:04.264Z - success: tester loaded
-2019-04-10T02:23:04.273Z - success: package-asset loaded
-2019-04-10T02:23:04.273Z - success: ui-grid loaded
-2019-04-10T02:23:04.276Z - success: preferences loaded
-2019-04-10T02:23:04.277Z - success: ui-kit-preview-extra loaded
-2019-04-10T02:23:04.280Z - success: project-exporter loaded
-2019-04-10T02:23:04.280Z - success: ui-kit-preview loaded
-2019-04-10T02:23:04.552Z - success: project-importer loaded
-2019-04-10T02:23:04.552Z - success: ui-kit loaded
-2019-04-10T02:23:04.556Z - success: project-settings loaded
-2019-04-10T02:23:04.557Z - success: ui-tree loaded
-2019-04-10T02:23:04.562Z - success: scene loaded
-2019-04-10T02:23:04.563Z - success: vivo-runtime loaded
-2019-04-10T02:23:04.565Z - success: simulator-debugger loaded
-2019-04-10T02:23:04.565Z - success: weapp-adapter loaded
-2019-04-10T02:23:04.567Z - success: sprite-editor loaded
-2019-04-10T02:23:04.570Z - success: store loaded
-2019-04-10T02:23:04.574Z - success: timeline loaded
-2019-04-10T02:23:05.878Z - normal: Loading packages
-2019-04-10T02:23:05.883Z - normal: Watching packages
-2019-04-10T02:23:06.341Z - normal: Run Application
-2019-04-10T02:57:46.558Z - error: TypeError: Cannot read property 'uuid' of null
-    at SVGGElement.t.addEventListener (C:\CocosCreator\resources\app.asar\editor\page\gizmos\elements\gizmo.js:1:4491)
-2019-04-10T04:40:26.803Z - warn: The Asset used by component "cc.Sprite" in scene "Game.fire" is missing. Detailed information:
-Node path: "Canvas/MenuGame/ShowRightPanel"
-Asset url: "db://assets/Scene/Game.fire"
-Missing uuid: "006b6346-ceb0-4892-9b2d-3239be9163f1"
+2019-04-11T17:37:25.108Z - normal: Load ~/.CocosCreator/settings.json
+2019-04-11T17:37:25.171Z - normal: Initializing Asset Database
+2019-04-11T17:37:25.176Z - normal: checking language setting...
+2019-04-11T17:37:25.176Z - normal: Language: en
+2019-04-11T17:37:26.203Z - success: preview server running at http://localhost:7456
+2019-04-11T17:37:26.246Z - success: protocol editor-framework registered
+2019-04-11T17:37:26.246Z - success: protocol app registered
+2019-04-11T17:37:26.246Z - success: protocol theme registered
+2019-04-11T17:37:26.246Z - success: protocol packages registered
+2019-04-11T17:37:26.247Z - success: protocol uuid registerred
+2019-04-11T17:37:26.247Z - success: protocol db registerred
+2019-04-11T17:37:26.247Z - success: protocol thumbnail registerred
+2019-04-11T17:37:26.247Z - success: protocol unpack registerred
+2019-04-11T17:37:26.247Z - success: protocol disable-commonjs registerred
+2019-04-11T17:37:28.043Z - normal: connected!
+2019-04-11T17:37:28.045Z - normal: Check project /Users/anhdinh/Documents/GitHub/VNCardsFB
+2019-04-11T17:37:28.046Z - normal: Initializing project /Users/anhdinh/Documents/GitHub/VNCardsFB
+2019-04-11T17:37:28.905Z - normal: Initializing Cocos2d
+2019-04-11T17:37:29.836Z - normal: Initializing engine extends
+2019-04-11T17:37:29.839Z - normal: Loading editor/builtin packages from /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin
+2019-04-11T17:37:29.859Z - normal: Loading builtin packages from /Applications/CocosCreator.app/Contents/Resources/builtin
+2019-04-11T17:37:30.693Z - success: assets loaded
+2019-04-11T17:37:30.694Z - success: asset-db-debugger loaded
+2019-04-11T17:37:30.783Z - success: builder loaded
+2019-04-11T17:37:30.784Z - success: color-picker loaded
+2019-04-11T17:37:30.933Z - success: cocos-analytics loaded
+2019-04-11T17:37:30.934Z - success: google-play-instant loaded
+2019-04-11T17:37:30.968Z - success: console loaded
+2019-04-11T17:37:30.969Z - success: jsb-adapter loaded
+2019-04-11T17:37:31.157Z - success: fb-instant-games loaded
+2019-04-11T17:37:31.158Z - success: oppo-runtime loaded
+2019-04-11T17:37:31.185Z - success: google-instant-games loaded
+2019-04-11T17:37:31.186Z - success: package-manager loaded
+2019-04-11T17:37:31.391Z - success: hierarchy loaded
+2019-04-11T17:37:31.391Z - success: qqplay-adapter loaded
+2019-04-11T17:37:31.451Z - success: inspector loaded
+2019-04-11T17:37:31.452Z - success: sdkbox loaded
+2019-04-11T17:37:31.603Z - success: keystore loaded
+2019-04-11T17:37:31.603Z - success: tester loaded
+2019-04-11T17:37:31.640Z - success: node-library loaded
+2019-04-11T17:37:31.641Z - success: ui-grid loaded
+2019-04-11T17:37:31.675Z - success: package-asset loaded
+2019-04-11T17:37:31.676Z - success: ui-kit-preview-extra loaded
+2019-04-11T17:37:31.710Z - success: preferences loaded
+2019-04-11T17:37:31.710Z - success: ui-kit-preview loaded
+2019-04-11T17:37:31.738Z - success: project-exporter loaded
+2019-04-11T17:37:31.739Z - success: ui-kit loaded
+2019-04-11T17:37:31.792Z - success: project-importer loaded
+2019-04-11T17:37:31.793Z - success: ui-tree loaded
+2019-04-11T17:37:31.834Z - success: project-settings loaded
+2019-04-11T17:37:31.835Z - success: vivo-runtime loaded
+2019-04-11T17:37:31.876Z - success: scene loaded
+2019-04-11T17:37:31.877Z - success: weapp-adapter loaded
+2019-04-11T17:37:31.884Z - success: simulator-debugger loaded
+2019-04-11T17:37:31.889Z - success: sprite-editor loaded
+2019-04-11T17:37:31.926Z - success: store loaded
+2019-04-11T17:37:31.975Z - success: timeline loaded
+2019-04-11T17:37:36.440Z - normal: Loading packages
+2019-04-11T17:37:36.446Z - normal: Watching packages
+2019-04-11T17:37:36.571Z - normal: Run Application
+2019-04-11T19:42:04.144Z - normal: Simulator: WORKAREA WIDTH 1280.00, HEIGHT 755.00
+2019-04-11T19:42:04.146Z - normal: Simulator: FRAME SCALE = 1.00
+2019-04-11T19:42:04.346Z - normal: Simulator: 
+2019-04-11T19:42:04.346Z - normal: Simulator: {
+2019-04-11T19:42:04.347Z - normal: Simulator: 	build_type: DEBUG
+2019-04-11T19:42:04.348Z - normal: Simulator: 	gl.vendor: Intel Inc.
+2019-04-11T19:42:04.348Z - normal: Simulator: 	gl.supports_PVRTC: false
+2019-04-11T19:42:04.348Z - normal: Simulator: 	gl.renderer: Intel Iris OpenGL Engine
+2019-04-11T19:42:04.349Z - normal: Simulator: 	gl.supports_ATITC: false
+2019-04-11T19:42:04.350Z - normal: Simulator: 	gl.supports_discard_framebuffer: false
+2019-04-11T19:42:04.350Z - normal: Simulator: 	gl.supports_NPOT: true
+2019-04-11T19:42:04.350Z - normal: Simulator: 	gl.max_texture_units: 16
+2019-04-11T19:42:04.352Z - normal: Simulator: 	gl.supports_ETC1: false
+2019-04-11T19:42:04.353Z - normal: Simulator: 	gl.max_texture_size: 16384
+2019-04-11T19:42:04.353Z - normal: Simulator: 	gl.supports_BGRA8888: false
+2019-04-11T19:42:04.354Z - normal: Simulator: 	gl.supports_vertex_array_object: true
+2019-04-11T19:42:04.354Z - normal: Simulator: 	gl.supports_OES_map_buffer: false
+2019-04-11T19:42:04.354Z - normal: Simulator: 	compiled_with_gl_state_cache: true
+2019-04-11T19:42:04.355Z - normal: Simulator: 	gl.supports_OES_packed_depth_stencil: false
+2019-04-11T19:42:04.355Z - normal: Simulator: 	gl.version: 2.1 INTEL-10.25.19
+2019-04-11T19:42:04.356Z - normal: Simulator: 	gl.supports_S3TC: true
+2019-04-11T19:42:04.356Z - normal: Simulator: 	compiled_with_profiler: false
+2019-04-11T19:42:04.356Z - normal: Simulator: 	gl.supports_OES_depth24: false
+2019-04-11T19:42:04.356Z - normal: Simulator: }
+2019-04-11T19:42:04.356Z - normal: Simulator: 
+2019-04-11T19:42:04.357Z - normal: Simulator: 
+2019-04-11T19:42:04.357Z - normal: Simulator: Project Config:
+2019-04-11T19:42:04.357Z - normal: Simulator:     project dir: /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/simulator/mac/Simulator.app/Contents/Resources/
+2019-04-11T19:42:04.358Z - normal: Simulator:     writable path: $(PROJDIR)/
+2019-04-11T19:42:04.358Z - normal: Simulator:     script file: $(PROJDIR)/main.js
+2019-04-11T19:42:04.358Z - normal: Simulator:     frame size: 960 x 640
+2019-04-11T19:42:04.358Z - normal: Simulator:     frame scale: 1.00
+2019-04-11T19:42:04.359Z - normal: Simulator:     show console: NO
+2019-04-11T19:42:04.359Z - normal: Simulator:     write debug log: NO ()
+2019-04-11T19:42:04.359Z - normal: Simulator:     listen: 
+2019-04-11T19:42:04.359Z - normal: Simulator:     debugger: none
+2019-04-11T19:42:04.360Z - normal: Simulator:     add searching path:
+2019-04-11T19:42:04.360Z - normal: Simulator: 
+2019-04-11T19:42:04.360Z - normal: Simulator: 
+2019-04-11T19:42:04.360Z - normal: Simulator: 
+2019-04-11T19:42:04.361Z - normal: Simulator: resetDesignResolution request
+2019-04-11T19:42:04.361Z - normal: Simulator: ------------------------------------------------
+2019-04-11T19:42:04.361Z - normal: Simulator: LOAD Js FILE: jsb-adapter/jsb-builtin.js
+2019-04-11T19:42:04.362Z - normal: Simulator: ------------------------------------------------
+2019-04-11T19:42:04.362Z - normal: Simulator: Initializing V8, version: 6.0.286.52
+2019-04-11T19:42:05.003Z - normal: Simulator: libuv version: 1.23.1-dev
+2019-04-11T19:42:05.016Z - normal: Simulator: Debugger listening..., visit [ chrome-devtools://devtools/bundled/inspector.html?v8only=true&ws=0.0.0.0:5086/00010002-0003-4004-8005-000600070008 ] in chrome browser to debug!
+2019-04-11T19:42:05.016Z - normal: Simulator: For help see https://nodejs.org/en/docs/inspector
+2019-04-11T19:42:05.112Z - normal: Simulator: JS: Enable batch GL commands optimization!
+2019-04-11T19:42:05.113Z - normal: Simulator: resetDesignResolution request
+2019-04-11T19:42:05.114Z - normal: Simulator: ------------------------------------------------
+2019-04-11T19:42:05.114Z - normal: Simulator: LOAD Js FILE: main.js
+2019-04-11T19:42:05.114Z - normal: Simulator: ------------------------------------------------
+2019-04-11T19:42:05.680Z - normal: Simulator: iShow!
+2019-04-11T19:42:05.845Z - normal: Simulator: glGetIntegerv: pname: 0x8b4c
+2019-04-11T19:42:05.854Z - normal: Simulator: JS: Cocos Creator v2.1.0
+2019-04-11T19:42:08.611Z - normal: Simulator: ScriptEngine::cleanup begin ...
+2019-04-11T19:42:08.612Z - normal: Simulator: GC begin ..., (js->native map) size: 36, all objects: 75
+2019-04-11T19:42:08.681Z - normal: Simulator: GC end ..., (js->native map) size: 36, all objects: 75
+2019-04-11T19:42:08.682Z - normal: Simulator: GC begin ..., (js->native map) size: 36, all objects: 75
+2019-04-11T19:42:08.752Z - normal: Simulator: GC end ..., (js->native map) size: 36, all objects: 75
+2019-04-11T19:42:08.753Z - normal: Simulator: Destroy WebGLProgram (3) by GC
+2019-04-11T19:42:08.753Z - normal: Simulator: Destroy WebGLFramebuffer (1) by GC
+2019-04-11T19:42:08.753Z - normal: Simulator: Destroy WebGLTexture (20) by GC
+2019-04-11T19:42:08.754Z - normal: Simulator: Destroy WebGLTexture (19) by GC
+2019-04-11T19:42:08.754Z - normal: Simulator: Destroy WebGLTexture (18) by GC
+2019-04-11T19:42:08.756Z - normal: Simulator: Destroy WebGLTexture (17) by GC
+2019-04-11T19:42:08.757Z - normal: Simulator: Destroy WebGLTexture (15) by GC
+2019-04-11T19:42:08.757Z - normal: Simulator: Destroy WebGLTexture (14) by GC
+2019-04-11T19:42:08.758Z - normal: Simulator: Destroy WebGLTexture (12) by GC
+2019-04-11T19:42:08.758Z - normal: Simulator: Destroy WebGLBuffer (4) by GC
+2019-04-11T19:42:08.758Z - normal: Simulator: Destroy WebGLBuffer (2) by GC
+2019-04-11T19:42:08.759Z - normal: Simulator: Destroy WebGLTexture (11) by GC
+2019-04-11T19:42:08.759Z - normal: Simulator: Destroy WebGLTexture (3) by GC
+2019-04-11T19:42:08.759Z - normal: Simulator: Destroy WebGLTexture (8) by GC
+2019-04-11T19:42:08.760Z - normal: Simulator: Destroy WebGLTexture (7) by GC
+2019-04-11T19:42:08.760Z - normal: Simulator: Destroy WebGLTexture (5) by GC
+2019-04-11T19:42:08.760Z - normal: Simulator: Destroy WebGLTexture (4) by GC
+2019-04-11T19:42:08.760Z - normal: Simulator: Destroy WebGLTexture (2) by GC
+2019-04-11T19:42:08.760Z - normal: Simulator: Destroy WebGLTexture (6) by GC
+2019-04-11T19:42:08.761Z - normal: Simulator: Destroy WebGLTexture (16) by GC
+2019-04-11T19:42:08.761Z - normal: Simulator: Destroy WebGLBuffer (6) by GC
+2019-04-11T19:42:08.761Z - normal: Simulator: Destroy WebGLTexture (1) by GC
+2019-04-11T19:42:08.761Z - normal: Simulator: Destroy WebGLBuffer (1) by GC
+2019-04-11T19:42:08.761Z - normal: Simulator: Destroy WebGLBuffer (8) by GC
+2019-04-11T19:42:08.762Z - normal: Simulator: Destroy WebGLTexture (9) by GC
+2019-04-11T19:42:08.762Z - normal: Simulator: Destroy WebGLTexture (13) by GC
+2019-04-11T19:42:08.762Z - normal: Simulator: Destroy WebGLBuffer (7) by GC
+2019-04-11T19:42:08.763Z - normal: Simulator: Destroy WebGLTexture (10) by GC
+2019-04-11T19:42:08.763Z - normal: Simulator: Destroy WebGLBuffer (3) by GC
+2019-04-11T19:42:08.763Z - normal: Simulator: Destroy WebGLBuffer (5) by GC
+2019-04-11T19:42:08.763Z - normal: Simulator: GC begin ..., (js->native map) size: 0, all objects: 0
+2019-04-11T19:42:08.849Z - normal: Simulator: GC end ..., (js->native map) size: 0, all objects: 0
+2019-04-11T19:42:08.852Z - normal: Simulator: ScriptEngine::cleanup end ...
+2019-04-11T19:42:09.888Z - normal: Simulator: WORKAREA WIDTH 1280.00, HEIGHT 755.00
+2019-04-11T19:42:09.888Z - normal: Simulator: FRAME SCALE = 1.00
+2019-04-11T19:42:10.081Z - normal: Simulator: 
+2019-04-11T19:42:10.081Z - normal: Simulator: {
+2019-04-11T19:42:10.082Z - normal: Simulator: 	build_type: DEBUG
+2019-04-11T19:42:10.082Z - normal: Simulator: 	gl.vendor: Intel Inc.
+2019-04-11T19:42:10.083Z - normal: Simulator: 	gl.supports_PVRTC: false
+2019-04-11T19:42:10.083Z - normal: Simulator: 	gl.renderer: Intel Iris OpenGL Engine
+2019-04-11T19:42:10.084Z - normal: Simulator: 	gl.supports_ATITC: false
+2019-04-11T19:42:10.084Z - normal: Simulator: 	gl.supports_discard_framebuffer: false
+2019-04-11T19:42:10.084Z - normal: Simulator: 	gl.supports_NPOT: true
+2019-04-11T19:42:10.084Z - normal: Simulator: 	gl.max_texture_units: 16
+2019-04-11T19:42:10.085Z - normal: Simulator: 	gl.supports_ETC1: false
+2019-04-11T19:42:10.085Z - normal: Simulator: 	gl.max_texture_size: 16384
+2019-04-11T19:42:10.085Z - normal: Simulator: 	gl.supports_BGRA8888: false
+2019-04-11T19:42:10.085Z - normal: Simulator: 	gl.supports_vertex_array_object: true
+2019-04-11T19:42:10.086Z - normal: Simulator: 	gl.supports_OES_map_buffer: false
+2019-04-11T19:42:10.086Z - normal: Simulator: 	compiled_with_gl_state_cache: true
+2019-04-11T19:42:10.086Z - normal: Simulator: 	gl.supports_OES_packed_depth_stencil: false
+2019-04-11T19:42:10.087Z - normal: Simulator: 	gl.version: 2.1 INTEL-10.25.19
+2019-04-11T19:42:10.087Z - normal: Simulator: 	gl.supports_S3TC: true
+2019-04-11T19:42:10.087Z - normal: Simulator: 	compiled_with_profiler: false
+2019-04-11T19:42:10.088Z - normal: Simulator: 	gl.supports_OES_depth24: false
+2019-04-11T19:42:10.088Z - normal: Simulator: }
+2019-04-11T19:42:10.088Z - normal: Simulator: 
+2019-04-11T19:42:10.088Z - normal: Simulator: 
+2019-04-11T19:42:10.089Z - normal: Simulator: Project Config:
+2019-04-11T19:42:10.089Z - normal: Simulator:     project dir: /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/simulator/mac/Simulator.app/Contents/Resources/
+2019-04-11T19:42:10.089Z - normal: Simulator:     writable path: $(PROJDIR)/
+2019-04-11T19:42:10.089Z - normal: Simulator:     script file: $(PROJDIR)/main.js
+2019-04-11T19:42:10.089Z - normal: Simulator:     frame size: 960 x 640
+2019-04-11T19:42:10.090Z - normal: Simulator:     frame scale: 1.00
+2019-04-11T19:42:10.090Z - normal: Simulator:     show console: NO
+2019-04-11T19:42:10.090Z - normal: Simulator:     write debug log: NO ()
+2019-04-11T19:42:10.091Z - normal: Simulator:     listen: 
+2019-04-11T19:42:10.091Z - normal: Simulator:     debugger: none
+2019-04-11T19:42:10.091Z - normal: Simulator:     add searching path:
+2019-04-11T19:42:10.092Z - normal: Simulator: resetDesignResolution request
+2019-04-11T19:42:10.095Z - normal: Simulator: ------------------------------------------------
+2019-04-11T19:42:10.096Z - normal: Simulator: LOAD Js FILE: jsb-adapter/jsb-builtin.js
+2019-04-11T19:42:10.096Z - normal: Simulator: ------------------------------------------------
+2019-04-11T19:42:10.096Z - normal: Simulator: Initializing V8, version: 6.0.286.52
+2019-04-11T19:42:10.467Z - normal: Simulator: libuv version: 1.23.1-dev
+2019-04-11T19:42:10.468Z - normal: Simulator: Debugger listening..., visit [ chrome-devtools://devtools/bundled/inspector.html?v8only=true&ws=0.0.0.0:5086/00010002-0003-4004-8005-000600070008 ] in chrome browser to debug!
+2019-04-11T19:42:10.468Z - normal: Simulator: For help see https://nodejs.org/en/docs/inspector
+2019-04-11T19:42:10.520Z - normal: Simulator: JS: Enable batch GL commands optimization!
+2019-04-11T19:42:10.521Z - normal: Simulator: resetDesignResolution request
+2019-04-11T19:42:10.521Z - normal: Simulator: ------------------------------------------------
+2019-04-11T19:42:10.521Z - normal: Simulator: LOAD Js FILE: main.js
+2019-04-11T19:42:10.522Z - normal: Simulator: ------------------------------------------------
+2019-04-11T19:42:11.040Z - normal: Simulator: iShow!
+2019-04-11T19:42:11.192Z - normal: Simulator: glGetIntegerv: pname: 0x8b4c
+2019-04-11T19:42:11.225Z - normal: Simulator: JS: Cocos Creator v2.1.0
+2019-04-11T19:42:29.177Z - normal: Simulator: ScriptEngine::cleanup begin ...
+2019-04-11T19:42:29.178Z - normal: Simulator: GC begin ..., (js->native map) size: 36, all objects: 75
+2019-04-11T19:42:29.252Z - normal: Simulator: GC end ..., (js->native map) size: 36, all objects: 75
+2019-04-11T19:42:29.253Z - normal: Simulator: GC begin ..., (js->native map) size: 36, all objects: 75
+2019-04-11T19:42:29.316Z - normal: Simulator: GC end ..., (js->native map) size: 36, all objects: 75
+2019-04-11T19:42:29.316Z - normal: Simulator: Destroy WebGLFramebuffer (1) by GC
+2019-04-11T19:42:29.316Z - normal: Simulator: Destroy WebGLTexture (20) by GC
+2019-04-11T19:42:29.316Z - normal: Simulator: Destroy WebGLTexture (17) by GC
+2019-04-11T19:42:29.317Z - normal: Simulator: Destroy WebGLTexture (15) by GC
+2019-04-11T19:42:29.317Z - normal: Simulator: Destroy WebGLProgram (3) by GC
+2019-04-11T19:42:29.317Z - normal: Simulator: Destroy WebGLTexture (16) by GC
+2019-04-11T19:42:29.326Z - normal: Simulator: Destroy WebGLTexture (12) by GC
+2019-04-11T19:42:29.326Z - normal: Simulator: Destroy WebGLTexture (13) by GC
+2019-04-11T19:42:29.327Z - normal: Simulator: Destroy WebGLTexture (8) by GC
+2019-04-11T19:42:29.327Z - normal: Simulator: Destroy WebGLTexture (11) by GC
+2019-04-11T19:42:29.328Z - normal: Simulator: Destroy WebGLTexture (9) by GC
+2019-04-11T19:42:29.329Z - normal: Simulator: Destroy WebGLTexture (14) by GC
+2019-04-11T19:42:29.329Z - normal: Simulator: Destroy WebGLTexture (5) by GC
+2019-04-11T19:42:29.330Z - normal: Simulator: Destroy WebGLTexture (3) by GC
+2019-04-11T19:42:29.331Z - normal: Simulator: Destroy WebGLTexture (7) by GC
+2019-04-11T19:42:29.331Z - normal: Simulator: Destroy WebGLBuffer (6) by GC
+2019-04-11T19:42:29.332Z - normal: Simulator: Destroy WebGLTexture (4) by GC
+2019-04-11T19:42:29.333Z - normal: Simulator: Destroy WebGLTexture (2) by GC
+2019-04-11T19:42:29.334Z - normal: Simulator: Destroy WebGLBuffer (5) by GC
+2019-04-11T19:42:29.334Z - normal: Simulator: Destroy WebGLTexture (1) by GC
+2019-04-11T19:42:29.335Z - normal: Simulator: Destroy WebGLTexture (19) by GC
+2019-04-11T19:42:29.337Z - normal: Simulator: Destroy WebGLBuffer (4) by GC
+2019-04-11T19:42:29.337Z - normal: Simulator: Destroy WebGLTexture (6) by GC
+2019-04-11T19:42:29.337Z - normal: Simulator: Destroy WebGLBuffer (2) by GC
+2019-04-11T19:42:29.338Z - normal: Simulator: Destroy WebGLBuffer (3) by GC
+2019-04-11T19:42:29.338Z - normal: Simulator: Destroy WebGLTexture (10) by GC
+2019-04-11T19:42:29.339Z - normal: Simulator: Destroy WebGLBuffer (1) by GC
+2019-04-11T19:42:29.339Z - normal: Simulator: Destroy WebGLTexture (18) by GC
+2019-04-11T19:42:29.340Z - normal: Simulator: Destroy WebGLBuffer (7) by GC
+2019-04-11T19:42:29.340Z - normal: Simulator: Destroy WebGLBuffer (8) by GC
+2019-04-11T19:42:29.341Z - normal: Simulator: GC begin ..., (js->native map) size: 0, all objects: 0
+2019-04-11T19:42:29.395Z - normal: Simulator: GC end ..., (js->native map) size: 0, all objects: 0
+2019-04-11T19:42:29.396Z - normal: Simulator: ScriptEngine::cleanup end ...
+2019-04-12T02:00:05.370Z - normal: Start building with options : {
+  "actualPlatform": "android",
+  "android-instant": {
+    "REMOTE_SERVER_ROOT": "",
+    "host": "",
+    "pathPattern": "",
+    "recordPath": "",
+    "scheme": "https",
+    "skipRecord": false
+  },
+  "apiLevel": "",
+  "appABIs": [],
+  "appKey": "",
+  "appSecret": "",
+  "buildPath": "/Users/anhdinh/Documents/GitHub/VNCardsFB/build",
+  "debug": false,
+  "dest": "/Users/anhdinh/Documents/GitHub/VNCardsFB/build/jsb-default",
+  "embedWebDebugger": false,
+  "encryptJs": true,
+  "excludeScenes": [],
+  "excludedModules": [],
+  "fb-instant-games": {},
+  "includeAnySDK": false,
+  "includeSDKBox": false,
+  "inlineSpriteFrames": true,
+  "inlineSpriteFrames_native": true,
+  "jailbreakPlatform": false,
+  "md5Cache": false,
+  "mergeStartScene": false,
+  "oauthLoginServer": "",
+  "optimizeHotUpdate": false,
+  "orientation": {
+    "landscapeLeft": true,
+    "landscapeRight": true,
+    "portrait": false,
+    "upsideDown": false
+  },
+  "packageName": "org.cocos2d.VNCardsFB",
+  "platform": "android",
+  "previewHeight": "720",
+  "previewWidth": "1280",
+  "privateKey": "",
+  "qqplay": {
+    "REMOTE_SERVER_ROOT": "",
+    "orientation": "portrait",
+    "zip": false
+  },
+  "scenes": [
+    "49ee16f5-074d-4a52-b51d-b95f36ac0fc3",
+    "9ffd88a0-3d4f-4db6-a9cd-d7b5af9553ae"
+  ],
+  "sourceMaps": false,
+  "startScene": "49ee16f5-074d-4a52-b51d-b95f36ac0fc3",
+  "template": "default",
+  "title": "VNCardsFB",
+  "useDebugKeystore": true,
+  "vsVersion": "auto",
+  "webOrientation": "auto",
+  "wechatgame": {
+    "REMOTE_SERVER_ROOT": "",
+    "appid": "wx6ac3f5090a6b99c5",
+    "orientation": "portrait",
+    "subContext": ""
+  },
+  "xxteaKey": "703b48ef-7e08-43",
+  "zipCompressJs": true,
+  "project": "/Users/anhdinh/Documents/GitHub/VNCardsFB",
+  "projectName": "VNCardsFB",
+  "debugBuildWorker": false
+}
+2019-04-12T02:00:05.377Z - normal: Building /Users/anhdinh/Documents/GitHub/VNCardsFB
+2019-04-12T02:00:05.377Z - normal: Destination /Users/anhdinh/Documents/GitHub/VNCardsFB/build/jsb-default
+2019-04-12T02:00:05.789Z - normal: Delete /Users/anhdinh/Documents/GitHub/VNCardsFB/build/jsb-default/res/**/*,/Users/anhdinh/Documents/GitHub/VNCardsFB/build/jsb-default/src/*/
+2019-04-12T02:00:05.797Z - error: Build Failed: Error: [NDK Root] is empty, please set [NDK Root] in Preferences.
+    at s (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/core/native-utils.js:1:2406)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/core/native-utils.js:1:2679
+    at M (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/core/native-utils.js:1:2939)
+    at Object.build (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/core/native-utils.js:1:12174)
+    at Gulp.<anonymous> (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/core/gulp-build.js:1:21866)
+    at module.exports (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/orchestrator/lib/runTask.js:34:7)
+    at Gulp.Orchestrator._runTask (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/orchestrator/index.js:273:3)
+    at Gulp.Orchestrator._runStep (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/orchestrator/index.js:214:10)
+    at Gulp.Orchestrator.start (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/orchestrator/index.js:134:8)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/gulp-sequence/index.js:63:12
+    at r.waterfall.r (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/lib/builder/index.js:1:3197)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/async/lib/async.js:52:16
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/async/lib/async.js:696:30
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/async/lib/async.js:167:37
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/async/lib/async.js:1209:30
+    at Gulp.doneCallback (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/core/gulp-build.js:1:22506)
+    at Gulp.Orchestrator.stop (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/orchestrator/index.js:150:9)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/orchestrator/index.js:277:22
+    at finish (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/orchestrator/lib/runTask.js:21:8)
+2019-04-12T02:00:35.439Z - normal: Simulator: WORKAREA WIDTH 1280.00, HEIGHT 755.00
+2019-04-12T02:00:35.440Z - normal: Simulator: FRAME SCALE = 1.00
+2019-04-12T02:00:35.664Z - normal: Simulator: 
+2019-04-12T02:00:35.664Z - normal: Simulator: {
+2019-04-12T02:00:35.665Z - normal: Simulator: 	build_type: DEBUG
+2019-04-12T02:00:35.667Z - normal: Simulator: 	gl.vendor: Intel Inc.
+2019-04-12T02:00:35.669Z - normal: Simulator: 	gl.supports_PVRTC: false
+2019-04-12T02:00:35.671Z - normal: Simulator: 	gl.renderer: Intel Iris OpenGL Engine
+2019-04-12T02:00:35.672Z - normal: Simulator: 	gl.supports_ATITC: false
+2019-04-12T02:00:35.672Z - normal: Simulator: 	gl.supports_discard_framebuffer: false
+2019-04-12T02:00:35.673Z - normal: Simulator: 	gl.supports_NPOT: true
+2019-04-12T02:00:35.673Z - normal: Simulator: 	gl.max_texture_units: 16
+2019-04-12T02:00:35.673Z - normal: Simulator: 	gl.supports_ETC1: false
+2019-04-12T02:00:35.673Z - normal: Simulator: 	gl.max_texture_size: 16384
+2019-04-12T02:00:35.674Z - normal: Simulator: 	gl.supports_BGRA8888: false
+2019-04-12T02:00:35.674Z - normal: Simulator: 	gl.supports_vertex_array_object: true
+2019-04-12T02:00:35.674Z - normal: Simulator: 	gl.supports_OES_map_buffer: false
+2019-04-12T02:00:35.674Z - normal: Simulator: 	compiled_with_gl_state_cache: true
+2019-04-12T02:00:35.675Z - normal: Simulator: 	gl.supports_OES_packed_depth_stencil: false
+2019-04-12T02:00:35.675Z - normal: Simulator: 	gl.version: 2.1 INTEL-10.25.19
+2019-04-12T02:00:35.675Z - normal: Simulator: 	gl.supports_S3TC: true
+2019-04-12T02:00:35.675Z - normal: Simulator: 	compiled_with_profiler: false
+2019-04-12T02:00:35.676Z - normal: Simulator: 	gl.supports_OES_depth24: false
+2019-04-12T02:00:35.676Z - normal: Simulator: }
+2019-04-12T02:00:35.676Z - normal: Simulator: 
+2019-04-12T02:00:35.677Z - normal: Simulator: 
+2019-04-12T02:00:35.677Z - normal: Simulator: Project Config:
+2019-04-12T02:00:35.678Z - normal: Simulator:     project dir: /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/simulator/mac/Simulator.app/Contents/Resources/
+2019-04-12T02:00:35.678Z - normal: Simulator:     writable path: $(PROJDIR)/
+2019-04-12T02:00:35.678Z - normal: Simulator:     script file: $(PROJDIR)/main.js
+2019-04-12T02:00:35.680Z - normal: Simulator:     frame size: 960 x 640
+2019-04-12T02:00:35.680Z - normal: Simulator:     frame scale: 1.00
+2019-04-12T02:00:35.680Z - normal: Simulator:     show console: NO
+2019-04-12T02:00:35.681Z - normal: Simulator:     write debug log: NO ()
+2019-04-12T02:00:35.686Z - normal: Simulator:     listen: 
+2019-04-12T02:00:35.688Z - normal: Simulator:     debugger: none
+2019-04-12T02:00:35.689Z - normal: Simulator:     add searching path:
+2019-04-12T02:00:35.689Z - normal: Simulator: 
+2019-04-12T02:00:35.690Z - normal: Simulator: 
+2019-04-12T02:00:35.690Z - normal: Simulator: 
+2019-04-12T02:00:35.690Z - normal: Simulator: resetDesignResolution request
+2019-04-12T02:00:35.691Z - normal: Simulator: ------------------------------------------------
+2019-04-12T02:00:35.691Z - normal: Simulator: LOAD Js FILE: jsb-adapter/jsb-builtin.js
+2019-04-12T02:00:35.691Z - normal: Simulator: ------------------------------------------------
+2019-04-12T02:00:35.692Z - normal: Simulator: Initializing V8, version: 6.0.286.52
+2019-04-12T02:00:36.267Z - normal: Simulator: libuv version: 1.23.1-dev
+2019-04-12T02:00:36.275Z - normal: Simulator: Debugger listening..., visit [ chrome-devtools://devtools/bundled/inspector.html?v8only=true&ws=0.0.0.0:5086/00010002-0003-4004-8005-000600070008 ] in chrome browser to debug!
+2019-04-12T02:00:36.275Z - normal: Simulator: For help see https://nodejs.org/en/docs/inspector
+2019-04-12T02:00:36.357Z - normal: Simulator: JS: Enable batch GL commands optimization!
+2019-04-12T02:00:36.363Z - normal: Simulator: resetDesignResolution request
+2019-04-12T02:00:36.364Z - normal: Simulator: ------------------------------------------------
+2019-04-12T02:00:36.364Z - normal: Simulator: LOAD Js FILE: main.js
+2019-04-12T02:00:36.364Z - normal: Simulator: ------------------------------------------------
+2019-04-12T02:00:36.925Z - normal: Simulator: iShow!
+2019-04-12T02:00:37.126Z - normal: Simulator: glGetIntegerv: pname: 0x8b4c
+2019-04-12T02:00:37.141Z - normal: Simulator: JS: Cocos Creator v2.1.0
+2019-04-12T02:00:44.136Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:00:44.136Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:00:44.140Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:00:44.141Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:00:44.141Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:00:44.147Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:00:44.149Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:00:44.150Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:00:44.151Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:00:44.152Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:00:44.152Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:00:44.152Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:00:44.176Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:00:44.176Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:00:44.179Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:00:44.180Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:00:44.180Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:00:44.180Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:00:44.181Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:00:44.182Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:00:44.182Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:00:44.183Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:00:44.183Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:00:44.184Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:00:44.184Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:00:44.185Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:00:44.185Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:00:44.185Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:00:44.186Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:00:44.188Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:00:44.188Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:00:44.188Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:00:44.188Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:00:44.188Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:00:44.189Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:00:44.191Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:00:44.199Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:00:44.201Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:00:44.208Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:00:44.209Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:00:44.210Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:00:44.210Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:00:44.210Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:00:44.211Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:00:44.371Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:00:44.371Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:00:44.372Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:00:44.372Z - warn: Simulator: 
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:00:44.373Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:00:44.373Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:00:44.374Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:00:44.375Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:00:44.375Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:00:44.376Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:00:44.376Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:00:44.376Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:00:44.377Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:00:44.379Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:00:44.381Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:00:44.383Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:00:44.385Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:00:44.396Z - error: Simulator: 
 
-2019-04-10T04:40:26.804Z - warn: The Asset used by component "cc.Button" in scene "Game.fire" is missing. Detailed information:
-Node path: "Canvas/MenuGame/ShowRightPanel"
-Asset url: "db://assets/Scene/Game.fire"
-Missing uuid: "006b6346-ceb0-4892-9b2d-3239be9163f1"
+    at HTMLElement.print-simulator-log (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene.js:1:1653)
+    at Object.e._dispatch (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/panel.js:1:1941)
+    at EventEmitter.o.on.s (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/ipc.js:1:2917)
+    at emitMany (events.js:127:13)
+    at EventEmitter.emit (events.js:204:7)
+2019-04-12T02:00:44.396Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:00:44.396Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:00:44.397Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:00:44.397Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:00:44.400Z - error: Simulator: 
 
-2019-04-10T04:40:26.804Z - warn: The Asset used by component "cc.Button" in scene "Game.fire" is missing. Detailed information:
-Node path: "Canvas/MenuGame/ShowRightPanel"
-Asset url: "db://assets/Scene/Game.fire"
-Missing uuid: "006b6346-ceb0-4892-9b2d-3239be9163f1"
+    at HTMLElement.print-simulator-log (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene.js:1:1653)
+    at Object.e._dispatch (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/panel.js:1:1941)
+    at EventEmitter.o.on.s (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/ipc.js:1:2917)
+    at emitMany (events.js:127:13)
+    at EventEmitter.emit (events.js:204:7)
+2019-04-12T02:00:45.168Z - normal: Simulator: JS: WebSocket onOpen
+2019-04-12T02:00:45.168Z - normal: Simulator: JS: WebSocket onMessage: {"@class": ".AuthenticatedConnectResponse","connectUrl": "wss://gsp-aas000-se13.gamesparks.net/ws/device/U376425o7BLE","requestId": "0"}
+2019-04-12T02:00:45.170Z - error: Simulator: 2019-04-12 09:00:45.165 Simulator[3130:510339] WebSocket (0x7fb2c8f280c0) was closed, no need to close it again!
+    at HTMLElement.print-simulator-log (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene.js:1:1653)
+    at Object.e._dispatch (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/panel.js:1:1941)
+    at EventEmitter.o.on.s (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/ipc.js:1:2917)
+    at emitMany (events.js:127:13)
+    at EventEmitter.emit (events.js:204:7)
+2019-04-12T02:00:45.173Z - error: Simulator: [ERROR] (/Users/nantas/fireball-x/cocos2d-x-lite_21/cocos/scripting/js-bindings/manual/jsb_websocket.cpp, 206): Can't get onclose function!
+    at HTMLElement.print-simulator-log (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene.js:1:1653)
+    at Object.e._dispatch (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/panel.js:1:1941)
+    at EventEmitter.o.on.s (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/ipc.js:1:2917)
+    at emitMany (events.js:127:13)
+    at EventEmitter.emit (events.js:204:7)
+2019-04-12T02:00:45.607Z - normal: Simulator: JS: WebSocket onOpen
+2019-04-12T02:00:45.608Z - normal: Simulator: JS: WebSocket onMessage: {"@class":".AuthenticatedConnectResponse","nonce":"7e2ad71a-4985-4e53-a8a1-393ffbcfd63a","requestId":"0"}
+2019-04-12T02:00:45.611Z - normal: Simulator: JS: WebSocket send: {"@class":".AuthenticatedConnectRequest","hmac":"90j9xWExtAjCCPAe/1F5Cl/QBF6rqjedwrDxnmc4rPY=","platform":"Mozilla","os":"iPhone/iPod"}
+2019-04-12T02:00:45.654Z - normal: Simulator: JS: WebSocket onMessage: {"@class":".AuthenticatedConnectResponse","requestId":"0","sessionId":"7e2ad71a-4985-4e53-a8a1-393ffbcfd63a"}
+2019-04-12T02:00:45.654Z - normal: Simulator: JS: WebSocket send: {"userName":"TestUser01","password":"TestUser01","@class":".AuthenticationRequest","requestId":"1555034445653_1"}
+2019-04-12T02:00:45.705Z - normal: Simulator: JS: WebSocket onMessage: {"@class":".AuthenticationResponse","authToken":"38ac503c-c2d0-45d5-957c-4ac59df55e0c","displayName":"TestUser01","newPlayer":false,"requestId":"1555034445653_1","userId":"5caf898ffed82804dc5a900b"}
+2019-04-12T02:00:45.706Z - normal: Simulator: JS: WebSocket send: {"matchShortCode":"Kill_13","matchGroup":"1991595654288655","skill":0,"@class":".MatchmakingRequest","requestId":"1555034445704_2"}
+2019-04-12T02:00:45.757Z - normal: Simulator: JS: WebSocket onMessage: {"@class":".MatchmakingResponse","requestId":"1555034445704_2"}
+2019-04-12T02:00:45.757Z - normal: Simulator: JS: [object Object]
+2019-04-12T02:00:45.792Z - normal: Simulator: JS: WebSocket onMessage: {"@class":".MatchFoundMessage","accessToken":"XHrNtXQoI/QWH3tWNZHQMCBoY6pbGNKofEOrS5kspM5fEZffwSfSAv41kCyWeWSZvbGXbIN4qKYkeQAPb4y2ESycURSVNh0/0PrlGEERoMM5gqWK/nW08WuoFs3VyEb78sMJTXXqBq7q05+wRiWrhkvetVeXKO/OiR6yIuce4G9jZj59LWmbmbq161+6Bj+umMSXSChfUoyxAC0WZ8dOZLHhXQDNcUUs1ng02V1zuzQkIAyY5pi1Jbvauboe2VRftmOmy8bFTI0sgDeHcZH0Ij9JdTsf5NNPIZGRpJ1z8ZjS2X42uno90o2OlUjsQbvmQJTwqlkt5rac+mFHBCaMfPZNgYFoE7mmWjYRXQglxW8iLLxtmJ7F7kPKwBq2sS+dRj1PudpBWxJEIVqPIGr8ijMSWgfAGhwV/GmcjaOGC56lhNjTl3U5yX8=","gameId":376425,"host":"gsp-aas-rt-13-251-158-38.gamesparks.net","matchData":{},"matchGroup":"1991595654288655","matchId":"5caff14dfed82804dc70ceb8","matchShortCode":"Kill_13","messageId":"5caff14dfed82804dc70cec0","notification":true,"participants":[{"displayName":"TestUser01","externalIds":{ },"id":"5caf898ffed82804dc5a900b","online":true,"peerId":1,"scriptData":{"InstantID":"TestUser01","Photo":"default"}}],"pendingMatchData":{},"playerId":"5caf898ffed82804dc5a900b","port":5000,"summary":"MatchFoundMessage"}
+2019-04-12T02:00:45.795Z - normal: Simulator: JS: Game on match found {"@class":".MatchFoundMessage","accessToken":"XHrNtXQoI/QWH3tWNZHQMCBoY6pbGNKofEOrS5kspM5fEZffwSfSAv41kCyWeWSZvbGXbIN4qKYkeQAPb4y2ESycURSVNh0/0PrlGEERoMM5gqWK/nW08WuoFs3VyEb78sMJTXXqBq7q05+wRiWrhkvetVeXKO/OiR6yIuce4G9jZj59LWmbmbq161+6Bj+umMSXSChfUoyxAC0WZ8dOZLHhXQDNcUUs1ng02V1zuzQkIAyY5pi1Jbvauboe2VRftmOmy8bFTI0sgDeHcZH0Ij9JdTsf5NNPIZGRpJ1z8ZjS2X42uno90o2OlUjsQbvmQJTwqlkt5rac+mFHBCaMfPZNgYFoE7mmWjYRXQglxW8iLLxtmJ7F7kPKwBq2sS+dRj1PudpBWxJEIVqPIGr8ijMSWgfAGhwV/GmcjaOGC56lhNjTl3U5yX8=","gameId":376425,"host":"gsp-aas-rt-13-251-158-38.gamesparks.net","matchData":{},"matchGroup":"1991595654288655","matchId":"5caff14dfed82804dc70ceb8","matchShortCode":"Kill_13","messageId":"5caff14dfed82804dc70cec0","notification":true,"participants":[{"displayName":"TestUser01","externalIds":{},"id":"5caf898ffed82804dc5a900b","online":true,"peerId":1,"scriptData":{"InstantID":"TestUser01","Photo":"default"}}],"pendingMatchData":{},"playerId":"5caf898ffed82804dc5a900b","port":5000,"summary":"MatchFoundMessage"}
+2019-04-12T02:00:45.795Z - normal: Simulator: JS: gsp-aas-rt-13-251-158-38.gamesparks.net : 5000
+2019-04-12T02:00:45.813Z - normal: Simulator: JS:  IRTSession:Disconnected, trying to connect
+2019-04-12T02:00:46.720Z - normal: Simulator: JS: onSessionReady true
+2019-04-12T02:00:46.789Z - normal: Simulator: JS: LoadScene 9ffd88a0-3d4f-4db6-a9cd-d7b5af9553ae: 17.572000000000116ms
+2019-04-12T02:00:46.808Z - error: Simulator: 2019-04-12 09:00:46.806 Simulator[3130:510339] WebSocket (0x7fb2c8f280c0) was closed, no need to close it again!
+    at HTMLElement.print-simulator-log (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene.js:1:1653)
+    at Object.e._dispatch (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/panel.js:1:1941)
+    at EventEmitter.o.on.s (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/ipc.js:1:2917)
+    at emitMany (events.js:127:13)
+    at EventEmitter.emit (events.js:204:7)
+2019-04-12T02:01:10.274Z - normal: Simulator: ScriptEngine::cleanup begin ...
+2019-04-12T02:01:10.275Z - normal: Simulator: GC begin ..., (js->native map) size: 183, all objects: 222
+2019-04-12T02:01:10.353Z - normal: Simulator: GC end ..., (js->native map) size: 171, all objects: 210
+2019-04-12T02:01:10.353Z - normal: Simulator: GC begin ..., (js->native map) size: 171, all objects: 210
+2019-04-12T02:01:10.419Z - normal: Simulator: GC end ..., (js->native map) size: 171, all objects: 210
+2019-04-12T02:01:10.420Z - normal: Simulator: Destroy WebGLBuffer (16) by GC
+2019-04-12T02:01:10.420Z - normal: Simulator: Destroy WebGLTexture (15) by GC
+2019-04-12T02:01:10.421Z - normal: Simulator: Destroy WebGLBuffer (15) by GC
+2019-04-12T02:01:10.422Z - normal: Simulator: Destroy WebGLBuffer (14) by GC
+2019-04-12T02:01:10.422Z - normal: Simulator: Destroy WebGLBuffer (24) by GC
+2019-04-12T02:01:10.422Z - normal: Simulator: Destroy WebGLProgram (6) by GC
+2019-04-12T02:01:10.422Z - normal: Simulator: Destroy WebGLTexture (14) by GC
+2019-04-12T02:01:10.423Z - normal: Simulator: Destroy WebGLBuffer (11) by GC
+2019-04-12T02:01:10.423Z - normal: Simulator: Destroy WebGLTexture (16) by GC
+2019-04-12T02:01:10.423Z - normal: Simulator: Destroy WebGLBuffer (10) by GC
+2019-04-12T02:01:10.423Z - normal: Simulator: Destroy WebGLBuffer (9) by GC
+2019-04-12T02:01:10.425Z - normal: Simulator: Destroy WebGLTexture (12) by GC
+2019-04-12T02:01:10.425Z - normal: Simulator: Destroy WebGLBuffer (18) by GC
+2019-04-12T02:01:10.425Z - normal: Simulator: Destroy WebGLTexture (11) by GC
+2019-04-12T02:01:10.426Z - normal: Simulator: Destroy WebGLTexture (131) by GC
+2019-04-12T02:01:10.426Z - normal: Simulator: Destroy WebGLTexture (130) by GC
+2019-04-12T02:01:10.426Z - normal: Simulator: Destroy WebGLTexture (126) by GC
+2019-04-12T02:01:10.426Z - normal: Simulator: Destroy WebGLTexture (125) by GC
+2019-04-12T02:01:10.427Z - normal: Simulator: Destroy WebGLTexture (122) by GC
+2019-04-12T02:01:10.427Z - normal: Simulator: Destroy WebGLTexture (121) by GC
+2019-04-12T02:01:10.427Z - normal: Simulator: Destroy WebGLTexture (133) by GC
+2019-04-12T02:01:10.428Z - normal: Simulator: Destroy WebGLTexture (116) by GC
+2019-04-12T02:01:10.428Z - normal: Simulator: Destroy WebGLTexture (115) by GC
+2019-04-12T02:01:10.428Z - normal: Simulator: Destroy WebGLFramebuffer (1) by GC
+2019-04-12T02:01:10.428Z - normal: Simulator: Destroy WebGLTexture (114) by GC
+2019-04-12T02:01:10.429Z - normal: Simulator: Destroy WebGLBuffer (20) by GC
+2019-04-12T02:01:10.429Z - normal: Simulator: Destroy WebGLTexture (110) by GC
+2019-04-12T02:01:10.429Z - normal: Simulator: Destroy WebGLTexture (109) by GC
+2019-04-12T02:01:10.429Z - normal: Simulator: Destroy WebGLTexture (129) by GC
+2019-04-12T02:01:10.430Z - normal: Simulator: Destroy WebGLTexture (106) by GC
+2019-04-12T02:01:10.433Z - normal: Simulator: Destroy WebGLTexture (104) by GC
+2019-04-12T02:01:10.434Z - normal: Simulator: Destroy WebGLTexture (102) by GC
+2019-04-12T02:01:10.434Z - normal: Simulator: Destroy WebGLTexture (101) by GC
+2019-04-12T02:01:10.434Z - normal: Simulator: Destroy WebGLTexture (100) by GC
+2019-04-12T02:01:10.435Z - normal: Simulator: Destroy WebGLTexture (97) by GC
+2019-04-12T02:01:10.435Z - normal: Simulator: Destroy WebGLTexture (128) by GC
+2019-04-12T02:01:10.435Z - normal: Simulator: Destroy WebGLTexture (96) by GC
+2019-04-12T02:01:10.436Z - normal: Simulator: Destroy WebGLTexture (93) by GC
+2019-04-12T02:01:10.436Z - normal: Simulator: Destroy WebGLTexture (92) by GC
+2019-04-12T02:01:10.436Z - normal: Simulator: Destroy WebGLTexture (91) by GC
+2019-04-12T02:01:10.437Z - normal: Simulator: Destroy WebGLTexture (90) by GC
+2019-04-12T02:01:10.437Z - normal: Simulator: Destroy WebGLTexture (89) by GC
+2019-04-12T02:01:10.437Z - normal: Simulator: Destroy WebGLTexture (88) by GC
+2019-04-12T02:01:10.437Z - normal: Simulator: Destroy WebGLTexture (87) by GC
+2019-04-12T02:01:10.440Z - normal: Simulator: Destroy WebGLTexture (86) by GC
+2019-04-12T02:01:10.440Z - normal: Simulator: Destroy WebGLTexture (85) by GC
+2019-04-12T02:01:10.440Z - normal: Simulator: Destroy WebGLTexture (84) by GC
+2019-04-12T02:01:10.440Z - normal: Simulator: Destroy WebGLTexture (118) by GC
+2019-04-12T02:01:10.440Z - normal: Simulator: Destroy WebGLTexture (83) by GC
+2019-04-12T02:01:10.441Z - normal: Simulator: Destroy WebGLTexture (82) by GC
+2019-04-12T02:01:10.441Z - normal: Simulator: Destroy WebGLTexture (80) by GC
+2019-04-12T02:01:10.441Z - normal: Simulator: Destroy WebGLTexture (51) by GC
+2019-04-12T02:01:10.441Z - normal: Simulator: Destroy WebGLTexture (77) by GC
+2019-04-12T02:01:10.441Z - normal: Simulator: Destroy WebGLTexture (7) by GC
+2019-04-12T02:01:10.442Z - normal: Simulator: Destroy WebGLTexture (74) by GC
+2019-04-12T02:01:10.442Z - normal: Simulator: Destroy WebGLTexture (73) by GC
+2019-04-12T02:01:10.442Z - normal: Simulator: Destroy WebGLTexture (120) by GC
+2019-04-12T02:01:10.442Z - normal: Simulator: Destroy WebGLTexture (70) by GC
+2019-04-12T02:01:10.443Z - normal: Simulator: Destroy WebGLTexture (81) by GC
+2019-04-12T02:01:10.444Z - normal: Simulator: Destroy WebGLTexture (17) by GC
+2019-04-12T02:01:10.445Z - normal: Simulator: Destroy WebGLTexture (69) by GC
+2019-04-12T02:01:10.446Z - normal: Simulator: Destroy WebGLTexture (52) by GC
+2019-04-12T02:01:10.446Z - normal: Simulator: Destroy WebGLTexture (71) by GC
+2019-04-12T02:01:10.447Z - normal: Simulator: Destroy WebGLTexture (65) by GC
+2019-04-12T02:01:10.447Z - normal: Simulator: Destroy WebGLTexture (107) by GC
+2019-04-12T02:01:10.447Z - normal: Simulator: Destroy WebGLTexture (94) by GC
+2019-04-12T02:01:10.447Z - normal: Simulator: Destroy WebGLTexture (5) by GC
+2019-04-12T02:01:10.448Z - normal: Simulator: Destroy WebGLTexture (63) by GC
+2019-04-12T02:01:10.448Z - normal: Simulator: Destroy WebGLTexture (119) by GC
+2019-04-12T02:01:10.448Z - normal: Simulator: Destroy WebGLTexture (21) by GC
+2019-04-12T02:01:10.449Z - normal: Simulator: Destroy WebGLTexture (62) by GC
+2019-04-12T02:01:10.449Z - normal: Simulator: Destroy WebGLTexture (61) by GC
+2019-04-12T02:01:10.450Z - normal: Simulator: Destroy WebGLTexture (54) by GC
+2019-04-12T02:01:10.450Z - normal: Simulator: Destroy WebGLTexture (56) by GC
+2019-04-12T02:01:10.450Z - normal: Simulator: Destroy WebGLTexture (43) by GC
+2019-04-12T02:01:10.451Z - normal: Simulator: Destroy WebGLTexture (49) by GC
+2019-04-12T02:01:10.451Z - normal: Simulator: Destroy WebGLTexture (55) by GC
+2019-04-12T02:01:10.451Z - normal: Simulator: Destroy WebGLTexture (29) by GC
+2019-04-12T02:01:10.452Z - normal: Simulator: Destroy WebGLTexture (48) by GC
+2019-04-12T02:01:10.452Z - normal: Simulator: Destroy WebGLTexture (111) by GC
+2019-04-12T02:01:10.452Z - normal: Simulator: Destroy WebGLTexture (47) by GC
+2019-04-12T02:01:10.453Z - normal: Simulator: Destroy WebGLTexture (45) by GC
+2019-04-12T02:01:10.453Z - normal: Simulator: Destroy WebGLTexture (44) by GC
+2019-04-12T02:01:10.453Z - normal: Simulator: Destroy WebGLTexture (57) by GC
+2019-04-12T02:01:10.453Z - normal: Simulator: Destroy WebGLTexture (13) by GC
+2019-04-12T02:01:10.454Z - normal: Simulator: Destroy WebGLTexture (42) by GC
+2019-04-12T02:01:10.454Z - normal: Simulator: Destroy WebGLProgram (9) by GC
+2019-04-12T02:01:10.454Z - normal: Simulator: Destroy WebGLTexture (103) by GC
+2019-04-12T02:01:10.454Z - normal: Simulator: Destroy WebGLTexture (79) by GC
+2019-04-12T02:01:10.455Z - normal: Simulator: Destroy WebGLTexture (40) by GC
+2019-04-12T02:01:10.455Z - normal: Simulator: Destroy WebGLTexture (39) by GC
+2019-04-12T02:01:10.455Z - normal: Simulator: Destroy WebGLTexture (50) by GC
+2019-04-12T02:01:10.455Z - normal: Simulator: Destroy WebGLBuffer (4) by GC
+2019-04-12T02:01:10.456Z - normal: Simulator: Destroy WebGLTexture (38) by GC
+2019-04-12T02:01:10.456Z - normal: Simulator: Destroy WebGLBuffer (19) by GC
+2019-04-12T02:01:10.456Z - normal: Simulator: Destroy WebGLTexture (113) by GC
+2019-04-12T02:01:10.456Z - normal: Simulator: Destroy WebGLTexture (37) by GC
+2019-04-12T02:01:10.456Z - normal: Simulator: Destroy WebGLBuffer (21) by GC
+2019-04-12T02:01:10.457Z - normal: Simulator: Destroy WebGLTexture (2) by GC
+2019-04-12T02:01:10.457Z - normal: Simulator: Destroy WebGLTexture (36) by GC
+2019-04-12T02:01:10.457Z - normal: Simulator: Destroy WebGLTexture (28) by GC
+2019-04-12T02:01:10.457Z - normal: Simulator: Destroy WebGLTexture (75) by GC
+2019-04-12T02:01:10.458Z - normal: Simulator: Destroy WebGLBuffer (13) by GC
+2019-04-12T02:01:10.458Z - normal: Simulator: Destroy WebGLTexture (108) by GC
+2019-04-12T02:01:10.458Z - normal: Simulator: Destroy WebGLTexture (25) by GC
+2019-04-12T02:01:10.458Z - normal: Simulator: Destroy WebGLTexture (35) by GC
+2019-04-12T02:01:10.459Z - normal: Simulator: Destroy WebGLTexture (33) by GC
+2019-04-12T02:01:10.459Z - normal: Simulator: Destroy WebGLTexture (41) by GC
+2019-04-12T02:01:10.459Z - normal: Simulator: Destroy WebGLBuffer (23) by GC
+2019-04-12T02:01:10.459Z - normal: Simulator: Destroy WebGLTexture (32) by GC
+2019-04-12T02:01:10.460Z - normal: Simulator: Destroy WebGLBuffer (17) by GC
+2019-04-12T02:01:10.460Z - normal: Simulator: Destroy WebGLTexture (124) by GC
+2019-04-12T02:01:10.460Z - normal: Simulator: Destroy WebGLTexture (58) by GC
+2019-04-12T02:01:10.461Z - normal: Simulator: Destroy WebGLTexture (30) by GC
+2019-04-12T02:01:10.461Z - normal: Simulator: Destroy WebGLTexture (67) by GC
+2019-04-12T02:01:10.461Z - normal: Simulator: Destroy WebGLTexture (27) by GC
+2019-04-12T02:01:10.462Z - normal: Simulator: Destroy WebGLTexture (24) by GC
+2019-04-12T02:01:10.462Z - normal: Simulator: Destroy WebGLTexture (76) by GC
+2019-04-12T02:01:10.462Z - normal: Simulator: Destroy WebGLBuffer (2) by GC
+2019-04-12T02:01:10.462Z - normal: Simulator: Destroy WebGLProgram (3) by GC
+2019-04-12T02:01:10.463Z - normal: Simulator: Destroy WebGLTexture (134) by GC
+2019-04-12T02:01:10.463Z - normal: Simulator: Destroy WebGLTexture (23) by GC
+2019-04-12T02:01:10.463Z - normal: Simulator: Destroy WebGLTexture (26) by GC
+2019-04-12T02:01:10.464Z - normal: Simulator: Destroy WebGLTexture (72) by GC
+2019-04-12T02:01:10.465Z - normal: Simulator: Destroy WebGLTexture (6) by GC
+2019-04-12T02:01:10.465Z - normal: Simulator: Destroy WebGLTexture (117) by GC
+2019-04-12T02:01:10.465Z - normal: Simulator: Destroy WebGLTexture (95) by GC
+2019-04-12T02:01:10.466Z - normal: Simulator: Destroy WebGLTexture (3) by GC
+2019-04-12T02:01:10.466Z - normal: Simulator: Destroy WebGLTexture (66) by GC
+2019-04-12T02:01:10.467Z - normal: Simulator: Destroy WebGLTexture (22) by GC
+2019-04-12T02:01:10.467Z - normal: Simulator: Destroy WebGLBuffer (22) by GC
+2019-04-12T02:01:10.467Z - normal: Simulator: Destroy WebGLBuffer (5) by GC
+2019-04-12T02:01:10.467Z - normal: Simulator: Destroy WebGLBuffer (12) by GC
+2019-04-12T02:01:10.467Z - normal: Simulator: Destroy WebGLTexture (4) by GC
+2019-04-12T02:01:10.468Z - normal: Simulator: Destroy WebGLTexture (105) by GC
+2019-04-12T02:01:10.468Z - normal: Simulator: Destroy WebGLTexture (31) by GC
+2019-04-12T02:01:10.468Z - normal: Simulator: Destroy WebGLTexture (123) by GC
+2019-04-12T02:01:10.468Z - normal: Simulator: Destroy WebGLTexture (1) by GC
+2019-04-12T02:01:10.468Z - normal: Simulator: Destroy WebGLTexture (78) by GC
+2019-04-12T02:01:10.469Z - normal: Simulator: Destroy WebGLTexture (99) by GC
+2019-04-12T02:01:10.469Z - normal: Simulator: Destroy WebGLTexture (53) by GC
+2019-04-12T02:01:10.469Z - normal: Simulator: Destroy WebGLTexture (68) by GC
+2019-04-12T02:01:10.469Z - normal: Simulator: Destroy WebGLTexture (64) by GC
+2019-04-12T02:01:10.469Z - normal: Simulator: Destroy WebGLTexture (60) by GC
+2019-04-12T02:01:10.470Z - normal: Simulator: Destroy WebGLTexture (34) by GC
+2019-04-12T02:01:10.470Z - normal: Simulator: Destroy WebGLTexture (8) by GC
+2019-04-12T02:01:10.470Z - normal: Simulator: Destroy WebGLBuffer (7) by GC
+2019-04-12T02:01:10.470Z - normal: Simulator: Destroy WebGLTexture (10) by GC
+2019-04-12T02:01:10.475Z - normal: Simulator: Destroy WebGLTexture (59) by GC
+2019-04-12T02:01:10.476Z - normal: Simulator: Destroy WebGLBuffer (1) by GC
+2019-04-12T02:01:10.476Z - normal: Simulator: Destroy WebGLBuffer (6) by GC
+2019-04-12T02:01:10.476Z - normal: Simulator: Destroy WebGLTexture (132) by GC
+2019-04-12T02:01:10.477Z - normal: Simulator: Destroy WebGLTexture (127) by GC
+2019-04-12T02:01:10.477Z - normal: Simulator: Destroy WebGLTexture (46) by GC
+2019-04-12T02:01:10.477Z - normal: Simulator: Destroy WebGLTexture (98) by GC
+2019-04-12T02:01:10.478Z - normal: Simulator: Destroy WebGLBuffer (3) by GC
+2019-04-12T02:01:10.478Z - normal: Simulator: Destroy WebGLBuffer (8) by GC
+2019-04-12T02:01:10.478Z - normal: Simulator: Destroy WebGLTexture (112) by GC
+2019-04-12T02:01:10.478Z - normal: Simulator: Destroy WebGLTexture (9) by GC
+2019-04-12T02:01:10.479Z - normal: Simulator: GC begin ..., (js->native map) size: 0, all objects: 0
+2019-04-12T02:01:10.528Z - normal: Simulator: GC end ..., (js->native map) size: 0, all objects: 0
+2019-04-12T02:01:10.533Z - normal: Simulator: ScriptEngine::cleanup end ...
+2019-04-12T02:01:30.441Z - normal: Simulator: WORKAREA WIDTH 1280.00, HEIGHT 755.00
+2019-04-12T02:01:30.442Z - normal: Simulator: FRAME SCALE = 1.00
+2019-04-12T02:01:30.575Z - normal: Simulator: 
+2019-04-12T02:01:30.575Z - normal: Simulator: {
+2019-04-12T02:01:30.576Z - normal: Simulator: 	build_type: DEBUG
+2019-04-12T02:01:30.639Z - normal: Simulator: 	gl.vendor: Intel Inc.
+2019-04-12T02:01:30.639Z - normal: Simulator: 	gl.supports_PVRTC: false
+2019-04-12T02:01:30.639Z - normal: Simulator: 	gl.renderer: Intel Iris OpenGL Engine
+2019-04-12T02:01:30.640Z - normal: Simulator: 	gl.supports_ATITC: false
+2019-04-12T02:01:30.640Z - normal: Simulator: 	gl.supports_discard_framebuffer: false
+2019-04-12T02:01:30.640Z - normal: Simulator: 	gl.supports_NPOT: true
+2019-04-12T02:01:30.640Z - normal: Simulator: 	gl.max_texture_units: 16
+2019-04-12T02:01:30.640Z - normal: Simulator: 	gl.supports_ETC1: false
+2019-04-12T02:01:30.641Z - normal: Simulator: 	gl.max_texture_size: 16384
+2019-04-12T02:01:30.641Z - normal: Simulator: 	gl.supports_BGRA8888: false
+2019-04-12T02:01:30.641Z - normal: Simulator: 	gl.supports_vertex_array_object: true
+2019-04-12T02:01:30.641Z - normal: Simulator: 	gl.supports_OES_map_buffer: false
+2019-04-12T02:01:30.642Z - normal: Simulator: 	compiled_with_gl_state_cache: true
+2019-04-12T02:01:30.642Z - normal: Simulator: 	gl.supports_OES_packed_depth_stencil: false
+2019-04-12T02:01:30.642Z - normal: Simulator: 	gl.version: 2.1 INTEL-10.25.19
+2019-04-12T02:01:30.642Z - normal: Simulator: 	gl.supports_S3TC: true
+2019-04-12T02:01:30.642Z - normal: Simulator: 	compiled_with_profiler: false
+2019-04-12T02:01:30.643Z - normal: Simulator: 	gl.supports_OES_depth24: false
+2019-04-12T02:01:30.643Z - normal: Simulator: }
+2019-04-12T02:01:30.643Z - normal: Simulator: 
+2019-04-12T02:01:30.644Z - normal: Simulator: 
+2019-04-12T02:01:30.644Z - normal: Simulator: Project Config:
+2019-04-12T02:01:30.644Z - normal: Simulator:     project dir: /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/simulator/mac/Simulator.app/Contents/Resources/
+2019-04-12T02:01:30.644Z - normal: Simulator:     writable path: $(PROJDIR)/
+2019-04-12T02:01:30.645Z - normal: Simulator:     script file: $(PROJDIR)/main.js
+2019-04-12T02:01:30.645Z - normal: Simulator:     frame size: 960 x 640
+2019-04-12T02:01:30.645Z - normal: Simulator:     frame scale: 1.00
+2019-04-12T02:01:30.646Z - normal: Simulator:     show console: NO
+2019-04-12T02:01:30.646Z - normal: Simulator:     write debug log: NO ()
+2019-04-12T02:01:30.646Z - normal: Simulator:     listen: 
+2019-04-12T02:01:30.646Z - normal: Simulator:     debugger: none
+2019-04-12T02:01:30.647Z - normal: Simulator:     add searching path:
+2019-04-12T02:01:30.647Z - normal: Simulator: 
+2019-04-12T02:01:30.647Z - normal: Simulator: 
+2019-04-12T02:01:30.647Z - normal: Simulator: 
+2019-04-12T02:01:30.648Z - normal: Simulator: resetDesignResolution request
+2019-04-12T02:01:30.648Z - normal: Simulator: ------------------------------------------------
+2019-04-12T02:01:30.648Z - normal: Simulator: LOAD Js FILE: jsb-adapter/jsb-builtin.js
+2019-04-12T02:01:30.648Z - normal: Simulator: ------------------------------------------------
+2019-04-12T02:01:30.649Z - normal: Simulator: Initializing V8, version: 6.0.286.52
+2019-04-12T02:01:31.134Z - normal: Simulator: libuv version: 1.23.1-dev
+2019-04-12T02:01:31.135Z - normal: Simulator: Debugger listening..., visit [ chrome-devtools://devtools/bundled/inspector.html?v8only=true&ws=0.0.0.0:5086/00010002-0003-4004-8005-000600070008 ] in chrome browser to debug!
+2019-04-12T02:01:31.135Z - normal: Simulator: For help see https://nodejs.org/en/docs/inspector
+2019-04-12T02:01:31.218Z - normal: Simulator: JS: Enable batch GL commands optimization!
+2019-04-12T02:01:31.247Z - normal: Simulator: resetDesignResolution request
+2019-04-12T02:01:31.248Z - normal: Simulator: ------------------------------------------------
+2019-04-12T02:01:31.250Z - normal: Simulator: LOAD Js FILE: main.js
+2019-04-12T02:01:31.252Z - normal: Simulator: ------------------------------------------------
+2019-04-12T02:01:31.921Z - normal: Simulator: iShow!
+2019-04-12T02:01:32.142Z - normal: Simulator: glGetIntegerv: pname: 0x8b4c
+2019-04-12T02:01:32.166Z - normal: Simulator: JS: Cocos Creator v2.1.0
+2019-04-12T02:01:35.450Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:35.451Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:35.451Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:35.459Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:35.462Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:35.463Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:35.463Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:35.479Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:35.485Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:35.485Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:35.485Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:35.486Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:35.486Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:35.486Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:35.486Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:35.486Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:35.487Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:35.487Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:35.487Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:35.487Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:35.488Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:35.488Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:35.489Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:35.492Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:35.493Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:35.512Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:35.514Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:35.515Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:35.516Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:35.517Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:35.763Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:35.764Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:35.764Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:35.765Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:35.765Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:35.765Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:35.766Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:35.766Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:35.766Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:35.766Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:35.769Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:35.769Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:35.770Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:35.770Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:35.770Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:35.771Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:35.771Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:35.771Z - error: Simulator: 
 
-2019-04-10T04:40:26.804Z - warn: The Asset used by component "cc.Button" in scene "Game.fire" is missing. Detailed information:
-Node path: "Canvas/MenuGame/ShowRightPanel"
-Asset url: "db://assets/Scene/Game.fire"
-Missing uuid: "006b6346-ceb0-4892-9b2d-3239be9163f1"
+    at HTMLElement.print-simulator-log (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene.js:1:1653)
+    at Object.e._dispatch (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/panel.js:1:1941)
+    at EventEmitter.o.on.s (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/ipc.js:1:2917)
+    at emitMany (events.js:127:13)
+    at EventEmitter.emit (events.js:204:7)
+2019-04-12T02:01:35.771Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:36.161Z - normal: Simulator: JS: WebSocket onOpen
+2019-04-12T02:01:36.162Z - normal: Simulator: JS: WebSocket onMessage: {"@class": ".AuthenticatedConnectResponse","connectUrl": "wss://gsp-aas000-se13.gamesparks.net/ws/device/U376425o7BLE","requestId": "0"}
+2019-04-12T02:01:36.163Z - error: Simulator: 2019-04-12 09:01:36.160 Simulator[3137:511483] WebSocket (0x7f81afe176b0) was closed, no need to close it again!
+    at HTMLElement.print-simulator-log (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene.js:1:1653)
+    at Object.e._dispatch (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/panel.js:1:1941)
+    at EventEmitter.o.on.s (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/ipc.js:1:2917)
+    at emitMany (events.js:127:13)
+    at EventEmitter.emit (events.js:204:7)
+2019-04-12T02:01:36.164Z - error: Simulator: [ERROR] (/Users/nantas/fireball-x/cocos2d-x-lite_21/cocos/scripting/js-bindings/manual/jsb_websocket.cpp, 206): Can't get onclose function!
+    at HTMLElement.print-simulator-log (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene.js:1:1653)
+    at Object.e._dispatch (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/panel.js:1:1941)
+    at EventEmitter.o.on.s (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/ipc.js:1:2917)
+    at emitMany (events.js:127:13)
+    at EventEmitter.emit (events.js:204:7)
+2019-04-12T02:01:36.522Z - normal: Simulator: JS: WebSocket onOpen
+2019-04-12T02:01:36.524Z - normal: Simulator: JS: WebSocket onMessage: {"@class":".AuthenticatedConnectResponse","nonce":"f6813452-cb18-4983-a9a3-76febc6a0c0f","requestId":"0"}
+2019-04-12T02:01:36.527Z - normal: Simulator: JS: WebSocket send: {"@class":".AuthenticatedConnectRequest","hmac":"lckRXY9J8lBWO2aoKL7GZjc/FO8WALSkttpsKg40yMc=","platform":"Mozilla","os":"iPhone/iPod"}
+2019-04-12T02:01:36.577Z - normal: Simulator: JS: WebSocket onMessage: {"@class":".AuthenticatedConnectResponse","requestId":"0","sessionId":"f6813452-cb18-4983-a9a3-76febc6a0c0f"}
+2019-04-12T02:01:36.577Z - normal: Simulator: JS: WebSocket send: {"userName":"TestUser01","password":"TestUser01","@class":".AuthenticationRequest","requestId":"1555034496576_1"}
+2019-04-12T02:01:36.628Z - normal: Simulator: JS: WebSocket onMessage: {"@class":".AuthenticationResponse","authToken":"cfedae85-079d-4bf1-b35b-2c8ddaaa3821","displayName":"TestUser01","newPlayer":false,"requestId":"1555034496576_1","userId":"5caf898ffed82804dc5a900b"}
+2019-04-12T02:01:36.629Z - normal: Simulator: JS: WebSocket send: {"matchShortCode":"Kill_13","matchGroup":"1991595654288655","skill":0,"@class":".MatchmakingRequest","requestId":"1555034496627_2"}
+2019-04-12T02:01:36.681Z - normal: Simulator: JS: WebSocket onMessage: {"@class":".MatchmakingResponse","requestId":"1555034496627_2"}
+2019-04-12T02:01:36.682Z - normal: Simulator: JS: [object Object]
+2019-04-12T02:01:36.720Z - normal: Simulator: JS: WebSocket onMessage: {"@class":".MatchFoundMessage","accessToken":"XHrNtXQoI/QaSypQZpiBaiBoYvgIHNX9f0OrS5kspM5fEZfSwijQD/41kCyWeWSZvbGXbIN4qKYkeQAPb4y2ESycURSVNh0/0PrlGEERoMM5gqWGqiSyomL5TM3VyRSo9sRcTnXqBq7q05+wRiWrhkvetVeXKO/OhB29IOoe4G9jZj59LWmbmbq161+6Bj+umMSXSChfUoyxAC0WZ8dOZLHhXQDNcUUs1ng02V1zuzQkIAyY5pi1Jbvauboe2VRftmOmy8bFTI0sgDeHcZH0Ij9JdTsf5NNPIZGRpJ1z8ZjS2X42uno90o2OlUjsQbvmQJTwqlkt5rac+mFHBCaMfPZNgYFoE7mmWjYRXQglxW8iLLxtmJ7F7kPKwBq2sS+dRj1PudpBWxJEIVqPIGr8ijMSWgfAGhwV/Gp0kQ0iGUaLdaaTRvw1JLY=","gameId":376425,"host":"gsp-aas-rt-13-251-158-38.gamesparks.net","matchData":{},"matchGroup":"1991595654288655","matchId":"5caff1807c71cb04e1d4d0a8","matchShortCode":"Kill_13","messageId":"5caff1807c71cb04e1d4d0b0","notification":true,"participants":[{"displayName":"TestUser01","externalIds":{ },"id":"5caf898ffed82804dc5a900b","online":true,"peerId":1,"scriptData":{"InstantID":"TestUser01","Photo":"default"}}],"pendingMatchData":{},"playerId":"5caf898ffed82804dc5a900b","port":5000,"summary":"MatchFoundMessage"}
+2019-04-12T02:01:36.722Z - normal: Simulator: JS: Game on match found {"@class":".MatchFoundMessage","accessToken":"XHrNtXQoI/QaSypQZpiBaiBoYvgIHNX9f0OrS5kspM5fEZfSwijQD/41kCyWeWSZvbGXbIN4qKYkeQAPb4y2ESycURSVNh0/0PrlGEERoMM5gqWGqiSyomL5TM3VyRSo9sRcTnXqBq7q05+wRiWrhkvetVeXKO/OhB29IOoe4G9jZj59LWmbmbq161+6Bj+umMSXSChfUoyxAC0WZ8dOZLHhXQDNcUUs1ng02V1zuzQkIAyY5pi1Jbvauboe2VRftmOmy8bFTI0sgDeHcZH0Ij9JdTsf5NNPIZGRpJ1z8ZjS2X42uno90o2OlUjsQbvmQJTwqlkt5rac+mFHBCaMfPZNgYFoE7mmWjYRXQglxW8iLLxtmJ7F7kPKwBq2sS+dRj1PudpBWxJEIVqPIGr8ijMSWgfAGhwV/Gp0kQ0iGUaLdaaTRvw1JLY=","gameId":376425,"host":"gsp-aas-rt-13-251-158-38.gamesparks.net","matchData":{},"matchGroup":"1991595654288655","matchId":"5caff1807c71cb04e1d4d0a8","matchShortCode":"Kill_13","messageId":"5caff1807c71cb04e1d4d0b0","notification":true,"participants":[{"displayName":"TestUser01","externalIds":{},"id":"5caf898ffed82804dc5a900b","online":true,"peerId":1,"scriptData":{"InstantID":"TestUser01","Photo":"default"}}],"pendingMatchData":{},"playerId":"5caf898ffed82804dc5a900b","port":5000,"summary":"MatchFoundMessage"}
+2019-04-12T02:01:36.722Z - normal: Simulator: JS: gsp-aas-rt-13-251-158-38.gamesparks.net : 5000
+2019-04-12T02:01:36.746Z - normal: Simulator: JS:  IRTSession:Disconnected, trying to connect
+2019-04-12T02:01:37.124Z - normal: Simulator: JS: onSessionReady true
+2019-04-12T02:01:37.199Z - normal: Simulator: JS: LoadScene 9ffd88a0-3d4f-4db6-a9cd-d7b5af9553ae: 18.1899999999996ms
+2019-04-12T02:01:37.241Z - error: Simulator: 2019-04-12 09:01:37.238 Simulator[3137:511483] WebSocket (0x7f81afe176b0) was closed, no need to close it again!
+    at HTMLElement.print-simulator-log (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene.js:1:1653)
+    at Object.e._dispatch (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/panel.js:1:1941)
+    at EventEmitter.o.on.s (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/ipc.js:1:2917)
+    at emitMany (events.js:127:13)
+    at EventEmitter.emit (events.js:204:7)
+2019-04-12T02:01:38.996Z - normal: Simulator: ScriptEngine::cleanup begin ...
+2019-04-12T02:01:38.996Z - normal: Simulator: GC begin ..., (js->native map) size: 157, all objects: 196
+2019-04-12T02:01:39.077Z - normal: Simulator: GC end ..., (js->native map) size: 145, all objects: 184
+2019-04-12T02:01:39.078Z - normal: Simulator: GC begin ..., (js->native map) size: 145, all objects: 184
+2019-04-12T02:01:39.139Z - normal: Simulator: GC end ..., (js->native map) size: 145, all objects: 184
+2019-04-12T02:01:39.140Z - normal: Simulator: Destroy WebGLFramebuffer (1) by GC
+2019-04-12T02:01:39.140Z - normal: Simulator: Destroy WebGLTexture (13) by GC
+2019-04-12T02:01:39.141Z - normal: Simulator: Destroy WebGLTexture (11) by GC
+2019-04-12T02:01:39.141Z - normal: Simulator: Destroy WebGLTexture (10) by GC
+2019-04-12T02:01:39.141Z - normal: Simulator: Destroy WebGLTexture (133) by GC
+2019-04-12T02:01:39.141Z - normal: Simulator: Destroy WebGLTexture (129) by GC
+2019-04-12T02:01:39.142Z - normal: Simulator: Destroy WebGLTexture (128) by GC
+2019-04-12T02:01:39.143Z - normal: Simulator: Destroy WebGLTexture (126) by GC
+2019-04-12T02:01:39.143Z - normal: Simulator: Destroy WebGLTexture (125) by GC
+2019-04-12T02:01:39.144Z - normal: Simulator: Destroy WebGLTexture (124) by GC
+2019-04-12T02:01:39.144Z - normal: Simulator: Destroy WebGLTexture (120) by GC
+2019-04-12T02:01:39.144Z - normal: Simulator: Destroy WebGLTexture (119) by GC
+2019-04-12T02:01:39.144Z - normal: Simulator: Destroy WebGLTexture (115) by GC
+2019-04-12T02:01:39.144Z - normal: Simulator: Destroy WebGLTexture (113) by GC
+2019-04-12T02:01:39.145Z - normal: Simulator: Destroy WebGLTexture (117) by GC
+2019-04-12T02:01:39.145Z - normal: Simulator: Destroy WebGLTexture (111) by GC
+2019-04-12T02:01:39.145Z - normal: Simulator: Destroy WebGLTexture (134) by GC
+2019-04-12T02:01:39.147Z - normal: Simulator: Destroy WebGLTexture (110) by GC
+2019-04-12T02:01:39.147Z - normal: Simulator: Destroy WebGLTexture (112) by GC
+2019-04-12T02:01:39.147Z - normal: Simulator: Destroy WebGLTexture (108) by GC
+2019-04-12T02:01:39.147Z - normal: Simulator: Destroy WebGLTexture (107) by GC
+2019-04-12T02:01:39.147Z - normal: Simulator: Destroy WebGLTexture (106) by GC
+2019-04-12T02:01:39.148Z - normal: Simulator: Destroy WebGLTexture (105) by GC
+2019-04-12T02:01:39.148Z - normal: Simulator: Destroy WebGLTexture (103) by GC
+2019-04-12T02:01:39.148Z - normal: Simulator: Destroy WebGLTexture (102) by GC
+2019-04-12T02:01:39.148Z - normal: Simulator: Destroy WebGLTexture (101) by GC
+2019-04-12T02:01:39.149Z - normal: Simulator: Destroy WebGLTexture (100) by GC
+2019-04-12T02:01:39.149Z - normal: Simulator: Destroy WebGLTexture (98) by GC
+2019-04-12T02:01:39.150Z - normal: Simulator: Destroy WebGLTexture (95) by GC
+2019-04-12T02:01:39.150Z - normal: Simulator: Destroy WebGLTexture (104) by GC
+2019-04-12T02:01:39.150Z - normal: Simulator: Destroy WebGLTexture (94) by GC
+2019-04-12T02:01:39.150Z - normal: Simulator: Destroy WebGLTexture (118) by GC
+2019-04-12T02:01:39.150Z - normal: Simulator: Destroy WebGLTexture (93) by GC
+2019-04-12T02:01:39.151Z - normal: Simulator: Destroy WebGLTexture (90) by GC
+2019-04-12T02:01:39.151Z - normal: Simulator: Destroy WebGLTexture (87) by GC
+2019-04-12T02:01:39.151Z - normal: Simulator: Destroy WebGLTexture (86) by GC
+2019-04-12T02:01:39.151Z - normal: Simulator: Destroy WebGLTexture (132) by GC
+2019-04-12T02:01:39.151Z - normal: Simulator: Destroy WebGLTexture (84) by GC
+2019-04-12T02:01:39.151Z - normal: Simulator: Destroy WebGLTexture (83) by GC
+2019-04-12T02:01:39.152Z - normal: Simulator: Destroy WebGLTexture (81) by GC
+2019-04-12T02:01:39.152Z - normal: Simulator: Destroy WebGLTexture (92) by GC
+2019-04-12T02:01:39.152Z - normal: Simulator: Destroy WebGLTexture (79) by GC
+2019-04-12T02:01:39.152Z - normal: Simulator: Destroy WebGLTexture (78) by GC
+2019-04-12T02:01:39.152Z - normal: Simulator: Destroy WebGLTexture (123) by GC
+2019-04-12T02:01:39.153Z - normal: Simulator: Destroy WebGLTexture (99) by GC
+2019-04-12T02:01:39.153Z - normal: Simulator: Destroy WebGLTexture (77) by GC
+2019-04-12T02:01:39.153Z - normal: Simulator: Destroy WebGLTexture (85) by GC
+2019-04-12T02:01:39.154Z - normal: Simulator: Destroy WebGLTexture (61) by GC
+2019-04-12T02:01:39.155Z - normal: Simulator: Destroy WebGLTexture (72) by GC
+2019-04-12T02:01:39.155Z - normal: Simulator: Destroy WebGLTexture (69) by GC
+2019-04-12T02:01:39.155Z - normal: Simulator: Destroy WebGLTexture (67) by GC
+2019-04-12T02:01:39.155Z - normal: Simulator: Destroy WebGLTexture (121) by GC
+2019-04-12T02:01:39.156Z - normal: Simulator: Destroy WebGLTexture (34) by GC
+2019-04-12T02:01:39.156Z - normal: Simulator: Destroy WebGLTexture (65) by GC
+2019-04-12T02:01:39.156Z - normal: Simulator: Destroy WebGLTexture (60) by GC
+2019-04-12T02:01:39.156Z - normal: Simulator: Destroy WebGLTexture (130) by GC
+2019-04-12T02:01:39.156Z - normal: Simulator: Destroy WebGLTexture (59) by GC
+2019-04-12T02:01:39.157Z - normal: Simulator: Destroy WebGLTexture (58) by GC
+2019-04-12T02:01:39.157Z - normal: Simulator: Destroy WebGLTexture (26) by GC
+2019-04-12T02:01:39.157Z - normal: Simulator: Destroy WebGLTexture (54) by GC
+2019-04-12T02:01:39.157Z - normal: Simulator: Destroy WebGLTexture (82) by GC
+2019-04-12T02:01:39.157Z - normal: Simulator: Destroy WebGLTexture (73) by GC
+2019-04-12T02:01:39.158Z - normal: Simulator: Destroy WebGLTexture (71) by GC
+2019-04-12T02:01:39.158Z - normal: Simulator: Destroy WebGLTexture (42) by GC
+2019-04-12T02:01:39.158Z - normal: Simulator: Destroy WebGLTexture (53) by GC
+2019-04-12T02:01:39.158Z - normal: Simulator: Destroy WebGLTexture (52) by GC
+2019-04-12T02:01:39.159Z - normal: Simulator: Destroy WebGLTexture (30) by GC
+2019-04-12T02:01:39.159Z - normal: Simulator: Destroy WebGLTexture (51) by GC
+2019-04-12T02:01:39.159Z - normal: Simulator: Destroy WebGLTexture (50) by GC
+2019-04-12T02:01:39.159Z - normal: Simulator: Destroy WebGLTexture (114) by GC
+2019-04-12T02:01:39.160Z - normal: Simulator: Destroy WebGLTexture (49) by GC
+2019-04-12T02:01:39.160Z - normal: Simulator: Destroy WebGLTexture (48) by GC
+2019-04-12T02:01:39.160Z - normal: Simulator: Destroy WebGLTexture (47) by GC
+2019-04-12T02:01:39.160Z - normal: Simulator: Destroy WebGLTexture (3) by GC
+2019-04-12T02:01:39.160Z - normal: Simulator: Destroy WebGLTexture (57) by GC
+2019-04-12T02:01:39.160Z - normal: Simulator: Destroy WebGLTexture (97) by GC
+2019-04-12T02:01:39.161Z - normal: Simulator: Destroy WebGLTexture (45) by GC
+2019-04-12T02:01:39.161Z - normal: Simulator: Destroy WebGLTexture (44) by GC
+2019-04-12T02:01:39.161Z - normal: Simulator: Destroy WebGLTexture (131) by GC
+2019-04-12T02:01:39.161Z - normal: Simulator: Destroy WebGLTexture (116) by GC
+2019-04-12T02:01:39.162Z - normal: Simulator: Destroy WebGLTexture (80) by GC
+2019-04-12T02:01:39.162Z - normal: Simulator: Destroy WebGLTexture (89) by GC
+2019-04-12T02:01:39.162Z - normal: Simulator: Destroy WebGLTexture (63) by GC
+2019-04-12T02:01:39.162Z - normal: Simulator: Destroy WebGLTexture (39) by GC
+2019-04-12T02:01:39.163Z - normal: Simulator: Destroy WebGLTexture (76) by GC
+2019-04-12T02:01:39.163Z - normal: Simulator: Destroy WebGLTexture (43) by GC
+2019-04-12T02:01:39.163Z - normal: Simulator: Destroy WebGLTexture (109) by GC
+2019-04-12T02:01:39.163Z - normal: Simulator: Destroy WebGLTexture (38) by GC
+2019-04-12T02:01:39.163Z - normal: Simulator: Destroy WebGLTexture (122) by GC
+2019-04-12T02:01:39.164Z - normal: Simulator: Destroy WebGLTexture (36) by GC
+2019-04-12T02:01:39.164Z - normal: Simulator: Destroy WebGLBuffer (3) by GC
+2019-04-12T02:01:39.164Z - normal: Simulator: Destroy WebGLTexture (35) by GC
+2019-04-12T02:01:39.164Z - normal: Simulator: Destroy WebGLTexture (91) by GC
+2019-04-12T02:01:39.164Z - normal: Simulator: Destroy WebGLTexture (64) by GC
+2019-04-12T02:01:39.165Z - normal: Simulator: Destroy WebGLTexture (33) by GC
+2019-04-12T02:01:39.165Z - normal: Simulator: Destroy WebGLTexture (46) by GC
+2019-04-12T02:01:39.165Z - normal: Simulator: Destroy WebGLTexture (1) by GC
+2019-04-12T02:01:39.165Z - normal: Simulator: Destroy WebGLTexture (7) by GC
+2019-04-12T02:01:39.166Z - normal: Simulator: Destroy WebGLTexture (28) by GC
+2019-04-12T02:01:39.166Z - normal: Simulator: Destroy WebGLTexture (5) by GC
+2019-04-12T02:01:39.166Z - normal: Simulator: Destroy WebGLBuffer (7) by GC
+2019-04-12T02:01:39.166Z - normal: Simulator: Destroy WebGLTexture (68) by GC
+2019-04-12T02:01:39.166Z - normal: Simulator: Destroy WebGLTexture (23) by GC
+2019-04-12T02:01:39.167Z - normal: Simulator: Destroy WebGLTexture (25) by GC
+2019-04-12T02:01:39.167Z - normal: Simulator: Destroy WebGLTexture (62) by GC
+2019-04-12T02:01:39.167Z - normal: Simulator: Destroy WebGLTexture (22) by GC
+2019-04-12T02:01:39.167Z - normal: Simulator: Destroy WebGLTexture (56) by GC
+2019-04-12T02:01:39.167Z - normal: Simulator: Destroy WebGLTexture (37) by GC
+2019-04-12T02:01:39.168Z - normal: Simulator: Destroy WebGLTexture (55) by GC
+2019-04-12T02:01:39.168Z - normal: Simulator: Destroy WebGLTexture (21) by GC
+2019-04-12T02:01:39.168Z - normal: Simulator: Destroy WebGLProgram (3) by GC
+2019-04-12T02:01:39.168Z - normal: Simulator: Destroy WebGLTexture (88) by GC
+2019-04-12T02:01:39.168Z - normal: Simulator: Destroy WebGLBuffer (5) by GC
+2019-04-12T02:01:39.169Z - normal: Simulator: Destroy WebGLTexture (74) by GC
+2019-04-12T02:01:39.169Z - normal: Simulator: Destroy WebGLBuffer (8) by GC
+2019-04-12T02:01:39.169Z - normal: Simulator: Destroy WebGLTexture (31) by GC
+2019-04-12T02:01:39.169Z - normal: Simulator: Destroy WebGLTexture (24) by GC
+2019-04-12T02:01:39.169Z - normal: Simulator: Destroy WebGLTexture (70) by GC
+2019-04-12T02:01:39.170Z - normal: Simulator: Destroy WebGLTexture (6) by GC
+2019-04-12T02:01:39.170Z - normal: Simulator: Destroy WebGLTexture (96) by GC
+2019-04-12T02:01:39.170Z - normal: Simulator: Destroy WebGLTexture (75) by GC
+2019-04-12T02:01:39.170Z - normal: Simulator: Destroy WebGLTexture (27) by GC
+2019-04-12T02:01:39.170Z - normal: Simulator: Destroy WebGLTexture (2) by GC
+2019-04-12T02:01:39.171Z - normal: Simulator: Destroy WebGLTexture (8) by GC
+2019-04-12T02:01:39.171Z - normal: Simulator: Destroy WebGLTexture (40) by GC
+2019-04-12T02:01:39.171Z - normal: Simulator: Destroy WebGLTexture (4) by GC
+2019-04-12T02:01:39.171Z - normal: Simulator: Destroy WebGLBuffer (6) by GC
+2019-04-12T02:01:39.171Z - normal: Simulator: Destroy WebGLTexture (12) by GC
+2019-04-12T02:01:39.172Z - normal: Simulator: Destroy WebGLTexture (29) by GC
+2019-04-12T02:01:39.172Z - normal: Simulator: Destroy WebGLBuffer (4) by GC
+2019-04-12T02:01:39.172Z - normal: Simulator: Destroy WebGLTexture (41) by GC
+2019-04-12T02:01:39.172Z - normal: Simulator: Destroy WebGLTexture (9) by GC
+2019-04-12T02:01:39.172Z - normal: Simulator: Destroy WebGLTexture (66) by GC
+2019-04-12T02:01:39.173Z - normal: Simulator: Destroy WebGLBuffer (1) by GC
+2019-04-12T02:01:39.173Z - normal: Simulator: Destroy WebGLTexture (127) by GC
+2019-04-12T02:01:39.173Z - normal: Simulator: Destroy WebGLBuffer (2) by GC
+2019-04-12T02:01:39.173Z - normal: Simulator: Destroy WebGLTexture (32) by GC
+2019-04-12T02:01:39.173Z - normal: Simulator: GC begin ..., (js->native map) size: 0, all objects: 0
+2019-04-12T02:01:39.234Z - normal: Simulator: GC end ..., (js->native map) size: 0, all objects: 0
+2019-04-12T02:01:39.247Z - normal: Simulator: ScriptEngine::cleanup end ...
+2019-04-12T02:01:51.884Z - normal: Simulator: WORKAREA WIDTH 1280.00, HEIGHT 755.00
+2019-04-12T02:01:51.885Z - normal: Simulator: FRAME SCALE = 1.00
+2019-04-12T02:01:52.059Z - normal: Simulator: 
+2019-04-12T02:01:52.059Z - normal: Simulator: {
+2019-04-12T02:01:52.059Z - normal: Simulator: 	build_type: DEBUG
+2019-04-12T02:01:52.060Z - normal: Simulator: 	gl.vendor: Intel Inc.
+2019-04-12T02:01:52.060Z - normal: Simulator: 	gl.supports_PVRTC: false
+2019-04-12T02:01:52.060Z - normal: Simulator: 	gl.renderer: Intel Iris OpenGL Engine
+2019-04-12T02:01:52.060Z - normal: Simulator: 	gl.supports_ATITC: false
+2019-04-12T02:01:52.061Z - normal: Simulator: 	gl.supports_discard_framebuffer: false
+2019-04-12T02:01:52.061Z - normal: Simulator: 	gl.supports_NPOT: true
+2019-04-12T02:01:52.061Z - normal: Simulator: 	gl.max_texture_units: 16
+2019-04-12T02:01:52.061Z - normal: Simulator: 	gl.supports_ETC1: false
+2019-04-12T02:01:52.062Z - normal: Simulator: 	gl.max_texture_size: 16384
+2019-04-12T02:01:52.062Z - normal: Simulator: 	gl.supports_BGRA8888: false
+2019-04-12T02:01:52.062Z - normal: Simulator: 	gl.supports_vertex_array_object: true
+2019-04-12T02:01:52.062Z - normal: Simulator: 	gl.supports_OES_map_buffer: false
+2019-04-12T02:01:52.063Z - normal: Simulator: 	compiled_with_gl_state_cache: true
+2019-04-12T02:01:52.063Z - normal: Simulator: 	gl.supports_OES_packed_depth_stencil: false
+2019-04-12T02:01:52.063Z - normal: Simulator: 	gl.version: 2.1 INTEL-10.25.19
+2019-04-12T02:01:52.063Z - normal: Simulator: 	gl.supports_S3TC: true
+2019-04-12T02:01:52.064Z - normal: Simulator: 	compiled_with_profiler: false
+2019-04-12T02:01:52.064Z - normal: Simulator: 	gl.supports_OES_depth24: false
+2019-04-12T02:01:52.064Z - normal: Simulator: }
+2019-04-12T02:01:52.064Z - normal: Simulator: 
+2019-04-12T02:01:52.064Z - normal: Simulator: 
+2019-04-12T02:01:52.065Z - normal: Simulator: Project Config:
+2019-04-12T02:01:52.065Z - normal: Simulator:     project dir: /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/simulator/mac/Simulator.app/Contents/Resources/
+2019-04-12T02:01:52.065Z - normal: Simulator:     writable path: $(PROJDIR)/
+2019-04-12T02:01:52.065Z - normal: Simulator:     script file: $(PROJDIR)/main.js
+2019-04-12T02:01:52.066Z - normal: Simulator:     frame size: 960 x 640
+2019-04-12T02:01:52.066Z - normal: Simulator:     frame scale: 1.00
+2019-04-12T02:01:52.066Z - normal: Simulator:     show console: NO
+2019-04-12T02:01:52.066Z - normal: Simulator:     write debug log: NO ()
+2019-04-12T02:01:52.067Z - normal: Simulator:     listen: 
+2019-04-12T02:01:52.067Z - normal: Simulator:     debugger: none
+2019-04-12T02:01:52.067Z - normal: Simulator:     add searching path:
+2019-04-12T02:01:52.067Z - normal: Simulator: 
+2019-04-12T02:01:52.067Z - normal: Simulator: 
+2019-04-12T02:01:52.068Z - normal: Simulator: 
+2019-04-12T02:01:52.068Z - normal: Simulator: resetDesignResolution request
+2019-04-12T02:01:52.068Z - normal: Simulator: ------------------------------------------------
+2019-04-12T02:01:52.068Z - normal: Simulator: LOAD Js FILE: jsb-adapter/jsb-builtin.js
+2019-04-12T02:01:52.069Z - normal: Simulator: ------------------------------------------------
+2019-04-12T02:01:52.069Z - normal: Simulator: Initializing V8, version: 6.0.286.52
+2019-04-12T02:01:52.490Z - normal: Simulator: libuv version: 1.23.1-dev
+2019-04-12T02:01:52.491Z - normal: Simulator: Debugger listening..., visit [ chrome-devtools://devtools/bundled/inspector.html?v8only=true&ws=0.0.0.0:5086/00010002-0003-4004-8005-000600070008 ] in chrome browser to debug!
+2019-04-12T02:01:52.491Z - normal: Simulator: For help see https://nodejs.org/en/docs/inspector
+2019-04-12T02:01:52.556Z - normal: Simulator: JS: Enable batch GL commands optimization!
+2019-04-12T02:01:52.601Z - normal: Simulator: resetDesignResolution request
+2019-04-12T02:01:52.602Z - normal: Simulator: ------------------------------------------------
+2019-04-12T02:01:52.603Z - normal: Simulator: LOAD Js FILE: main.js
+2019-04-12T02:01:52.603Z - normal: Simulator: ------------------------------------------------
+2019-04-12T02:01:53.252Z - normal: Simulator: iShow!
+2019-04-12T02:01:53.457Z - normal: Simulator: glGetIntegerv: pname: 0x8b4c
+2019-04-12T02:01:53.474Z - normal: Simulator: JS: Cocos Creator v2.1.0
+2019-04-12T02:01:55.497Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:55.499Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:55.501Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:55.502Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:55.508Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:55.508Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:55.509Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:55.509Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:55.510Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:55.510Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:55.511Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:55.512Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:55.523Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:55.525Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:55.526Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:55.548Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:55.549Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:55.549Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:55.550Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:55.551Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:55.553Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:55.553Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:55.554Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:55.554Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:55.554Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:55.555Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:55.555Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:55.555Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:55.555Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:55.556Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:55.556Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:55.556Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:55.556Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:55.560Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:55.560Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:55.560Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:55.561Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:55.561Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:55.627Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:55.630Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:55.636Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:55.642Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:55.652Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:55.656Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:55.658Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:55.658Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:55.662Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:55.668Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:55.672Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:55.672Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:55.674Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:01:56.170Z - normal: Simulator: JS: WebSocket onOpen
+2019-04-12T02:01:56.171Z - normal: Simulator: JS: WebSocket onMessage: {"@class": ".AuthenticatedConnectResponse","connectUrl": "wss://gsp-aas000-se09.gamesparks.net/ws/device/U376425o7BLE","requestId": "0"}
+2019-04-12T02:01:56.172Z - error: Simulator: 2019-04-12 09:01:56.170 Simulator[3143:512180] WebSocket (0x7f95a15e77d0) was closed, no need to close it again!
+    at HTMLElement.print-simulator-log (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene.js:1:1653)
+    at Object.e._dispatch (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/panel.js:1:1941)
+    at EventEmitter.o.on.s (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/ipc.js:1:2917)
+    at emitMany (events.js:127:13)
+    at EventEmitter.emit (events.js:204:7)
+2019-04-12T02:01:56.173Z - error: Simulator: [ERROR] (/Users/nantas/fireball-x/cocos2d-x-lite_21/cocos/scripting/js-bindings/manual/jsb_websocket.cpp, 206): Can't get onclose function!
+    at HTMLElement.print-simulator-log (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene.js:1:1653)
+    at Object.e._dispatch (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/panel.js:1:1941)
+    at EventEmitter.o.on.s (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/ipc.js:1:2917)
+    at emitMany (events.js:127:13)
+    at EventEmitter.emit (events.js:204:7)
+2019-04-12T02:01:56.620Z - normal: Simulator: JS: WebSocket onOpen
+2019-04-12T02:01:56.620Z - normal: Simulator: JS: WebSocket onMessage: {"@class":".AuthenticatedConnectResponse","nonce":"51ae830b-fbbb-40a0-bba0-8831e57e7124","requestId":"0"}
+2019-04-12T02:01:56.625Z - error: Simulator: 2019-04-12 09:01:56.623 Simulator[3143:512180] WebSocket (0x7f95a15e77d0) was closed, no need to close it again!
+    at HTMLElement.print-simulator-log (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene.js:1:1653)
+    at Object.e._dispatch (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/panel.js:1:1941)
+    at EventEmitter.o.on.s (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/ipc.js:1:2917)
+    at emitMany (events.js:127:13)
+    at EventEmitter.emit (events.js:204:7)
+2019-04-12T02:01:56.628Z - normal: Simulator: JS: WebSocket send: {"@class":".AuthenticatedConnectRequest","hmac":"An2a22YnNpMcnOPSn6zy4EAl+ngvhZbPm8ONfPngZEk=","platform":"Mozilla","os":"iPhone/iPod"}
+2019-04-12T02:01:56.694Z - normal: Simulator: JS: WebSocket onMessage: {"@class":".AuthenticatedConnectResponse","requestId":"0","sessionId":"51ae830b-fbbb-40a0-bba0-8831e57e7124"}
+2019-04-12T02:01:56.694Z - normal: Simulator: JS: WebSocket send: {"userName":"TestUser03","password":"TestUser03","@class":".AuthenticationRequest","requestId":"1555034516686_1"}
+2019-04-12T02:01:56.759Z - normal: Simulator: JS: WebSocket onMessage: {"@class":".AuthenticationResponse","authToken":"1ef94deb-8d2e-4d07-a381-d856c298eca7","displayName":"TestUser03","newPlayer":false,"requestId":"1555034516686_1","userId":"5caf983fe668e304e112f209"}
+2019-04-12T02:01:56.760Z - normal: Simulator: JS: WebSocket send: {"matchShortCode":"Kill_13","matchGroup":"1991595654288655","skill":0,"@class":".MatchmakingRequest","requestId":"1555034516758_2"}
+2019-04-12T02:01:56.827Z - normal: Simulator: JS: WebSocket onMessage: {"@class":".MatchmakingResponse","requestId":"1555034516758_2"}
+2019-04-12T02:01:56.828Z - normal: Simulator: JS: [object Object]
+2019-04-12T02:01:56.856Z - normal: Simulator: JS: WebSocket onMessage: {"@class":".MatchFoundMessage","accessToken":"XHrNtXQoI/QbTypQZpiBaiBoYvgIHNX/LBirS5kspM5fEZbawifUCP41kCyWeWSZvbGXbIN4qKYkeQAPb4y2ESycURSVNh0/0PrlGEERoMM5gqWHriSyomL5TM3VyRSo9sReHS7qBq7q05+wRiWrhkvetVeXKO/PjB2yJO4e4G9jZj59LWmbmbq161+6Bj+umMSXSChfUoyxAC0WZ8dOZLHhXQDNcUUs1ng02V1zujUvIA/LtJjiLrvauOgaigtdtjimy8bFTI0sgDeHcZH0Ij9JdTsf5NNPIZGRpJ1z8ZjS2X42uno90o2OlUjsQbvmQJTwqlkt5rac+mFHBCaMfPZNgYFoE7mmWjYRXQglxW8iLLxtmJ7F7kPKwBq2sS+dRj1PudpBWxJEIVqPIGr8ijMSWgfAGhwV/E7xf3mzfkv+pw7uhheXdoQ=","gameId":376425,"host":"gsp-aas-rt-13-251-158-38.gamesparks.net","matchData":{},"matchGroup":"1991595654288655","matchId":"5caff1947c71cb04e1d4d22c","matchShortCode":"Kill_13","messageId":"5caff1947c71cb04e1d4d234","notification":true,"participants":[{"displayName":"TestUser03","externalIds":{ },"id":"5caf983fe668e304e112f209","online":true,"peerId":1,"scriptData":{"InstantID":"TestUser03","Photo":"default"}}],"pendingMatchData":{},"playerId":"5caf983fe668e304e112f209","port":5000,"summary":"MatchFoundMessage"}
+2019-04-12T02:01:56.861Z - normal: Simulator: JS: Game on match found {"@class":".MatchFoundMessage","accessToken":"XHrNtXQoI/QbTypQZpiBaiBoYvgIHNX/LBirS5kspM5fEZbawifUCP41kCyWeWSZvbGXbIN4qKYkeQAPb4y2ESycURSVNh0/0PrlGEERoMM5gqWHriSyomL5TM3VyRSo9sReHS7qBq7q05+wRiWrhkvetVeXKO/PjB2yJO4e4G9jZj59LWmbmbq161+6Bj+umMSXSChfUoyxAC0WZ8dOZLHhXQDNcUUs1ng02V1zujUvIA/LtJjiLrvauOgaigtdtjimy8bFTI0sgDeHcZH0Ij9JdTsf5NNPIZGRpJ1z8ZjS2X42uno90o2OlUjsQbvmQJTwqlkt5rac+mFHBCaMfPZNgYFoE7mmWjYRXQglxW8iLLxtmJ7F7kPKwBq2sS+dRj1PudpBWxJEIVqPIGr8ijMSWgfAGhwV/E7xf3mzfkv+pw7uhheXdoQ=","gameId":376425,"host":"gsp-aas-rt-13-251-158-38.gamesparks.net","matchData":{},"matchGroup":"1991595654288655","matchId":"5caff1947c71cb04e1d4d22c","matchShortCode":"Kill_13","messageId":"5caff1947c71cb04e1d4d234","notification":true,"participants":[{"displayName":"TestUser03","externalIds":{},"id":"5caf983fe668e304e112f209","online":true,"peerId":1,"scriptData":{"InstantID":"TestUser03","Photo":"default"}}],"pendingMatchData":{},"playerId":"5caf983fe668e304e112f209","port":5000,"summary":"MatchFoundMessage"}
+2019-04-12T02:01:56.861Z - normal: Simulator: JS: gsp-aas-rt-13-251-158-38.gamesparks.net : 5000
+2019-04-12T02:01:56.889Z - normal: Simulator: JS:  IRTSession:Disconnected, trying to connect
+2019-04-12T02:01:57.369Z - normal: Simulator: JS: onSessionReady true
+2019-04-12T02:01:57.442Z - normal: Simulator: JS: LoadScene 9ffd88a0-3d4f-4db6-a9cd-d7b5af9553ae: 17.059000000000196ms
+2019-04-12T02:02:18.004Z - normal: Simulator: JS: WebSocket onMessage: {"@class":".MatchUpdatedMessage","addedPlayers":["5caf8a7ce668e304e10fa417"],"gameId":376425,"matchData":{},"matchGroup":"1991595654288655","matchId":"5caff1947c71cb04e1d4d22c","matchShortCode":"Kill_13","messageId":"5caff1aafed82804dc70ddb8","notification":true,"participants":[{"displayName":"TestUser03","externalIds":{ },"id":"5caf983fe668e304e112f209","online":true,"peerId":1,"scriptData":{"InstantID":"TestUser03","Photo":"default"}},{"displayName":"TestUser08","externalIds":{ },"id":"5caf8a7ce668e304e10fa417","online":true,"peerId":2,"scriptData":{"InstantID":"TestUser08","Photo":"default"}}],"playerId":"5caf983fe668e304e112f209","summary":"MatchUpdatedMessage"}
+2019-04-12T02:02:18.005Z - normal: Simulator: JS: Game on match update {"@class":".MatchUpdatedMessage","addedPlayers":["5caf8a7ce668e304e10fa417"],"gameId":376425,"matchData":{},"matchGroup":"1991595654288655","matchId":"5caff1947c71cb04e1d4d22c","matchShortCode":"Kill_13","messageId":"5caff1aafed82804dc70ddb8","notification":true,"participants":[{"displayName":"TestUser03","externalIds":{},"id":"5caf983fe668e304e112f209","online":true,"peerId":1,"scriptData":{"InstantID":"TestUser03","Photo":"default"}},{"displayName":"TestUser08","externalIds":{},"id":"5caf8a7ce668e304e10fa417","online":true,"peerId":2,"scriptData":{"InstantID":"TestUser08","Photo":"default"}}],"playerId":"5caf983fe668e304e112f209","summary":"MatchUpdatedMessage"}
+2019-04-12T02:02:18.676Z - normal: Simulator: JS: onPlayerConnectedCB 2
+2019-04-12T02:02:20.526Z - normal: Simulator: JS: GameState Change 1
+2019-04-12T02:02:24.491Z - normal: Simulator: JS: GameState Change 0
+2019-04-12T02:02:24.519Z - normal: Simulator: JS: GameState Change 1
+2019-04-12T02:02:26.415Z - normal: Simulator: JS: GameState Change 0
+2019-04-12T02:02:26.422Z - normal: Simulator: JS: GameState Change 1
+2019-04-12T02:02:29.966Z - normal: Simulator: JS: GameState Change 2
+2019-04-12T02:02:30.339Z - normal: Simulator: I/AudioEngine-inl.mm (359): OpenAL was initialized successfully!
+2019-04-12T02:02:30.339Z - normal: Simulator: V/AudioCache (311): pcm buffer was loaded successfully, total frames: 8255, total read frames: 8255, adjust frames: 0, remainingFrames: 0
+2019-04-12T02:02:30.339Z - normal: Simulator: JS: GameState Change 3
+2019-04-12T02:03:12.025Z - normal: Simulator: JS: GameState Change 4
+2019-04-12T02:03:22.071Z - normal: Simulator: JS: GameState Change 0
+2019-04-12T02:03:22.072Z - normal: Simulator: JS: GameState Change 1
+2019-04-12T02:03:39.219Z - normal: Simulator: JS: onPlayerDisconnected 2
+2019-04-12T02:03:39.237Z - normal: Simulator: JS: GameState Change 0
+2019-04-12T02:03:43.491Z - normal: Simulator: ScriptEngine::cleanup begin ...
+2019-04-12T02:03:43.493Z - normal: Simulator: GC begin ..., (js->native map) size: 191, all objects: 230
+2019-04-12T02:03:43.756Z - normal: Simulator: GC end ..., (js->native map) size: 179, all objects: 218
+2019-04-12T02:03:43.757Z - normal: Simulator: GC begin ..., (js->native map) size: 179, all objects: 218
+2019-04-12T02:03:43.962Z - normal: Simulator: GC end ..., (js->native map) size: 179, all objects: 218
+2019-04-12T02:03:43.964Z - normal: Simulator: Destroy WebGLBuffer (32) by GC
+2019-04-12T02:03:43.965Z - normal: Simulator: Destroy WebGLBuffer (31) by GC
+2019-04-12T02:03:43.966Z - normal: Simulator: Destroy WebGLBuffer (27) by GC
+2019-04-12T02:03:43.968Z - normal: Simulator: Destroy WebGLTexture (17) by GC
+2019-04-12T02:03:43.969Z - normal: Simulator: Destroy WebGLBuffer (24) by GC
+2019-04-12T02:03:43.971Z - normal: Simulator: Destroy WebGLBuffer (23) by GC
+2019-04-12T02:03:43.972Z - normal: Simulator: Destroy WebGLBuffer (26) by GC
+2019-04-12T02:03:43.973Z - normal: Simulator: Destroy WebGLBuffer (19) by GC
+2019-04-12T02:03:43.973Z - normal: Simulator: Destroy WebGLBuffer (17) by GC
+2019-04-12T02:03:43.977Z - normal: Simulator: Destroy WebGLBuffer (15) by GC
+2019-04-12T02:03:43.978Z - normal: Simulator: Destroy WebGLBuffer (12) by GC
+2019-04-12T02:03:43.979Z - normal: Simulator: Destroy WebGLBuffer (11) by GC
+2019-04-12T02:03:43.980Z - normal: Simulator: Destroy WebGLTexture (12) by GC
+2019-04-12T02:03:43.980Z - normal: Simulator: Destroy WebGLTexture (133) by GC
+2019-04-12T02:03:43.984Z - normal: Simulator: Destroy WebGLTexture (132) by GC
+2019-04-12T02:03:44.014Z - normal: Simulator: Destroy WebGLTexture (14) by GC
+2019-04-12T02:03:44.015Z - normal: Simulator: Destroy WebGLTexture (128) by GC
+2019-04-12T02:03:44.017Z - normal: Simulator: Destroy WebGLTexture (126) by GC
+2019-04-12T02:03:44.022Z - normal: Simulator: Destroy WebGLTexture (125) by GC
+2019-04-12T02:03:44.024Z - normal: Simulator: Destroy WebGLTexture (120) by GC
+2019-04-12T02:03:44.027Z - normal: Simulator: Destroy WebGLTexture (15) by GC
+2019-04-12T02:03:44.028Z - normal: Simulator: Destroy WebGLTexture (122) by GC
+2019-04-12T02:03:44.029Z - normal: Simulator: Destroy WebGLTexture (119) by GC
+2019-04-12T02:03:44.030Z - normal: Simulator: Destroy WebGLTexture (118) by GC
+2019-04-12T02:03:44.043Z - normal: Simulator: Destroy WebGLTexture (116) by GC
+2019-04-12T02:03:44.044Z - normal: Simulator: Destroy WebGLProgram (6) by GC
+2019-04-12T02:03:44.045Z - normal: Simulator: Destroy WebGLTexture (13) by GC
+2019-04-12T02:03:44.046Z - normal: Simulator: Destroy WebGLTexture (115) by GC
+2019-04-12T02:03:44.047Z - normal: Simulator: Destroy WebGLTexture (111) by GC
+2019-04-12T02:03:44.048Z - normal: Simulator: Destroy WebGLTexture (110) by GC
+2019-04-12T02:03:44.048Z - normal: Simulator: Destroy WebGLTexture (109) by GC
+2019-04-12T02:03:44.049Z - normal: Simulator: Destroy WebGLFramebuffer (1) by GC
+2019-04-12T02:03:44.050Z - normal: Simulator: Destroy WebGLTexture (108) by GC
+2019-04-12T02:03:44.050Z - normal: Simulator: Destroy WebGLTexture (124) by GC
+2019-04-12T02:03:44.051Z - normal: Simulator: Destroy WebGLTexture (107) by GC
+2019-04-12T02:03:44.052Z - normal: Simulator: Destroy WebGLTexture (105) by GC
+2019-04-12T02:03:44.052Z - normal: Simulator: Destroy WebGLTexture (103) by GC
+2019-04-12T02:03:44.053Z - normal: Simulator: Destroy WebGLTexture (98) by GC
+2019-04-12T02:03:44.054Z - normal: Simulator: Destroy WebGLTexture (97) by GC
+2019-04-12T02:03:44.054Z - normal: Simulator: Destroy WebGLTexture (129) by GC
+2019-04-12T02:03:44.055Z - normal: Simulator: Destroy WebGLTexture (96) by GC
+2019-04-12T02:03:44.057Z - normal: Simulator: Destroy WebGLTexture (95) by GC
+2019-04-12T02:03:44.058Z - normal: Simulator: Destroy WebGLTexture (93) by GC
+2019-04-12T02:03:44.059Z - normal: Simulator: Destroy WebGLTexture (91) by GC
+2019-04-12T02:03:44.062Z - normal: Simulator: Destroy WebGLTexture (90) by GC
+2019-04-12T02:03:44.063Z - normal: Simulator: Destroy WebGLTexture (88) by GC
+2019-04-12T02:03:44.066Z - normal: Simulator: Destroy WebGLTexture (86) by GC
+2019-04-12T02:03:44.066Z - normal: Simulator: Destroy WebGLTexture (85) by GC
+2019-04-12T02:03:44.067Z - normal: Simulator: Destroy WebGLBuffer (16) by GC
+2019-04-12T02:03:44.067Z - normal: Simulator: Destroy WebGLTexture (81) by GC
+2019-04-12T02:03:44.068Z - normal: Simulator: Destroy WebGLTexture (11) by GC
+2019-04-12T02:03:44.069Z - normal: Simulator: Destroy WebGLTexture (123) by GC
+2019-04-12T02:03:44.070Z - normal: Simulator: Destroy WebGLTexture (78) by GC
+2019-04-12T02:03:44.071Z - normal: Simulator: Destroy WebGLTexture (104) by GC
+2019-04-12T02:03:44.071Z - normal: Simulator: Destroy WebGLTexture (99) by GC
+2019-04-12T02:03:44.072Z - normal: Simulator: Destroy WebGLTexture (62) by GC
+2019-04-12T02:03:44.073Z - normal: Simulator: Destroy WebGLTexture (70) by GC
+2019-04-12T02:03:44.074Z - normal: Simulator: Destroy WebGLTexture (67) by GC
+2019-04-12T02:03:44.075Z - normal: Simulator: Destroy WebGLTexture (65) by GC
+2019-04-12T02:03:44.075Z - normal: Simulator: Destroy WebGLTexture (60) by GC
+2019-04-12T02:03:44.076Z - normal: Simulator: Destroy WebGLTexture (102) by GC
+2019-04-12T02:03:44.077Z - normal: Simulator: Destroy WebGLTexture (58) by GC
+2019-04-12T02:03:44.077Z - normal: Simulator: Destroy WebGLTexture (82) by GC
+2019-04-12T02:03:44.078Z - normal: Simulator: Destroy WebGLTexture (80) by GC
+2019-04-12T02:03:44.078Z - normal: Simulator: Destroy WebGLTexture (56) by GC
+2019-04-12T02:03:44.079Z - normal: Simulator: Destroy WebGLProgram (3) by GC
+2019-04-12T02:03:44.080Z - normal: Simulator: Destroy WebGLTexture (5) by GC
+2019-04-12T02:03:44.080Z - normal: Simulator: Destroy WebGLTexture (52) by GC
+2019-04-12T02:03:44.081Z - normal: Simulator: Destroy WebGLTexture (51) by GC
+2019-04-12T02:03:44.081Z - normal: Simulator: Destroy WebGLTexture (113) by GC
+2019-04-12T02:03:44.082Z - normal: Simulator: Destroy WebGLTexture (72) by GC
+2019-04-12T02:03:44.082Z - normal: Simulator: Destroy WebGLTexture (50) by GC
+2019-04-12T02:03:44.083Z - normal: Simulator: Destroy WebGLTexture (114) by GC
+2019-04-12T02:03:44.084Z - normal: Simulator: Destroy WebGLTexture (41) by GC
+2019-04-12T02:03:44.084Z - normal: Simulator: Destroy WebGLTexture (49) by GC
+2019-04-12T02:03:44.085Z - normal: Simulator: Destroy WebGLTexture (47) by GC
+2019-04-12T02:03:44.088Z - normal: Simulator: Destroy WebGLTexture (117) by GC
+2019-04-12T02:03:44.088Z - normal: Simulator: Destroy WebGLTexture (101) by GC
+2019-04-12T02:03:44.089Z - normal: Simulator: Destroy WebGLTexture (46) by GC
+2019-04-12T02:03:44.089Z - normal: Simulator: Destroy WebGLTexture (45) by GC
+2019-04-12T02:03:44.090Z - normal: Simulator: Destroy WebGLTexture (43) by GC
+2019-04-12T02:03:44.091Z - normal: Simulator: Destroy WebGLTexture (79) by GC
+2019-04-12T02:03:44.091Z - normal: Simulator: Destroy WebGLTexture (16) by GC
+2019-04-12T02:03:44.092Z - normal: Simulator: Destroy WebGLTexture (63) by GC
+2019-04-12T02:03:44.093Z - normal: Simulator: Destroy WebGLBuffer (13) by GC
+2019-04-12T02:03:44.093Z - normal: Simulator: Destroy WebGLTexture (83) by GC
+2019-04-12T02:03:44.095Z - normal: Simulator: Destroy WebGLTexture (53) by GC
+2019-04-12T02:03:44.096Z - normal: Simulator: Destroy WebGLTexture (42) by GC
+2019-04-12T02:03:44.097Z - normal: Simulator: Destroy WebGLBuffer (22) by GC
+2019-04-12T02:03:44.097Z - normal: Simulator: Destroy WebGLTexture (69) by GC
+2019-04-12T02:03:44.098Z - normal: Simulator: Destroy WebGLTexture (37) by GC
+2019-04-12T02:03:44.100Z - normal: Simulator: Destroy WebGLTexture (39) by GC
+2019-04-12T02:03:44.101Z - normal: Simulator: Destroy WebGLTexture (36) by GC
+2019-04-12T02:03:44.102Z - normal: Simulator: Destroy WebGLTexture (35) by GC
+2019-04-12T02:03:44.103Z - normal: Simulator: Destroy WebGLBuffer (18) by GC
+2019-04-12T02:03:44.105Z - normal: Simulator: Destroy WebGLTexture (66) by GC
+2019-04-12T02:03:44.109Z - normal: Simulator: Destroy WebGLTexture (64) by GC
+2019-04-12T02:03:44.110Z - normal: Simulator: Destroy WebGLTexture (57) by GC
+2019-04-12T02:03:44.111Z - normal: Simulator: Destroy WebGLTexture (131) by GC
+2019-04-12T02:03:44.111Z - normal: Simulator: Destroy WebGLTexture (34) by GC
+2019-04-12T02:03:44.112Z - normal: Simulator: Destroy WebGLTexture (84) by GC
+2019-04-12T02:03:44.113Z - normal: Simulator: Destroy WebGLTexture (38) by GC
+2019-04-12T02:03:44.113Z - normal: Simulator: Destroy WebGLTexture (30) by GC
+2019-04-12T02:03:44.114Z - normal: Simulator: Destroy WebGLTexture (29) by GC
+2019-04-12T02:03:44.115Z - normal: Simulator: Destroy WebGLTexture (44) by GC
+2019-04-12T02:03:44.115Z - normal: Simulator: Destroy WebGLTexture (55) by GC
+2019-04-12T02:03:44.116Z - normal: Simulator: Destroy WebGLTexture (94) by GC
+2019-04-12T02:03:44.117Z - normal: Simulator: Destroy WebGLTexture (26) by GC
+2019-04-12T02:03:44.117Z - normal: Simulator: Destroy WebGLTexture (48) by GC
+2019-04-12T02:03:44.119Z - normal: Simulator: Destroy WebGLBuffer (29) by GC
+2019-04-12T02:03:44.122Z - normal: Simulator: Destroy WebGLTexture (4) by GC
+2019-04-12T02:03:44.123Z - normal: Simulator: Destroy WebGLTexture (10) by GC
+2019-04-12T02:03:44.123Z - normal: Simulator: Destroy WebGLTexture (87) by GC
+2019-04-12T02:03:44.124Z - normal: Simulator: Destroy WebGLTexture (31) by GC
+2019-04-12T02:03:44.125Z - normal: Simulator: Destroy WebGLBuffer (6) by GC
+2019-04-12T02:03:44.130Z - normal: Simulator: Destroy WebGLTexture (27) by GC
+2019-04-12T02:03:44.131Z - normal: Simulator: Destroy WebGLTexture (28) by GC
+2019-04-12T02:03:44.132Z - normal: Simulator: Destroy WebGLTexture (71) by GC
+2019-04-12T02:03:44.133Z - normal: Simulator: Destroy WebGLTexture (74) by GC
+2019-04-12T02:03:44.133Z - normal: Simulator: Destroy WebGLTexture (24) by GC
+2019-04-12T02:03:44.135Z - normal: Simulator: Destroy WebGLBuffer (20) by GC
+2019-04-12T02:03:44.136Z - normal: Simulator: Destroy WebGLTexture (92) by GC
+2019-04-12T02:03:44.137Z - normal: Simulator: Destroy WebGLTexture (23) by GC
+2019-04-12T02:03:44.138Z - normal: Simulator: Destroy WebGLTexture (21) by GC
+2019-04-12T02:03:44.139Z - normal: Simulator: Destroy WebGLBuffer (30) by GC
+2019-04-12T02:03:44.140Z - normal: Simulator: Destroy WebGLTexture (73) by GC
+2019-04-12T02:03:44.141Z - normal: Simulator: Destroy WebGLBuffer (14) by GC
+2019-04-12T02:03:44.142Z - normal: Simulator: Destroy WebGLTexture (59) by GC
+2019-04-12T02:03:44.143Z - normal: Simulator: Destroy WebGLTexture (134) by GC
+2019-04-12T02:03:44.144Z - normal: Simulator: Destroy WebGLBuffer (1) by GC
+2019-04-12T02:03:44.144Z - normal: Simulator: Destroy WebGLTexture (33) by GC
+2019-04-12T02:03:44.145Z - normal: Simulator: Destroy WebGLTexture (89) by GC
+2019-04-12T02:03:44.146Z - normal: Simulator: Destroy WebGLBuffer (21) by GC
+2019-04-12T02:03:44.147Z - normal: Simulator: Destroy WebGLTexture (100) by GC
+2019-04-12T02:03:44.148Z - normal: Simulator: Destroy WebGLTexture (77) by GC
+2019-04-12T02:03:44.148Z - normal: Simulator: Destroy WebGLTexture (2) by GC
+2019-04-12T02:03:44.149Z - normal: Simulator: Destroy WebGLTexture (106) by GC
+2019-04-12T02:03:44.151Z - normal: Simulator: Destroy WebGLTexture (3) by GC
+2019-04-12T02:03:44.152Z - normal: Simulator: Destroy WebGLTexture (22) by GC
+2019-04-12T02:03:44.152Z - normal: Simulator: Destroy WebGLTexture (76) by GC
+2019-04-12T02:03:44.153Z - normal: Simulator: Destroy WebGLTexture (75) by GC
+2019-04-12T02:03:44.154Z - normal: Simulator: Destroy WebGLBuffer (10) by GC
+2019-04-12T02:03:44.154Z - normal: Simulator: Destroy WebGLTexture (9) by GC
+2019-04-12T02:03:44.155Z - normal: Simulator: Destroy WebGLTexture (68) by GC
+2019-04-12T02:03:44.156Z - normal: Simulator: Destroy WebGLBuffer (8) by GC
+2019-04-12T02:03:44.156Z - normal: Simulator: Destroy WebGLTexture (112) by GC
+2019-04-12T02:03:44.157Z - normal: Simulator: Destroy WebGLTexture (130) by GC
+2019-04-12T02:03:44.157Z - normal: Simulator: Destroy WebGLTexture (8) by GC
+2019-04-12T02:03:44.158Z - normal: Simulator: Destroy WebGLTexture (32) by GC
+2019-04-12T02:03:44.159Z - normal: Simulator: Destroy WebGLTexture (6) by GC
+2019-04-12T02:03:44.159Z - normal: Simulator: Destroy WebGLTexture (127) by GC
+2019-04-12T02:03:44.161Z - normal: Simulator: Destroy WebGLTexture (121) by GC
+2019-04-12T02:03:44.161Z - normal: Simulator: Destroy WebGLBuffer (4) by GC
+2019-04-12T02:03:44.162Z - normal: Simulator: Destroy WebGLTexture (1) by GC
+2019-04-12T02:03:44.163Z - normal: Simulator: Destroy WebGLBuffer (25) by GC
+2019-04-12T02:03:44.163Z - normal: Simulator: Destroy WebGLTexture (61) by GC
+2019-04-12T02:03:44.164Z - normal: Simulator: Destroy WebGLBuffer (9) by GC
+2019-04-12T02:03:44.164Z - normal: Simulator: Destroy WebGLBuffer (7) by GC
+2019-04-12T02:03:44.166Z - normal: Simulator: Destroy WebGLTexture (7) by GC
+2019-04-12T02:03:44.166Z - normal: Simulator: Destroy WebGLBuffer (5) by GC
+2019-04-12T02:03:44.167Z - normal: Simulator: Destroy WebGLBuffer (3) by GC
+2019-04-12T02:03:44.168Z - normal: Simulator: Destroy WebGLTexture (40) by GC
+2019-04-12T02:03:44.168Z - normal: Simulator: Destroy WebGLTexture (25) by GC
+2019-04-12T02:03:44.169Z - normal: Simulator: Destroy WebGLTexture (54) by GC
+2019-04-12T02:03:44.170Z - normal: Simulator: Destroy WebGLBuffer (28) by GC
+2019-04-12T02:03:44.170Z - normal: Simulator: Destroy WebGLProgram (9) by GC
+2019-04-12T02:03:44.171Z - normal: Simulator: Destroy WebGLBuffer (2) by GC
+2019-04-12T02:03:44.172Z - normal: Simulator: GC begin ..., (js->native map) size: 0, all objects: 0
+2019-04-12T02:03:44.488Z - normal: Simulator: GC end ..., (js->native map) size: 0, all objects: 0
+2019-04-12T02:03:44.489Z - normal: Simulator: ScriptEngine::cleanup end ...
+2019-04-12T02:03:44.761Z - normal: Simulator: V/AudioCache (160): ~AudioCache(id=1), delete buffer: 2425
+2019-04-12T02:05:45.750Z - normal: Simulator: WORKAREA WIDTH 1280.00, HEIGHT 755.00
+2019-04-12T02:05:45.752Z - normal: Simulator: FRAME SCALE = 1.00
+2019-04-12T02:05:45.953Z - normal: Simulator: 
+2019-04-12T02:05:45.953Z - normal: Simulator: {
+2019-04-12T02:05:45.953Z - normal: Simulator: 	build_type: DEBUG
+2019-04-12T02:05:45.954Z - normal: Simulator: 	gl.vendor: Intel Inc.
+2019-04-12T02:05:45.954Z - normal: Simulator: 	gl.supports_PVRTC: false
+2019-04-12T02:05:45.954Z - normal: Simulator: 	gl.renderer: Intel Iris OpenGL Engine
+2019-04-12T02:05:45.954Z - normal: Simulator: 	gl.supports_ATITC: false
+2019-04-12T02:05:45.954Z - normal: Simulator: 	gl.supports_discard_framebuffer: false
+2019-04-12T02:05:45.955Z - normal: Simulator: 	gl.supports_NPOT: true
+2019-04-12T02:05:45.955Z - normal: Simulator: 	gl.max_texture_units: 16
+2019-04-12T02:05:45.955Z - normal: Simulator: 	gl.supports_ETC1: false
+2019-04-12T02:05:45.955Z - normal: Simulator: 	gl.max_texture_size: 16384
+2019-04-12T02:05:45.955Z - normal: Simulator: 	gl.supports_BGRA8888: false
+2019-04-12T02:05:45.955Z - normal: Simulator: 	gl.supports_vertex_array_object: true
+2019-04-12T02:05:45.956Z - normal: Simulator: 	gl.supports_OES_map_buffer: false
+2019-04-12T02:05:45.956Z - normal: Simulator: 	compiled_with_gl_state_cache: true
+2019-04-12T02:05:45.956Z - normal: Simulator: 	gl.supports_OES_packed_depth_stencil: false
+2019-04-12T02:05:45.956Z - normal: Simulator: 	gl.version: 2.1 INTEL-10.25.19
+2019-04-12T02:05:45.956Z - normal: Simulator: 	gl.supports_S3TC: true
+2019-04-12T02:05:45.957Z - normal: Simulator: 	compiled_with_profiler: false
+2019-04-12T02:05:45.957Z - normal: Simulator: 	gl.supports_OES_depth24: false
+2019-04-12T02:05:45.959Z - normal: Simulator: }
+2019-04-12T02:05:45.959Z - normal: Simulator: 
+2019-04-12T02:05:45.960Z - normal: Simulator: 
+2019-04-12T02:05:45.960Z - normal: Simulator: Project Config:
+2019-04-12T02:05:45.960Z - normal: Simulator:     project dir: /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/simulator/mac/Simulator.app/Contents/Resources/
+2019-04-12T02:05:45.960Z - normal: Simulator:     writable path: $(PROJDIR)/
+2019-04-12T02:05:45.961Z - normal: Simulator:     script file: $(PROJDIR)/main.js
+2019-04-12T02:05:45.961Z - normal: Simulator:     frame size: 960 x 640
+2019-04-12T02:05:45.961Z - normal: Simulator:     frame scale: 1.00
+2019-04-12T02:05:45.961Z - normal: Simulator:     show console: NO
+2019-04-12T02:05:45.962Z - normal: Simulator:     write debug log: NO ()
+2019-04-12T02:05:45.962Z - normal: Simulator:     listen: 
+2019-04-12T02:05:45.962Z - normal: Simulator:     debugger: none
+2019-04-12T02:05:45.962Z - normal: Simulator:     add searching path:
+2019-04-12T02:05:45.962Z - normal: Simulator: resetDesignResolution request
+2019-04-12T02:05:45.963Z - normal: Simulator: ------------------------------------------------
+2019-04-12T02:05:45.963Z - normal: Simulator: LOAD Js FILE: jsb-adapter/jsb-builtin.js
+2019-04-12T02:05:45.963Z - normal: Simulator: ------------------------------------------------
+2019-04-12T02:05:45.963Z - normal: Simulator: Initializing V8, version: 6.0.286.52
+2019-04-12T02:05:46.399Z - normal: Simulator: libuv version: 1.23.1-dev
+2019-04-12T02:05:46.400Z - normal: Simulator: Debugger listening..., visit [ chrome-devtools://devtools/bundled/inspector.html?v8only=true&ws=0.0.0.0:5086/00010002-0003-4004-8005-000600070008 ] in chrome browser to debug!
+2019-04-12T02:05:46.401Z - normal: Simulator: For help see https://nodejs.org/en/docs/inspector
+2019-04-12T02:05:46.485Z - normal: Simulator: JS: Enable batch GL commands optimization!
+2019-04-12T02:05:46.488Z - normal: Simulator: resetDesignResolution request
+2019-04-12T02:05:46.491Z - normal: Simulator: ------------------------------------------------
+2019-04-12T02:05:46.493Z - normal: Simulator: LOAD Js FILE: main.js
+2019-04-12T02:05:46.495Z - normal: Simulator: ------------------------------------------------
+2019-04-12T02:05:47.018Z - normal: Simulator: iShow!
+2019-04-12T02:05:47.215Z - normal: Simulator: glGetIntegerv: pname: 0x8b4c
+2019-04-12T02:05:47.232Z - normal: Simulator: JS: Cocos Creator v2.1.0
+2019-04-12T02:05:48.594Z - normal: Simulator: ScriptEngine::cleanup begin ...
+2019-04-12T02:05:48.595Z - normal: Simulator: GC begin ..., (js->native map) size: 36, all objects: 75
+2019-04-12T02:05:48.688Z - normal: Simulator: GC end ..., (js->native map) size: 36, all objects: 75
+2019-04-12T02:05:48.688Z - normal: Simulator: GC begin ..., (js->native map) size: 36, all objects: 75
+2019-04-12T02:05:48.770Z - normal: Simulator: GC end ..., (js->native map) size: 36, all objects: 75
+2019-04-12T02:05:48.771Z - normal: Simulator: Destroy WebGLTexture (19) by GC
+2019-04-12T02:05:48.771Z - normal: Simulator: Destroy WebGLTexture (18) by GC
+2019-04-12T02:05:48.772Z - normal: Simulator: Destroy WebGLTexture (17) by GC
+2019-04-12T02:05:48.772Z - normal: Simulator: Destroy WebGLTexture (16) by GC
+2019-04-12T02:05:48.773Z - normal: Simulator: Destroy WebGLTexture (13) by GC
+2019-04-12T02:05:48.774Z - normal: Simulator: Destroy WebGLTexture (10) by GC
+2019-04-12T02:05:48.775Z - normal: Simulator: Destroy WebGLFramebuffer (1) by GC
+2019-04-12T02:05:48.775Z - normal: Simulator: Destroy WebGLTexture (9) by GC
+2019-04-12T02:05:48.777Z - normal: Simulator: Destroy WebGLTexture (7) by GC
+2019-04-12T02:05:48.778Z - normal: Simulator: Destroy WebGLTexture (3) by GC
+2019-04-12T02:05:48.778Z - normal: Simulator: Destroy WebGLTexture (1) by GC
+2019-04-12T02:05:48.779Z - normal: Simulator: Destroy WebGLTexture (4) by GC
+2019-04-12T02:05:48.780Z - normal: Simulator: Destroy WebGLTexture (14) by GC
+2019-04-12T02:05:48.781Z - normal: Simulator: Destroy WebGLTexture (12) by GC
+2019-04-12T02:05:48.781Z - normal: Simulator: Destroy WebGLTexture (2) by GC
+2019-04-12T02:05:48.782Z - normal: Simulator: Destroy WebGLProgram (3) by GC
+2019-04-12T02:05:48.783Z - normal: Simulator: Destroy WebGLBuffer (1) by GC
+2019-04-12T02:05:48.783Z - normal: Simulator: Destroy WebGLTexture (11) by GC
+2019-04-12T02:05:48.784Z - normal: Simulator: Destroy WebGLTexture (5) by GC
+2019-04-12T02:05:48.784Z - normal: Simulator: Destroy WebGLTexture (15) by GC
+2019-04-12T02:05:48.785Z - normal: Simulator: Destroy WebGLTexture (6) by GC
+2019-04-12T02:05:48.787Z - normal: Simulator: Destroy WebGLBuffer (2) by GC
+2019-04-12T02:05:48.787Z - normal: Simulator: Destroy WebGLBuffer (8) by GC
+2019-04-12T02:05:48.787Z - normal: Simulator: Destroy WebGLBuffer (6) by GC
+2019-04-12T02:05:48.788Z - normal: Simulator: Destroy WebGLTexture (20) by GC
+2019-04-12T02:05:48.789Z - normal: Simulator: Destroy WebGLBuffer (7) by GC
+2019-04-12T02:05:48.790Z - normal: Simulator: Destroy WebGLBuffer (4) by GC
+2019-04-12T02:05:48.790Z - normal: Simulator: Destroy WebGLBuffer (5) by GC
+2019-04-12T02:05:48.790Z - normal: Simulator: Destroy WebGLTexture (8) by GC
+2019-04-12T02:05:48.791Z - normal: Simulator: Destroy WebGLBuffer (3) by GC
+2019-04-12T02:05:48.791Z - normal: Simulator: GC begin ..., (js->native map) size: 0, all objects: 0
+2019-04-12T02:05:48.855Z - normal: Simulator: GC end ..., (js->native map) size: 0, all objects: 0
+2019-04-12T02:05:48.857Z - normal: Simulator: ScriptEngine::cleanup end ...
+2019-04-12T02:08:49.424Z - normal: Simulator: WORKAREA WIDTH 1280.00, HEIGHT 755.00
+2019-04-12T02:08:49.426Z - normal: Simulator: FRAME SCALE = 1.00
+2019-04-12T02:08:49.622Z - normal: Simulator: 
+2019-04-12T02:08:49.623Z - normal: Simulator: {
+2019-04-12T02:08:49.623Z - normal: Simulator: 	build_type: DEBUG
+2019-04-12T02:08:49.623Z - normal: Simulator: 	gl.vendor: Intel Inc.
+2019-04-12T02:08:49.624Z - normal: Simulator: 	gl.supports_PVRTC: false
+2019-04-12T02:08:49.624Z - normal: Simulator: 	gl.renderer: Intel Iris OpenGL Engine
+2019-04-12T02:08:49.624Z - normal: Simulator: 	gl.supports_ATITC: false
+2019-04-12T02:08:49.624Z - normal: Simulator: 	gl.supports_discard_framebuffer: false
+2019-04-12T02:08:49.625Z - normal: Simulator: 	gl.supports_NPOT: true
+2019-04-12T02:08:49.626Z - normal: Simulator: 	gl.max_texture_units: 16
+2019-04-12T02:08:49.626Z - normal: Simulator: 	gl.supports_ETC1: false
+2019-04-12T02:08:49.626Z - normal: Simulator: 	gl.max_texture_size: 16384
+2019-04-12T02:08:49.626Z - normal: Simulator: 	gl.supports_BGRA8888: false
+2019-04-12T02:08:49.626Z - normal: Simulator: 	gl.supports_vertex_array_object: true
+2019-04-12T02:08:49.627Z - normal: Simulator: 	gl.supports_OES_map_buffer: false
+2019-04-12T02:08:49.627Z - normal: Simulator: 	compiled_with_gl_state_cache: true
+2019-04-12T02:08:49.627Z - normal: Simulator: 	gl.supports_OES_packed_depth_stencil: false
+2019-04-12T02:08:49.627Z - normal: Simulator: 	gl.version: 2.1 INTEL-10.25.19
+2019-04-12T02:08:49.627Z - normal: Simulator: 	gl.supports_S3TC: true
+2019-04-12T02:08:49.628Z - normal: Simulator: 	compiled_with_profiler: false
+2019-04-12T02:08:49.628Z - normal: Simulator: 	gl.supports_OES_depth24: false
+2019-04-12T02:08:49.628Z - normal: Simulator: }
+2019-04-12T02:08:49.628Z - normal: Simulator: 
+2019-04-12T02:08:49.629Z - normal: Simulator: 
+2019-04-12T02:08:49.629Z - normal: Simulator: Project Config:
+2019-04-12T02:08:49.629Z - normal: Simulator:     project dir: /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/simulator/mac/Simulator.app/Contents/Resources/
+2019-04-12T02:08:49.630Z - normal: Simulator:     writable path: $(PROJDIR)/
+2019-04-12T02:08:49.631Z - normal: Simulator:     script file: $(PROJDIR)/main.js
+2019-04-12T02:08:49.631Z - normal: Simulator:     frame size: 960 x 640
+2019-04-12T02:08:49.631Z - normal: Simulator:     frame scale: 1.00
+2019-04-12T02:08:49.632Z - normal: Simulator:     show console: NO
+2019-04-12T02:08:49.632Z - normal: Simulator:     write debug log: NO ()
+2019-04-12T02:08:49.632Z - normal: Simulator:     listen: 
+2019-04-12T02:08:49.632Z - normal: Simulator:     debugger: none
+2019-04-12T02:08:49.632Z - normal: Simulator:     add searching path:
+2019-04-12T02:08:49.632Z - normal: Simulator: 
+2019-04-12T02:08:49.633Z - normal: Simulator: 
+2019-04-12T02:08:49.633Z - normal: Simulator: 
+2019-04-12T02:08:49.633Z - normal: Simulator: resetDesignResolution request
+2019-04-12T02:08:49.633Z - normal: Simulator: ------------------------------------------------
+2019-04-12T02:08:49.633Z - normal: Simulator: LOAD Js FILE: jsb-adapter/jsb-builtin.js
+2019-04-12T02:08:49.634Z - normal: Simulator: ------------------------------------------------
+2019-04-12T02:08:49.634Z - normal: Simulator: Initializing V8, version: 6.0.286.52
+2019-04-12T02:08:50.161Z - normal: Simulator: WORKAREA WIDTH 1280.00, HEIGHT 755.00
+2019-04-12T02:08:50.162Z - normal: Simulator: FRAME SCALE = 1.00
+2019-04-12T02:08:50.365Z - normal: Simulator: 
+2019-04-12T02:08:50.366Z - normal: Simulator: {
+2019-04-12T02:08:50.366Z - normal: Simulator: 	build_type: DEBUG
+2019-04-12T02:08:50.367Z - normal: Simulator: 	gl.vendor: Intel Inc.
+2019-04-12T02:08:50.367Z - normal: Simulator: 	gl.supports_PVRTC: false
+2019-04-12T02:08:50.367Z - normal: Simulator: 	gl.renderer: Intel Iris OpenGL Engine
+2019-04-12T02:08:50.367Z - normal: Simulator: 	gl.supports_ATITC: false
+2019-04-12T02:08:50.368Z - normal: Simulator: 	gl.supports_discard_framebuffer: false
+2019-04-12T02:08:50.369Z - normal: Simulator: 	gl.supports_NPOT: true
+2019-04-12T02:08:50.369Z - normal: Simulator: 	gl.max_texture_units: 16
+2019-04-12T02:08:50.370Z - normal: Simulator: 	gl.supports_ETC1: false
+2019-04-12T02:08:50.370Z - normal: Simulator: 	gl.max_texture_size: 16384
+2019-04-12T02:08:50.370Z - normal: Simulator: 	gl.supports_BGRA8888: false
+2019-04-12T02:08:50.370Z - normal: Simulator: 	gl.supports_vertex_array_object: true
+2019-04-12T02:08:50.371Z - normal: Simulator: 	gl.supports_OES_map_buffer: false
+2019-04-12T02:08:50.371Z - normal: Simulator: 	compiled_with_gl_state_cache: true
+2019-04-12T02:08:50.372Z - normal: Simulator: 	gl.supports_OES_packed_depth_stencil: false
+2019-04-12T02:08:50.372Z - normal: Simulator: 	gl.version: 2.1 INTEL-10.25.19
+2019-04-12T02:08:50.372Z - normal: Simulator: 	gl.supports_S3TC: true
+2019-04-12T02:08:50.374Z - normal: Simulator: 	compiled_with_profiler: false
+2019-04-12T02:08:50.375Z - normal: Simulator: 	gl.supports_OES_depth24: false
+2019-04-12T02:08:50.375Z - normal: Simulator: }
+2019-04-12T02:08:50.375Z - normal: Simulator: 
+2019-04-12T02:08:50.375Z - normal: Simulator: 
+2019-04-12T02:08:50.376Z - normal: Simulator: Project Config:
+2019-04-12T02:08:50.376Z - normal: Simulator:     project dir: /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/simulator/mac/Simulator.app/Contents/Resources/
+2019-04-12T02:08:50.376Z - normal: Simulator:     writable path: $(PROJDIR)/
+2019-04-12T02:08:50.376Z - normal: Simulator:     script file: $(PROJDIR)/main.js
+2019-04-12T02:08:50.376Z - normal: Simulator:     frame size: 960 x 640
+2019-04-12T02:08:50.376Z - normal: Simulator:     frame scale: 1.00
+2019-04-12T02:08:50.377Z - normal: Simulator:     show console: NO
+2019-04-12T02:08:50.377Z - normal: Simulator:     write debug log: NO ()
+2019-04-12T02:08:50.377Z - normal: Simulator:     listen: 
+2019-04-12T02:08:50.377Z - normal: Simulator:     debugger: none
+2019-04-12T02:08:50.377Z - normal: Simulator:     add searching path:
+2019-04-12T02:08:50.378Z - normal: Simulator: resetDesignResolution request
+2019-04-12T02:08:50.378Z - normal: Simulator: ------------------------------------------------
+2019-04-12T02:08:50.378Z - normal: Simulator: LOAD Js FILE: jsb-adapter/jsb-builtin.js
+2019-04-12T02:08:50.378Z - normal: Simulator: ------------------------------------------------
+2019-04-12T02:08:50.378Z - normal: Simulator: Initializing V8, version: 6.0.286.52
+2019-04-12T02:08:50.991Z - normal: Simulator: libuv version: 1.23.1-dev
+2019-04-12T02:08:50.999Z - normal: Simulator: Debugger listening..., visit [ chrome-devtools://devtools/bundled/inspector.html?v8only=true&ws=0.0.0.0:5086/00010002-0003-4004-8005-000600070008 ] in chrome browser to debug!
+2019-04-12T02:08:50.999Z - normal: Simulator: For help see https://nodejs.org/en/docs/inspector
+2019-04-12T02:08:51.072Z - normal: Simulator: JS: Enable batch GL commands optimization!
+2019-04-12T02:08:51.075Z - normal: Simulator: resetDesignResolution request
+2019-04-12T02:08:51.075Z - normal: Simulator: ------------------------------------------------
+2019-04-12T02:08:51.076Z - normal: Simulator: LOAD Js FILE: main.js
+2019-04-12T02:08:51.076Z - normal: Simulator: ------------------------------------------------
+2019-04-12T02:08:51.660Z - normal: Simulator: iShow!
+2019-04-12T02:08:51.865Z - normal: Simulator: glGetIntegerv: pname: 0x8b4c
+2019-04-12T02:08:51.881Z - normal: Simulator: JS: Cocos Creator v2.1.0
+2019-04-12T02:09:23.794Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:23.795Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:23.800Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:23.802Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:23.802Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:23.802Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:23.808Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:23.809Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:23.826Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:23.826Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:23.826Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:23.827Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:23.827Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:23.828Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:23.830Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:23.831Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:23.831Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:23.834Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:23.835Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:23.835Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:23.835Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:23.835Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:23.836Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:23.836Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:23.836Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:23.836Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:23.836Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:23.839Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:23.840Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:23.840Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:23.843Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:23.844Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:23.846Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:23.861Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:23.863Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:23.879Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:23.881Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:23.882Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:23.898Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:23.900Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:23.900Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:23.900Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:23.901Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:23.901Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:23.902Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:23.961Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:24.001Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:24.001Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:24.020Z - error: Simulator: 
 
-2019-04-10T04:40:26.804Z - warn: The Asset used by component "cc.Button" in scene "Game.fire" is missing. Detailed information:
-Node path: "Canvas/MenuGame/ShowRightPanel"
-Asset url: "db://assets/Scene/Game.fire"
-Missing uuid: "006b6346-ceb0-4892-9b2d-3239be9163f1"
+    at HTMLElement.print-simulator-log (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene.js:1:1653)
+    at Object.e._dispatch (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/panel.js:1:1941)
+    at EventEmitter.o.on.s (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/ipc.js:1:2917)
+    at emitMany (events.js:127:13)
+    at EventEmitter.emit (events.js:204:7)
+2019-04-12T02:09:24.022Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:24.022Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:24.022Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:24.023Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:24.024Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:24.027Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:24.027Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:24.027Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:24.030Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:24.031Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:24.032Z - error: Simulator: 
 
+    at HTMLElement.print-simulator-log (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene.js:1:1653)
+    at Object.e._dispatch (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/panel.js:1:1941)
+    at EventEmitter.o.on.s (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/ipc.js:1:2917)
+    at emitMany (events.js:127:13)
+    at EventEmitter.emit (events.js:204:7)
+2019-04-12T02:09:24.033Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:24.037Z - error: Simulator: 
+
+    at HTMLElement.print-simulator-log (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene.js:1:1653)
+    at Object.e._dispatch (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/panel.js:1:1941)
+    at EventEmitter.o.on.s (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/ipc.js:1:2917)
+    at emitMany (events.js:127:13)
+    at EventEmitter.emit (events.js:204:7)
+2019-04-12T02:09:24.037Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:24.049Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:24.060Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:24.074Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:24.110Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:24.113Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:24.115Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:24.118Z - error: Simulator: 
+
+    at HTMLElement.print-simulator-log (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene.js:1:1653)
+    at Object.e._dispatch (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/panel.js:1:1941)
+    at EventEmitter.o.on.s (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/ipc.js:1:2917)
+    at emitMany (events.js:127:13)
+    at EventEmitter.emit (events.js:204:7)
+2019-04-12T02:09:24.119Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:24.678Z - normal: Simulator: JS: WebSocket onOpen
+2019-04-12T02:09:24.679Z - normal: Simulator: JS: WebSocket onMessage: {"@class": ".AuthenticatedConnectResponse","connectUrl": "wss://gsp-aas000-se10.gamesparks.net/ws/device/U376425o7BLE","requestId": "0"}
+2019-04-12T02:09:24.680Z - error: Simulator: 2019-04-12 09:09:24.675 Simulator[3179:521491] WebSocket (0x7fe361cca4f0) was closed, no need to close it again!
+    at HTMLElement.print-simulator-log (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene.js:1:1653)
+    at Object.e._dispatch (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/panel.js:1:1941)
+    at EventEmitter.o.on.s (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/ipc.js:1:2917)
+    at emitMany (events.js:127:13)
+    at EventEmitter.emit (events.js:204:7)
+2019-04-12T02:09:24.681Z - error: Simulator: [ERROR] (/Users/nantas/fireball-x/cocos2d-x-lite_21/cocos/scripting/js-bindings/manual/jsb_websocket.cpp, 206): Can't get onclose function!
+    at HTMLElement.print-simulator-log (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene.js:1:1653)
+    at Object.e._dispatch (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/panel.js:1:1941)
+    at EventEmitter.o.on.s (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/ipc.js:1:2917)
+    at emitMany (events.js:127:13)
+    at EventEmitter.emit (events.js:204:7)
+2019-04-12T02:09:25.044Z - normal: Simulator: JS: WebSocket onOpen
+2019-04-12T02:09:25.045Z - normal: Simulator: JS: WebSocket onMessage: {"@class":".AuthenticatedConnectResponse","nonce":"e62ae0a8-92d6-4b8c-a9a7-a53ecd56fc20","requestId":"0"}
+2019-04-12T02:09:25.049Z - normal: Simulator: JS: WebSocket send: {"@class":".AuthenticatedConnectRequest","hmac":"uDMq8yp/EtViO+HwHY+U5M3+hWRN2O2FXK+GVrRtdfA=","platform":"Mozilla","os":"iPhone/iPod"}
+2019-04-12T02:09:25.092Z - normal: Simulator: JS: WebSocket onMessage: {"@class":".AuthenticatedConnectResponse","requestId":"0","sessionId":"e62ae0a8-92d6-4b8c-a9a7-a53ecd56fc20"}
+2019-04-12T02:09:25.094Z - normal: Simulator: JS: WebSocket send: {"userName":"TestUser03","password":"TestUser03","@class":".AuthenticationRequest","requestId":"1555034965089_1"}
+2019-04-12T02:09:25.133Z - normal: Simulator: JS: WebSocket onMessage: {"@class":".MatchUpdatedMessage","gameId":376425,"matchData":{},"matchGroup":"1991595654288655","matchId":"5caff1947c71cb04e1d4d22c","matchShortCode":"Kill_13","messageId":"5caff2007c71cb04e1d4e6e7","notification":true,"participants":[{"displayName":"TestUser03","externalIds":{ },"id":"5caf983fe668e304e112f209","online":false,"peerId":1,"scriptData":{"InstantID":"TestUser03","Photo":"default"}}],"playerId":"5caf983fe668e304e112f209","removedPlayers":["5caf8a7ce668e304e10fa417"],"summary":"MatchUpdatedMessage"}
+2019-04-12T02:09:25.133Z - normal: Simulator: JS: Game on match update {"@class":".MatchUpdatedMessage","gameId":376425,"matchData":{},"matchGroup":"1991595654288655","matchId":"5caff1947c71cb04e1d4d22c","matchShortCode":"Kill_13","messageId":"5caff2007c71cb04e1d4e6e7","notification":true,"participants":[{"displayName":"TestUser03","externalIds":{},"id":"5caf983fe668e304e112f209","online":false,"peerId":1,"scriptData":{"InstantID":"TestUser03","Photo":"default"}}],"playerId":"5caf983fe668e304e112f209","removedPlayers":["5caf8a7ce668e304e10fa417"],"summary":"MatchUpdatedMessage"}
+2019-04-12T02:09:25.136Z - error: Simulator: ERROR: Uncaught TypeError: Cannot read property 'removePlayer' of null, location: assets/Script/Game/GameMgr.js:0:0
+STACK:
+[0]OnMatchUpdate@assets/Script/Game/GameMgr.js:61
+[1]onMessage@assets/Script/Manager/GSMgr.js:65
+[2]onWebSocketMessage@/Users/anhdinh/Documents/GitHub/VNCardsFB/assets/Script/GameSparks/gamesparks.js:153
+[ERROR] (/Users/nantas/fireball-x/cocos2d-x-lite_21/cocos/scripting/js-bindings/jswrapper/v8/Object.cpp, 521): Invoking function (0x7fe361c5eeb0) failed!
+    at HTMLElement.print-simulator-log (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene.js:1:1653)
+    at Object.e._dispatch (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/panel.js:1:1941)
+    at EventEmitter.o.on.s (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/ipc.js:1:2917)
+    at emitMany (events.js:127:13)
+    at EventEmitter.emit (events.js:204:7)
+2019-04-12T02:09:25.155Z - normal: Simulator: JS: WebSocket onMessage: {"@class":".AuthenticationResponse","authToken":"06ee523f-c067-417b-ba61-ad7089f497bd","displayName":"TestUser03","newPlayer":false,"requestId":"1555034965089_1","userId":"5caf983fe668e304e112f209"}
+2019-04-12T02:09:25.162Z - normal: Simulator: JS: WebSocket send: {"matchShortCode":"Kill_13","matchGroup":"1991595654288655","skill":0,"@class":".MatchmakingRequest","requestId":"1555034965142_2"}
+2019-04-12T02:09:25.217Z - normal: Simulator: JS: WebSocket onMessage: {"@class":".MatchmakingResponse","requestId":"1555034965142_2"}
+2019-04-12T02:09:25.218Z - normal: Simulator: JS: [object Object]
+2019-04-12T02:09:25.282Z - normal: Simulator: JS: WebSocket onMessage: {"@class":".MatchFoundMessage","accessToken":"ewh3qlMA3Sa8lsPtWYfhxlBcVmrfcnR+14Yr3blP3heAYnXrJejTBhDFLjCXNSi5hsVk3KjOA3Kt2ddC0CRfOs/ZV+bJNvFQro63P2mixzbflcGsFvh6zg9dhIG6AydV+P8jSfRQfiPX/KNZYg4rzxP8nmp2KU2Qctk063VeLpr4cVnJ/7luRgCGoHOdrGWR48M/mhBxrupJ9XGZNN5BwANG6uh49Ci/vYN1OMtmsVHAhkKCFFknqXIlW6/tO4Rg4wv9ULVBoOGemRNzgBkr4EMvv8rQU2XxzE3dOkWhuqgN1GmpCwiMU4E9zlSDNfiZgdpyMrxyoS9/3/OzKi/iZL5D42pCNHWG2HKf5oSj7OVQ4aL1qYhnXOsyYNU+yuE0oONUIGTx3/NVT97mKZJBdESZbIUmbIUetopX5OgyzDPjN0ouQu35BDw=","gameId":376425,"host":"gsp-aas-rt-13-251-158-37.gamesparks.net","matchData":{},"matchGroup":"1991595654288655","matchId":"5caff355e668e304e129ffa1","matchShortCode":"Kill_13","messageId":"5caff355e668e304e129ffa7","notification":true,"participants":[{"displayName":"TestUser03","externalIds":{ },"id":"5caf983fe668e304e112f209","online":false,"peerId":1,"scriptData":{"InstantID":"TestUser03","Photo":"default"}}],"pendingMatchData":{},"playerId":"5caf983fe668e304e112f209","port":5000,"summary":"MatchFoundMessage"}
+2019-04-12T02:09:25.282Z - normal: Simulator: JS: Game on match found {"@class":".MatchFoundMessage","accessToken":"ewh3qlMA3Sa8lsPtWYfhxlBcVmrfcnR+14Yr3blP3heAYnXrJejTBhDFLjCXNSi5hsVk3KjOA3Kt2ddC0CRfOs/ZV+bJNvFQro63P2mixzbflcGsFvh6zg9dhIG6AydV+P8jSfRQfiPX/KNZYg4rzxP8nmp2KU2Qctk063VeLpr4cVnJ/7luRgCGoHOdrGWR48M/mhBxrupJ9XGZNN5BwANG6uh49Ci/vYN1OMtmsVHAhkKCFFknqXIlW6/tO4Rg4wv9ULVBoOGemRNzgBkr4EMvv8rQU2XxzE3dOkWhuqgN1GmpCwiMU4E9zlSDNfiZgdpyMrxyoS9/3/OzKi/iZL5D42pCNHWG2HKf5oSj7OVQ4aL1qYhnXOsyYNU+yuE0oONUIGTx3/NVT97mKZJBdESZbIUmbIUetopX5OgyzDPjN0ouQu35BDw=","gameId":376425,"host":"gsp-aas-rt-13-251-158-37.gamesparks.net","matchData":{},"matchGroup":"1991595654288655","matchId":"5caff355e668e304e129ffa1","matchShortCode":"Kill_13","messageId":"5caff355e668e304e129ffa7","notification":true,"participants":[{"displayName":"TestUser03","externalIds":{},"id":"5caf983fe668e304e112f209","online":false,"peerId":1,"scriptData":{"InstantID":"TestUser03","Photo":"default"}}],"pendingMatchData":{},"playerId":"5caf983fe668e304e112f209","port":5000,"summary":"MatchFoundMessage"}
+2019-04-12T02:09:25.282Z - normal: Simulator: JS: gsp-aas-rt-13-251-158-37.gamesparks.net : 5000
+2019-04-12T02:09:25.300Z - normal: Simulator: JS:  IRTSession:Disconnected, trying to connect
+2019-04-12T02:09:25.944Z - error: Simulator: 2019-04-12 09:09:25.939 Simulator[3179:521491] WebSocket (0x7fe361cca4f0) was closed, no need to close it again!
+    at HTMLElement.print-simulator-log (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene.js:1:1653)
+    at Object.e._dispatch (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/panel.js:1:1941)
+    at EventEmitter.o.on.s (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/ipc.js:1:2917)
+    at emitMany (events.js:127:13)
+    at EventEmitter.emit (events.js:204:7)
+2019-04-12T02:09:26.178Z - normal: Simulator: JS: onSessionReady true
+2019-04-12T02:09:26.245Z - normal: Simulator: JS: LoadScene 9ffd88a0-3d4f-4db6-a9cd-d7b5af9553ae: 16.39999999999418ms
+2019-04-12T02:09:29.292Z - normal: Simulator: ScriptEngine::cleanup begin ...
+2019-04-12T02:09:29.292Z - normal: Simulator: GC begin ..., (js->native map) size: 168, all objects: 207
+2019-04-12T02:09:29.369Z - normal: Simulator: GC end ..., (js->native map) size: 156, all objects: 195
+2019-04-12T02:09:29.370Z - normal: Simulator: GC begin ..., (js->native map) size: 156, all objects: 195
+2019-04-12T02:09:29.437Z - normal: Simulator: GC end ..., (js->native map) size: 156, all objects: 195
+2019-04-12T02:09:29.439Z - normal: Simulator: Destroy WebGLBuffer (12) by GC
+2019-04-12T02:09:29.440Z - normal: Simulator: Destroy WebGLBuffer (11) by GC
+2019-04-12T02:09:29.440Z - normal: Simulator: Destroy WebGLBuffer (10) by GC
+2019-04-12T02:09:29.440Z - normal: Simulator: Destroy WebGLTexture (12) by GC
+2019-04-12T02:09:29.441Z - normal: Simulator: Destroy WebGLTexture (131) by GC
+2019-04-12T02:09:29.441Z - normal: Simulator: Destroy WebGLProgram (6) by GC
+2019-04-12T02:09:29.442Z - normal: Simulator: Destroy WebGLTexture (127) by GC
+2019-04-12T02:09:29.442Z - normal: Simulator: Destroy WebGLTexture (124) by GC
+2019-04-12T02:09:29.443Z - normal: Simulator: Destroy WebGLTexture (123) by GC
+2019-04-12T02:09:29.443Z - normal: Simulator: Destroy WebGLTexture (118) by GC
+2019-04-12T02:09:29.443Z - normal: Simulator: Destroy WebGLTexture (120) by GC
+2019-04-12T02:09:29.443Z - normal: Simulator: Destroy WebGLTexture (116) by GC
+2019-04-12T02:09:29.443Z - normal: Simulator: Destroy WebGLTexture (114) by GC
+2019-04-12T02:09:29.445Z - normal: Simulator: Destroy WebGLTexture (113) by GC
+2019-04-12T02:09:29.445Z - normal: Simulator: Destroy WebGLTexture (112) by GC
+2019-04-12T02:09:29.446Z - normal: Simulator: Destroy WebGLTexture (111) by GC
+2019-04-12T02:09:29.446Z - normal: Simulator: Destroy WebGLTexture (108) by GC
+2019-04-12T02:09:29.446Z - normal: Simulator: Destroy WebGLTexture (119) by GC
+2019-04-12T02:09:29.447Z - normal: Simulator: Destroy WebGLTexture (107) by GC
+2019-04-12T02:09:29.447Z - normal: Simulator: Destroy WebGLTexture (106) by GC
+2019-04-12T02:09:29.447Z - normal: Simulator: Destroy WebGLTexture (105) by GC
+2019-04-12T02:09:29.447Z - normal: Simulator: Destroy WebGLTexture (104) by GC
+2019-04-12T02:09:29.448Z - normal: Simulator: Destroy WebGLTexture (103) by GC
+2019-04-12T02:09:29.448Z - normal: Simulator: Destroy WebGLTexture (101) by GC
+2019-04-12T02:09:29.448Z - normal: Simulator: Destroy WebGLFramebuffer (1) by GC
+2019-04-12T02:09:29.448Z - normal: Simulator: Destroy WebGLTexture (100) by GC
+2019-04-12T02:09:29.450Z - normal: Simulator: Destroy WebGLTexture (97) by GC
+2019-04-12T02:09:29.450Z - normal: Simulator: Destroy WebGLTexture (109) by GC
+2019-04-12T02:09:29.450Z - normal: Simulator: Destroy WebGLTexture (96) by GC
+2019-04-12T02:09:29.451Z - normal: Simulator: Destroy WebGLTexture (95) by GC
+2019-04-12T02:09:29.451Z - normal: Simulator: Destroy WebGLTexture (10) by GC
+2019-04-12T02:09:29.451Z - normal: Simulator: Destroy WebGLTexture (94) by GC
+2019-04-12T02:09:29.451Z - normal: Simulator: Destroy WebGLTexture (121) by GC
+2019-04-12T02:09:29.451Z - normal: Simulator: Destroy WebGLTexture (90) by GC
+2019-04-12T02:09:29.452Z - normal: Simulator: Destroy WebGLTexture (89) by GC
+2019-04-12T02:09:29.452Z - normal: Simulator: Destroy WebGLTexture (133) by GC
+2019-04-12T02:09:29.452Z - normal: Simulator: Destroy WebGLTexture (88) by GC
+2019-04-12T02:09:29.452Z - normal: Simulator: Destroy WebGLTexture (86) by GC
+2019-04-12T02:09:29.453Z - normal: Simulator: Destroy WebGLTexture (84) by GC
+2019-04-12T02:09:29.453Z - normal: Simulator: Destroy WebGLTexture (83) by GC
+2019-04-12T02:09:29.453Z - normal: Simulator: Destroy WebGLTexture (82) by GC
+2019-04-12T02:09:29.453Z - normal: Simulator: Destroy WebGLBuffer (9) by GC
+2019-04-12T02:09:29.453Z - normal: Simulator: Destroy WebGLTexture (130) by GC
+2019-04-12T02:09:29.454Z - normal: Simulator: Destroy WebGLBuffer (1) by GC
+2019-04-12T02:09:29.454Z - normal: Simulator: Destroy WebGLTexture (81) by GC
+2019-04-12T02:09:29.454Z - normal: Simulator: Destroy WebGLTexture (30) by GC
+2019-04-12T02:09:29.454Z - normal: Simulator: Destroy WebGLTexture (24) by GC
+2019-04-12T02:09:29.455Z - normal: Simulator: Destroy WebGLTexture (79) by GC
+2019-04-12T02:09:29.456Z - normal: Simulator: Destroy WebGLTexture (49) by GC
+2019-04-12T02:09:29.456Z - normal: Simulator: Destroy WebGLTexture (74) by GC
+2019-04-12T02:09:29.456Z - normal: Simulator: Destroy WebGLTexture (73) by GC
+2019-04-12T02:09:29.456Z - normal: Simulator: Destroy WebGLTexture (71) by GC
+2019-04-12T02:09:29.457Z - normal: Simulator: Destroy WebGLTexture (72) by GC
+2019-04-12T02:09:29.457Z - normal: Simulator: Destroy WebGLTexture (99) by GC
+2019-04-12T02:09:29.457Z - normal: Simulator: Destroy WebGLTexture (70) by GC
+2019-04-12T02:09:29.457Z - normal: Simulator: Destroy WebGLTexture (69) by GC
+2019-04-12T02:09:29.457Z - normal: Simulator: Destroy WebGLTexture (23) by GC
+2019-04-12T02:09:29.458Z - normal: Simulator: Destroy WebGLTexture (68) by GC
+2019-04-12T02:09:29.458Z - normal: Simulator: Destroy WebGLTexture (2) by GC
+2019-04-12T02:09:29.458Z - normal: Simulator: Destroy WebGLTexture (66) by GC
+2019-04-12T02:09:29.459Z - normal: Simulator: Destroy WebGLTexture (60) by GC
+2019-04-12T02:09:29.459Z - normal: Simulator: Destroy WebGLTexture (59) by GC
+2019-04-12T02:09:29.459Z - normal: Simulator: Destroy WebGLBuffer (5) by GC
+2019-04-12T02:09:29.459Z - normal: Simulator: Destroy WebGLTexture (57) by GC
+2019-04-12T02:09:29.460Z - normal: Simulator: Destroy WebGLTexture (56) by GC
+2019-04-12T02:09:29.460Z - normal: Simulator: Destroy WebGLTexture (42) by GC
+2019-04-12T02:09:29.461Z - normal: Simulator: Destroy WebGLTexture (55) by GC
+2019-04-12T02:09:29.461Z - normal: Simulator: Destroy WebGLTexture (87) by GC
+2019-04-12T02:09:29.461Z - normal: Simulator: Destroy WebGLTexture (54) by GC
+2019-04-12T02:09:29.462Z - normal: Simulator: Destroy WebGLTexture (61) by GC
+2019-04-12T02:09:29.462Z - normal: Simulator: Destroy WebGLTexture (33) by GC
+2019-04-12T02:09:29.462Z - normal: Simulator: Destroy WebGLTexture (31) by GC
+2019-04-12T02:09:29.462Z - normal: Simulator: Destroy WebGLTexture (50) by GC
+2019-04-12T02:09:29.462Z - normal: Simulator: Destroy WebGLTexture (51) by GC
+2019-04-12T02:09:29.463Z - normal: Simulator: Destroy WebGLTexture (58) by GC
+2019-04-12T02:09:29.463Z - normal: Simulator: Destroy WebGLTexture (48) by GC
+2019-04-12T02:09:29.463Z - normal: Simulator: Destroy WebGLTexture (93) by GC
+2019-04-12T02:09:29.463Z - normal: Simulator: Destroy WebGLTexture (46) by GC
+2019-04-12T02:09:29.464Z - normal: Simulator: Destroy WebGLTexture (45) by GC
+2019-04-12T02:09:29.464Z - normal: Simulator: Destroy WebGLTexture (126) by GC
+2019-04-12T02:09:29.464Z - normal: Simulator: Destroy WebGLTexture (44) by GC
+2019-04-12T02:09:29.464Z - normal: Simulator: Destroy WebGLTexture (43) by GC
+2019-04-12T02:09:29.465Z - normal: Simulator: Destroy WebGLTexture (41) by GC
+2019-04-12T02:09:29.465Z - normal: Simulator: Destroy WebGLTexture (40) by GC
+2019-04-12T02:09:29.465Z - normal: Simulator: Destroy WebGLTexture (39) by GC
+2019-04-12T02:09:29.465Z - normal: Simulator: Destroy WebGLTexture (115) by GC
+2019-04-12T02:09:29.465Z - normal: Simulator: Destroy WebGLTexture (37) by GC
+2019-04-12T02:09:29.466Z - normal: Simulator: Destroy WebGLTexture (38) by GC
+2019-04-12T02:09:29.466Z - normal: Simulator: Destroy WebGLTexture (62) by GC
+2019-04-12T02:09:29.466Z - normal: Simulator: Destroy WebGLTexture (36) by GC
+2019-04-12T02:09:29.466Z - normal: Simulator: Destroy WebGLTexture (63) by GC
+2019-04-12T02:09:29.466Z - normal: Simulator: Destroy WebGLTexture (35) by GC
+2019-04-12T02:09:29.467Z - normal: Simulator: Destroy WebGLBuffer (8) by GC
+2019-04-12T02:09:29.471Z - normal: Simulator: Destroy WebGLTexture (34) by GC
+2019-04-12T02:09:29.471Z - normal: Simulator: Destroy WebGLTexture (77) by GC
+2019-04-12T02:09:29.472Z - normal: Simulator: Destroy WebGLTexture (13) by GC
+2019-04-12T02:09:29.472Z - normal: Simulator: Destroy WebGLTexture (11) by GC
+2019-04-12T02:09:29.473Z - normal: Simulator: Destroy WebGLTexture (53) by GC
+2019-04-12T02:09:29.473Z - normal: Simulator: Destroy WebGLTexture (128) by GC
+2019-04-12T02:09:29.473Z - normal: Simulator: Destroy WebGLTexture (125) by GC
+2019-04-12T02:09:29.473Z - normal: Simulator: Destroy WebGLTexture (32) by GC
+2019-04-12T02:09:29.474Z - normal: Simulator: Destroy WebGLTexture (29) by GC
+2019-04-12T02:09:29.474Z - normal: Simulator: Destroy WebGLTexture (8) by GC
+2019-04-12T02:09:29.474Z - normal: Simulator: Destroy WebGLTexture (28) by GC
+2019-04-12T02:09:29.475Z - normal: Simulator: Destroy WebGLTexture (129) by GC
+2019-04-12T02:09:29.475Z - normal: Simulator: Destroy WebGLTexture (27) by GC
+2019-04-12T02:09:29.475Z - normal: Simulator: Destroy WebGLTexture (52) by GC
+2019-04-12T02:09:29.476Z - normal: Simulator: Destroy WebGLTexture (67) by GC
+2019-04-12T02:09:29.476Z - normal: Simulator: Destroy WebGLTexture (26) by GC
+2019-04-12T02:09:29.476Z - normal: Simulator: Destroy WebGLTexture (117) by GC
+2019-04-12T02:09:29.476Z - normal: Simulator: Destroy WebGLTexture (25) by GC
+2019-04-12T02:09:29.477Z - normal: Simulator: Destroy WebGLProgram (3) by GC
+2019-04-12T02:09:29.477Z - normal: Simulator: Destroy WebGLBuffer (6) by GC
+2019-04-12T02:09:29.477Z - normal: Simulator: Destroy WebGLTexture (122) by GC
+2019-04-12T02:09:29.477Z - normal: Simulator: Destroy WebGLBuffer (4) by GC
+2019-04-12T02:09:29.478Z - normal: Simulator: Destroy WebGLTexture (132) by GC
+2019-04-12T02:09:29.478Z - normal: Simulator: Destroy WebGLTexture (110) by GC
+2019-04-12T02:09:29.478Z - normal: Simulator: Destroy WebGLTexture (9) by GC
+2019-04-12T02:09:29.478Z - normal: Simulator: Destroy WebGLTexture (6) by GC
+2019-04-12T02:09:29.478Z - normal: Simulator: Destroy WebGLTexture (1) by GC
+2019-04-12T02:09:29.479Z - normal: Simulator: Destroy WebGLTexture (91) by GC
+2019-04-12T02:09:29.479Z - normal: Simulator: Destroy WebGLTexture (64) by GC
+2019-04-12T02:09:29.479Z - normal: Simulator: Destroy WebGLTexture (102) by GC
+2019-04-12T02:09:29.479Z - normal: Simulator: Destroy WebGLTexture (22) by GC
+2019-04-12T02:09:29.480Z - normal: Simulator: Destroy WebGLBuffer (2) by GC
+2019-04-12T02:09:29.480Z - normal: Simulator: Destroy WebGLTexture (47) by GC
+2019-04-12T02:09:29.480Z - normal: Simulator: Destroy WebGLBuffer (7) by GC
+2019-04-12T02:09:29.480Z - normal: Simulator: Destroy WebGLTexture (76) by GC
+2019-04-12T02:09:29.480Z - normal: Simulator: Destroy WebGLTexture (98) by GC
+2019-04-12T02:09:29.481Z - normal: Simulator: Destroy WebGLTexture (134) by GC
+2019-04-12T02:09:29.481Z - normal: Simulator: Destroy WebGLTexture (5) by GC
+2019-04-12T02:09:29.481Z - normal: Simulator: Destroy WebGLTexture (7) by GC
+2019-04-12T02:09:29.481Z - normal: Simulator: Destroy WebGLProgram (9) by GC
+2019-04-12T02:09:29.482Z - normal: Simulator: Destroy WebGLTexture (78) by GC
+2019-04-12T02:09:29.482Z - normal: Simulator: Destroy WebGLTexture (4) by GC
+2019-04-12T02:09:29.482Z - normal: Simulator: Destroy WebGLTexture (85) by GC
+2019-04-12T02:09:29.482Z - normal: Simulator: Destroy WebGLTexture (80) by GC
+2019-04-12T02:09:29.482Z - normal: Simulator: Destroy WebGLTexture (75) by GC
+2019-04-12T02:09:29.483Z - normal: Simulator: Destroy WebGLTexture (14) by GC
+2019-04-12T02:09:29.483Z - normal: Simulator: Destroy WebGLTexture (65) by GC
+2019-04-12T02:09:29.483Z - normal: Simulator: Destroy WebGLTexture (21) by GC
+2019-04-12T02:09:29.483Z - normal: Simulator: Destroy WebGLTexture (92) by GC
+2019-04-12T02:09:29.483Z - normal: Simulator: Destroy WebGLBuffer (3) by GC
+2019-04-12T02:09:29.484Z - normal: Simulator: Destroy WebGLTexture (3) by GC
+2019-04-12T02:09:29.504Z - normal: Simulator: GC begin ..., (js->native map) size: 0, all objects: 0
+2019-04-12T02:09:29.691Z - normal: Simulator: GC end ..., (js->native map) size: 0, all objects: 0
+2019-04-12T02:09:29.691Z - normal: Simulator: ScriptEngine::cleanup end ...
+2019-04-12T02:09:37.599Z - normal: Simulator: WORKAREA WIDTH 1280.00, HEIGHT 755.00
+2019-04-12T02:09:37.599Z - normal: Simulator: FRAME SCALE = 1.00
+2019-04-12T02:09:37.791Z - normal: Simulator: 
+2019-04-12T02:09:37.791Z - normal: Simulator: {
+2019-04-12T02:09:37.791Z - normal: Simulator: 	build_type: DEBUG
+2019-04-12T02:09:37.792Z - normal: Simulator: 	gl.vendor: Intel Inc.
+2019-04-12T02:09:37.792Z - normal: Simulator: 	gl.supports_PVRTC: false
+2019-04-12T02:09:37.792Z - normal: Simulator: 	gl.renderer: Intel Iris OpenGL Engine
+2019-04-12T02:09:37.792Z - normal: Simulator: 	gl.supports_ATITC: false
+2019-04-12T02:09:37.792Z - normal: Simulator: 	gl.supports_discard_framebuffer: false
+2019-04-12T02:09:37.793Z - normal: Simulator: 	gl.supports_NPOT: true
+2019-04-12T02:09:37.793Z - normal: Simulator: 	gl.max_texture_units: 16
+2019-04-12T02:09:37.793Z - normal: Simulator: 	gl.supports_ETC1: false
+2019-04-12T02:09:37.793Z - normal: Simulator: 	gl.max_texture_size: 16384
+2019-04-12T02:09:37.793Z - normal: Simulator: 	gl.supports_BGRA8888: false
+2019-04-12T02:09:37.794Z - normal: Simulator: 	gl.supports_vertex_array_object: true
+2019-04-12T02:09:37.794Z - normal: Simulator: 	gl.supports_OES_map_buffer: false
+2019-04-12T02:09:37.794Z - normal: Simulator: 	compiled_with_gl_state_cache: true
+2019-04-12T02:09:37.794Z - normal: Simulator: 	gl.supports_OES_packed_depth_stencil: false
+2019-04-12T02:09:37.795Z - normal: Simulator: 	gl.version: 2.1 INTEL-10.25.19
+2019-04-12T02:09:37.795Z - normal: Simulator: 	gl.supports_S3TC: true
+2019-04-12T02:09:37.795Z - normal: Simulator: 	compiled_with_profiler: false
+2019-04-12T02:09:37.795Z - normal: Simulator: 	gl.supports_OES_depth24: false
+2019-04-12T02:09:37.795Z - normal: Simulator: }
+2019-04-12T02:09:37.796Z - normal: Simulator: Project Config:
+2019-04-12T02:09:37.796Z - normal: Simulator:     project dir: /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/simulator/mac/Simulator.app/Contents/Resources/
+2019-04-12T02:09:37.796Z - normal: Simulator:     writable path: $(PROJDIR)/
+2019-04-12T02:09:37.796Z - normal: Simulator:     script file: $(PROJDIR)/main.js
+2019-04-12T02:09:37.796Z - normal: Simulator:     frame size: 960 x 640
+2019-04-12T02:09:37.797Z - normal: Simulator:     frame scale: 1.00
+2019-04-12T02:09:37.797Z - normal: Simulator:     show console: NO
+2019-04-12T02:09:37.797Z - normal: Simulator:     write debug log: NO ()
+2019-04-12T02:09:37.797Z - normal: Simulator:     listen: 
+2019-04-12T02:09:37.797Z - normal: Simulator:     debugger: none
+2019-04-12T02:09:37.797Z - normal: Simulator:     add searching path:
+2019-04-12T02:09:37.847Z - normal: Simulator: resetDesignResolution request
+2019-04-12T02:09:37.848Z - normal: Simulator: ------------------------------------------------
+2019-04-12T02:09:37.848Z - normal: Simulator: LOAD Js FILE: jsb-adapter/jsb-builtin.js
+2019-04-12T02:09:37.848Z - normal: Simulator: ------------------------------------------------
+2019-04-12T02:09:37.849Z - normal: Simulator: Initializing V8, version: 6.0.286.52
+2019-04-12T02:09:38.196Z - normal: Simulator: libuv version: 1.23.1-dev
+2019-04-12T02:09:38.196Z - normal: Simulator: Debugger listening..., visit [ chrome-devtools://devtools/bundled/inspector.html?v8only=true&ws=0.0.0.0:5086/00010002-0003-4004-8005-000600070008 ] in chrome browser to debug!
+2019-04-12T02:09:38.197Z - normal: Simulator: For help see https://nodejs.org/en/docs/inspector
+2019-04-12T02:09:38.244Z - normal: Simulator: JS: Enable batch GL commands optimization!
+2019-04-12T02:09:38.246Z - normal: Simulator: resetDesignResolution request
+2019-04-12T02:09:38.246Z - normal: Simulator: ------------------------------------------------
+2019-04-12T02:09:38.247Z - normal: Simulator: LOAD Js FILE: main.js
+2019-04-12T02:09:38.247Z - normal: Simulator: ------------------------------------------------
+2019-04-12T02:09:38.882Z - normal: Simulator: iShow!
+2019-04-12T02:09:39.046Z - normal: Simulator: glGetIntegerv: pname: 0x8b4c
+2019-04-12T02:09:39.059Z - normal: Simulator: JS: Cocos Creator v2.1.0
+2019-04-12T02:09:40.725Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:40.726Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:40.731Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:40.732Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:40.773Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:40.774Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:40.774Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:40.774Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:40.774Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:40.775Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:40.775Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:40.775Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:40.775Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:40.776Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:40.776Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:40.776Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:40.776Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:40.777Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:40.777Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:40.777Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:40.777Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:40.778Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:40.778Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:40.780Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:40.780Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:40.780Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:40.781Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:40.781Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:40.781Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:40.781Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:40.781Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:40.782Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:40.782Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:40.782Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:40.782Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:40.783Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:40.783Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:40.799Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:40.800Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:40.800Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:40.805Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:40.879Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:40.887Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:40.888Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:40.889Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:40.922Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:40.923Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:40.923Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:40.923Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+2019-04-12T02:09:41.392Z - normal: Simulator: JS: WebSocket onOpen
+2019-04-12T02:09:41.393Z - normal: Simulator: JS: WebSocket onMessage: {"@class": ".AuthenticatedConnectResponse","connectUrl": "wss://gsp-aas000-se10.gamesparks.net/ws/device/U376425o7BLE","requestId": "0"}
+2019-04-12T02:09:41.394Z - error: Simulator: 2019-04-12 09:09:41.391 Simulator[3191:522567] WebSocket (0x7fdb56f73a00) was closed, no need to close it again!
+    at HTMLElement.print-simulator-log (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene.js:1:1653)
+    at Object.e._dispatch (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/panel.js:1:1941)
+    at EventEmitter.o.on.s (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/ipc.js:1:2917)
+    at emitMany (events.js:127:13)
+    at EventEmitter.emit (events.js:204:7)
+2019-04-12T02:09:41.397Z - error: Simulator: [ERROR] (/Users/nantas/fireball-x/cocos2d-x-lite_21/cocos/scripting/js-bindings/manual/jsb_websocket.cpp, 206): Can't get onclose function!
+    at HTMLElement.print-simulator-log (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene.js:1:1653)
+    at Object.e._dispatch (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/panel.js:1:1941)
+    at EventEmitter.o.on.s (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/ipc.js:1:2917)
+    at emitMany (events.js:127:13)
+    at EventEmitter.emit (events.js:204:7)
+2019-04-12T02:09:41.644Z - normal: Simulator: JS: WebSocket onOpen
+2019-04-12T02:09:41.645Z - normal: Simulator: JS: WebSocket onMessage: {"@class":".AuthenticatedConnectResponse","nonce":"c1a8a49e-d683-4c91-baff-97c5714220f6","requestId":"0"}
+2019-04-12T02:09:41.650Z - normal: Simulator: JS: WebSocket send: {"@class":".AuthenticatedConnectRequest","hmac":"mbM1xx+bzDapLeKPXWNgIIUoiG7o7PHw5f+AEJWYY0E=","platform":"Mozilla","os":"iPhone/iPod"}
+2019-04-12T02:09:41.688Z - normal: Simulator: JS: WebSocket onMessage: {"@class":".AuthenticatedConnectResponse","requestId":"0","sessionId":"c1a8a49e-d683-4c91-baff-97c5714220f6"}
+2019-04-12T02:09:41.688Z - normal: Simulator: JS: WebSocket send: {"userName":"TestUser01","password":"TestUser01","@class":".AuthenticationRequest","requestId":"1555034981686_1"}
+2019-04-12T02:09:41.741Z - normal: Simulator: JS: WebSocket onMessage: {"@class":".AuthenticationResponse","authToken":"326ee7df-eb0d-4113-9cd0-8fb41f210c9f","displayName":"TestUser01","newPlayer":false,"requestId":"1555034981686_1","userId":"5caf898ffed82804dc5a900b"}
+2019-04-12T02:09:41.741Z - normal: Simulator: JS: WebSocket send: {"matchShortCode":"Kill_13","matchGroup":"1991595654288655","skill":0,"@class":".MatchmakingRequest","requestId":"1555034981733_2"}
+2019-04-12T02:09:41.784Z - normal: Simulator: JS: WebSocket onMessage: {"@class":".MatchmakingResponse","requestId":"1555034981733_2"}
+2019-04-12T02:09:41.785Z - normal: Simulator: JS: [object Object]
+2019-04-12T02:09:41.873Z - normal: Simulator: JS: WebSocket onMessage: {"@class":".MatchFoundMessage","accessToken":"ewh3qlMA3Sa/lsC+C4e2zVBcVzjaeiAr144r3blP3heAYnXlIeLUChDFLjCXNSi5hsVk3KjOA3Kt2ddC0CRfOs/ZV+bJNvFQro63P2mixzbflcGvFvspnA8Kj4G6AnVQ8Kt2SfxQfiPX/KNZYg4rzxP8nmp2KU2QfN0+7HleLpr4cVnJ/7luRgCGoHOdrGWR48M/mhBxrupJ9XGZNN5BwANG6uh49Ci/vYN1OMtmsFDLhkHRRllwonIlWv3paNti41D9ULVBoOGemRNzgBkr4EMvv8rQU2XxzE3dOkWhuqgN1GmpCwiMU4E9zlSDNfiZgdpyMrxyoS9/3/OzKi/iZL5D42pCNHWG2HKf5oSj7OVQ4aL1qYhnXOsyYNU+yuE0oONUIGTx3/NVT97mKZJBdESZbIUmbIUetpvF8grm1vpJV6qpRUwZ1so=","gameId":376425,"host":"gsp-aas-rt-13-251-158-37.gamesparks.net","matchData":{},"matchGroup":"1991595654288655","matchId":"5caff365fed82804dc7123a9","matchShortCode":"Kill_13","messageId":"5caff365fed82804dc7123b1","notification":true,"participants":[{"displayName":"TestUser01","externalIds":{ },"id":"5caf898ffed82804dc5a900b","online":true,"peerId":1,"scriptData":{"InstantID":"TestUser01","Photo":"default"}}],"pendingMatchData":{},"playerId":"5caf898ffed82804dc5a900b","port":5000,"summary":"MatchFoundMessage"}
+2019-04-12T02:09:41.874Z - normal: Simulator: JS: Game on match found {"@class":".MatchFoundMessage","accessToken":"ewh3qlMA3Sa/lsC+C4e2zVBcVzjaeiAr144r3blP3heAYnXlIeLUChDFLjCXNSi5hsVk3KjOA3Kt2ddC0CRfOs/ZV+bJNvFQro63P2mixzbflcGvFvspnA8Kj4G6AnVQ8Kt2SfxQfiPX/KNZYg4rzxP8nmp2KU2QfN0+7HleLpr4cVnJ/7luRgCGoHOdrGWR48M/mhBxrupJ9XGZNN5BwANG6uh49Ci/vYN1OMtmsFDLhkHRRllwonIlWv3paNti41D9ULVBoOGemRNzgBkr4EMvv8rQU2XxzE3dOkWhuqgN1GmpCwiMU4E9zlSDNfiZgdpyMrxyoS9/3/OzKi/iZL5D42pCNHWG2HKf5oSj7OVQ4aL1qYhnXOsyYNU+yuE0oONUIGTx3/NVT97mKZJBdESZbIUmbIUetpvF8grm1vpJV6qpRUwZ1so=","gameId":376425,"host":"gsp-aas-rt-13-251-158-37.gamesparks.net","matchData":{},"matchGroup":"1991595654288655","matchId":"5caff365fed82804dc7123a9","matchShortCode":"Kill_13","messageId":"5caff365fed82804dc7123b1","notification":true,"participants":[{"displayName":"TestUser01","externalIds":{},"id":"5caf898ffed82804dc5a900b","online":true,"peerId":1,"scriptData":{"InstantID":"TestUser01","Photo":"default"}}],"pendingMatchData":{},"playerId":"5caf898ffed82804dc5a900b","port":5000,"summary":"MatchFoundMessage"}
+2019-04-12T02:09:41.874Z - normal: Simulator: JS: gsp-aas-rt-13-251-158-37.gamesparks.net : 5000
+2019-04-12T02:09:41.888Z - normal: Simulator: JS:  IRTSession:Disconnected, trying to connect
+2019-04-12T02:09:42.007Z - error: Simulator: 2019-04-12 09:09:42.004 Simulator[3191:522567] WebSocket (0x7fdb56f73a00) was closed, no need to close it again!
+    at HTMLElement.print-simulator-log (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene.js:1:1653)
+    at Object.e._dispatch (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/panel.js:1:1941)
+    at EventEmitter.o.on.s (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/ipc.js:1:2917)
+    at emitMany (events.js:127:13)
+    at EventEmitter.emit (events.js:204:7)
+2019-04-12T02:09:42.259Z - normal: Simulator: JS: onSessionReady true
+2019-04-12T02:09:42.328Z - normal: Simulator: JS: LoadScene 9ffd88a0-3d4f-4db6-a9cd-d7b5af9553ae: 16.538000000000466ms
+2019-04-12T02:11:21.316Z - normal: Simulator: ScriptEngine::cleanup begin ...
+2019-04-12T02:11:21.320Z - normal: Simulator: GC begin ..., (js->native map) size: 186, all objects: 225
+2019-04-12T02:11:21.392Z - normal: Simulator: GC end ..., (js->native map) size: 174, all objects: 213
+2019-04-12T02:11:21.393Z - normal: Simulator: GC begin ..., (js->native map) size: 174, all objects: 213
+2019-04-12T02:11:21.463Z - normal: Simulator: GC end ..., (js->native map) size: 174, all objects: 213
+2019-04-12T02:11:21.463Z - normal: Simulator: Destroy WebGLTexture (18) by GC
+2019-04-12T02:11:21.464Z - normal: Simulator: Destroy WebGLTexture (16) by GC
+2019-04-12T02:11:21.464Z - normal: Simulator: Destroy WebGLBuffer (20) by GC
+2019-04-12T02:11:21.466Z - normal: Simulator: Destroy WebGLBuffer (18) by GC
+2019-04-12T02:11:21.466Z - normal: Simulator: Destroy WebGLBuffer (17) by GC
+2019-04-12T02:11:21.466Z - normal: Simulator: Destroy WebGLTexture (15) by GC
+2019-04-12T02:11:21.467Z - normal: Simulator: Destroy WebGLBuffer (14) by GC
+2019-04-12T02:11:21.467Z - normal: Simulator: Destroy WebGLProgram (6) by GC
+2019-04-12T02:11:21.467Z - normal: Simulator: Destroy WebGLTexture (14) by GC
+2019-04-12T02:11:21.467Z - normal: Simulator: Destroy WebGLBuffer (10) by GC
+2019-04-12T02:11:21.467Z - normal: Simulator: Destroy WebGLBuffer (9) by GC
+2019-04-12T02:11:21.468Z - normal: Simulator: Destroy WebGLFramebuffer (1) by GC
+2019-04-12T02:11:21.468Z - normal: Simulator: Destroy WebGLTexture (13) by GC
+2019-04-12T02:11:21.468Z - normal: Simulator: Destroy WebGLTexture (11) by GC
+2019-04-12T02:11:21.468Z - normal: Simulator: Destroy WebGLTexture (132) by GC
+2019-04-12T02:11:21.468Z - normal: Simulator: Destroy WebGLTexture (131) by GC
+2019-04-12T02:11:21.469Z - normal: Simulator: Destroy WebGLTexture (130) by GC
+2019-04-12T02:11:21.469Z - normal: Simulator: Destroy WebGLTexture (128) by GC
+2019-04-12T02:11:21.469Z - normal: Simulator: Destroy WebGLTexture (127) by GC
+2019-04-12T02:11:21.472Z - normal: Simulator: Destroy WebGLTexture (125) by GC
+2019-04-12T02:11:21.472Z - normal: Simulator: Destroy WebGLTexture (124) by GC
+2019-04-12T02:11:21.473Z - normal: Simulator: Destroy WebGLTexture (122) by GC
+2019-04-12T02:11:21.473Z - normal: Simulator: Destroy WebGLTexture (121) by GC
+2019-04-12T02:11:21.473Z - normal: Simulator: Destroy WebGLTexture (120) by GC
+2019-04-12T02:11:21.473Z - normal: Simulator: Destroy WebGLTexture (119) by GC
+2019-04-12T02:11:21.473Z - normal: Simulator: Destroy WebGLTexture (20) by GC
+2019-04-12T02:11:21.474Z - normal: Simulator: Destroy WebGLBuffer (24) by GC
+2019-04-12T02:11:21.474Z - normal: Simulator: Destroy WebGLTexture (116) by GC
+2019-04-12T02:11:21.474Z - normal: Simulator: Destroy WebGLTexture (114) by GC
+2019-04-12T02:11:21.474Z - normal: Simulator: Destroy WebGLTexture (110) by GC
+2019-04-12T02:11:21.476Z - normal: Simulator: Destroy WebGLTexture (109) by GC
+2019-04-12T02:11:21.476Z - normal: Simulator: Destroy WebGLTexture (107) by GC
+2019-04-12T02:11:21.476Z - normal: Simulator: Destroy WebGLTexture (106) by GC
+2019-04-12T02:11:21.477Z - normal: Simulator: Destroy WebGLTexture (105) by GC
+2019-04-12T02:11:21.477Z - normal: Simulator: Destroy WebGLTexture (102) by GC
+2019-04-12T02:11:21.477Z - normal: Simulator: Destroy WebGLTexture (101) by GC
+2019-04-12T02:11:21.477Z - normal: Simulator: Destroy WebGLTexture (100) by GC
+2019-04-12T02:11:21.477Z - normal: Simulator: Destroy WebGLTexture (99) by GC
+2019-04-12T02:11:21.478Z - normal: Simulator: Destroy WebGLTexture (97) by GC
+2019-04-12T02:11:21.478Z - normal: Simulator: Destroy WebGLTexture (96) by GC
+2019-04-12T02:11:21.478Z - normal: Simulator: Destroy WebGLTexture (94) by GC
+2019-04-12T02:11:21.478Z - normal: Simulator: Destroy WebGLTexture (90) by GC
+2019-04-12T02:11:21.478Z - normal: Simulator: Destroy WebGLTexture (89) by GC
+2019-04-12T02:11:21.479Z - normal: Simulator: Destroy WebGLBuffer (22) by GC
+2019-04-12T02:11:21.479Z - normal: Simulator: Destroy WebGLTexture (86) by GC
+2019-04-12T02:11:21.479Z - normal: Simulator: Destroy WebGLTexture (10) by GC
+2019-04-12T02:11:21.479Z - normal: Simulator: Destroy WebGLTexture (108) by GC
+2019-04-12T02:11:21.479Z - normal: Simulator: Destroy WebGLTexture (84) by GC
+2019-04-12T02:11:21.479Z - normal: Simulator: Destroy WebGLTexture (81) by GC
+2019-04-12T02:11:21.480Z - normal: Simulator: Destroy WebGLBuffer (21) by GC
+2019-04-12T02:11:21.480Z - normal: Simulator: Destroy WebGLTexture (133) by GC
+2019-04-12T02:11:21.480Z - normal: Simulator: Destroy WebGLBuffer (7) by GC
+2019-04-12T02:11:21.480Z - normal: Simulator: Destroy WebGLTexture (80) by GC
+2019-04-12T02:11:21.480Z - normal: Simulator: Destroy WebGLTexture (79) by GC
+2019-04-12T02:11:21.481Z - normal: Simulator: Destroy WebGLTexture (75) by GC
+2019-04-12T02:11:21.481Z - normal: Simulator: Destroy WebGLTexture (46) by GC
+2019-04-12T02:11:21.492Z - normal: Simulator: Destroy WebGLTexture (76) by GC
+2019-04-12T02:11:21.492Z - normal: Simulator: Destroy WebGLTexture (73) by GC
+2019-04-12T02:11:21.492Z - normal: Simulator: Destroy WebGLTexture (82) by GC
+2019-04-12T02:11:21.494Z - normal: Simulator: Destroy WebGLTexture (40) by GC
+2019-04-12T02:11:21.494Z - normal: Simulator: Destroy WebGLTexture (72) by GC
+2019-04-12T02:11:21.495Z - normal: Simulator: Destroy WebGLTexture (50) by GC
+2019-04-12T02:11:21.495Z - normal: Simulator: Destroy WebGLTexture (71) by GC
+2019-04-12T02:11:21.496Z - normal: Simulator: Destroy WebGLTexture (69) by GC
+2019-04-12T02:11:21.496Z - normal: Simulator: Destroy WebGLTexture (68) by GC
+2019-04-12T02:11:21.496Z - normal: Simulator: Destroy WebGLTexture (38) by GC
+2019-04-12T02:11:21.496Z - normal: Simulator: Destroy WebGLTexture (60) by GC
+2019-04-12T02:11:21.496Z - normal: Simulator: Destroy WebGLTexture (17) by GC
+2019-04-12T02:11:21.497Z - normal: Simulator: Destroy WebGLTexture (57) by GC
+2019-04-12T02:11:21.497Z - normal: Simulator: Destroy WebGLTexture (112) by GC
+2019-04-12T02:11:21.497Z - normal: Simulator: Destroy WebGLTexture (51) by GC
+2019-04-12T02:11:21.498Z - normal: Simulator: Destroy WebGLTexture (48) by GC
+2019-04-12T02:11:21.499Z - normal: Simulator: Destroy WebGLTexture (12) by GC
+2019-04-12T02:11:21.499Z - normal: Simulator: Destroy WebGLTexture (45) by GC
+2019-04-12T02:11:21.499Z - normal: Simulator: Destroy WebGLTexture (78) by GC
+2019-04-12T02:11:21.500Z - normal: Simulator: Destroy WebGLBuffer (2) by GC
+2019-04-12T02:11:21.500Z - normal: Simulator: Destroy WebGLTexture (39) by GC
+2019-04-12T02:11:21.501Z - normal: Simulator: Destroy WebGLTexture (37) by GC
+2019-04-12T02:11:21.501Z - normal: Simulator: Destroy WebGLTexture (66) by GC
+2019-04-12T02:11:21.501Z - normal: Simulator: Destroy WebGLTexture (34) by GC
+2019-04-12T02:11:21.502Z - normal: Simulator: Destroy WebGLTexture (33) by GC
+2019-04-12T02:11:21.502Z - normal: Simulator: Destroy WebGLTexture (32) by GC
+2019-04-12T02:11:21.502Z - normal: Simulator: Destroy WebGLTexture (59) by GC
+2019-04-12T02:11:21.502Z - normal: Simulator: Destroy WebGLBuffer (19) by GC
+2019-04-12T02:11:21.503Z - normal: Simulator: Destroy WebGLTexture (53) by GC
+2019-04-12T02:11:21.503Z - normal: Simulator: Destroy WebGLTexture (30) by GC
+2019-04-12T02:11:21.503Z - normal: Simulator: Destroy WebGLTexture (98) by GC
+2019-04-12T02:11:21.503Z - normal: Simulator: Destroy WebGLBuffer (4) by GC
+2019-04-12T02:11:21.504Z - normal: Simulator: Destroy WebGLTexture (26) by GC
+2019-04-12T02:11:21.505Z - normal: Simulator: Destroy WebGLTexture (29) by GC
+2019-04-12T02:11:21.505Z - normal: Simulator: Destroy WebGLTexture (118) by GC
+2019-04-12T02:11:21.505Z - normal: Simulator: Destroy WebGLTexture (117) by GC
+2019-04-12T02:11:21.506Z - normal: Simulator: Destroy WebGLTexture (56) by GC
+2019-04-12T02:11:21.506Z - normal: Simulator: Destroy WebGLTexture (28) by GC
+2019-04-12T02:11:21.506Z - normal: Simulator: Destroy WebGLTexture (113) by GC
+2019-04-12T02:11:21.507Z - normal: Simulator: Destroy WebGLTexture (27) by GC
+2019-04-12T02:11:21.507Z - normal: Simulator: Destroy WebGLTexture (2) by GC
+2019-04-12T02:11:21.507Z - normal: Simulator: Destroy WebGLTexture (35) by GC
+2019-04-12T02:11:21.507Z - normal: Simulator: Destroy WebGLTexture (95) by GC
+2019-04-12T02:11:21.508Z - normal: Simulator: Destroy WebGLTexture (24) by GC
+2019-04-12T02:11:21.508Z - normal: Simulator: Destroy WebGLTexture (87) by GC
+2019-04-12T02:11:21.508Z - normal: Simulator: Destroy WebGLTexture (23) by GC
+2019-04-12T02:11:21.508Z - normal: Simulator: Destroy WebGLTexture (22) by GC
+2019-04-12T02:11:21.508Z - normal: Simulator: Destroy WebGLTexture (21) by GC
+2019-04-12T02:11:21.509Z - normal: Simulator: Destroy WebGLTexture (126) by GC
+2019-04-12T02:11:21.509Z - normal: Simulator: Destroy WebGLTexture (85) by GC
+2019-04-12T02:11:21.509Z - normal: Simulator: Destroy WebGLTexture (65) by GC
+2019-04-12T02:11:21.509Z - normal: Simulator: Destroy WebGLTexture (36) by GC
+2019-04-12T02:11:21.510Z - normal: Simulator: Destroy WebGLTexture (67) by GC
+2019-04-12T02:11:21.510Z - normal: Simulator: Destroy WebGLTexture (111) by GC
+2019-04-12T02:11:21.510Z - normal: Simulator: Destroy WebGLTexture (63) by GC
+2019-04-12T02:11:21.510Z - normal: Simulator: Destroy WebGLTexture (55) by GC
+2019-04-12T02:11:21.511Z - normal: Simulator: Destroy WebGLTexture (61) by GC
+2019-04-12T02:11:21.511Z - normal: Simulator: Destroy WebGLBuffer (12) by GC
+2019-04-12T02:11:21.511Z - normal: Simulator: Destroy WebGLTexture (77) by GC
+2019-04-12T02:11:21.511Z - normal: Simulator: Destroy WebGLProgram (9) by GC
+2019-04-12T02:11:21.511Z - normal: Simulator: Destroy WebGLTexture (88) by GC
+2019-04-12T02:11:21.512Z - normal: Simulator: Destroy WebGLTexture (62) by GC
+2019-04-12T02:11:21.512Z - normal: Simulator: Destroy WebGLTexture (115) by GC
+2019-04-12T02:11:21.512Z - normal: Simulator: Destroy WebGLTexture (54) by GC
+2019-04-12T02:11:21.512Z - normal: Simulator: Destroy WebGLTexture (43) by GC
+2019-04-12T02:11:21.513Z - normal: Simulator: Destroy WebGLProgram (3) by GC
+2019-04-12T02:11:21.513Z - normal: Simulator: Destroy WebGLTexture (47) by GC
+2019-04-12T02:11:21.513Z - normal: Simulator: Destroy WebGLTexture (44) by GC
+2019-04-12T02:11:21.513Z - normal: Simulator: Destroy WebGLTexture (134) by GC
+2019-04-12T02:11:21.513Z - normal: Simulator: Destroy WebGLBuffer (6) by GC
+2019-04-12T02:11:21.514Z - normal: Simulator: Destroy WebGLTexture (52) by GC
+2019-04-12T02:11:21.538Z - normal: Simulator: Destroy WebGLTexture (5) by GC
+2019-04-12T02:11:21.539Z - normal: Simulator: Destroy WebGLBuffer (8) by GC
+2019-04-12T02:11:21.539Z - normal: Simulator: Destroy WebGLTexture (8) by GC
+2019-04-12T02:11:21.539Z - normal: Simulator: Destroy WebGLTexture (9) by GC
+2019-04-12T02:11:21.540Z - normal: Simulator: Destroy WebGLTexture (129) by GC
+2019-04-12T02:11:21.540Z - normal: Simulator: Destroy WebGLTexture (58) by GC
+2019-04-12T02:11:21.540Z - normal: Simulator: Destroy WebGLTexture (19) by GC
+2019-04-12T02:11:21.540Z - normal: Simulator: Destroy WebGLTexture (93) by GC
+2019-04-12T02:11:21.541Z - normal: Simulator: Destroy WebGLTexture (7) by GC
+2019-04-12T02:11:21.541Z - normal: Simulator: Destroy WebGLTexture (6) by GC
+2019-04-12T02:11:21.541Z - normal: Simulator: Destroy WebGLBuffer (23) by GC
+2019-04-12T02:11:21.542Z - normal: Simulator: Destroy WebGLTexture (4) by GC
+2019-04-12T02:11:21.542Z - normal: Simulator: Destroy WebGLTexture (83) by GC
+2019-04-12T02:11:21.542Z - normal: Simulator: Destroy WebGLTexture (41) by GC
+2019-04-12T02:11:21.542Z - normal: Simulator: Destroy WebGLTexture (3) by GC
+2019-04-12T02:11:21.543Z - normal: Simulator: Destroy WebGLBuffer (11) by GC
+2019-04-12T02:11:21.543Z - normal: Simulator: Destroy WebGLTexture (70) by GC
+2019-04-12T02:11:21.543Z - normal: Simulator: Destroy WebGLTexture (64) by GC
+2019-04-12T02:11:21.543Z - normal: Simulator: Destroy WebGLTexture (31) by GC
+2019-04-12T02:11:21.543Z - normal: Simulator: Destroy WebGLTexture (1) by GC
+2019-04-12T02:11:21.544Z - normal: Simulator: Destroy WebGLTexture (74) by GC
+2019-04-12T02:11:21.544Z - normal: Simulator: Destroy WebGLTexture (103) by GC
+2019-04-12T02:11:21.544Z - normal: Simulator: Destroy WebGLBuffer (3) by GC
+2019-04-12T02:11:21.544Z - normal: Simulator: Destroy WebGLTexture (49) by GC
+2019-04-12T02:11:21.545Z - normal: Simulator: Destroy WebGLTexture (91) by GC
+2019-04-12T02:11:21.545Z - normal: Simulator: Destroy WebGLBuffer (1) by GC
+2019-04-12T02:11:21.545Z - normal: Simulator: Destroy WebGLTexture (42) by GC
+2019-04-12T02:11:21.545Z - normal: Simulator: Destroy WebGLBuffer (15) by GC
+2019-04-12T02:11:21.546Z - normal: Simulator: Destroy WebGLBuffer (13) by GC
+2019-04-12T02:11:21.546Z - normal: Simulator: Destroy WebGLTexture (92) by GC
+2019-04-12T02:11:21.546Z - normal: Simulator: Destroy WebGLTexture (25) by GC
+2019-04-12T02:11:21.546Z - normal: Simulator: Destroy WebGLBuffer (16) by GC
+2019-04-12T02:11:21.546Z - normal: Simulator: Destroy WebGLTexture (104) by GC
+2019-04-12T02:11:21.546Z - normal: Simulator: Destroy WebGLBuffer (5) by GC
+2019-04-12T02:11:21.547Z - normal: Simulator: Destroy WebGLTexture (123) by GC
+2019-04-12T02:11:21.547Z - normal: Simulator: GC begin ..., (js->native map) size: 0, all objects: 0
+2019-04-12T02:11:21.733Z - normal: Simulator: GC end ..., (js->native map) size: 0, all objects: 0
+2019-04-12T02:11:21.734Z - normal: Simulator: ScriptEngine::cleanup end ...
