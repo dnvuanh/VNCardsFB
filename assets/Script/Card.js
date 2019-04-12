@@ -22,20 +22,25 @@ cc.Class({
     onSelect()
     {
         this.isSelected = true;
-        this.node.y = this.selectedPosition;
+        this.node.runAction(cc.moveTo(0.1, this.node.x, this.selectedPosition));
     },
 
-    onDeselect()
+    onDeselect(playAnim)
     {
         this.isSelected = false;
-        this.node.y = 0;
+        if (playAnim)
+            this.node.runAction(cc.moveTo(0.1, this.node.x, 0));
+        else
+        {
+            this.node.position.y = 0;
+        }
     },
 
     onClick()
     {
         if (this.isSelected)
         {
-            this.onDeselect();
+            this.onDeselect(true);
         }
         else
         {

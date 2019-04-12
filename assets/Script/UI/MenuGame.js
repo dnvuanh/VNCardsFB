@@ -223,7 +223,7 @@ cc.Class({
         if(GameMgr.instance.IsMyId(playerId)) {
             cards.forEach(it => {
                 let card = this.myCardNode.getChildByName("Card_" + it);
-                card.getComponent("Card").onDeselect();
+                card.getComponent("Card").onDeselect(false);
                 card.setParent(this.playZoneNode);
                 card.setPosition(0, 0);
             });
