@@ -18,6 +18,8 @@ cc.Class({
             this.username.node.active = false;
             this.startLoading();
         }
+        this.progressPercent = 0;
+        this.nextProgressPercent = 0;
     },
 
     loginButtonClick() {
@@ -37,25 +39,25 @@ cc.Class({
     loadResource()
     {
         ImageCache.Init(this.LoadSoundGame.bind(this));
-        this.loadingBar.progress = 0.2;
+        this.nextProgressPercent = 0.3;
     },
 
     LoadSoundGame()
     {
         SoundMgr.instance.preload(this.LoadGameScene.bind(this));
-        this.loadingBar.progress = 0.4;
+        this.nextProgressPercent = 0.5;
     },
 
     LoadGameScene()
     {
         cc.director.preloadScene("Game", this.InitGameSpark.bind(this));
-        this.loadingBar.progress = 0.6;
+        this.nextProgressPercent = 0.8;
     },
 
     InitGameSpark()
     {
         GSMgr.instance.Init(this.LoginServer.bind(this));
-        this.loadingBar.progress = 0.8;
+        this.nextProgressPercent = 0.9;
     },
 
     LoginServer()
@@ -109,6 +111,7 @@ cc.Class({
     onEnterRoomResponse(response)
     {
         console.log(response);
+        this.nextProgressPercent = 1;
         if (!response.error)
         {
             this.WaitMatchData();
@@ -122,7 +125,15 @@ cc.Class({
 
     Finished()
     {
-        this.loadingBar.progress = 1;
         cc.director.loadScene("Game");
+    },
+
+    update(dt)
+    {
+        if (this.progressPercent < this.nextProgressPercent)
+        {
+            this.progressPercent += dt;
+            this.loadingBar.progress = this.progressPercent;
+        }
     }
 });

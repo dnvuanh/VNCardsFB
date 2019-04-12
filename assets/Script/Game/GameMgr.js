@@ -33,9 +33,12 @@ var GameMgr = cc.Class({
         this.startGameScene = true;
         //this.matchData.Host && UIManager.instance.setHost(this.matchData.Host);
         this.matchData.Seats && UIManager.instance.refreshSeats(this.matchData.Seats);
-        this.myCards && UIManager.instance.onCardsReceived(this.myCards, false);
-        this.matchData.TurnKeeper && UIManager.instance.onTurnChange(this.matchData.TurnKeeper, this.matchData.TimeBeginTurn, this.matchData.Timeout);
-        this.matchData.CurrentCards && UIManager.instance.onThrowSuccess(this.matchData.PreviousThrowPlayerId, this.matchData.CurrentCards);
+        if (this.matchData.State == Define.GameState.RUNNING)
+        {
+            this.myCards && UIManager.instance.onCardsReceived(this.myCards, false);
+            this.matchData.TurnKeeper && UIManager.instance.onTurnChange(this.matchData.TurnKeeper, this.matchData.TimeBeginTurn, this.matchData.Timeout);
+            this.matchData.CurrentCards && UIManager.instance.onThrowSuccess(this.matchData.PreviousThrowPlayerId, this.matchData.CurrentCards);
+        }
     },
 
     OnMatchFound(message) {

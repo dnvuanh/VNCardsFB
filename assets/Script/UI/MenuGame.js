@@ -229,7 +229,7 @@ cc.Class({
             });
         } else {
             cards.forEach(it => {
-                let card = ObjectPool.instance.getCard(it);                
+                let card = ObjectPool.instance.getCard(it);
                 card.setParent(this.playZoneNode);
                 card.setPosition(0, 0);
             });
