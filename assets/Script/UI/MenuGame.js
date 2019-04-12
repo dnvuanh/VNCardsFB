@@ -22,6 +22,7 @@ cc.Class({
         skipButton: cc.Button,
         playZoneNode: cc.Node,
         countDown: require("CountDown"),
+        ResultDisplay: cc.Node,
     },
 
     onLoad()
@@ -33,6 +34,7 @@ cc.Class({
         this.onlineList.node.active = true;
         this.chatBox.node.active = false;
         //this.seatOccupied = [false, false, false, false];
+        this.ResultDisplay = this.ResultDisplay.getComponent("ResultDisplay");
     },
 
     addPlayer(player)
@@ -105,11 +107,11 @@ cc.Class({
 
     beginNewGame()
     {
-        this.SeatMgr.hideResultIcon();
+        this.ButtonStart.active = false;
+        this.ResultDisplay.hideResultIcon();
         this.PlayingButtons.active = true;
         this.previousCards = null;
         this.previousThrowPlayer = null;
-        var myid = GameMgr.instance.getMyId();
     },
 
     PlayDealCardAnim(cards)
@@ -129,7 +131,6 @@ cc.Class({
     onCardsReceived(cards, playAnim)
     {
         this.beginNewGame();
-        this.ButtonStart.active = false;
         if (playAnim)
             this.PlayDealCardAnim(cards);
         else
@@ -271,7 +272,11 @@ cc.Class({
         // }
         console.log(scores);
         this.friendCardNode.children.forEach(it => it.active = false);
-        this.SeatMgr.displayResult(playerWinId, playersCards);
+        if (playersCards[playerWinId].length == 13) //instant win
+        {
+            this.beginNewGame();
+        }
+        this.ResultDisplay.display(playerWinId, playersCards);
     },
 
     onPlayerReady(playerId, isReady)
@@ -316,5 +321,10 @@ cc.Class({
     refreshSeats(Seats)
     {
         this.SeatMgr.refreshSeats(Seats);
+    },
+
+    getPlayerSeat(playerId)
+    {
+        return this.SeatMgr.getPlayerSeat(playerId);
     }
 });

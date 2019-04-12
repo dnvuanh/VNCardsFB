@@ -104,8 +104,8 @@ var GameMgr = cc.Class({
     IsMyId: function IsMyId(id) {
         return this.userId == id;
     },
-    getOnlineSeatCount: function getOnlineSeatCount() {
-        return Object.keys(this.matchData.Seats).length;
+    getPlayerSeat: function getPlayerSeat(playerId) {
+        return UIManager.instance.getPlayerSeat(playerId);
     },
     onPlayerEnterSeat: function onPlayerEnterSeat(message) {
         var playerId = message.getString(1);
@@ -197,7 +197,7 @@ var GameMgr = cc.Class({
         var scores = JSON.parse(message.getString(1));
         var playerWinId = message.getString(2);
         var playersCards = {};
-        for (var i = 0, seats = this.getOnlineSeatCount(); i < seats; i++) {
+        for (var i = 0, seats = Object.keys(scores).length; i < seats; i++) {
             var playerId = message.getString(3 + i * 2);
             var cards = JSON.parse(message.getString(3 + i * 2 + 1));
             playersCards[playerId] = cards;

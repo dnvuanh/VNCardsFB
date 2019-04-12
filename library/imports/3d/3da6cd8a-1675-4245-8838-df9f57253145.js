@@ -26,7 +26,8 @@ cc.Class({
         throwButton: cc.Button,
         skipButton: cc.Button,
         playZoneNode: cc.Node,
-        countDown: require("CountDown")
+        countDown: require("CountDown"),
+        ResultDisplay: cc.Node
     },
 
     onLoad: function onLoad() {
@@ -37,6 +38,7 @@ cc.Class({
         this.onlineList.node.active = true;
         this.chatBox.node.active = false;
         //this.seatOccupied = [false, false, false, false];
+        this.ResultDisplay = this.ResultDisplay.getComponent("ResultDisplay");
     },
     addPlayer: function addPlayer(player) {
         this.onlineList.addPlayer(player);
@@ -86,11 +88,11 @@ cc.Class({
         });
     },
     beginNewGame: function beginNewGame() {
-        this.SeatMgr.hideResultIcon();
+        this.ButtonStart.active = false;
+        this.ResultDisplay.hideResultIcon();
         this.PlayingButtons.active = true;
         this.previousCards = null;
         this.previousThrowPlayer = null;
-        var myid = GameMgr.instance.getMyId();
     },
     PlayDealCardAnim: function PlayDealCardAnim(cards) {
         var _this = this;
@@ -109,7 +111,6 @@ cc.Class({
     },
     onCardsReceived: function onCardsReceived(cards, playAnim) {
         this.beginNewGame();
-        this.ButtonStart.active = false;
         if (playAnim) this.PlayDealCardAnim(cards);else {
             for (var i = 0; i < cards.length; i++) {
                 var card = ObjectPool.instance.getCard(cards[i]);
@@ -226,7 +227,11 @@ cc.Class({
         this.friendCardNode.children.forEach(function (it) {
             return it.active = false;
         });
-        this.SeatMgr.displayResult(playerWinId, playersCards);
+        if (playersCards[playerWinId].length == 13) //instant win
+            {
+                this.beginNewGame();
+            }
+        this.ResultDisplay.display(playerWinId, playersCards);
     },
     onPlayerReady: function onPlayerReady(playerId, isReady) {
         this.SeatMgr.onPlayerReady(playerId, isReady);
@@ -254,6 +259,9 @@ cc.Class({
     },
     refreshSeats: function refreshSeats(Seats) {
         this.SeatMgr.refreshSeats(Seats);
+    },
+    getPlayerSeat: function getPlayerSeat(playerId) {
+        return this.SeatMgr.getPlayerSeat(playerId);
     }
 });
 
