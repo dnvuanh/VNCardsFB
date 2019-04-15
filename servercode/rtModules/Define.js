@@ -32,6 +32,6 @@ function Define()
     
     this.TIME_PER_TURN = 60;
     this.TIME_BREAK_GAME = 10;
-    this.TIME_FORCE_START = 15;
+    this.TIME_FORCE_START = 60;
 }
 module.exports = new Define();
