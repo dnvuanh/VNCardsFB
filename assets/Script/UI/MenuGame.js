@@ -58,10 +58,10 @@ cc.Class({
         GSMgr.instance.leaveSeat(1 - GameMgr.instance.IsRegisterLeave());
     },
 
-    playerEnterSeat(playerInfo, seat)
+    playerEnterSeat(playerInfo, seat, additionalInfo)
     {
         //this.seatOccupied[seat] = true;
-        this.SeatMgr.onPlayerEnter(playerInfo, seat);
+        this.SeatMgr.onPlayerEnter(playerInfo, seat, additionalInfo);
         if (GameMgr.instance.IsMyId(playerInfo.id))
         {
             this.ButtonLeave.active = true;
@@ -105,11 +105,11 @@ cc.Class({
         this.friendCardNode.children.forEach(it => it.active = false);
     },
 
-    beginNewGame()
+    ClearPreviousGame()
     {
         this.ButtonStart.active = false;
         this.ResultDisplay.hideResultIcon();
-        this.PlayingButtons.active = true;
+        this.PlayingButtons.active = false;
         this.previousCards = null;
         this.previousThrowPlayer = null;
     },
@@ -130,7 +130,6 @@ cc.Class({
 
     onCardsReceived(cards, playAnim)
     {
-        this.beginNewGame();
         if (playAnim)
             this.PlayDealCardAnim(cards);
         else
@@ -264,19 +263,11 @@ cc.Class({
         this.previousCards = null;
     },
 
-    displayResult(scores, playerWinId, playersCards)
+    updateResult(scores, winner, remainCards)
     {
-        // if(playersCards[playerWinId].length == 13)
-        // {
-        //     this.PlayDealCardAnim(playersCards[GameMgr.instance.getMyId()]);
-        // }
-        console.log(scores);
+        this.SeatMgr.updateResult();
         this.friendCardNode.children.forEach(it => it.active = false);
-        if (playersCards[playerWinId].length == 13) //instant win
-        {
-            this.beginNewGame();
-        }
-        this.ResultDisplay.display(playerWinId, playersCards);
+        this.ResultDisplay.display(winner, remainCards);
     },
 
     onPlayerReady(playerId, isReady)
@@ -303,6 +294,7 @@ cc.Class({
 
     onGameStateReady(timeStamp)
     {
+        this.ClearPreviousGame();
         if (GameMgr.instance.IsMeHost())
         {
             this.enableStartButton(true);

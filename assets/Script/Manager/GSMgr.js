@@ -69,6 +69,8 @@ var GSMgr = cc.Class({
             case ".MatchUpdatedMessage":
                 GameMgr.instance.OnMatchUpdate(message);
                 break;
+            
+            case ".RegistrationResponse":
             case ".AuthenticationResponse":
                 GameMgr.instance.UpdateUserInfo(message);
                 break;

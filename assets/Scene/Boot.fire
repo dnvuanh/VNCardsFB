@@ -50,8 +50,8 @@
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 0.46875,
-      "y": 0.46875,
+      "x": 0.16471820345351457,
+      "y": 0.16471820345351457,
       "z": 1
     },
     "_quat": {
@@ -3734,8 +3734,8 @@
       "__id__": 82
     },
     "_enabled": true,
-    "APIKey": "j356603E53FA",
-    "Secret": "SCWcCimJ27E9MWBwAXn2kJ9lKes90KiC",
+    "APIKey": "U376425o7BLE",
+    "Secret": "jFCL29CmvyREVveMfZZb4VXVY45TiSAx",
     "_id": "68qDaWlkVDyKsKoJkMUwzx"
   },
   {

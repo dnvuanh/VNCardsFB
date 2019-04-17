@@ -12,6 +12,7 @@ var GameMgr = cc.Class({
         this.RegisterLeave = 0;
         this.myCards = null;
         //this.matchData.PlayerReady = [];
+        this.matchData.AdditionInfos = {};
     },
 
     start() {
@@ -25,6 +26,7 @@ var GameMgr = cc.Class({
         GSMgr.instance.registerOpCodeCallback(ServerCode.RP_THROW_SUCCESS, this.onThrowSuccess.bind(this));
         GSMgr.instance.registerOpCodeCallback(ServerCode.RP_GAME_RESULT, this.onGameResult.bind(this));
         GSMgr.instance.registerOpCodeCallback(ServerCode.RP_REGISTER_LEAVE, this.onPlayerRegisterLeave.bind(this));
+        GSMgr.instance.registerOpCodeCallback(ServerCode.RP_REQUEST_ERROR, this.onErrorResponse.bind(this));
         //GSMgr.instance.registerOpCodeCallback(ServerCode.RP_PLAYER_READY, this.onPlayerReady.bind(this));
         //remove design ready
     },
@@ -125,7 +127,8 @@ var GameMgr = cc.Class({
         let playerId = message.getString(1);
         let seat = message.getLong(2);
         this.matchData.Seats[seat] = playerId;
-        UIManager.instance.playerEnterSeat(this.getPlayer(playerId), seat);
+        this.matchData.AdditionInfos[playerId] = JSON.parse(message.getString(3));;
+        UIManager.instance.playerEnterSeat(this.getPlayer(playerId), seat, this.matchData.AdditionInfos[playerId]);
 
         if (this.IsMyId(playerId)) {
             this.MySeat = seat;
@@ -222,15 +225,13 @@ var GameMgr = cc.Class({
     onGameResult(message)
     {
         let scores = JSON.parse(message.getString(1));
-        let playerWinId = message.getString(2);
-        let playersCards = {};
-        for(var i = 0, seats = Object.keys(scores).length; i < seats; i++)
+        let winner = message.getString(2);
+        let remainCards = JSON.parse(message.getString(3));
+        for (let i in this.matchData.AdditionInfos)
         {
-            let playerId = message.getString(3 + i * 2);
-            let cards = JSON.parse(message.getString(3 + i * 2 + 1));
-            playersCards[playerId] = cards;
+            this.matchData.AdditionInfos[i].VND += scores[i];
         }
-        UIManager.instance.displayResult(scores, playerWinId, playersCards);
+        UIManager.instance.updateResult(scores, winner, remainCards);
     },
 
     onPlayerRegisterLeave(message)
@@ -249,4 +250,17 @@ var GameMgr = cc.Class({
     {
         UIManager.instance.onGameStart();
     },
+
+    onErrorResponse(message)
+    {
+        let errorCode = message.getLong(1);
+        let errorString = message.getString(2);
+        console.log("On response error " + errorCode);
+        Notification.instance.add(errorString);
+    },
+
+    getAdditionalInfo(playerId)
+    {
+        return this.matchData.AdditionInfos[playerId];
+    }
 });

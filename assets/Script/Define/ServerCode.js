@@ -23,7 +23,6 @@ var ServerCode = {
 
     //error handle
     RP_REQUEST_ERROR: 5000,
-    ERROR_DUPLICATED_SEAT: 5001
 }
 
 module.exports = ServerCode;

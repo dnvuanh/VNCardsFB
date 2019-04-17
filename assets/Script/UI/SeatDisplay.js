@@ -21,7 +21,7 @@ cc.Class({
         this.positionAfterRotate = index;
     },
 
-    display(playerInfo)
+    display(playerInfo, additionalInfo)
     {
         this.playerId = playerInfo.id;
         let photo = playerInfo.scriptData.Photo;
@@ -39,6 +39,8 @@ cc.Class({
             this.userName.string = displayName;
             this.displayNode.active = true;
         });
+
+        this.money.string = additionalInfo.VND;
     },
 
     getPlayerId()
@@ -117,5 +119,14 @@ cc.Class({
     getPositionAfterRotate()
     {
         return this.positionAfterRotate;
+    },
+
+    updateResult()
+    {
+        if (this.playerId)
+        {
+            let additionalInfo = GameMgr.instance.getAdditionalInfo(this.playerId);
+            this.money.getComponent("RunNumber").runTo(additionalInfo.VND, 0.2);
+        }
     }
 });

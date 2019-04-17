@@ -20,15 +20,15 @@ cc.Class({
         this.Icons = {};
     },
 
-    display(playerWinId, playersCards)
+    display(winner, remainCards)
     {
-        var players = Object.keys(playersCards);
+        var players = Object.keys(remainCards);
         for(var i = 0, len = players.length; i < len; i++)
         {
             var seatIndex = GameMgr.instance.getPlayerSeat(players[i]);
-            var cards = playersCards[players[i]];
-            var bInstantWin = playersCards[playerWinId].length == 13;
-            if(players[i] == playerWinId)
+            var cards = remainCards[players[i]];
+            var bInstantWin = remainCards[playerWinId].length == 13;
+            if(players[i] == winner)
             {
                 this.displayWinResult(bInstantWin, seatIndex, cards);
             }

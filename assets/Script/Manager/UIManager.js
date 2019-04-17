@@ -92,9 +92,9 @@ var UIManager = cc.Class({
         this.MenuGame.removePlayer(player);
     },
     
-    playerEnterSeat(playerInfo, seat)
+    playerEnterSeat(playerInfo, seat, additionalInfo)
     {
-        this.MenuGame.playerEnterSeat(playerInfo, seat);
+        this.MenuGame.playerEnterSeat(playerInfo, seat, additionalInfo);
     },
 
     playerLeaveSeat(seat)
@@ -147,9 +147,9 @@ var UIManager = cc.Class({
         this.MenuGame.onGameOver();
     },
 
-    displayResult(scores, playerWinId, playersCards)
+    updateResult(scores, winner, remainCards)
     {
-        this.MenuGame.displayResult(scores, playerWinId, playersCards);
+        this.MenuGame.updateResult(scores, winner, remainCards);
     },
 
     onPlayerReady(playerId, isReady)

@@ -32,7 +32,8 @@ cc.Class({
             if (playerId)
             {
                 let playerInfo = GameMgr.instance.getPlayer(playerId);
-                this.onPlayerEnter(playerInfo, seat);
+                let additionalInfo = GameMgr.instance.getAdditionalInfo(playerId);
+                this.onPlayerEnter(playerInfo, seat, additionalInfo);
             }
         }
         let host = GameMgr.instance.getHost();
@@ -40,12 +41,12 @@ cc.Class({
             this.setHost(host);
     },
 
-    onPlayerEnter(playerInfo, seat)
+    onPlayerEnter(playerInfo, seat, additionalInfo)
     {
         if (seat < this.Seats.length)
         {
             var seatDisplay = this.Seats[seat];
-                seatDisplay.display(playerInfo);
+                seatDisplay.display(playerInfo, additionalInfo);
         }
         if (GameMgr.instance.IsMyId(playerInfo.id))
         {
@@ -142,6 +143,14 @@ cc.Class({
             }
         }
         return -1;
+    },
+
+    updateResult()
+    {
+        for (var i = 0; i < this.Seats.length; i++)
+        {
+            var seatDisplay = this.Seats[i];
+                seatDisplay.updateResult();
+        }
     }
-    
 });
