@@ -21,7 +21,7 @@ var UIManager = cc.Class({
 
     start()
     {
-        GameMgr.instance.onInit();
+        this.showMenu("MenuMain");
     },
 
     showLoading(display)

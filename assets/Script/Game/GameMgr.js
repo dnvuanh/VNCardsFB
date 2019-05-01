@@ -31,7 +31,7 @@ var GameMgr = cc.Class({
         //remove design ready
     },
 
-    onInit() {
+    refreshMatchStatus() {
         this.startGameScene = true;
         //this.matchData.Host && UIManager.instance.setHost(this.matchData.Host);
         this.matchData.Seats && UIManager.instance.refreshSeats(this.matchData.Seats);
@@ -61,14 +61,9 @@ var GameMgr = cc.Class({
         }
     },
 
-    onMatchLoaded(callback) {
-        this.onMatchLoadedCb = callback;
-    },
-
     onMatchLoad(message) {
         this.matchData = JSON.parse(message.getString(1));
-        if (this.onMatchLoadedCb)
-            this.onMatchLoadedCb();
+        this.refreshMatchStatus();
     },
 
     getCurrentSeats() {
@@ -105,6 +100,8 @@ var GameMgr = cc.Class({
 
     UpdateUserInfo(message) {
         this.userId = message.userId;
+        if (message.scriptData && message.scriptData.lastMatchInfo)
+            this.lastMatchInfo = message.scriptData.lastMatchInfo
     },
 
     getMyId() {

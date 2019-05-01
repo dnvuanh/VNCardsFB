@@ -56,8 +56,8 @@ cc.Class({
 
     InitGameSpark()
     {
+        this.nextProgressPercent = 1;
         GSMgr.instance.Init(this.LoginServer.bind(this));
-        this.nextProgressPercent = 0.9;
     },
 
     LoginServer()
@@ -86,7 +86,7 @@ cc.Class({
         }
         else
         {
-            this.EnterRoom();
+            this.Finished();
         }
     },
 
@@ -94,33 +94,12 @@ cc.Class({
     {
         if (!response.error)
         {
-            this.EnterRoom();
+            this.Finished();
         }
         else
         {
             //pop up error
         }
-    },
-
-    EnterRoom()
-    {
-        var groupId = FBInstantHelper.getContextID();
-        GSMgr.instance.enterRoomRequest("Kill_13", groupId, this.onEnterRoomResponse.bind(this));
-    },
-
-    onEnterRoomResponse(response)
-    {
-        console.log(response);
-        this.nextProgressPercent = 1;
-        if (!response.error)
-        {
-            this.WaitMatchData();
-        }
-    },
-
-    WaitMatchData() //it's sent automatically when user enter room
-    {
-        GameMgr.instance.onMatchLoaded(this.Finished.bind(this));
     },
 
     Finished()
