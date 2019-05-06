@@ -37,7 +37,7 @@ var GameMgr = cc.Class({
         this.matchData.Seats && UIManager.instance.refreshSeats(this.matchData.Seats);
         if (this.matchData.State == Define.GameState.RUNNING)
         {
-            this.myCards && UIManager.instance.onCardsReceived(this.myCards, false);
+            //this.myCards && UIManager.instance.onCardsReceived(this.myCards, false);
             this.matchData.TurnKeeper && UIManager.instance.onTurnChange(this.matchData.TurnKeeper, this.matchData.TimeBeginTurn, this.matchData.Timeout);
             this.matchData.CurrentCards && UIManager.instance.onThrowSuccess(this.matchData.PreviousThrowPlayerId, this.matchData.CurrentCards);
         }
@@ -203,7 +203,8 @@ var GameMgr = cc.Class({
         let cards = JSON.parse(message.getString(1));
         cards.sort((a, b) => a - b);
         this.myCards = cards;
-        UIManager.instance && UIManager.instance.onCardsReceived(this.myCards, true);
+        let playAnimDeal = (this.matchData.State != Define.GameState.RUNNING);
+        UIManager.instance && UIManager.instance.onCardsReceived(this.myCards, playAnimDeal);
     },
 
     onTurnChange(message) {
