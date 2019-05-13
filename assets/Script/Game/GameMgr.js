@@ -100,8 +100,8 @@ var GameMgr = cc.Class({
 
     UpdateUserInfo(message) {
         this.userId = message.userId;
-        if (message.scriptData && message.scriptData.lastMatchInfo)
-            this.lastMatchInfo = message.scriptData.lastMatchInfo
+        if (message.scriptData && message.scriptData.rtSessionId)
+            this.lastMatchInfo = {session: message.scriptData.rtSessionId, matchGroup: message.scriptData.lastMatch};
     },
 
     getMyId() {

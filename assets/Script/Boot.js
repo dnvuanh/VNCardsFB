@@ -69,7 +69,7 @@ cc.Class({
                 this.userId = this.username.string;
             }
         }
-        GSMgr.instance.authenticationRequest(this.userId, this.userId, this.OnTryLogin.bind(this));
+        GSMgr.instance.authenticationRequest(this.userId, this.userId, this.OnTryLogin.bind(this), this.onPlayerLoad.bind(this));
     },
 
     OnTryLogin(response)
@@ -85,6 +85,19 @@ cc.Class({
             GSMgr.instance.registrationRequest(playerName, this.userId, this.userId, playerPhoto, this.OnTryRegister.bind(this));
         }
         else
+        {
+            this.waitForUserProfile();
+        }
+    },
+
+    onPlayerLoad()
+    {
+        this.onPlayerLoaded = true;
+    },
+
+    waitForUserProfile()
+    {
+        if (this.onPlayerLoaded)
         {
             this.Finished();
         }

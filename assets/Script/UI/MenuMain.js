@@ -11,8 +11,7 @@ cc.Class({
     {
         if (GameMgr.instance.lastMatchInfo)
         {
-            GSMgr.instance.onMessage(GameMgr.instance.lastMatchInfo);
-            this.onEnterRoomResponse();
+            GSMgr.instance.enterRoomRequest("Kill_13", GameMgr.instance.lastMatchInfo.matchGroup, this.onEnterRoomResponse.bind(this));
         }
     },
 

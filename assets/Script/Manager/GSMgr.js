@@ -72,6 +72,7 @@ var GSMgr = cc.Class({
             
             case ".RegistrationResponse":
             case ".AuthenticationResponse":
+                this.onUserInfoLoadCb && this.onUserInfoLoadCb();
                 GameMgr.instance.UpdateUserInfo(message);
                 break;
         }
@@ -90,13 +91,14 @@ var GSMgr = cc.Class({
         this.GameSparks.sendWithData("RegistrationRequest", request, onResponse);
     },
 
-    authenticationRequest(username, password, onResponse)
+    authenticationRequest(username, password, onResponse, onUserInfoLoadCb)
     {
         var request = {};
             request["userName"] = username;
             request["password"] = password;
         
         this.GameSparks.sendWithData("AuthenticationRequest", request, onResponse);
+        this.onUserInfoLoadCb = onUserInfoLoadCb;
     },
 
     enterRoomRequest(gameType, groupName, onResponse)

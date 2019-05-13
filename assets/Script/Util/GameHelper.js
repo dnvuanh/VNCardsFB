@@ -93,7 +93,7 @@ var GameHelper = cc.Class({
         if(currentSet.setType == Define.SetType.ERROR)  {
             return false;
         }
-        if(previousSet === null) {
+        if(!previousSet) {
             return true;
         }
         if(previousSet.setType >= Define.SetType.THREEPAIRS){
