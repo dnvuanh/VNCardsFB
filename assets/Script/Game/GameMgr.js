@@ -53,11 +53,11 @@ var GameMgr = cc.Class({
         this.onlineList = message.participants;
         if (message.hasOwnProperty("addedPlayers")) {
             let player = this.onlineList.filter(player => player.id == message.addedPlayers)[0];
-            UIManager.instance.addPlayer(player);
+            UIManager.instance && UIManager.instance.addPlayer(player);
         }
         if (message.hasOwnProperty("removedPlayers")) {
             let player = message.removedPlayers[0];
-            UIManager.instance.removePlayer(player);
+            UIManager.instance && UIManager.instance.removePlayer(player);
         }
     },
 
@@ -101,7 +101,7 @@ var GameMgr = cc.Class({
     UpdateUserInfo(message) {
         this.userId = message.userId;
         if (message.scriptData && message.scriptData.rtSessionId)
-            this.lastMatchInfo = {session: message.scriptData.rtSessionId, matchGroup: message.scriptData.lastMatch};
+            this.lastMatchInfo = message.scriptData.lastMatch;
     },
 
     getMyId() {

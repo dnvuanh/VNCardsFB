@@ -78,6 +78,11 @@ var GSMgr = cc.Class({
         }
     },
 
+    resumeMatch(matchInfo)
+    {
+        
+    },
+
     registrationRequest(displayName, username, password, photo, onResponse)
     {
         var request = {};
