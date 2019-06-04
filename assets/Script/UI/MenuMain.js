@@ -39,6 +39,6 @@ cc.Class({
 
     onEnterRoomResponse()
     {
-        UIManager.instance.showMenu("MenuGame", true);
+        UIManager.instance.showMenu("MenuGame", false);
     }
 });

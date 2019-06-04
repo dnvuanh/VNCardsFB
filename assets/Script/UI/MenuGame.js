@@ -55,7 +55,21 @@ cc.Class({
 
     requestLeaveSeat()
     {
-        GSMgr.instance.leaveSeat(1 - GameMgr.instance.IsRegisterLeave());
+        GSMgr.instance.requestLeaveSeat(1 - GameMgr.instance.IsRegisterLeave());
+    },
+
+    requestLeaveRoom()
+    {
+        if (GameMgr.instance.getMySeat())
+        {
+            this.requestLeaveSeat();
+            this.isLeavingRoom = true;
+        }
+        else
+        {
+            GSMgr.instance.stopRTSession();
+            UIManager.instance.closeCurrentMenu();
+        }
     },
 
     playerEnterSeat(playerInfo, seat, additionalInfo)
@@ -70,12 +84,18 @@ cc.Class({
 
     playerLeaveSeat(seat)
     {
+        this.SeatMgr.onPlayerLeave(seat);
         if (GameMgr.instance.getMySeat() == seat)
         {
             this.ButtonLeave.active = false;
             this.enableStartButton(false);
+            if (this.isLeavingRoom)
+            {
+                this.isLeavingRoom = false;
+                GSMgr.instance.stopRTSession();
+                UIManager.instance.closeCurrentMenu();
+            }
         }
-        this.SeatMgr.onPlayerLeave(seat);
     },
 
     setHost(playerId)
@@ -318,5 +338,12 @@ cc.Class({
     getPlayerSeat(playerId)
     {
         return this.SeatMgr.getPlayerSeat(playerId);
+    },
+
+    Hide()
+    {
+        Notification.instance.clearAll();
+        this.SeatMgr.clearAll();
+        this._super();
     }
 });

@@ -9,7 +9,7 @@ cc.Class({
     setCard(value)
     {
         this.cardValue = value;
-        this.display.spriteFrame = ImageCache.getSprite("Card_" + value);
+        this.display.spriteFrame = ImageCache.getSprite("Card_" + value, "Cards");
         this.node.name = "Card_" + value;
         this.up = false;
     },

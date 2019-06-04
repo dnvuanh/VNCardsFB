@@ -253,7 +253,7 @@ var GSMgr = cc.Class({
         this.sendRTData(ServerCode.RQ_PLAYER_READY, data);
     },
 
-    leaveSeat(isLeave)
+    requestLeaveSeat(isLeave)
     {
         let data = RTData.get();
             data.setLong(1, isLeave);

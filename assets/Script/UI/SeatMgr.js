@@ -152,5 +152,10 @@ cc.Class({
             var seatDisplay = this.Seats[i];
                 seatDisplay.updateResult();
         }
-    }
+    },
+
+    clearAll()
+    {
+        this.Seats.forEach(seatDisplay => seatDisplay.remove());
+    },
 });

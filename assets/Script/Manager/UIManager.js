@@ -16,6 +16,7 @@ var UIManager = cc.Class({
     {
         UIManager.instance = this;
         this.MenuStack = [];
+        this.PopupStack = [];
         this.CurrentMenu = null;
     },
 
@@ -37,7 +38,7 @@ var UIManager = cc.Class({
         let menu = this.node.getChildByName(menuName);
         if (menu != null)
         {
-            menu.active = true;
+            menu.getComponent("MenuScene").Show();
             this.MenuStack.push(menuName);
             this.CurrentMenu = menuName;
         }
@@ -45,24 +46,29 @@ var UIManager = cc.Class({
         if (this.MenuStack.length > 1)
         {
             let lastMenu = this.node.getChildByName(this.MenuStack[this.MenuStack.length - 2]);
-                lastMenu.active = false;
+                lastMenu.getComponent("MenuScene").Hide();
 
             if (closeCurrent)
                 this.MenuStack.splice(this.MenuStack.length - 2,1);
         }
         return menu;
     },
-    
+
+    showPopup(popupName)
+    {
+        
+    },
+
     closeCurrentMenu()
     {
         if (this.MenuStack.length > 1)
         {
             let nextMenu = this.node.getChildByName(this.MenuStack[this.MenuStack.length-2]);
-                nextMenu.active = true;
+                nextMenu.getComponent("MenuScene").Show();
         }
         
         let menu = this.node.getChildByName(this.CurrentMenu);
-            menu.active = false;
+            menu.getComponent("MenuScene").Hide();
         
         this.MenuStack.splice(this.MenuStack.length-1, 1);
         this.CurrentMenu = this.MenuStack[this.MenuStack.length];
