@@ -44,8 +44,8 @@
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 0.22973967099940656,
-      "y": 0.22973967099940656,
+      "x": 0.234375,
+      "y": 0.234375,
       "z": 1
     },
     "_quat": {
@@ -13512,8 +13512,8 @@
       "__id__": 310
     },
     "component": "",
-    "_componentId": "107ed5Y2yhB+JsoOi9+2ctl",
-    "handler": "onCreate",
+    "_componentId": "73b936wez5D9rfDH0m/uPUT",
+    "handler": "OnJoinButtonPressed",
     "customEventData": ""
   },
   {
@@ -13589,6 +13589,7 @@
       "__id__": 310
     },
     "_enabled": true,
+    "Private": null,
     "RoomId": {
       "__id__": 334
     },

@@ -35,7 +35,7 @@ cc.Class({
     onFindMatchPressed()
     {
         let roomId = "PU" + parseInt(Date.now()%1000000);
-        GSMgr.instance.createRoomRequest("Kill_13_Pub", roomId, this.onEnterRoomResponse.bind(this));
+        GSMgr.instance.findRoomRequest("Kill_13_Pub", roomId, this.onEnterRoomResponse.bind(this));
     },
 
     onEnterRoomResponse()

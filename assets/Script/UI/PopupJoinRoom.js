@@ -11,12 +11,12 @@ cc.Class({
     OnJoinButtonPressed()
     {
         let roomId = this.RoomId.string;
-        let roomType = (this.RoomId.indexOf("PR") == 0) ? "Kill_13_Pri":"Kill_13_Pub";
+        let roomType = (roomId.indexOf("PR") == 0) ? "Kill_13_Pri":"Kill_13_Pub";
 
-        GSMgr.instance.enterRoomRequest(roomType, roomId, this.onEnterRoomResponse.bind(this));
+        GSMgr.instance.enterRoomRequest(roomType, roomId, this.onJoinRoomResponse.bind(this));
     },
 
-    onEnterRoomResponse()
+    onJoinRoomResponse()
     {
         this.Close();
         UIManager.instance.showMenu("MenuGame", false);
