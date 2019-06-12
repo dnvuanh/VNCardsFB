@@ -27,6 +27,7 @@ cc.Class({
 
     onLoad()
     {
+        this._super();
         this.ButtonLeave.active = false;
         this.ButtonStart.active = false;
         this.ButtonReady.active = false;

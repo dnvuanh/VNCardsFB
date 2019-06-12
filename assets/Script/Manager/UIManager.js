@@ -45,8 +45,11 @@ var UIManager = cc.Class({
         
         if (this.MenuStack.length > 1)
         {
-            let lastMenu = this.node.getChildByName(this.MenuStack[this.MenuStack.length - 2]);
-                lastMenu.getComponent("MenuScene").Hide();
+            if (!menu.getComponent("MenuScene").IsPopup())
+            {
+                let lastMenu = this.node.getChildByName(this.MenuStack[this.MenuStack.length - 2]).getComponent("MenuScene");
+                    lastMenu.getComponent("MenuScene").Hide();
+            }
 
             if (closeCurrent)
                 this.MenuStack.splice(this.MenuStack.length - 2,1);

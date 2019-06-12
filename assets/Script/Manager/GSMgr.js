@@ -106,12 +106,25 @@ var GSMgr = cc.Class({
         this.onUserInfoLoadCb = onUserInfoLoadCb;
     },
 
-    enterRoomRequest(gameType, groupName, onResponse)
+    enterRoomRequest(shortCode, roomId, onResponse)
     {
         var request = {};
-            request["matchShortCode"] = gameType;
-            request["matchGroup"] = groupName;
+            request["matchShortCode"] = shortCode;
             request["skill"] = 0;
+            request["matchData"] = {};
+            request["matchData"].CustomId = roomId;
+        
+        this.GameSparks.sendWithData("MatchmakingRequest", request, onResponse);
+    },
+
+    createRoomRequest(shortCode, roomId, onResponse)
+    {
+        var request = {};
+            request["matchShortCode"] = shortCode;
+            request["skill"] = 0;
+            request["customQuery"] = {"matchData.roomId": roomId};
+            request["matchData"] = {};
+            request["matchData"].roomId = roomId;
         
         this.GameSparks.sendWithData("MatchmakingRequest", request, onResponse);
     },

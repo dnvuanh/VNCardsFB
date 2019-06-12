@@ -1,19 +1,23 @@
+var MenuScene = require("MenuScene");
 cc.Class({
-    extends: cc.Component,
+    extends: MenuScene,
 
     properties: {
 
     },
 
-    Show()
+    onLoad()
     {
-        console.log("Popup " + this.node.name + " show");
-        this.node.active = true;
+        this._super();
     },
 
-    Hide()
+    Close()
     {
-        console.log("Popup " + this.node.name + " hide");
-        this.node.active = false;
+        UIManager.instance.closeCurrentMenu();
     },
+
+    IsPopup()
+    {
+        return true;
+    }
 });

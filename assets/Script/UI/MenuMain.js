@@ -9,32 +9,33 @@ cc.Class({
 
     start()
     {
-        if (GameMgr.instance.lastMatchInfo)
+        /*if (GameMgr.instance.lastMatchInfo)
         {
             GSMgr.instance.enterRoomRequest("Kill_13", GameMgr.instance.lastMatchInfo, this.onEnterRoomResponse.bind(this));
             //console.log(GameMgr.instance.lastMatchInfo);
-        }
+        }*/
     },
 
     onPlayMessengerPressed()
     {
-        var groupId = FBInstantHelper.getContextID();
-        GSMgr.instance.enterRoomRequest("Kill_13", groupId, this.onEnterRoomResponse.bind(this));
+        var roomId = "PR" + FBInstantHelper.getContextID();
+        GSMgr.instance.enterRoomRequest("Kill_13_Pri", roomId, this.onEnterRoomResponse.bind(this));
     },
 
     onCreateRoomPressed()
     {
-
+        UIManager.instance.showMenu("PopupCreateRoom", false);
     },
 
     onJoinRoomPressed()
     {
-
+        UIManager.instance.showMenu("PopupJoinRoom", false);
     },
 
     onFindMatchPressed()
     {
-
+        let roomId = "PU" + parseInt(Date.now()%1000000);
+        GSMgr.instance.createRoomRequest("Kill_13_Pub", roomId, this.onEnterRoomResponse.bind(this));
     },
 
     onEnterRoomResponse()

@@ -1,4 +1,5 @@
 var PopupScene = require("PopupScene");
+
 cc.Class({
     extends: PopupScene,
 
@@ -7,11 +8,10 @@ cc.Class({
         RoomId: cc.EditBox,
     },
 
-    onCreate()
+    OnJoinButtonPressed()
     {
-        let isPrivate = this.Private.isChecked;
-        let roomId = isPrivate ? "PR" : "PU" + this.RoomId.string;
-        let roomType = isPrivate ? "Kill_13_Pri":"Kill_13_Pub";
+        let roomId = this.RoomId.string;
+        let roomType = (this.RoomId.indexOf("PR") == 0) ? "Kill_13_Pri":"Kill_13_Pub";
 
         GSMgr.instance.enterRoomRequest(roomType, roomId, this.onEnterRoomResponse.bind(this));
     },
@@ -20,5 +20,5 @@ cc.Class({
     {
         this.Close();
         UIManager.instance.showMenu("MenuGame", false);
-    },
-})
+    }
+});
