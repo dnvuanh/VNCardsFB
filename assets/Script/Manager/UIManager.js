@@ -189,5 +189,10 @@ var UIManager = cc.Class({
     getPlayerSeat(playerId)
     {
         return this.MenuGame.getPlayerSeat(playerId);
+    },
+
+    setRoomId(roomId)
+    {
+        this.MenuGame.setRoomId(roomId);
     }
 });

@@ -108,24 +108,30 @@ var GSMgr = cc.Class({
 
     findRoomRequest(onResponse)
     {
-        var request = {};
+        var request = {
+            "eventKey": "FindRoom",
+        };
 
-        this.GameSparks.sendWithData("MatchmakingRequest", request, onResponse);
+        this.GameSparks.sendWithData("LogEventRequest", request, onResponse);
     },
 
     createRoomRequest(roomId, onResponse)
     {
-        var request = {};
-            request["roomId"] = roomId;
-        this.GameSparks.sendWithData("MatchmakingRequest", request, onResponse);
+        var request = {
+            "eventKey": "CreateRoom",
+            "roomId": roomId
+        };
+        this.GameSparks.sendWithData("LogEventRequest", request, onResponse);
     },
 
     enterRoomRequest(roomId, onResponse)
     {
-        var request = {};
-            request["roomId"] = roomId;
+        var request = {
+            "eventKey": "EnterRoom",
+            "roomId": roomId
+        };
         
-        this.GameSparks.sendWithData("MatchmakingRequest", request, onResponse);
+        this.GameSparks.sendWithData("LogEventRequest", request, onResponse);
     },
 
     createChallengeRequest(shortCode, minPlayers, maxPlayers, onResponse)

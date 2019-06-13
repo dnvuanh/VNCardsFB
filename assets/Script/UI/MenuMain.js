@@ -18,8 +18,8 @@ cc.Class({
 
     onPlayMessengerPressed()
     {
-        //var roomId = "PR" + FBInstantHelper.getContextID();
-        //GSMgr.instance.enterRoomRequest("Kill_13_Pri", roomId, this.onEnterRoomResponse.bind(this));
+        var roomId = "PR" + FBInstantHelper.getContextID();
+        GSMgr.instance.enterRoomRequest(roomId, this.onEnterRoomResponse.bind(this));
     },
 
     onCreateRoomPressed()

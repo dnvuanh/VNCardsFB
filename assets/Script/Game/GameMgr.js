@@ -46,6 +46,8 @@ var GameMgr = cc.Class({
     OnMatchFound(message) {
         console.log("Game on match found " + JSON.stringify(message));
         this.onlineList = message.participants;
+        this.roomId = message.matchData.roomId;
+        UIManager.instance.setRoomId(this.roomId);
     },
 
     OnMatchUpdate(message) {

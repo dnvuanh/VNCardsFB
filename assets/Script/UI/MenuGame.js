@@ -23,6 +23,7 @@ cc.Class({
         playZoneNode: cc.Node,
         countDown: require("CountDown"),
         ResultDisplay: cc.Node,
+        roomId: cc.Label
     },
 
     onLoad()
@@ -129,7 +130,7 @@ cc.Class({
     ClearPreviousGame()
     {
         this.ButtonStart.active = false;
-        this.ResultDisplay.hideResultIcon();
+        //this.ResultDisplay.hideResultIcon();
         this.PlayingButtons.active = false;
         this.previousCards = null;
         this.previousThrowPlayer = null;
@@ -288,7 +289,7 @@ cc.Class({
     {
         this.SeatMgr.updateResult();
         this.friendCardNode.children.forEach(it => it.active = false);
-        this.ResultDisplay.display(winner, remainCards);
+        //this.ResultDisplay.display(winner, remainCards);
     },
 
     onPlayerReady(playerId, isReady)
@@ -346,5 +347,10 @@ cc.Class({
         Notification.instance.clearAll();
         this.SeatMgr.clearAll();
         this._super();
+    },
+
+    setRoomId(roomId)
+    {
+        this.roomId.string = "Room: " + roomId;
     }
 });
