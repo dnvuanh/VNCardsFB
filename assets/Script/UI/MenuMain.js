@@ -18,8 +18,8 @@ cc.Class({
 
     onPlayMessengerPressed()
     {
-        var roomId = "PR" + FBInstantHelper.getContextID();
-        GSMgr.instance.enterRoomRequest("Kill_13_Pri", roomId, this.onEnterRoomResponse.bind(this));
+        //var roomId = "PR" + FBInstantHelper.getContextID();
+        //GSMgr.instance.enterRoomRequest("Kill_13_Pri", roomId, this.onEnterRoomResponse.bind(this));
     },
 
     onCreateRoomPressed()
@@ -34,8 +34,7 @@ cc.Class({
 
     onFindMatchPressed()
     {
-        let roomId = "PU" + parseInt(Date.now()%1000000);
-        GSMgr.instance.findRoomRequest("Kill_13_Pub", roomId, this.onEnterRoomResponse.bind(this));
+        GSMgr.instance.findRoomRequest(this.onEnterRoomResponse.bind(this));
     },
 
     onEnterRoomResponse()

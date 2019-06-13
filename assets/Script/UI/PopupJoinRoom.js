@@ -11,9 +11,8 @@ cc.Class({
     OnJoinButtonPressed()
     {
         let roomId = this.RoomId.string;
-        let roomType = (roomId.indexOf("PR") == 0) ? "Kill_13_Pri":"Kill_13_Pub";
-
-        GSMgr.instance.enterRoomRequest(roomType, roomId, this.onJoinRoomResponse.bind(this));
+        
+        GSMgr.instance.enterRoomRequest(roomId, this.onJoinRoomResponse.bind(this));
     },
 
     onJoinRoomResponse()
