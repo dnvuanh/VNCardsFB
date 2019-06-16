@@ -10,14 +10,14 @@ cc.Class({
     onCreate()
     {
         let isPrivate = this.Private.isChecked;
-        let roomId = isPrivate ? "PR" : "PU" + this.RoomId.string;
+        let roomId = (isPrivate ? "PR" : "PU") + this.RoomId.string;
 
         GSMgr.instance.createRoomRequest(roomId, this.onCreateRoomResponse.bind(this));
     },
 
     onCreateRoomResponse()
     {
-        this.Close();
+        UIManager.instance.closeCurrentPopup();
         UIManager.instance.showMenu("MenuGame", false);
     },
 })

@@ -4,7 +4,12 @@ cc.Class({
     extends: MenuScene,
 
     properties: {
-        
+        playMessenger: cc.Node
+    },
+
+    onLoad()
+    {
+        this.playMessenger.active = FBInstantHelper.isReady();
     },
 
     start()
@@ -24,12 +29,12 @@ cc.Class({
 
     onCreateRoomPressed()
     {
-        UIManager.instance.showMenu("PopupCreateRoom", false);
+        UIManager.instance.showPopup("PopupCreateRoom");
     },
 
     onJoinRoomPressed()
     {
-        UIManager.instance.showMenu("PopupJoinRoom", false);
+        UIManager.instance.showPopup("PopupJoinRoom");
     },
 
     onFindMatchPressed()

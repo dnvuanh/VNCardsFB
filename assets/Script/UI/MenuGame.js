@@ -62,7 +62,7 @@ cc.Class({
 
     requestLeaveRoom()
     {
-        if (GameMgr.instance.getMySeat())
+        if (GameMgr.instance.getMySeat() != null)
         {
             this.requestLeaveSeat();
             this.isLeavingRoom = true;
@@ -87,7 +87,7 @@ cc.Class({
     playerLeaveSeat(seat)
     {
         this.SeatMgr.onPlayerLeave(seat);
-        if (GameMgr.instance.getMySeat() == seat)
+        if (GameMgr.instance.getMySeat() != null)
         {
             this.ButtonLeave.active = false;
             this.enableStartButton(false);

@@ -1,1 +1,1 @@
-/Applications/CocosCreator.app/Contents/MacOS/CocosCreator --path ./ --build "platform=android;debug=true"
+/Applications/CocosCreator.app/Contents/MacOS/CocosCreator --path ./ --build "platform=android;debug=true;autoCompile=true"

@@ -17,7 +17,7 @@ cc.Class({
 
     onJoinRoomResponse()
     {
-        this.Close();
+        UIManager.instance.closeCurrentPopup();
         UIManager.instance.showMenu("MenuGame", false);
     }
 });

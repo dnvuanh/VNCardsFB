@@ -13,7 +13,7 @@ cc.Class({
 
     Close()
     {
-        UIManager.instance.closeCurrentMenu();
+        UIManager.instance.closeCurrentPopup();
     },
 
     IsPopup()

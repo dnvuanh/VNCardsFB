@@ -9,3 +9,4 @@ window.GameHelper = require("GameHelper");
 window.Notification = require("Notification");
 window.SoundMgr = require("SoundMgr");
 window.Define = require("Define");
+window.Utils = require("Utils");

@@ -5,6 +5,8 @@ var UIManager = cc.Class({
     properties: {
         loadingscreen: Loading,
         MenuGame: require("MenuGame"),
+        transitionFrame: cc.Node,
+        transitionTime: 0.1
     },
     
     statics:
@@ -18,6 +20,9 @@ var UIManager = cc.Class({
         this.MenuStack = [];
         this.PopupStack = [];
         this.CurrentMenu = null;
+        this.CurrentPopup = null;
+        this.transitionFrame.active = true;
+        this.transitionFrame.opacity = 255;
     },
 
     start()
@@ -35,46 +40,88 @@ var UIManager = cc.Class({
     
     showMenu(menuName, closeCurrent=true)
     {
-        let menu = this.node.getChildByName(menuName);
-        if (menu != null)
-        {
-            menu.getComponent("MenuScene").Show();
-            this.MenuStack.push(menuName);
-            this.CurrentMenu = menuName;
-        }
-        
-        if (this.MenuStack.length > 1)
-        {
-            if (!menu.getComponent("MenuScene").IsPopup())
+        this.transitionFrame.active = true;
+        this.transitionFrame.runAction(cc.fadeIn(this.transitionTime));
+        this.node.runAction(cc.sequence(cc.delayTime(this.transitionTime), cc.callFunc(()=>{
+            let menu = this.node.getChildByName(menuName);
+            if (menu != null)
             {
-                let lastMenu = this.node.getChildByName(this.MenuStack[this.MenuStack.length - 2]).getComponent("MenuScene");
-                    lastMenu.getComponent("MenuScene").Hide();
+                menu.getComponent("MenuScene").Show();
+                this.MenuStack.push(menuName);
+                this.CurrentMenu = menuName;
             }
+            
+            if (this.MenuStack.length > 1)
+            {
+                if (!menu.getComponent("MenuScene").IsPopup())
+                {
+                    let lastMenu = this.node.getChildByName(this.MenuStack[this.MenuStack.length - 2]).getComponent("MenuScene");
+                        lastMenu.getComponent("MenuScene").Hide();
+                }
 
-            if (closeCurrent)
-                this.MenuStack.splice(this.MenuStack.length - 2,1);
-        }
-        return menu;
+                if (closeCurrent)
+                    this.MenuStack.splice(this.MenuStack.length - 2,1);
+            }
+        }), cc.callFunc(()=>{
+            this.transitionFrame.runAction(cc.sequence(cc.fadeOut(this.transitionTime), cc.callFunc(()=>{
+                this.transitionFrame.active = false;
+            })));
+        })))
+        
+        //return menu;
     },
 
     showPopup(popupName)
     {
-        
+        if (!this.CurrentPopup)
+        {
+            let popup = this.node.getChildByName(popupName).getComponent("PopupScene");
+                popup.Show();
+            this.CurrentPopup = popupName;
+        }
+        else
+        {
+            this.PopupStack.push(popupName);
+        }
+    },
+
+    closeCurrentPopup()
+    {
+        if (this.CurrentPopup)
+        {
+            let popup = this.node.getChildByName(this.CurrentPopup).getComponent("PopupScene");
+                popup.Hide();
+            this.CurrentPopup = null;
+
+            if (this.PopupStack.length > 0)
+            {
+                let nextPopup = this.PopupStack.pop();
+                this.showPopup(nextPopup);
+            }
+        }
     },
 
     closeCurrentMenu()
     {
-        if (this.MenuStack.length > 1)
-        {
-            let nextMenu = this.node.getChildByName(this.MenuStack[this.MenuStack.length-2]);
-                nextMenu.getComponent("MenuScene").Show();
-        }
-        
-        let menu = this.node.getChildByName(this.CurrentMenu);
-            menu.getComponent("MenuScene").Hide();
-        
-        this.MenuStack.splice(this.MenuStack.length-1, 1);
-        this.CurrentMenu = this.MenuStack[this.MenuStack.length];
+        this.transitionFrame.active = true;
+        this.transitionFrame.runAction(cc.fadeIn(this.transitionTime));
+        this.node.runAction(cc.sequence(cc.delayTime(this.transitionTime), cc.callFunc(()=>{
+            if (this.MenuStack.length > 1)
+            {
+                let nextMenu = this.node.getChildByName(this.MenuStack[this.MenuStack.length-2]);
+                    nextMenu.getComponent("MenuScene").Show();
+            }
+            
+            let menu = this.node.getChildByName(this.CurrentMenu);
+                menu.getComponent("MenuScene").Hide();
+            
+            this.MenuStack.splice(this.MenuStack.length-1, 1);
+            this.CurrentMenu = this.MenuStack[this.MenuStack.length];
+        }), cc.callFunc(()=>{
+            this.transitionFrame.runAction(cc.sequence(cc.fadeOut(this.transitionTime), cc.callFunc(()=>{
+                this.transitionFrame.active = false;
+            })));
+        })))
     },
 
     closeAllMenu()

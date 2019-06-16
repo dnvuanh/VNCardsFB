@@ -190,7 +190,6 @@ var GameHelper = cc.Class({
         }
         return false;
     },
-
 });
 
 module.exports = new GameHelper();

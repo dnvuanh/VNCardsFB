@@ -19,8 +19,10 @@ cc.Class({
             let position = this.destination[(i % this.destination.length)].position;
             let delayTime = new cc.DelayTime(cardOrder * this.delayTime);
             let moveTo = new cc.MoveTo(this.flyingTime, position);
+            let rotateTo = new cc.rotateBy(this.flyingTime, 360, 360);
+            let moveAndRotate = new cc.Spawn(moveTo, rotateTo);
             let finish = new cc.callFunc(this.onCardDelivery, this, this.node.children[i]);
-            let sequence = new cc.Sequence(delayTime, cc.callFunc(() => SoundMgr.instance.play("deal", false, 0.6)), moveTo, finish);
+            let sequence = new cc.Sequence(delayTime, cc.callFunc(() => SoundMgr.instance.play("deal", false, 0.6)), moveAndRotate, finish);
             this.node.children[i].active = true;
             this.node.children[i].runAction(sequence);
         }

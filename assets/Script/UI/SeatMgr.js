@@ -3,25 +3,26 @@ cc.Class({
 
     properties: {
         SeatPrefab : cc.Prefab,
+        displayNode: cc.Node,
     },
     
     onLoad()
     {
         this.cachedPlayersPos = [];
         this.Seats = [];
-        
-        for (let i=0; i<this.node.children.length; i++)
+        this.SeatMapping = [0,1,2,3];
+
+        let totalSeats = this.displayNode.children.length;
+        for (let i=0; i<totalSeats; i++)
         {
-            this.cachedPlayersPos[i] = this.node.children[i].position;
+            let display = this.displayNode.getChildByName("display_" + i);
+            this.cachedPlayersPos[i] = display.position;
             this.Seats[i] = cc.instantiate(this.SeatPrefab).getComponent("SeatDisplay");
-            this.node.children[i].active = false;
             this.Seats[i].onInit(i, this.cachedPlayersPos[i]);
+            this.Seats[i].node.position = display.position;
+            this.Seats[i].node.parent = this.displayNode;
+            this.Seats[i].node.active = false;
         }
-        for(let i = 0; i < 4; i++)
-        {
-            this.node.addChild(this.Seats[i].node);
-        }
-        this.seatOffset = 0;
     },
 
     refreshSeats(Seats)
@@ -46,12 +47,17 @@ cc.Class({
         if (seat < this.Seats.length)
         {
             var seatDisplay = this.Seats[seat];
+                seatDisplay.node.active = true;
                 seatDisplay.display(playerInfo, additionalInfo);
+            if (!GameMgr.instance.getHost() || GameMgr.instance.getHost() == playerInfo.id)
+            {
+                this.setHost(playerInfo.id);
+            }
         }
-        if (GameMgr.instance.IsMyId(playerInfo.id))
+        /*if (GameMgr.instance.IsMyId(playerInfo.id))
         {
             this.RotateSeats(seat);
-        }
+        }*/
     },
 
     RotateSeats(mySeat)
@@ -60,13 +66,13 @@ cc.Class({
         for (let i=0; i < this.Seats.length; i++)
         {
             let offset = (i - mySeat) >= 0 ? (i - mySeat) : (i - mySeat + 4);
-            /*let fadeOut = cc.fadeOut(0.2);
+            let fadeOut = cc.fadeOut(0.2);
             let movePosition = cc.callFunc(() => this.Seats[i].node.position = this.cachedPlayersPos[offset]);
             let fadeIn = cc.fadeIn(0.2);
-            this.Seats[i].node.runAction(cc.sequence(fadeOut, cc.delayTime(0.1), movePosition, fadeIn));*/
-            var movePosition = cc.moveTo(0.5,this.cachedPlayersPos[offset]);
+            this.Seats[i].node.runAction(cc.sequence(fadeOut, cc.delayTime(0.1), movePosition, fadeIn));
+            /*var movePosition = cc.moveTo(0.5,this.cachedPlayersPos[offset]);
             this.Seats[i].node.runAction(movePosition);
-            this.Seats[i].setPositionAfterRotate(offset);
+            this.Seats[i].setPositionAfterRotate(offset);*/
         }
     },
 
@@ -76,6 +82,7 @@ cc.Class({
         {
             var seatDisplay = this.Seats[seat];
                 seatDisplay.remove();
+                seatDisplay.node.active = false;
         }
     },
 
@@ -152,6 +159,11 @@ cc.Class({
             var seatDisplay = this.Seats[i];
                 seatDisplay.updateResult();
         }
+    },
+
+    onRequestSeat(target, data)
+    {
+        GSMgr.instance.requestSeat(data);
     },
 
     clearAll()

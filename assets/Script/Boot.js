@@ -4,35 +4,45 @@ cc.Class({
     properties: {
         loadingBar: cc.ProgressBar,
         username: cc.EditBox,
-        login: cc.Button,
+        quickLogin: cc.Node,
+        loginBox: cc.Node,
+        transitionFrame: cc.Node
     },
 
-    // LIFE-CYCLE CALLBACKS:
-
-    // onLoad () {},
+    onLoad () {
+        this.quickLogin.active = false;
+        this.loadingBar.node.active = false;
+    },
 
     start () {
-        this.userId = '';
         if(FBInstantHelper.isReady()) {
-            this.login.node.active = false;
-            this.username.node.active = false;
+            this.userId = FBInstantHelper.getPlayerID();
             this.startLoading();
+        }
+        else
+        {
+            if (cc.sys.platform == cc.sys.DESKTOP_BROWSER)
+                this.username.string = Utils.generateId(window, screen, navigator);
         }
         this.progressPercent = 0;
         this.nextProgressPercent = 0;
     },
 
     loginButtonClick() {
+        this.userId = this.username.string;
         this.startLoading();
     },
 
     quickLoginButtonClick(sender, id) {
-        this.startLoading();
         this.userId = id;
+        this.startLoading();
     },
 
     startLoading()
     {
+        this.loginBox.active = false;
+        this.quickLogin.active = false;
+        this.loadingBar.node.active = true;
         this.loadResource();
     },
 
@@ -62,13 +72,6 @@ cc.Class({
 
     LoginServer()
     {      
-        if(FBInstantHelper.isReady()) {
-            this.userId = FBInstantHelper.getPlayerID();
-        } else {
-            if(this.userId == '') {
-                this.userId = this.username.string;
-            }
-        }
         GSMgr.instance.authenticationRequest(this.userId, this.userId, this.OnTryLogin.bind(this), this.onPlayerLoad.bind(this));
     },
 
@@ -117,7 +120,15 @@ cc.Class({
 
     Finished()
     {
-        cc.director.loadScene("Game");
+        let switchScene = cc.sequence(cc.callFunc(()=>{
+                                        this.transitionFrame.runAction(cc.fadeIn(0.2));
+                                      }), 
+                                      cc.delayTime(0.2), 
+                                      cc.callFunc(()=>{
+                                        cc.director.loadScene("Game");
+                                      }));
+                                      
+        this.node.runAction(switchScene);
     },
 
     update(dt)

@@ -75,6 +75,10 @@ var GSMgr = cc.Class({
                 this.onUserInfoLoadCb && this.onUserInfoLoadCb();
                 GameMgr.instance.UpdateUserInfo(message);
                 break;
+
+            case ".SessionTerminatedMessage":
+                this.stopRTSession();
+                break;
         }
     },
 
