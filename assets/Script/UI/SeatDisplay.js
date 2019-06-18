@@ -21,7 +21,7 @@ cc.Class({
         this.positionAfterRotate = index;
     },
 
-    display(playerInfo, additionalInfo)
+    display(playerInfo, additionalInfo, isReady)
     {
         this.playerId = playerInfo.id;
         let photo = playerInfo.scriptData.Photo;
@@ -41,6 +41,8 @@ cc.Class({
         });
 
         this.money.string = additionalInfo.VND;
+        this.node.opacity = isReady ? 255 : 120;
+        
     },
 
     getPlayerId()

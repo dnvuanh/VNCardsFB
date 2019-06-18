@@ -25,7 +25,7 @@ cc.Class({
         }
     },
 
-    refreshSeats(Seats)
+    refreshSeats(Seats, status)
     {
         for (var seat in Seats)
         {
@@ -34,7 +34,7 @@ cc.Class({
             {
                 let playerInfo = GameMgr.instance.getPlayer(playerId);
                 let additionalInfo = GameMgr.instance.getAdditionalInfo(playerId);
-                this.onPlayerEnter(playerInfo, seat, additionalInfo);
+                this.onPlayerEnter(playerInfo, seat, additionalInfo, status.indexOf(playerId) > 0);
             }
         }
         let host = GameMgr.instance.getHost();
@@ -42,13 +42,13 @@ cc.Class({
             this.setHost(host);
     },
 
-    onPlayerEnter(playerInfo, seat, additionalInfo)
+    onPlayerEnter(playerInfo, seat, additionalInfo, isReady)
     {
         if (seat < this.Seats.length)
         {
             var seatDisplay = this.Seats[seat];
                 seatDisplay.node.active = true;
-                seatDisplay.display(playerInfo, additionalInfo);
+                seatDisplay.display(playerInfo, additionalInfo, isReady);
             if (!GameMgr.instance.getHost() || GameMgr.instance.getHost() == playerInfo.id)
             {
                 this.setHost(playerInfo.id);

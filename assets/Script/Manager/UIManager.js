@@ -148,9 +148,9 @@ var UIManager = cc.Class({
         this.MenuGame.removePlayer(player);
     },
     
-    playerEnterSeat(playerInfo, seat, additionalInfo)
+    playerEnterSeat(playerInfo, seat, additionalInfo, isReady)
     {
-        this.MenuGame.playerEnterSeat(playerInfo, seat, additionalInfo);
+        this.MenuGame.playerEnterSeat(playerInfo, seat, additionalInfo, isReady);
     },
 
     playerLeaveSeat(seat)
@@ -228,9 +228,9 @@ var UIManager = cc.Class({
         this.MenuGame.onGameStart();
     },
 
-    refreshSeats(Seats)
+    refreshSeats(Seats, status)
     {
-        this.MenuGame.refreshSeats(Seats);
+        this.MenuGame.refreshSeats(Seats, status);
     },
 
     getPlayerSeat(playerId)

@@ -74,10 +74,10 @@ cc.Class({
         }
     },
 
-    playerEnterSeat(playerInfo, seat, additionalInfo)
+    playerEnterSeat(playerInfo, seat, additionalInfo, isReady)
     {
         //this.seatOccupied[seat] = true;
-        this.SeatMgr.onPlayerEnter(playerInfo, seat, additionalInfo);
+        this.SeatMgr.onPlayerEnter(playerInfo, seat, additionalInfo, isReady);
         if (GameMgr.instance.IsMyId(playerInfo.id))
         {
             this.ButtonLeave.active = true;
@@ -332,7 +332,7 @@ cc.Class({
         this.countDown.hide();
     },
 
-    refreshSeats(Seats)
+    refreshSeats(Seats, status)
     {
         this.SeatMgr.refreshSeats(Seats);
     },

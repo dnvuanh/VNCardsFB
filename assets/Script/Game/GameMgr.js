@@ -34,7 +34,7 @@ var GameMgr = cc.Class({
     refreshMatchStatus() {
         this.startGameScene = true;
         //this.matchData.Host && UIManager.instance.setHost(this.matchData.Host);
-        this.matchData.Seats && UIManager.instance.refreshSeats(this.matchData.Seats);
+        this.matchData.Seats && UIManager.instance.refreshSeats(this.matchData.Seats, this.matchData.Ready);
         if (this.matchData.State == Define.GameState.RUNNING)
         {
             //this.myCards && UIManager.instance.onCardsReceived(this.myCards, false);
@@ -125,9 +125,11 @@ var GameMgr = cc.Class({
     onPlayerEnterSeat(message) {
         let playerId = message.getString(1);
         let seat = message.getLong(2);
+        let isReady = message.getLong(4);
+
         this.matchData.Seats[seat] = playerId;
         this.matchData.AdditionInfos[playerId] = JSON.parse(message.getString(3));;
-        UIManager.instance.playerEnterSeat(this.getPlayer(playerId), seat, this.matchData.AdditionInfos[playerId]);
+        UIManager.instance.playerEnterSeat(this.getPlayer(playerId), seat, this.matchData.AdditionInfos[playerId], isReady);
 
         if (this.IsMyId(playerId)) {
             this.MySeat = seat;
