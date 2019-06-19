@@ -334,7 +334,7 @@ cc.Class({
 
     refreshSeats(Seats, status)
     {
-        this.SeatMgr.refreshSeats(Seats);
+        this.SeatMgr.refreshSeats(Seats, status);
     },
 
     getPlayerSeat(playerId)

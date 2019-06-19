@@ -11,13 +11,14 @@ cc.Class({
         this._super();
     },
 
-    Close()
+    Close(action)
     {
         UIManager.instance.closeCurrentPopup();
+        action && action();
     },
 
     IsPopup()
     {
         return true;
-    }
+    },
 });

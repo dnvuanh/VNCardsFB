@@ -73,16 +73,17 @@ var UIManager = cc.Class({
 
     showPopup(popupName)
     {
+        let popup = this.node.getChildByName(popupName).getComponent("PopupScene");
         if (!this.CurrentPopup)
         {
-            let popup = this.node.getChildByName(popupName).getComponent("PopupScene");
-                popup.Show();
+            popup.Show();
             this.CurrentPopup = popupName;
         }
         else
         {
             this.PopupStack.push(popupName);
         }
+        return popup;
     },
 
     closeCurrentPopup()
@@ -241,5 +242,5 @@ var UIManager = cc.Class({
     setRoomId(roomId)
     {
         this.MenuGame.setRoomId(roomId);
-    }
+    },
 });

@@ -77,6 +77,7 @@ var GSMgr = cc.Class({
                 break;
 
             case ".SessionTerminatedMessage":
+                GameMgr.instance.OnAccountConflict();
                 this.stopRTSession();
                 break;
         }

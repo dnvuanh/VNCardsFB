@@ -264,5 +264,13 @@ var GameMgr = cc.Class({
     getAdditionalInfo(playerId)
     {
         return this.matchData.AdditionInfos[playerId];
+    },
+
+    OnAccountConflict()
+    {
+        let popup = UIManager.instance.showPopup("PopupInfo");
+        popup.display("Confliction","Someone is trying to login your account", ()=>{
+            cc.director.loadScene("Boot");
+        });
     }
 });

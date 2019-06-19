@@ -34,7 +34,7 @@ cc.Class({
             {
                 let playerInfo = GameMgr.instance.getPlayer(playerId);
                 let additionalInfo = GameMgr.instance.getAdditionalInfo(playerId);
-                this.onPlayerEnter(playerInfo, seat, additionalInfo, status.indexOf(playerId) > 0);
+                this.onPlayerEnter(playerInfo, seat, additionalInfo, status.indexOf(playerId) > -1);
             }
         }
         let host = GameMgr.instance.getHost();
