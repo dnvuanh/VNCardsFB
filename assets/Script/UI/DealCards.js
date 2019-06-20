@@ -18,11 +18,15 @@ cc.Class({
             let cardOrder = (i/this.destination.length);
             let position = this.destination[(i % this.destination.length)].position;
             let delayTime = new cc.DelayTime(cardOrder * this.delayTime);
+            let playSound = cc.callFunc(() => {
+                if (cardOrder == 0)
+                    SoundMgr.instance.play("deal", false, 0.6)
+            });
             let moveTo = new cc.MoveTo(this.flyingTime, position);
             let rotateTo = new cc.rotateBy(this.flyingTime, 360, 360);
             let moveAndRotate = new cc.Spawn(moveTo, rotateTo);
             let finish = new cc.callFunc(this.onCardDelivery, this, this.node.children[i]);
-            let sequence = new cc.Sequence(delayTime, /*cc.callFunc(() => SoundMgr.instance.play("deal", false, 0.6)),*/ moveAndRotate, finish);
+            let sequence = new cc.Sequence(delayTime, playSound, moveAndRotate, finish);
             this.node.children[i].active = true;
             this.node.children[i].runAction(sequence);
         }
@@ -33,7 +37,7 @@ cc.Class({
         this.deliveryCount += 1;
         card.setPosition(0,0);
         card.active = false;
-        if (this.deliveryCount % this.destination.length == 0)
+        if (this.deliveryCount % this.destination.length == 1)
         {
             this.callbackEveryTurn();
         }
