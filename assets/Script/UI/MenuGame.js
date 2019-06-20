@@ -154,6 +154,11 @@ cc.Class({
         this.DealCards.startAnim(()=>{
             let card = ObjectPool.instance.getCard(cards[cardCount]);
                 card && card.setParent(this.myCardNode);
+                card.setSiblingIndex(0);
+                //card.opacity = 120;
+                //card.scaleX = 0.8;
+                //card.scaleY = 0.8;
+                //card.runAction(cc.spawn(cc.fadeIn(0.1), cc.scaleTo(0.1,1)));
             if (cardCount == 0)
             {
                 this.friendCardNode.children.forEach(it => it.active = true);
