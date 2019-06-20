@@ -75,8 +75,8 @@ cc.Class({
                 if (!GameMgr.instance.IsRegisterLeave())
                 {
                     this.requestLeaveSeat();
-                    this.isLeavingRoom = true;
                 }
+                this.isLeavingRoom = true;
             }
         }
         else
@@ -101,7 +101,7 @@ cc.Class({
         this.SeatMgr.onPlayerLeave(seat);
         if (GameMgr.instance.getMySeat() != null)
         {
-            this.ButtonLeave.active = false;
+            this.ButtonLeaveSeat.active = false;
             this.enableStartButton(false);
             if (this.isLeavingRoom)
             {
