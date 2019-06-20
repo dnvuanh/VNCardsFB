@@ -1,7 +1,7 @@
 {
   "ver": "1.2.4",
   "uuid": "a37ab0cd-32b2-4a2a-bcee-f168f5b8e9c5",
-  "rawTextureUuid": "67177091-2767-4b90-9a3b-24178880e6ea",
+  "rawTextureUuid": "661e72cc-9058-46aa-904c-225026d3adff",
   "size": {
     "width": 1815,
     "height": 1190
@@ -11,7 +11,7 @@
     "Card_12.png": {
       "ver": "1.0.3",
       "uuid": "469bb466-0ded-4b6d-bbb9-4037bca5142f",
-      "rawTextureUuid": "67177091-2767-4b90-9a3b-24178880e6ea",
+      "rawTextureUuid": "661e72cc-9058-46aa-904c-225026d3adff",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": true,
@@ -33,7 +33,7 @@
     "Card_13.png": {
       "ver": "1.0.3",
       "uuid": "e491cebd-9847-4da2-82a0-13a70ce38fa8",
-      "rawTextureUuid": "67177091-2767-4b90-9a3b-24178880e6ea",
+      "rawTextureUuid": "661e72cc-9058-46aa-904c-225026d3adff",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": true,
@@ -55,7 +55,7 @@
     "Card_14.png": {
       "ver": "1.0.3",
       "uuid": "499cac83-ac71-4fcf-874b-b8f1e45b47e6",
-      "rawTextureUuid": "67177091-2767-4b90-9a3b-24178880e6ea",
+      "rawTextureUuid": "661e72cc-9058-46aa-904c-225026d3adff",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": true,
@@ -77,7 +77,7 @@
     "Card_15.png": {
       "ver": "1.0.3",
       "uuid": "5a100837-e71a-4248-ad93-5facef7f2403",
-      "rawTextureUuid": "67177091-2767-4b90-9a3b-24178880e6ea",
+      "rawTextureUuid": "661e72cc-9058-46aa-904c-225026d3adff",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": true,
@@ -99,7 +99,7 @@
     "Card_16.png": {
       "ver": "1.0.3",
       "uuid": "3d37140c-51ed-419c-bfb5-e5e964f0a45d",
-      "rawTextureUuid": "67177091-2767-4b90-9a3b-24178880e6ea",
+      "rawTextureUuid": "661e72cc-9058-46aa-904c-225026d3adff",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": true,
@@ -121,7 +121,7 @@
     "Card_17.png": {
       "ver": "1.0.3",
       "uuid": "5c1e9015-ad61-4bb5-b819-d9d587c49788",
-      "rawTextureUuid": "67177091-2767-4b90-9a3b-24178880e6ea",
+      "rawTextureUuid": "661e72cc-9058-46aa-904c-225026d3adff",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": true,
@@ -143,7 +143,7 @@
     "Card_18.png": {
       "ver": "1.0.3",
       "uuid": "ebcea2ce-21b0-401d-b551-fcbef42d105c",
-      "rawTextureUuid": "67177091-2767-4b90-9a3b-24178880e6ea",
+      "rawTextureUuid": "661e72cc-9058-46aa-904c-225026d3adff",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": true,
@@ -165,7 +165,7 @@
     "Card_19.png": {
       "ver": "1.0.3",
       "uuid": "f8c9f463-bd24-44af-8c81-613494bc6d64",
-      "rawTextureUuid": "67177091-2767-4b90-9a3b-24178880e6ea",
+      "rawTextureUuid": "661e72cc-9058-46aa-904c-225026d3adff",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,
@@ -187,7 +187,7 @@
     "Card_20.png": {
       "ver": "1.0.3",
       "uuid": "7d36a5f3-e8b5-457d-810d-2686a2a9bba1",
-      "rawTextureUuid": "67177091-2767-4b90-9a3b-24178880e6ea",
+      "rawTextureUuid": "661e72cc-9058-46aa-904c-225026d3adff",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": true,
@@ -209,7 +209,7 @@
     "Card_21.png": {
       "ver": "1.0.3",
       "uuid": "2c24851c-23ce-46de-b532-a0c48474d162",
-      "rawTextureUuid": "67177091-2767-4b90-9a3b-24178880e6ea",
+      "rawTextureUuid": "661e72cc-9058-46aa-904c-225026d3adff",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": true,
@@ -231,7 +231,7 @@
     "Card_22.png": {
       "ver": "1.0.3",
       "uuid": "9494b5f2-dd66-4709-85ba-159de4838629",
-      "rawTextureUuid": "67177091-2767-4b90-9a3b-24178880e6ea",
+      "rawTextureUuid": "661e72cc-9058-46aa-904c-225026d3adff",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": true,
@@ -253,7 +253,7 @@
     "Card_23.png": {
       "ver": "1.0.3",
       "uuid": "9b685363-d959-4360-8a46-1314146de2e4",
-      "rawTextureUuid": "67177091-2767-4b90-9a3b-24178880e6ea",
+      "rawTextureUuid": "661e72cc-9058-46aa-904c-225026d3adff",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": true,
@@ -275,7 +275,7 @@
     "Card_24.png": {
       "ver": "1.0.3",
       "uuid": "2492dc0c-9e88-4bc9-b6dc-04de8ac135b0",
-      "rawTextureUuid": "67177091-2767-4b90-9a3b-24178880e6ea",
+      "rawTextureUuid": "661e72cc-9058-46aa-904c-225026d3adff",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": true,
@@ -297,7 +297,7 @@
     "Card_25.png": {
       "ver": "1.0.3",
       "uuid": "935bbbda-38d3-4467-b594-b642a087a9f5",
-      "rawTextureUuid": "67177091-2767-4b90-9a3b-24178880e6ea",
+      "rawTextureUuid": "661e72cc-9058-46aa-904c-225026d3adff",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": true,
@@ -319,7 +319,7 @@
     "Card_26.png": {
       "ver": "1.0.3",
       "uuid": "c89f1656-f3ec-40ce-b7df-422e0159d3a7",
-      "rawTextureUuid": "67177091-2767-4b90-9a3b-24178880e6ea",
+      "rawTextureUuid": "661e72cc-9058-46aa-904c-225026d3adff",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": true,
@@ -341,7 +341,7 @@
     "Card_27.png": {
       "ver": "1.0.3",
       "uuid": "45499331-e6a6-4794-ada1-c84c15bcee71",
-      "rawTextureUuid": "67177091-2767-4b90-9a3b-24178880e6ea",
+      "rawTextureUuid": "661e72cc-9058-46aa-904c-225026d3adff",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,
@@ -363,7 +363,7 @@
     "Card_28.png": {
       "ver": "1.0.3",
       "uuid": "364750bd-654e-4630-a29e-ef5f12d6e907",
-      "rawTextureUuid": "67177091-2767-4b90-9a3b-24178880e6ea",
+      "rawTextureUuid": "661e72cc-9058-46aa-904c-225026d3adff",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": true,
@@ -385,7 +385,7 @@
     "Card_29.png": {
       "ver": "1.0.3",
       "uuid": "9013ff74-d615-49cc-be8a-db3bbe8de394",
-      "rawTextureUuid": "67177091-2767-4b90-9a3b-24178880e6ea",
+      "rawTextureUuid": "661e72cc-9058-46aa-904c-225026d3adff",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": true,
@@ -407,7 +407,7 @@
     "Card_30.png": {
       "ver": "1.0.3",
       "uuid": "40ab0186-8959-4988-9879-0bf628bd451e",
-      "rawTextureUuid": "67177091-2767-4b90-9a3b-24178880e6ea",
+      "rawTextureUuid": "661e72cc-9058-46aa-904c-225026d3adff",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": true,
@@ -429,7 +429,7 @@
     "Card_31.png": {
       "ver": "1.0.3",
       "uuid": "547e8953-11d7-4b6e-943a-680d08394d76",
-      "rawTextureUuid": "67177091-2767-4b90-9a3b-24178880e6ea",
+      "rawTextureUuid": "661e72cc-9058-46aa-904c-225026d3adff",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": true,
@@ -451,7 +451,7 @@
     "Card_32.png": {
       "ver": "1.0.3",
       "uuid": "fd559599-d559-4d50-b43a-938559ee8755",
-      "rawTextureUuid": "67177091-2767-4b90-9a3b-24178880e6ea",
+      "rawTextureUuid": "661e72cc-9058-46aa-904c-225026d3adff",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": true,
@@ -473,7 +473,7 @@
     "Card_33.png": {
       "ver": "1.0.3",
       "uuid": "65d2e107-85b3-42d4-9803-e5ab99f149b1",
-      "rawTextureUuid": "67177091-2767-4b90-9a3b-24178880e6ea",
+      "rawTextureUuid": "661e72cc-9058-46aa-904c-225026d3adff",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": true,
@@ -495,7 +495,7 @@
     "Card_34.png": {
       "ver": "1.0.3",
       "uuid": "5e67c782-d485-477d-b9ab-2308f8a222de",
-      "rawTextureUuid": "67177091-2767-4b90-9a3b-24178880e6ea",
+      "rawTextureUuid": "661e72cc-9058-46aa-904c-225026d3adff",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": true,
@@ -517,7 +517,7 @@
     "Card_35.png": {
       "ver": "1.0.3",
       "uuid": "3e47e1c3-e9fc-4729-9318-1bd572db9222",
-      "rawTextureUuid": "67177091-2767-4b90-9a3b-24178880e6ea",
+      "rawTextureUuid": "661e72cc-9058-46aa-904c-225026d3adff",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": true,
@@ -539,7 +539,7 @@
     "Card_36.png": {
       "ver": "1.0.3",
       "uuid": "d2173d01-cd21-437d-8525-9f5e7503ed17",
-      "rawTextureUuid": "67177091-2767-4b90-9a3b-24178880e6ea",
+      "rawTextureUuid": "661e72cc-9058-46aa-904c-225026d3adff",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": true,
@@ -561,7 +561,7 @@
     "Card_37.png": {
       "ver": "1.0.3",
       "uuid": "2eb513a8-47de-4917-a38d-75737c06331d",
-      "rawTextureUuid": "67177091-2767-4b90-9a3b-24178880e6ea",
+      "rawTextureUuid": "661e72cc-9058-46aa-904c-225026d3adff",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": true,
@@ -583,7 +583,7 @@
     "Card_38.png": {
       "ver": "1.0.3",
       "uuid": "9d3968fa-36b1-40af-b772-6c6f68f171f4",
-      "rawTextureUuid": "67177091-2767-4b90-9a3b-24178880e6ea",
+      "rawTextureUuid": "661e72cc-9058-46aa-904c-225026d3adff",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": true,
@@ -605,7 +605,7 @@
     "Card_39.png": {
       "ver": "1.0.3",
       "uuid": "8a88fc0b-90d7-4b51-8a1f-6e5ff66827b2",
-      "rawTextureUuid": "67177091-2767-4b90-9a3b-24178880e6ea",
+      "rawTextureUuid": "661e72cc-9058-46aa-904c-225026d3adff",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": true,
@@ -627,7 +627,7 @@
     "Card_40.png": {
       "ver": "1.0.3",
       "uuid": "8ce6c3c3-ee8d-4196-b683-42331a27df77",
-      "rawTextureUuid": "67177091-2767-4b90-9a3b-24178880e6ea",
+      "rawTextureUuid": "661e72cc-9058-46aa-904c-225026d3adff",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": true,
@@ -649,7 +649,7 @@
     "Card_41.png": {
       "ver": "1.0.3",
       "uuid": "16d8e3f0-2ce6-4048-9172-ca9c66c17b30",
-      "rawTextureUuid": "67177091-2767-4b90-9a3b-24178880e6ea",
+      "rawTextureUuid": "661e72cc-9058-46aa-904c-225026d3adff",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": true,
@@ -671,7 +671,7 @@
     "Card_42.png": {
       "ver": "1.0.3",
       "uuid": "b321ac9d-5b93-4f24-a791-a7bb2bc70f9d",
-      "rawTextureUuid": "67177091-2767-4b90-9a3b-24178880e6ea",
+      "rawTextureUuid": "661e72cc-9058-46aa-904c-225026d3adff",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,
@@ -693,7 +693,7 @@
     "Card_43.png": {
       "ver": "1.0.3",
       "uuid": "e509df5c-fd16-44cc-8ff9-caa9620b8414",
-      "rawTextureUuid": "67177091-2767-4b90-9a3b-24178880e6ea",
+      "rawTextureUuid": "661e72cc-9058-46aa-904c-225026d3adff",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": true,
@@ -715,7 +715,7 @@
     "Card_44.png": {
       "ver": "1.0.3",
       "uuid": "4228c8ac-18fe-48e8-8296-896664486fdf",
-      "rawTextureUuid": "67177091-2767-4b90-9a3b-24178880e6ea",
+      "rawTextureUuid": "661e72cc-9058-46aa-904c-225026d3adff",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": true,
@@ -737,7 +737,7 @@
     "Card_45.png": {
       "ver": "1.0.3",
       "uuid": "94cec372-411e-4fba-bb95-134c98cfd962",
-      "rawTextureUuid": "67177091-2767-4b90-9a3b-24178880e6ea",
+      "rawTextureUuid": "661e72cc-9058-46aa-904c-225026d3adff",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": true,
@@ -759,7 +759,7 @@
     "Card_46.png": {
       "ver": "1.0.3",
       "uuid": "519118e4-c3d0-47a1-a548-ff9b8cb009b1",
-      "rawTextureUuid": "67177091-2767-4b90-9a3b-24178880e6ea",
+      "rawTextureUuid": "661e72cc-9058-46aa-904c-225026d3adff",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": true,
@@ -781,7 +781,7 @@
     "Card_47.png": {
       "ver": "1.0.3",
       "uuid": "5bee2b52-0ec0-4f1b-bf61-a75d102a0aa6",
-      "rawTextureUuid": "67177091-2767-4b90-9a3b-24178880e6ea",
+      "rawTextureUuid": "661e72cc-9058-46aa-904c-225026d3adff",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": true,
@@ -803,7 +803,7 @@
     "Card_48.png": {
       "ver": "1.0.3",
       "uuid": "4a8b53f5-ca15-441c-8428-f176d2ec9c3e",
-      "rawTextureUuid": "67177091-2767-4b90-9a3b-24178880e6ea",
+      "rawTextureUuid": "661e72cc-9058-46aa-904c-225026d3adff",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": true,
@@ -825,7 +825,7 @@
     "Card_49.png": {
       "ver": "1.0.3",
       "uuid": "6717a2ed-de40-4601-91f6-da694ed3b6ca",
-      "rawTextureUuid": "67177091-2767-4b90-9a3b-24178880e6ea",
+      "rawTextureUuid": "661e72cc-9058-46aa-904c-225026d3adff",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": true,
@@ -847,7 +847,7 @@
     "Card_50.png": {
       "ver": "1.0.3",
       "uuid": "3a1abe0d-4eff-4d19-8666-68f94cf473e2",
-      "rawTextureUuid": "67177091-2767-4b90-9a3b-24178880e6ea",
+      "rawTextureUuid": "661e72cc-9058-46aa-904c-225026d3adff",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,
@@ -869,7 +869,7 @@
     "Card_51.png": {
       "ver": "1.0.3",
       "uuid": "54dfa94b-68f5-44cb-87b5-68c12e64392e",
-      "rawTextureUuid": "67177091-2767-4b90-9a3b-24178880e6ea",
+      "rawTextureUuid": "661e72cc-9058-46aa-904c-225026d3adff",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": true,
@@ -891,7 +891,7 @@
     "Card_52.png": {
       "ver": "1.0.3",
       "uuid": "eefe2ab6-0bcc-4408-9c8a-654163d269bc",
-      "rawTextureUuid": "67177091-2767-4b90-9a3b-24178880e6ea",
+      "rawTextureUuid": "661e72cc-9058-46aa-904c-225026d3adff",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": true,
@@ -913,7 +913,7 @@
     "Card_53.png": {
       "ver": "1.0.3",
       "uuid": "1585b8e9-a6fa-420b-9536-43103035f010",
-      "rawTextureUuid": "67177091-2767-4b90-9a3b-24178880e6ea",
+      "rawTextureUuid": "661e72cc-9058-46aa-904c-225026d3adff",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": true,
@@ -935,7 +935,7 @@
     "Card_54.png": {
       "ver": "1.0.3",
       "uuid": "8bf6f4fa-c62a-40b4-bc1d-3819bebbdd83",
-      "rawTextureUuid": "67177091-2767-4b90-9a3b-24178880e6ea",
+      "rawTextureUuid": "661e72cc-9058-46aa-904c-225026d3adff",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": true,
@@ -957,7 +957,7 @@
     "Card_55.png": {
       "ver": "1.0.3",
       "uuid": "467f7b85-ec06-42d8-8410-546cc0adca22",
-      "rawTextureUuid": "67177091-2767-4b90-9a3b-24178880e6ea",
+      "rawTextureUuid": "661e72cc-9058-46aa-904c-225026d3adff",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": true,
@@ -979,7 +979,7 @@
     "Card_56.png": {
       "ver": "1.0.3",
       "uuid": "0e46b8dc-e44c-492b-8547-0315f4b2be3f",
-      "rawTextureUuid": "67177091-2767-4b90-9a3b-24178880e6ea",
+      "rawTextureUuid": "661e72cc-9058-46aa-904c-225026d3adff",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": true,
@@ -1001,7 +1001,7 @@
     "Card_57.png": {
       "ver": "1.0.3",
       "uuid": "6bd82ef5-d9af-4fd5-a0ae-fda6a0cef126",
-      "rawTextureUuid": "67177091-2767-4b90-9a3b-24178880e6ea",
+      "rawTextureUuid": "661e72cc-9058-46aa-904c-225026d3adff",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": true,
@@ -1023,7 +1023,7 @@
     "Card_58.png": {
       "ver": "1.0.3",
       "uuid": "1f130a98-b96b-41a9-ad91-4d9773b4512e",
-      "rawTextureUuid": "67177091-2767-4b90-9a3b-24178880e6ea",
+      "rawTextureUuid": "661e72cc-9058-46aa-904c-225026d3adff",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,
@@ -1045,7 +1045,7 @@
     "Card_59.png": {
       "ver": "1.0.3",
       "uuid": "92ddf657-ac46-4466-8606-8135371fb5db",
-      "rawTextureUuid": "67177091-2767-4b90-9a3b-24178880e6ea",
+      "rawTextureUuid": "661e72cc-9058-46aa-904c-225026d3adff",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": true,
@@ -1067,7 +1067,7 @@
     "Card_60.png": {
       "ver": "1.0.3",
       "uuid": "492f6769-9302-438a-81ef-cce07a4ccd77",
-      "rawTextureUuid": "67177091-2767-4b90-9a3b-24178880e6ea",
+      "rawTextureUuid": "661e72cc-9058-46aa-904c-225026d3adff",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": true,
@@ -1089,7 +1089,7 @@
     "Card_61.png": {
       "ver": "1.0.3",
       "uuid": "c49567ac-3add-4cba-8f0e-b65e8e44f20e",
-      "rawTextureUuid": "67177091-2767-4b90-9a3b-24178880e6ea",
+      "rawTextureUuid": "661e72cc-9058-46aa-904c-225026d3adff",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": true,
@@ -1111,7 +1111,7 @@
     "Card_62.png": {
       "ver": "1.0.3",
       "uuid": "b11009ec-5c6b-4b0d-8e6c-ccb7f54662dc",
-      "rawTextureUuid": "67177091-2767-4b90-9a3b-24178880e6ea",
+      "rawTextureUuid": "661e72cc-9058-46aa-904c-225026d3adff",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": true,
@@ -1133,7 +1133,7 @@
     "Card_63.png": {
       "ver": "1.0.3",
       "uuid": "ffeff583-5fe0-4bdf-88ea-08ede6deee50",
-      "rawTextureUuid": "67177091-2767-4b90-9a3b-24178880e6ea",
+      "rawTextureUuid": "661e72cc-9058-46aa-904c-225026d3adff",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": true,
@@ -1155,7 +1155,7 @@
     "Card_back.png": {
       "ver": "1.0.3",
       "uuid": "b6f761fa-7b8d-4613-b1f2-e1ed57262e25",
-      "rawTextureUuid": "67177091-2767-4b90-9a3b-24178880e6ea",
+      "rawTextureUuid": "661e72cc-9058-46aa-904c-225026d3adff",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": true,
@@ -1177,7 +1177,7 @@
     "Card_back_1.png": {
       "ver": "1.0.3",
       "uuid": "a820ed8d-2da8-4f42-9e54-79daca88b1e6",
-      "rawTextureUuid": "67177091-2767-4b90-9a3b-24178880e6ea",
+      "rawTextureUuid": "661e72cc-9058-46aa-904c-225026d3adff",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": true,

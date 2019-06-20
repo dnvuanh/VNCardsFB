@@ -77,6 +77,7 @@ cc.Class({
                     this.requestLeaveSeat();
                 }
                 this.isLeavingRoom = true;
+                this.ButtonLeaveRoom.getComponentInChildren(cc.Label).string = "Unleave Room";
             }
         }
         else
