@@ -10,7 +10,8 @@ cc.Class({
         chatBox: require("ChatBox"),
         SeatMgr: require("SeatMgr"),
         DealCards: require("DealCards"),
-        ButtonLeave: cc.Node,
+        ButtonLeaveSeat: cc.Node,
+        ButtonLeaveRoom: cc.Node,
         ButtonStart: cc.Node,
         ButtonReady: cc.Node,
         PlayingButtons: cc.Node,
@@ -29,7 +30,7 @@ cc.Class({
     onLoad()
     {
         this._super();
-        this.ButtonLeave.active = false;
+        this.ButtonLeaveSeat.active = false;
         this.ButtonStart.active = false;
         this.ButtonReady.active = false;
         this.PlayingButtons.active = false;
@@ -64,8 +65,19 @@ cc.Class({
     {
         if (GameMgr.instance.getMySeat() != null)
         {
-            this.requestLeaveSeat();
-            this.isLeavingRoom = true;
+            if (this.isLeavingRoom)
+            {
+                this.isLeavingRoom = false;
+                this.ButtonLeaveRoom.getComponentInChildren(cc.Label).string = "Leave Room";
+            }
+            else
+            {
+                if (!GameMgr.instance.IsRegisterLeave())
+                {
+                    this.requestLeaveSeat();
+                    this.isLeavingRoom = true;
+                }
+            }
         }
         else
         {
@@ -80,7 +92,7 @@ cc.Class({
         this.SeatMgr.onPlayerEnter(playerInfo, seat, additionalInfo, isReady);
         if (GameMgr.instance.IsMyId(playerInfo.id))
         {
-            this.ButtonLeave.active = true;
+            this.ButtonLeaveSeat.active = true;
         }
     },
 
@@ -308,10 +320,8 @@ cc.Class({
 
     onPlayerRegisterLeave(isLeave)
     {
-        if (isLeave)
-            this.ButtonLeave.getComponentInChildren(cc.Label).string = "Unleave";
-        else
-            this.ButtonLeave.getComponentInChildren(cc.Label).string = "Leave";
+        this.ButtonLeaveSeat.getComponentInChildren(cc.Label).string = isLeave ? "Unleave Seat" : "Leave Seat";
+        this.ButtonLeaveRoom.getComponentInChildren(cc.Label).string = (isLeave && this.isLeavingRoom) ? "Unleave Room" : "Leave Room";
     },
 
     onGameStateReady(timeStamp)

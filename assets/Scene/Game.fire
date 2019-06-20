@@ -6069,7 +6069,7 @@
     "_position": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": -298,
+      "y": -247,
       "z": 0
     },
     "_scale": {
@@ -11185,8 +11185,11 @@
     "DealCards": {
       "__id__": 230
     },
-    "ButtonLeave": {
+    "ButtonLeaveSeat": {
       "__id__": 142
+    },
+    "ButtonLeaveRoom": {
+      "__id__": 132
     },
     "ButtonStart": {
       "__id__": 123
