@@ -261,7 +261,7 @@ cc.Class({
         this.newParent.addChild(this.myNode);
         this.myNode.setPosition(this.newParent.convertToNodeSpace(tempPos));
         */
-        let sourcePos = this.SeatMgr.getSeatPosition(playerId);
+        let seatNode = this.SeatMgr.getSeat(playerId);
         let destPos = {x: (Math.random()*200) - 100, y: (Math.random()*200) - 100};
         let isMyCard = GameMgr.instance.IsMyId(playerId);
         let flyDuration = 0.2;
@@ -278,13 +278,15 @@ cc.Class({
             else
             {
                 card = ObjectPool.instance.getCard(cards[i]);
-                card.scaleX = 0.9;
-                card.scaleX = 0.9;
-                card.setPosition(sourcePos);
-                flyAction = cc.spawn(cc.sequence(cc.scaleTo(flyDuration/2,1), cc.scaleTo(flyDuration/2,0.9)), cc.moveTo(0.2, destPos.x + i*50, destPos.y));
+                card.scaleX = 0.8;
+                card.scaleX = 0.8;
+                Utils.changeParent(card, seatNode)
+                card.setPosition(cc.Vec2.ZERO);
+                flyAction = cc.spawn(cc.sequence(cc.scaleTo(flyDuration/2,1.1), cc.scaleTo(flyDuration/2,0.9)), cc.moveTo(0.2, destPos.x + i*60, destPos.y));
             }
-            card.setParent(this.playZoneNode);
-            //card.runAction(flyAction);
+            Utils.changeParent(card, this.playZoneNode);
+            card.runAction(cc.sequence(cc.delayTime(0.05*i), flyAction));
+            //card.setParent(this.playZoneNode);
         }
     },
 
