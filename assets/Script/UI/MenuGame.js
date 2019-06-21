@@ -252,25 +252,39 @@ cc.Class({
 
     removeCardsFromHand(playerId, cards)
     {
-        let cardList = this.playZoneNode.getComponentsInChildren("Card");
+        /*let cardList = this.playZoneNode.getComponentsInChildren("Card");
             cardList.forEach(card => {
                 card.node.active = false;
             });
-            
+        var tempPos = this.myNode.parent.convertToWorldSpace(animIcon.getPosition());
+        this.myNode.parent = null;
+        this.newParent.addChild(this.myNode);
+        this.myNode.setPosition(this.newParent.convertToNodeSpace(tempPos));
+        */
+        let sourcePos = this.SeatMgr.getSeatPosition(playerId);
+        let destPos = {x: (Math.random()*200) - 100, y: (Math.random()*200) - 100};
+        let isMyCard = GameMgr.instance.IsMyId(playerId);
+        let flyDuration = 0.2;
+        let flyAction = null;
         cards.sort((a,b) => a - b);
-        if(GameMgr.instance.IsMyId(playerId)) {
-            cards.forEach(it => {
-                let card = this.myCardNode.getChildByName("Card_" + it);
-                card.getComponent("Card").onDeselect(false);
-                card.setParent(this.playZoneNode);
-                card.setPosition(0, 0);
-            });
-        } else {
-            cards.forEach(it => {
-                let card = ObjectPool.instance.getCard(it);
-                card.setParent(this.playZoneNode);
-                card.setPosition(0, 0);
-            });
+        for (let i=0; i <cards.length; i++)
+        {
+            let card = null;
+            if (isMyCard)
+            {
+                card = this.myCardNode.getChildByName("Card_" + cards[i]);
+                flyAction = cc.spawn(cc.scaleTo(flyDuration,0.9), cc.moveTo(flyDuration, destPos.x + i*50, destPos.y));
+            }
+            else
+            {
+                card = ObjectPool.instance.getCard(cards[i]);
+                card.scaleX = 0.9;
+                card.scaleX = 0.9;
+                card.setPosition(sourcePos);
+                flyAction = cc.spawn(cc.sequence(cc.scaleTo(flyDuration/2,1), cc.scaleTo(flyDuration/2,0.9)), cc.moveTo(0.2, destPos.x + i*50, destPos.y));
+            }
+            card.setParent(this.playZoneNode);
+            //card.runAction(flyAction);
         }
     },
 

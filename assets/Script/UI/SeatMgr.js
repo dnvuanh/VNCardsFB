@@ -76,6 +76,18 @@ cc.Class({
         }
     },
 
+    getSeatPosition(playerId)
+    {
+        for (let i=0; i<this.Seats.length; i++)
+        {
+            if (this.Seats[i].getPlayerId == playerId)
+            {
+                return this.Seats[i].node.position;
+            }
+        }
+        return cc.Vec2.ZERO;
+    },
+
     onPlayerLeave(seat)
     {
         if (seat < this.Seats.length)
