@@ -252,28 +252,19 @@ cc.Class({
 
     removeCardsFromHand(playerId, cards)
     {
-        /*let cardList = this.playZoneNode.getComponentsInChildren("Card");
-            cardList.forEach(card => {
-                card.node.active = false;
-            });
-        var tempPos = this.myNode.parent.convertToWorldSpace(animIcon.getPosition());
-        this.myNode.parent = null;
-        this.newParent.addChild(this.myNode);
-        this.myNode.setPosition(this.newParent.convertToNodeSpace(tempPos));
-        */
         let seatNode = this.SeatMgr.getSeat(playerId);
-        let destPos = {x: (Math.random()*200) - 100, y: (Math.random()*200) - 100};
+        let destPos = {x: (Math.random()*10 - 5)*10 , y: (Math.random()*10 - 5)*10};
         let isMyCard = GameMgr.instance.IsMyId(playerId);
         let flyDuration = 0.2;
         let flyAction = null;
         cards.sort((a,b) => a - b);
-        for (let i=0; i <cards.length; i++)
+        for (let i=0; i < cards.length; i++)
         {
             let card = null;
             if (isMyCard)
             {
                 card = this.myCardNode.getChildByName("Card_" + cards[i]);
-                flyAction = cc.spawn(cc.scaleTo(flyDuration,0.9), cc.moveTo(flyDuration, destPos.x + i*50, destPos.y));
+                flyAction = cc.spawn(cc.scaleTo(flyDuration,1), cc.moveTo(flyDuration, destPos.x + i*50, destPos.y));
             }
             else
             {
@@ -282,11 +273,10 @@ cc.Class({
                 card.scaleX = 0.8;
                 Utils.changeParent(card, seatNode)
                 card.setPosition(cc.Vec2.ZERO);
-                flyAction = cc.spawn(cc.sequence(cc.scaleTo(flyDuration/2,1.1), cc.scaleTo(flyDuration/2,0.9)), cc.moveTo(0.2, destPos.x + i*60, destPos.y));
+                flyAction = cc.spawn(cc.sequence(cc.scaleTo(flyDuration/2,1.1), cc.scaleTo(flyDuration/2,1)), cc.moveTo(0.2, destPos.x + i*60, destPos.y));
             }
             Utils.changeParent(card, this.playZoneNode);
             card.runAction(cc.sequence(cc.delayTime(0.05*i), flyAction));
-            //card.setParent(this.playZoneNode);
         }
     },
 
