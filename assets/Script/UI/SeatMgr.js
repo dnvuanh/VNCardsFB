@@ -4,42 +4,49 @@ cc.Class({
     properties: {
         SeatPrefab : cc.Prefab,
         displayNode: cc.Node,
+        Seats: [require("SeatDisplay")],
     },
     
     onLoad()
     {
         this.cachedPlayersPos = [];
-        this.Seats = [];
         this.SeatMapping = [0,1,2,3];
-
-        let totalSeats = this.displayNode.children.length;
-        for (let i=0; i<totalSeats; i++)
+        for (let i=0; i<this.Seats.length; i++)
         {
-            let display = this.displayNode.getChildByName("display_" + i);
-            this.cachedPlayersPos[i] = display.position;
-            this.Seats[i] = cc.instantiate(this.SeatPrefab).getComponent("SeatDisplay");
-            this.Seats[i].onInit(i, this.cachedPlayersPos[i]);
-            this.Seats[i].node.position = display.position;
-            this.Seats[i].node.parent = this.displayNode;
-            this.Seats[i].node.active = false;
+            let seat = this.Seats[i].node;
+                seat.active = false;
+
+            this.cachedPlayersPos[i] = seat.position;
         }
     },
 
-    refreshSeats(Seats, status)
+    start()
     {
-        for (var seat in Seats)
+        this.refreshSeats();
+    },
+
+    refreshSeats()
+    {
+        let matchData = GameMgr.instance.getMatchData();
+        let Seats = matchData.Seats;
+        let status = matchData.Ready;
+
+        if (Seats && Seats.length > 0)
         {
-            let playerId = Seats[seat];
-            if (playerId)
+            for (var seat in Seats)
             {
-                let playerInfo = GameMgr.instance.getPlayer(playerId);
-                let additionalInfo = GameMgr.instance.getAdditionalInfo(playerId);
-                this.onPlayerEnter(playerInfo, seat, additionalInfo, status.indexOf(playerId) > -1);
+                let playerId = Seats[seat];
+                if (playerId)
+                {
+                    let playerInfo = GameMgr.instance.getPlayer(playerId);
+                    let additionalInfo = GameMgr.instance.getAdditionalInfo(playerId);
+                    this.onPlayerEnter(playerInfo, seat, additionalInfo, status.indexOf(playerId) > -1);
+                }
             }
+            let host = GameMgr.instance.getHost();
+            if (host)
+                this.setHost(host);
         }
-        let host = GameMgr.instance.getHost();
-        if (host)
-            this.setHost(host);
     },
 
     onPlayerEnter(playerInfo, seat, additionalInfo, isReady)

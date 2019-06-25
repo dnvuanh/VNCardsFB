@@ -10,14 +10,13 @@ cc.Class({
         turnCountDown: cc.ProgressBar,
     },
 
-    onInit(index, position)
+    onInit(index)
     {
         this.displayNode.active = false;
         this.hostIcon.active = false;
         this.turnCountDown.node.active = false;
         this.IsMyTurn = false;
         this.index = index;
-        this.node.setPosition(position);
         this.positionAfterRotate = index;
     },
 

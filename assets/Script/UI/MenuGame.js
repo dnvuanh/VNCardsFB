@@ -353,9 +353,9 @@ cc.Class({
         this.countDown.hide();
     },
 
-    refreshSeats(Seats, status)
+    refreshSeats()
     {
-        this.SeatMgr.refreshSeats(Seats, status);
+        this.SeatMgr.refreshSeats();
     },
 
     getPlayerSeat(playerId)

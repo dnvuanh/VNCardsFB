@@ -34,13 +34,18 @@ var GameMgr = cc.Class({
     refreshMatchStatus() {
         this.startGameScene = true;
         //this.matchData.Host && UIManager.instance.setHost(this.matchData.Host);
-        this.matchData.Seats && UIManager.instance.refreshSeats(this.matchData.Seats, this.matchData.Ready);
+        this.matchData.Seats && UIManager.instance.refreshSeats();
         if (this.matchData.State == Define.GameState.RUNNING)
         {
             //this.myCards && UIManager.instance.onCardsReceived(this.myCards, false);
             this.matchData.TurnKeeper && UIManager.instance.onTurnChange(this.matchData.TurnKeeper, this.matchData.TimeBeginTurn, this.matchData.Timeout);
             this.matchData.CurrentCards && UIManager.instance.onThrowSuccess(this.matchData.PreviousThrowPlayerId, this.matchData.CurrentCards);
         }
+    },
+
+    getMatchData()
+    {
+        return this.matchData;
     },
 
     OnMatchFound(message) {
