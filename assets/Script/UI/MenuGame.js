@@ -155,6 +155,7 @@ cc.Class({
         this.DealCards.startAnim(()=>{
             let card = ObjectPool.instance.getCard(cards[cardCount]);
                 card && card.setParent(this.myCardNode);
+                card.getComponent("Card").reset();
                 card.opacity = 120;
                 card.scaleX = 0.8;
                 card.scaleY = 0.8;
@@ -253,10 +254,11 @@ cc.Class({
     removeCardsFromHand(playerId, cards)
     {
         let seatNode = this.SeatMgr.getSeat(playerId);
-        let destPos = {x: (Math.random()*10 - 5)*10 , y: (Math.random()*10 - 5)*10};
+        let destPos = {x: (Math.random()*14 - 7)*10 , y: (Math.random()*14 - 7)*10};
         let isMyCard = GameMgr.instance.IsMyId(playerId);
         let flyDuration = 0.2;
         let flyAction = null;
+        let halfOfCards = Math.floor(cards.length/2);
         cards.sort((a,b) => a - b);
         for (let i=0; i < cards.length; i++)
         {
@@ -264,7 +266,7 @@ cc.Class({
             if (isMyCard)
             {
                 card = this.myCardNode.getChildByName("Card_" + cards[i]);
-                flyAction = cc.spawn(cc.scaleTo(flyDuration,1), cc.moveTo(flyDuration, destPos.x + i*50, destPos.y));
+                flyAction = cc.spawn(cc.scaleTo(flyDuration,1), cc.moveTo(flyDuration, destPos.x + (i - halfOfCards)*80, destPos.y));
             }
             else
             {
@@ -273,7 +275,7 @@ cc.Class({
                 card.scaleX = 0.8;
                 Utils.changeParent(card, seatNode)
                 card.setPosition(cc.Vec2.ZERO);
-                flyAction = cc.spawn(cc.sequence(cc.scaleTo(flyDuration/2,1.1), cc.scaleTo(flyDuration/2,1)), cc.moveTo(0.2, destPos.x + i*60, destPos.y));
+                flyAction = cc.spawn(cc.sequence(cc.scaleTo(flyDuration/2,1.1), cc.scaleTo(flyDuration/2,1)), cc.moveTo(0.2, destPos.x + (i - halfOfCards)*80, destPos.y));
             }
             Utils.changeParent(card, this.playZoneNode);
             card.runAction(cc.sequence(cc.delayTime(0.05*i), flyAction));

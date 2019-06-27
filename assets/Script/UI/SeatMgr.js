@@ -61,10 +61,10 @@ cc.Class({
                 this.setHost(playerInfo.id);
             }
         }
-        /*if (GameMgr.instance.IsMyId(playerInfo.id))
+        if (GameMgr.instance.IsMyId(playerInfo.id))
         {
             this.RotateSeats(seat);
-        }*/
+        }
     },
 
     RotateSeats(mySeat)

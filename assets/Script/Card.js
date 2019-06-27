@@ -53,4 +53,10 @@ cc.Class({
     {
         return this.isSelected;
     },
+
+    reset()
+    {
+        this.isSelected = false;
+        this.node.scale = cc.Vec2.ONE;
+    }
 });
