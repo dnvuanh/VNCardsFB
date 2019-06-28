@@ -60,6 +60,17 @@ var Utils = cc.Class({
         node.parent = newParent;
         node.position = newLocPos;
 		node.rotation = newLocRot;
+    },
+
+    shiftArray(array, times)
+    {
+        let count = 0;
+        while (count < times)
+        {
+            let temp = array.shift();
+            array[array.length] = temp;
+            count += 1;
+        }
     }
 });
 

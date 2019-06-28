@@ -70,17 +70,15 @@ cc.Class({
     RotateSeats(mySeat)
     {
         Notification.instance.add("Moving Player Position");
-        for (let i=0; i < this.Seats.length; i++)
-        {
-            let offset = (i - mySeat) >= 0 ? (i - mySeat) : (i - mySeat + 4);
-            let fadeOut = cc.fadeOut(0.2);
-            let movePosition = cc.callFunc(() => this.Seats[i].node.position = this.cachedPlayersPos[offset]);
-            let fadeIn = cc.fadeIn(0.2);
-            this.Seats[i].node.runAction(cc.sequence(fadeOut, cc.delayTime(0.1), movePosition, fadeIn));
-            /*var movePosition = cc.moveTo(0.5,this.cachedPlayersPos[offset]);
-            this.Seats[i].node.runAction(movePosition);
-            this.Seats[i].setPositionAfterRotate(offset);*/
-        }
+        let offset = this.SeatMapping.indexOf(mySeat);
+        Utils.shiftArray(this.SeatMapping, offset);
+        let swapPosition = cc.callFunc(()=>{
+            for (let i=0; i < this.SeatMapping.length; i++)
+            {
+                this.Seats[this.SeatMapping[i]].node.position = this.cachedPlayersPos[i];
+            }
+        });
+        this.displayNode.runAction(cc.sequence(cc.fadeOut(0.2), swapPosition, cc.fadeIn(0.2)));
     },
 
     getSeat(playerId)
@@ -182,7 +180,7 @@ cc.Class({
 
     onRequestSeat(target, data)
     {
-        GSMgr.instance.requestSeat(data);
+        GSMgr.instance.requestSeat(this.SeatMapping[parseInt(data)]);
     },
 
     clearAll()
