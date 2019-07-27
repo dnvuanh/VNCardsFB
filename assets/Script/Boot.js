@@ -29,6 +29,7 @@ cc.Class({
     },
 
     loginButtonClick() {
+        SoundMgr.instance.playSoundClick();
         this.userId = this.username.string;
         this.startLoading();
     },

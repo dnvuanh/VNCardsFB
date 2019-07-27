@@ -17,6 +17,7 @@ cc.Class({
 
     OnOKPressed()
     {
+        SoundMgr.instance.play("buttonClick");
         this.Close(this.closeAction);
     }
 });

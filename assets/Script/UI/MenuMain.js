@@ -21,6 +21,11 @@ cc.Class({
         }*/
     },
 
+    onEnable()
+    {
+        SoundMgr.instance.playMusic("music");
+    },
+
     onPlayMessengerPressed()
     {
         SoundMgr.instance.play("buttonClick");

@@ -2,7 +2,10 @@ var SoundMgr = cc.Class({
     extends: cc.Component,
 
     properties: {
-        
+        soundClick: {
+            type: cc.AudioClip,
+            default: null
+        }
     },
 
     statics:{
@@ -14,6 +17,12 @@ var SoundMgr = cc.Class({
         SoundMgr.instance = this;
         this.SoundCached = null;
         cc.game.addPersistRootNode(this.node);
+        this.isMusicLoaded = false;
+    },
+
+    playSoundClick()
+    {
+        cc.audioEngine.play(this.soundClick, false, 1);
     },
 
     preload(callback)
@@ -29,8 +38,29 @@ var SoundMgr = cc.Class({
         let clip = this.SoundCached.filter((ac) => ac.name == soundName);
         if (clip.length > 0)
         {
-            cc.audioEngine.play(clip[0], loop, volumn);
+            cc.audioEngine.playEffect(clip[0], loop, volumn);
         }
-        //cc.audioEngine.playEffect("Sounds/" + soundName);
-    }
+    },
+
+    playMusic(soundName, loop = true, volumn = 1)
+    {
+        if (this.isMusicLoaded)
+        {
+            cc.audioEngine.resumeMusic();
+        }
+        else
+        {
+            let clip = this.SoundCached.filter((ac) => ac.name == soundName);
+            if (clip.length > 0)
+            {
+                this.isMusicLoaded = true;
+                cc.audioEngine.playMusic(clip[0], loop, volumn);
+            }
+        }
+    },
+
+    pauseMusic()
+    {
+        cc.audioEngine.pauseMusic();
+    },
 });

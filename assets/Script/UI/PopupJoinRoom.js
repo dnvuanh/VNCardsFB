@@ -10,8 +10,8 @@ cc.Class({
 
     OnJoinButtonPressed()
     {
+        SoundMgr.instance.play("buttonClick");
         let roomId = this.RoomId.string;
-        
         GSMgr.instance.enterRoomRequest(roomId, this.onJoinRoomResponse.bind(this));
     },
 

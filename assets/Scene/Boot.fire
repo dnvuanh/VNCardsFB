@@ -4574,6 +4574,9 @@
       "__id__": 101
     },
     "_enabled": true,
+    "soundClick": {
+      "__uuid__": "5bf30dea-b8eb-4a16-a50d-49e4e78daf4f"
+    },
     "_id": "edchw6kZ1A87zNtMnhF0cB"
   }
 ]

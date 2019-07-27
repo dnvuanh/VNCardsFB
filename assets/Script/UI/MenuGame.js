@@ -40,6 +40,11 @@ cc.Class({
         this.ResultDisplay = this.ResultDisplay.getComponent("ResultDisplay");
     },
 
+    onEnable()
+    {
+        SoundMgr.instance.pauseMusic();
+    },
+
     addPlayer(player)
     {
         this.onlineList.addPlayer(player);

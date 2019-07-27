@@ -11,8 +11,8 @@ cc.Class({
     {
         let isPrivate = this.Private.isChecked;
         let roomId = (isPrivate ? "PR" : "PU") + this.RoomId.string;
-
         GSMgr.instance.createRoomRequest(roomId, this.onCreateRoomResponse.bind(this));
+        SoundMgr.instance.play("buttonClick");
     },
 
     onCreateRoomResponse()
