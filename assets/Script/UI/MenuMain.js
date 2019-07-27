@@ -23,22 +23,26 @@ cc.Class({
 
     onPlayMessengerPressed()
     {
+        SoundMgr.instance.play("buttonClick");
         var roomId = "PR" + FBInstantHelper.getContextID();
         GSMgr.instance.enterRoomRequest(roomId, this.onEnterRoomResponse.bind(this));
     },
 
     onCreateRoomPressed()
     {
+        SoundMgr.instance.play("buttonClick");
         UIManager.instance.showPopup("PopupCreateRoom");
     },
 
     onJoinRoomPressed()
     {
+        SoundMgr.instance.play("buttonClick");
         UIManager.instance.showPopup("PopupJoinRoom");
     },
 
     onFindMatchPressed()
     {
+        SoundMgr.instance.play("buttonClick");
         GSMgr.instance.findRoomRequest(this.onEnterRoomResponse.bind(this));
     },
 

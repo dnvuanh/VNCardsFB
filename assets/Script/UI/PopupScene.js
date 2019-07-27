@@ -11,10 +11,11 @@ cc.Class({
         this._super();
     },
 
-    Close(action)
+    Close()
     {
+        SoundMgr.instance.play("buttonClick");
         UIManager.instance.closeCurrentPopup();
-        action && action();
+        //action && action();
     },
 
     IsPopup()

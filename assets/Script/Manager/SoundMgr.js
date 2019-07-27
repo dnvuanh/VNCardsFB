@@ -24,12 +24,13 @@ var SoundMgr = cc.Class({
         });
     },
 
-    play(soundName, loop, volumn)
+    play(soundName, loop = false, volumn = 1)
     {
         let clip = this.SoundCached.filter((ac) => ac.name == soundName);
         if (clip.length > 0)
         {
             cc.audioEngine.play(clip[0], loop, volumn);
         }
+        //cc.audioEngine.playEffect("Sounds/" + soundName);
     }
 });

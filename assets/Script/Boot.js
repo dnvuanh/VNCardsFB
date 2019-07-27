@@ -6,7 +6,7 @@ cc.Class({
         username: cc.EditBox,
         quickLogin: cc.Node,
         loginBox: cc.Node,
-        transitionFrame: cc.Node
+        transitionFrame: cc.Node,
     },
 
     onLoad () {

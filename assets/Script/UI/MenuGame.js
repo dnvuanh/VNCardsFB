@@ -58,11 +58,13 @@ cc.Class({
 
     requestLeaveSeat()
     {
+        SoundMgr.instance.play("buttonClick");
         GSMgr.instance.requestLeaveSeat(1 - GameMgr.instance.IsRegisterLeave());
     },
 
     requestLeaveRoom()
     {
+        SoundMgr.instance.play("buttonClick");
         if (GameMgr.instance.getMySeat() != null)
         {
             if (this.isLeavingRoom)

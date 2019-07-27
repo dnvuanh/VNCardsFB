@@ -19,7 +19,7 @@ cc.Class({
             let position = this.destination[(i % this.destination.length)].position;
             let delayTime = new cc.DelayTime(cardOrder * this.delayTime);
             let playSound = cc.callFunc(() => {
-                //SoundMgr.instance.play("deal", false, 0.6)
+                SoundMgr.instance.play("deal", false, 0.6)
             });
             let moveTo = new cc.MoveTo(this.flyingTime, position);
             let rotateTo = new cc.rotateBy(this.flyingTime, 360, 360);
