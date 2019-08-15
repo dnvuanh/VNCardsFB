@@ -143,6 +143,7 @@ cc.Class({
 
     onStartGameClick()
     {
+        SoundMgr.instance.play("ingameClick");
         GSMgr.instance.startGame();
         this.friendCardNode.children.forEach(it => it.active = false);
     },
@@ -214,6 +215,7 @@ cc.Class({
 
     throwCards()
     {
+        SoundMgr.instance.play("ingameClick");
         let cards = this.getSelectedCards();
         GSMgr.instance.throwCards(cards);
     },

@@ -61,10 +61,10 @@ cc.Class({
                 this.setHost(playerInfo.id);
             }
         }
-        if (GameMgr.instance.IsMyId(playerInfo.id))
+        /*if (GameMgr.instance.IsMyId(playerInfo.id))
         {
             this.RotateSeats(seat);
-        }
+        }*/
     },
 
     RotateSeats(mySeat)
@@ -78,7 +78,7 @@ cc.Class({
                 this.Seats[this.SeatMapping[i]].node.position = this.cachedPlayersPos[i];
             }
         });
-        this.displayNode.runAction(cc.sequence(cc.fadeOut(0.2), swapPosition, cc.fadeIn(0.2)));
+        this.displayNode.runAction(cc.sequence(cc.fadeOut(0.2), cc.delayTime(0.5), swapPosition, cc.fadeIn(0.2)));
     },
 
     getSeat(playerId)
