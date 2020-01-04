@@ -1,0 +1,56 @@
+{
+  "requires": true,
+  "lockfileVersion": 1,
+  "dependencies": {
+    "@colyseus/schema": {
+      "integrity": "sha512-uJXPHgFXY1GEQwvvnp9/7URvrnZDwkDySMnHSUxBSkGKK2wOlXr5RXPDjZWIvXTcARA1o/mvBmCo+y0VxYEbvQ==",
+      "resolved": "https://registry.npmjs.org/@colyseus/schema/-/schema-0.4.54.tgz",
+      "version": "0.4.54"
+    },
+    "@gamestdio/signals": {
+      "integrity": "sha512-EPWA3IkJ+xDT1K/xV53m5N4h/g4qzpf4NG6GustZLT1wp3T59YPonGQ9LLl3+YMNwSNj0yawX4wUpOnuQJ96Ug==",
+      "resolved": "https://registry.npmjs.org/@gamestdio/signals/-/signals-1.0.0.tgz",
+      "version": "1.0.0"
+    },
+    "@gamestdio/state-listener": {
+      "integrity": "sha512-FEKarKXEeXvCrzilFw9ANOxKkdtFfHXYqJNCaYEhTV+13x02o7HXDFetJAoQCAT9AVgiHUd3Ylo5mOukAegPoA==",
+      "resolved": "https://registry.npmjs.org/@gamestdio/state-listener/-/state-listener-3.1.0.tgz",
+      "version": "3.1.0"
+    },
+    "@gamestdio/websocket": {
+      "integrity": "sha512-J3n5SKim+ZoLbe44hRGI/VYAwSMCeIJuBy+FfP6EZaujEpNchPRFcIsVQLWAwpU1bP2Ji63rC+rEUOd1vjUB6Q==",
+      "resolved": "https://registry.npmjs.org/@gamestdio/websocket/-/websocket-0.3.2.tgz",
+      "version": "0.3.2"
+    },
+    "colyseus.js": {
+      "integrity": "sha512-EPovWiKn7+hKiLPw0QoONiynfCnocaUh+5osi5xzVhEXwI0xF6WsP356fg9UNL1VycYM7M0pk7rJNcqm0gFHHw==",
+      "requires": {
+        "@colyseus/schema": "^0.4.0",
+        "@gamestdio/signals": "^1.0.0",
+        "@gamestdio/state-listener": "^3.1.0",
+        "@gamestdio/websocket": "^0.3.2",
+        "fossil-delta": "^1.0.0",
+        "httpie": "^2.0.0-next.2",
+        "notepack.io": "^2.1.3",
+        "strong-events": "^1.0.5"
+      },
+      "resolved": "https://registry.npmjs.org/colyseus.js/-/colyseus.js-0.11.0.tgz",
+      "version": "0.11.0"
+    },
+    "fossil-delta": {
+      "integrity": "sha512-fkgQUnBaJjhDq0DN1ajBlWWRH99NQgwVoReMEr0oXLqYXAx8X9mD5gGaoTYDdVVbLJYsMNrnkJ028Ld0UgWrGA==",
+      "resolved": "https://registry.npmjs.org/fossil-delta/-/fossil-delta-1.0.2.tgz",
+      "version": "1.0.2"
+    },
+    "notepack.io": {
+      "integrity": "sha512-9b5w3t5VSH6ZPosoYnyDONnUTF8o0UkBw7JLA6eBlYJWyGT1Q3vQa8Hmuj1/X6RYvHjjygBDgw6fJhe0JEojfw==",
+      "resolved": "https://registry.npmjs.org/notepack.io/-/notepack.io-2.2.0.tgz",
+      "version": "2.2.0"
+    },
+    "strong-events": {
+      "integrity": "sha512-EcYp+7YZO/zPPRQ/wERj7sk2SxSN32P6X19ShJu/rEIvdF8hOf9X6nlw9Ig4r9R/IVNoN1dKUN23xidpvzxzRQ==",
+      "resolved": "https://registry.npmjs.org/strong-events/-/strong-events-1.0.6.tgz",
+      "version": "1.0.6"
+    }
+  }
+}

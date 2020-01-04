@@ -101,6 +101,13 @@ cc.Class({
                 seatDisplay.remove();
                 seatDisplay.node.active = false;
         }
+        if (seat == GameMgr.instance.getMySeat())
+        {
+            this.Seats.forEach(seat =>{
+                seat.remove();
+                seat.node.active = false;
+            });
+        }
     },
 
     setHost(playerId)
