@@ -22,7 +22,6 @@ cc.Class({
 
     start()
     {
-        this.refreshSeats();
     },
 
     refreshSeats()
@@ -49,6 +48,11 @@ cc.Class({
         }
     },
 
+    onEnable()
+    {
+        this.refreshSeats();
+    },
+
     onPlayerEnter(playerInfo, seat, additionalInfo, isReady)
     {
         if (seat < this.Seats.length)
@@ -61,10 +65,6 @@ cc.Class({
                 this.setHost(playerInfo.id);
             }
         }
-        /*if (GameMgr.instance.IsMyId(playerInfo.id))
-        {
-            this.RotateSeats(seat);
-        }*/
     },
 
     RotateSeats(mySeat)
