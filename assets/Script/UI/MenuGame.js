@@ -90,6 +90,7 @@ cc.Class({
         else
         {
             GSMgr.instance.stopRTSession();
+            this.SeatMgr.clearAll();
             UIManager.instance.closeCurrentMenu();
         }
     },
@@ -107,10 +108,10 @@ cc.Class({
     playerLeaveSeat(seat)
     {
         this.SeatMgr.onPlayerLeave(seat);
-        if (GameMgr.instance.getMySeat() != null)
+        if (GameMgr.instance.getMySeat() == seat)
         {
-            this.ButtonLeaveSeat.active = false;
             this.enableStartButton(false);
+            this.ButtonLeaveSeat.active = false;
             if (this.isLeavingRoom)
             {
                 this.isLeavingRoom = false;
