@@ -41,10 +41,10 @@ var Utils = cc.Class({
 		if(node.parent == newParent) return;
 		var getWorldRotation = function (node) {
 			var currNode = node;
-			var resultRot = currNode.rotation;
+			var resultRot = currNode.angle;
 			do {
 				currNode = currNode.parent;
-				resultRot += currNode.rotation;
+				resultRot += currNode.angle;
 			} while(currNode.parent != null);
 			resultRot = resultRot % 360;
 			return resultRot;
@@ -59,7 +59,7 @@ var Utils = cc.Class({
 
         node.parent = newParent;
         node.position = newLocPos;
-		node.rotation = newLocRot;
+		node.angle = newLocRot;
     },
 
     shiftArray(array, times)
