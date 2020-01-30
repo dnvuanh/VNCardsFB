@@ -116,6 +116,7 @@ cc.Class({
             {
                 this.isLeavingRoom = false;
                 GSMgr.instance.stopRTSession();
+                this.ButtonLeaveRoom.getComponentInChildren(cc.Label).string = "Leave Room";
                 UIManager.instance.closeCurrentMenu();
             }
         }
