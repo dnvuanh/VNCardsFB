@@ -10,7 +10,7 @@ cc.Class({
     },
 
     onLoad () {
-        this.quickLogin.active = false;
+        //this.quickLogin.active = false;
         this.loadingBar.node.active = false;
     },
 
