@@ -238,6 +238,7 @@ var GameMgr = cc.Class({
         {
             this.matchData.AdditionInfos[i].VND += scores[i];
         }
+        UIManager.instance.showResult(scores[this.getMyId()]);
         UIManager.instance.updateResult(scores, winner, remainCards);
     },
 

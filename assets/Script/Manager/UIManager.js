@@ -243,4 +243,18 @@ var UIManager = cc.Class({
     {
         this.MenuGame.setRoomId(roomId);
     },
+
+    showResult(score)
+    {
+        let popup = null;
+        if (score > 0)
+        {
+            popup = this.showPopup("PopupWin");
+        }
+        else
+        {
+            popup = this.showPopup("PopupLose");
+        }
+        popup.display(score);
+    }
 });
