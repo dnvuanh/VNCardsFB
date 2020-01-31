@@ -28,7 +28,7 @@ var Define = {
     },
 
     TIME_FORCE_START: 15,
-    TIME_DISPLAY_RESULT: 5,
+    TIME_DISPLAY_RESULT: 9,
 }
 
 module.exports = Define;

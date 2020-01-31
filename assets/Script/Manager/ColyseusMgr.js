@@ -1,6 +1,6 @@
 
 
-const Colyseus = require("colyseus.js");
+//const Colyseus = require("colyseus.js");
 
 cc.Class({
     extends: cc.Component,
